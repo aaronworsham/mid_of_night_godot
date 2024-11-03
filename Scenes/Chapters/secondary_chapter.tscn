@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bildav4l48sc4"]
+
+[ext_resource type="PackedScene" uid="uid://cvd7df11se5qh" path="res://Scenes/Maps/library_map.tscn" id="1_ty122"]
+[ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_4yhpq"]
+
+[node name="SecondaryChapter" type="Node2D"]
+
+[node name="LibraryScene" parent="." instance=ExtResource("1_ty122")]
+position = Vector2(-4, -2)
+
+[node name="SaveManager" parent="." instance=ExtResource("2_4yhpq")]

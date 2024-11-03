@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://of4iwmum7uuq"]
+
+[ext_resource type="Texture2D" uid="uid://k2dg3f04e88b" path="res://Assets/Backgrounds/dg8evnz-3a1ee158-a36b-4b8c-a311-0626658b3b0f.png" id="1_jrqqb"]
+
+[node name="Village Map" type="Node2D"]
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(-73, 30)
+scale = Vector2(0.462667, 0.462667)
+texture = ExtResource("1_jrqqb")

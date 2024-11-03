@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqy6hsli0vuq4"]
+
+[ext_resource type="Texture2D" uid="uid://c4l8fp6a5bjfw" path="res://Assets/Sprites/pixel-video-game-apple-fruit-vector-24857170.jpg" id="1_uu8tp"]
+
+[node name="Apple" type="Sprite2D"]
+position = Vector2(0, 3)
+scale = Vector2(0.032, 0.0333333)
+texture = ExtResource("1_uu8tp")

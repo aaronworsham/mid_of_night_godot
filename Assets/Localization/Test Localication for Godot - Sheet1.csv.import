@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://8ljrgya8aw1j"
+
+[deps]
+
+files=["res://Assets/Localization/Test Localication for Godot - Sheet1.en.translation", "res://Assets/Localization/Test Localication for Godot - Sheet1.es.translation", "res://Assets/Localization/Test Localication for Godot - Sheet1.fr.translation"]
+
+source_file="res://Assets/Localization/Test Localication for Godot - Sheet1.csv"
+dest_files=["res://Assets/Localization/Test Localication for Godot - Sheet1.en.translation", "res://Assets/Localization/Test Localication for Godot - Sheet1.es.translation", "res://Assets/Localization/Test Localication for Godot - Sheet1.fr.translation"]
+
+[params]
+
+compress=true
+delimiter=0

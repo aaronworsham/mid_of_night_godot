@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dslya3xokc4xn"]
+
+[ext_resource type="PackedScene" uid="uid://of4iwmum7uuq" path="res://Scenes/Maps/village_map.tscn" id="1_n4k42"]
+[ext_resource type="PackedScene" uid="uid://f1tivs1vbjok" path="res://Scenes/Interactables/Actors/vendor.tscn" id="2_j6c5y"]
+
+[node name="FirstChapter" type="Node2D"]
+
+[node name="Library Map" parent="." instance=ExtResource("1_n4k42")]
+
+[node name="Vendor" parent="." instance=ExtResource("2_j6c5y")]
+position = Vector2(-88, -64)

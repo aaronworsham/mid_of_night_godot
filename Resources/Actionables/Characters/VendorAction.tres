@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ActionableResource" load_steps=3 format=3 uid="uid://c2sdd56hjap8t"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/ActionableResource.gd" id="1_cs4n6"]
+[ext_resource type="Resource" path="res://Dialog/Shared/Characters/VendorTimeline.dtl" id="2_mme04"]
+
+[resource]
+script = ExtResource("1_cs4n6")
+timeline = "VendorTimeline"
+timelineID = ExtResource("2_mme04")

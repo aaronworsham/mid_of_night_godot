@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvd7df11se5qh"]
+
+[ext_resource type="Texture2D" uid="uid://cmcia0vkef3up" path="res://Assets/Backgrounds/Library.webp" id="1_6w8id"]
+[ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="5_4yku1"]
+
+[node name="Library Map" type="Node2D"]
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(-372, -211)
+scale = Vector2(0.462667, 0.462667)
+texture = ExtResource("1_6w8id")
+
+[node name="Detective" parent="." instance=ExtResource("5_4yku1")]
+position = Vector2(-209, -204)
+
+[node name="Camera2D" type="Camera2D" parent="Detective"]
+position = Vector2(-4, 5)
+zoom = Vector2(3, 3)

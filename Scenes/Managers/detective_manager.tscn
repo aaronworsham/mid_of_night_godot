@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://uq7pf86awi87"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/DetectiveManager.gd" id="1_badek"]
+
+[node name="DetectiveManager" type="Node"]
+script = ExtResource("1_badek")

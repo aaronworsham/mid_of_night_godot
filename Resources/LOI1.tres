@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="LOIResource" load_steps=2 format=3 uid="uid://dx3m2cq0wfjdf"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/LOIResource.gd" id="1_1hnaq"]
+
+[resource]
+script = ExtResource("1_1hnaq")
+detail = "Test"
