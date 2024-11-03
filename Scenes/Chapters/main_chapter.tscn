@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ck5s77sy8lhis"]
+[gd_scene load_steps=10 format=3 uid="uid://ck5s77sy8lhis"]
 
 [ext_resource type="PackedScene" uid="uid://epkelude5vue" path="res://Scenes/UI/attribute_ui.tscn" id="1_ah8me"]
 [ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_dobw0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://uq7pf86awi87" path="res://Scenes/Managers/detective_manager.tscn" id="3_vnnr2"]
 [ext_resource type="PackedScene" uid="uid://c3mtayg14ghop" path="res://Scenes/Managers/event_manager.tscn" id="4_py5oh"]
 [ext_resource type="PackedScene" uid="uid://dsntxowjttdx0" path="res://Scenes/Interactables/Actors/detective_model.tscn" id="5_dlrtt"]
+[ext_resource type="PackedScene" uid="uid://vjn0rs5rhiwm" path="res://Scenes/Managers/mystery_manager.tscn" id="5_e1ejx"]
 [ext_resource type="PackedScene" uid="uid://dslya3xokc4xn" path="res://Scenes/Chapters/first_chapter.tscn" id="6_o33fe"]
 [ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="8_fyupr"]
 
@@ -27,6 +28,8 @@
 unique_name_in_owner = true
 
 [node name="EventManager" parent="Managers" instance=ExtResource("4_py5oh")]
+
+[node name="MysteryManager" parent="Managers" instance=ExtResource("5_e1ejx")]
 
 [node name="Models" type="Node" parent="."]
 
