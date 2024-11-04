@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ck5s77sy8lhis"]
+[gd_scene load_steps=11 format=3 uid="uid://ck5s77sy8lhis"]
 
 [ext_resource type="PackedScene" uid="uid://epkelude5vue" path="res://Scenes/UI/attribute_ui.tscn" id="1_ah8me"]
 [ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_dobw0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://vjn0rs5rhiwm" path="res://Scenes/Managers/mystery_manager.tscn" id="5_e1ejx"]
 [ext_resource type="PackedScene" uid="uid://dslya3xokc4xn" path="res://Scenes/Chapters/first_chapter.tscn" id="6_o33fe"]
 [ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="8_fyupr"]
+[ext_resource type="PackedScene" uid="uid://tn0ssayl7wum" path="res://Scenes/UI/SQLiteTest.tscn" id="10_1se0b"]
 
 [node name="Main" type="Node2D"]
 
@@ -38,6 +39,8 @@ unique_name_in_owner = true
 [node name="UI" type="Node" parent="."]
 
 [node name="AttributeUI" parent="UI" instance=ExtResource("1_ah8me")]
+
+[node name="SQLiteTest" parent="UI" instance=ExtResource("10_1se0b")]
 
 [node name="FirstChapter" parent="." instance=ExtResource("6_o33fe")]
 position = Vector2(0, 4)
