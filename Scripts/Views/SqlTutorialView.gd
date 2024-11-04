@@ -12,18 +12,31 @@ func _ready() -> void:
 
 
 func _on_insert_data_button_down() -> void:
+	var data = {
+		"name" : %NameEdit.text,
+		"score" : int(%ScoreEdit.text),
+
+	}
+	database.insert_row("players",data)
 	pass # Replace with function body.
 
 
 func _on_select_data_button_down() -> void:
+	print(database.select_rows("players", "score > 10", ["*"]))
 	pass # Replace with function body.
 
 
 func _on_update_data_button_down() -> void:
+	database.update_rows(
+		"players", 
+		"name = '" + %NameEdit.text + "'",
+		{"score": int(%ScoreEdit.text)}
+	)
 	pass # Replace with function body.
 
 
 func _on_delete_data_button_down() -> void:
+	database.delete_rows("players", "name = '"+%NameEdit.text+"'")
 	pass # Replace with function body.
 
 
