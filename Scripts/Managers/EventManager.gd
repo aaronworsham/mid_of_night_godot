@@ -2,6 +2,7 @@ extends Node
 
 signal event_attributes_updated(attrs:Dictionary)
 signal event_mysteries_updated(mystery:String)
+signal event_start_dialog(act:ActionableController)
 
 
 
@@ -11,6 +12,10 @@ func emit_event_attributes_updated(attrs:Dictionary):
 
 func emit_event_mysteries_updated(mystery:String):
 	event_mysteries_updated.emit(mystery)
+
+func emit_event_start_dialog(act:ActionableController):
+	event_start_dialog.emit(act)
+
 
 #Singals EM is connected to
 func _on_dialogic_signal(argument:String):

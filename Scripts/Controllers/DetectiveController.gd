@@ -35,10 +35,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if Input.is_action_pressed("dialogic_default_action"):
 			var actionables = actionable_finder.get_overlapping_areas()
-			lock_movement = true
-			querty_ui.visible = true
 			if actionables.size() > 0:
-				actionables[0].dialog_action()
+				lock_movement = true
+				EventManager.emit_event_start_dialog(actionables[0])
+				#actionables[0].dialog_action()
 				get_viewport().set_input_as_handled()
 				return
 
