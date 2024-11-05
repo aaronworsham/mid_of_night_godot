@@ -1,6 +1,10 @@
 label hello
-This is Hello
+Vendor: Hello young fella.  Here to learn more about [The Village (Info)] ?
+[signal arg="the village"]
 [end_timeline]
-label information
-This is Information
+label the village
+Vendor: Oh, yes?  Wonderful.  Happy to tell you all about our little village.  Very quite.  Definately not haunted.  I would introduce you to everyone but... they're out looking for that poor girl.  [Missing Girl (Quest)]
+[end_timeline]
+label missing girl
+Vendor: I guess a little girl went missing last night.  Poor thing.
 [end_timeline]

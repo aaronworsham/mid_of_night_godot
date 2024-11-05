@@ -5,7 +5,6 @@ signal event_mysteries_updated(mystery:String)
 signal event_start_dialog(act:ActionableController)
 
 
-
 #Signals EM can emit for others to connect to
 func emit_event_attributes_updated(attrs:Dictionary):
 	event_attributes_updated.emit(attrs)

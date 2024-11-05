@@ -4,3 +4,17 @@
 
 [resource]
 script = ExtResource("1_kbbhw")
+topics = {
+"hello": {
+0: "test_timeline",
+1: "hello",
+2: true,
+3: false
+},
+"the village": {
+0: "test_timeline",
+1: "the village",
+2: false,
+3: false
+}
+}
