@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://ck5s77sy8lhis"]
 
-[ext_resource type="PackedScene" uid="uid://epkelude5vue" path="res://Scenes/UI/query_ui.tscn" id="1_ah8me"]
+[ext_resource type="PackedScene" uid="uid://epkelude5vue" path="res://Scenes/UI/NotebookUI.tscn" id="1_ah8me"]
 [ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_dobw0"]
 [ext_resource type="PackedScene" uid="uid://6vhcn0bs35h" path="res://Scenes/Controllers/input_controller.tscn" id="2_rqwcm"]
 [ext_resource type="PackedScene" uid="uid://uq7pf86awi87" path="res://Scenes/Managers/detective_manager.tscn" id="3_vnnr2"]
@@ -38,7 +38,7 @@ unique_name_in_owner = true
 
 [node name="UI" type="Node" parent="."]
 
-[node name="QueryUI" parent="UI" instance=ExtResource("1_ah8me")]
+[node name="NotebookUI" parent="UI" instance=ExtResource("1_ah8me")]
 visible = false
 
 [node name="SQLiteTest" parent="UI" instance=ExtResource("10_1se0b")]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://epkelude5vue"]
+
+[ext_resource type="Script" path="res://Scripts/Views/notebookUIView.gd" id="1_63ywa"]
+
+[node name="NotebookUI" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1_63ywa")
+
+[node name="NotebookList" type="ItemList" parent="."]
+unique_name_in_owner = true
+offset_left = 65.0
+offset_top = 133.0
+offset_right = 560.0
+offset_bottom = 730.0
+
+[node name="QueryEdit" type="TextEdit" parent="."]
+unique_name_in_owner = true
+offset_left = 69.0
+offset_top = 757.0
+offset_right = 572.0
+offset_bottom = 800.0
+placeholder_text = "Enter question"
+
+[connection signal="item_clicked" from="NotebookList" to="." method="_on_notebook_list_item_clicked"]
