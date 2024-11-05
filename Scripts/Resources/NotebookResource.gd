@@ -10,10 +10,14 @@ enum topic_flags{
 
 var topics:Dictionary = {
 	"hello" : {
+		"timeline": "test_timeline",
+		"label": "hello",
 		"discovered": true,
 		"clicked": false,
 	},
 	"information" : {
+		"timeline": "test_timeline",
+		"label": "information",
 		"discovered": true,
 		"clicked": false,		
 	}

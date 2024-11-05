@@ -1,31 +1,6 @@
-Vendor: Hey Fella, what can I do for you?
-- Information
-jump threads
-
-# Threads
-
-label threads (Test Display)
-Vendor: What would you like to know?
-- Missing Girl
-	jump missing_girl
-- About the Village
-	jump village
-- End Conversation
-	jump end
-
-# Missing Girl
-
-label missing_girl (Missing Girl)
-Vendor: Its a real tradegy what happened.  The whole town is out looking for her.
-jump threads
-
-# #Village
-
-label village (The Village)
-Sure, love to tell you more about the Village.  Its a small town.  Definately not haunted.
-jump threads
-
-# #End
-
-label end (End)
-Vendor: Well, nice talking to you.
+label hello
+This is Hello
+[end_timeline]
+label information
+This is Information
+[end_timeline]

@@ -11,9 +11,4 @@ func _ready() -> void:
 func dialog_action(_act:ActionableController) -> void:
 	print("ActionController: Got signal from DetectiveController")
 	querty_ui.visible = true
-	# check if a dialog is already running
-	if Dialogic.current_timeline != null:
-		return
-	else:
-		Dialogic.start('test_timeline')
-	return
+
