@@ -8,7 +8,7 @@ enum topic_flags{
 
 
 
-var notebook_topics:Dictionary = {
+var topics:Dictionary = {
 	"hello" : {
 		"discovered": true,
 		"clicked": false,

@@ -16,5 +16,4 @@ func dialog_action(_act:ActionableController) -> void:
 		return
 	else:
 		Dialogic.start('test_timeline')
-	
 	return
