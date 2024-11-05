@@ -1,5 +1,5 @@
 class_name ActionableResource
 extends Resource
 
-@export var timeline:String
-@export var timelineID:DialogicTimeline
+@export var dialogue_resource:DialogueResource
+@export var dialogue_start:String

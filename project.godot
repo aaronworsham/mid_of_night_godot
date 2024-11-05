@@ -19,26 +19,19 @@ config/icon="res://icon.svg"
 
 ChapterManager="*res://Scripts/Managers/ChapterManager.gd"
 EventManager="*res://Scripts/Managers/EventManager.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
-"Bob": "res://Dialog/Shared/Characters/Bob.dch",
-"Sam": "res://Dialog/Shared/Characters/Sam.dch",
-"Vendor": "res://Dialog/Shared/Characters/Vendor.dch"
+"Vendor": "res://Dialog/Dialogic/Vendor.dch"
 }
 directories/dtl_directory={
-"VendorTimeline": "res://Dialog/Shared/Characters/VendorTimeline.dtl",
-"timeline": "res://Dialog/MainVO/timeline1.dtl",
-"timeline2": "res://Dialog/VO2/timeline2.dtl"
+"test_timeline": "res://Dialog/Dialogic/test_timeline.dtl",
+"timeline2": "res://Dialog/Dialogic/timeline2.dtl"
 }
-variables={
-"InvestigatedMissingGirl": false,
-"LearnedAboutVillage": false,
-"RevealMissingGirlFirstClue": false,
-"UncoverMissingGirlMystery": false
-}
+variables={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -66,9 +59,18 @@ translation/save_mode=0
 translation/add_separator=false
 text/autopauses={}
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://Dialog/Dialogic/NewStyle.tres"]
+layout/default_style="res://Dialog/Dialogic/NewStyle.tres"
 glossary/glossary_files=["res://Dialog/Shared/Glossaries/Test Glossary.tres"]
+translation/intern/save_mode=0
+translation/intern/file_mode=1
+translation/intern/translation_folder="res://Dialog/Localization"
+translation/id_counter=33
+translation/locales=[]
+
+[dialogue_manager]
+
+general/missing_translations_are_errors=true
 
 [display]
 
@@ -77,7 +79,7 @@ window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg", "res://addons/gut/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg", "res://addons/gut/plugin.cfg")
 
 [input]
 
@@ -132,8 +134,8 @@ dialogic_default_action={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Assets/Localization/Test Localication for Godot - Sheet1.en.translation", "res://Assets/Localization/Test Localication for Godot - Sheet1.es.translation", "res://Assets/Localization/Test Localication for Godot - Sheet1.fr.translation")
-locale/translations_pot_files=PackedStringArray("res://Dialog/TestDialog.dialogue", "res://Dialog/Test2Dialogue.dialogue", "res://Dialog/Test3.dialogue")
+locale/translations=PackedStringArray("res://Assets/Localization/Test Localication for Godot - Sheet1.csv", "res://Assets/Localization/Test Localication for Godot - Sheet1.en.translation", "res://Assets/Localization/Test Localication for Godot - Sheet1.es.translation", "res://Assets/Localization/Test Localication for Godot - Sheet1.fr.translation")
+locale/translations_pot_files=PackedStringArray("res://Dialog/DialogueManager/test_dialogue.dialogue", "res://Dialog/DialogueManager/test_dialogue2.dialogue")
 locale/translation_add_builtin_strings_to_pot=true
 locale/test="en"
 

@@ -5,11 +5,15 @@
 [resource]
 script = ExtResource("1_mvb3g")
 entries = {
+"Glossary/1f/20/name": "Test Entry 1",
 "Test Entry 1": {
+"_translation_id": "20",
 "case_sensitive": true,
 "name": "Test Entry 1"
 }
 }
 enabled = true
-_translation_id = ""
-_translation_keys = {}
+_translation_id = "1f"
+_translation_keys = {
+"Test Entry 1": "Glossary/1f/20/name"
+}

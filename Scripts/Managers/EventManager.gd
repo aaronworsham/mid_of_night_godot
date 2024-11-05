@@ -3,8 +3,7 @@ extends Node
 signal event_attributes_updated(attrs:Dictionary)
 signal event_mysteries_updated(mystery:String)
 
-func _ready() -> void:
-	Dialogic.signal_event.connect(_on_dialogic_signal)
+
 
 #Signals EM can emit for others to connect to
 func emit_event_attributes_updated(attrs:Dictionary):

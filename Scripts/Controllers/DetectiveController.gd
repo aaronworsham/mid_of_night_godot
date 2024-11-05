@@ -4,12 +4,18 @@ extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var actionable_finder: Area2D = $Direction/ActionableFinder
 @onready var anim_tree = get_node("AnimationTree")
+@onready var querty_ui = get_node("/root/Main/UI/QueryUI")
+@onready var query_field = get_node("/root/Main/UI/QueryUI").get_node("%QueryEdit")
 var speed: int = 50  # speed in pixels/sec
 var facing = Vector2.ZERO;
+var lock_movement: bool = false
 
 
 
 func _physics_process(_delta):
+		
+	if lock_movement == true:
+		return
 		
 	#Set Velocity
 	var direction = Input.get_vector("left", "right", "up", "down")
@@ -29,9 +35,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if Input.is_action_pressed("dialogic_default_action"):
 			var actionables = actionable_finder.get_overlapping_areas()
-			if Dialogic.current_timeline != null:
-				return
-			elif actionables.size() > 0:
+			lock_movement = true
+			querty_ui.visible = true
+			if actionables.size() > 0:
 				actionables[0].dialog_action()
 				get_viewport().set_input_as_handled()
 				return

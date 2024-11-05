@@ -1,6 +1,0 @@
-join Bob center
-[voice path="res://Assets/Audio/test_audio.ogg" volume="0.0"]
-Bob: This is a test 3 #id:11
-join Sam center
-This is Another Test
-[end_timeline]

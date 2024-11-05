@@ -1,4 +1,4 @@
 keys,en,es,fr
-TEST,English Test update,Spanish Test,French Test
-TEST2,This is a new test,,
-TEST.TEST,This is a test of keys,,
+VENDOR.LINE1,Hello young fella.  What can I do for you?,Spanish Test,French Test
+VENDOR.LINE2,This is a new test,,
+VENDOR.LINE3,This is a test of keys,,
