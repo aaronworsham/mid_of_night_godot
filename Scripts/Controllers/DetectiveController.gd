@@ -37,7 +37,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			var actionables = actionable_finder.get_overlapping_areas()
 			if actionables.size() > 0:
 				lock_movement = true
-				EventManager.emit_event_start_dialog(actionables[0])
+				#send the Actor
+				EventManager.emit_event_start_dialog(actionables[0].get_parent())
 				#actionables[0].dialog_action()
 				get_viewport().set_input_as_handled()
 				return

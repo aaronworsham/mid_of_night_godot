@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://epkelude5vue"]
 
-[ext_resource type="Script" path="res://Scripts/Views/notebookUIView.gd" id="1_63ywa"]
+[ext_resource type="Script" path="res://Scripts/Views/NotebookView.gd" id="1_h4x2s"]
 
 [node name="NotebookUI" type="CanvasLayer"]
 layer = 100
-script = ExtResource("1_63ywa")
+script = ExtResource("1_h4x2s")
 
 [node name="NotebookList" type="ItemList" parent="."]
 unique_name_in_owner = true

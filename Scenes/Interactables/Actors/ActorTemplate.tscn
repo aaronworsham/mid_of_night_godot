@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://f1tivs1vbjok"]
+[gd_scene load_steps=5 format=3 uid="uid://f1tivs1vbjok"]
 
-[ext_resource type="Texture2D" uid="uid://cry6db4u7hutd" path="res://Assets/Sprites/063f63cd2d00668b7b581e1dc7102548.jpg" id="1_nydpn"]
-[ext_resource type="PackedScene" uid="uid://bhnd86i7oo0md" path="res://Scenes/Interactables/Actionable.tscn" id="2_1v4oi"]
-[ext_resource type="Resource" uid="uid://c2sdd56hjap8t" path="res://Resources/Actionables/Characters/VendorAction.tres" id="3_aepq5"]
+[ext_resource type="PackedScene" uid="uid://bhnd86i7oo0md" path="res://Scenes/Interactables/Actionable.tscn" id="1_3n25r"]
+[ext_resource type="Script" path="res://Scripts/Controllers/ActorController.gd" id="1_hmqp6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7hob"]
 size = Vector2(26, 26)
@@ -10,11 +9,11 @@ size = Vector2(26, 26)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ddrd"]
 size = Vector2(40, 39)
 
-[node name="Vendor" type="StaticBody2D"]
+[node name="Actor" type="StaticBody2D"]
+script = ExtResource("1_hmqp6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_nydpn")
 region_enabled = true
 region_rect = Rect2(27.8333, 48.4996, 98, 104)
 
@@ -23,8 +22,8 @@ visible = false
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_q7hob")
 
-[node name="Actionable" parent="." instance=ExtResource("2_1v4oi")]
-actionable = ExtResource("3_aepq5")
+[node name="Actionable" parent="." instance=ExtResource("1_3n25r")]
+script = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
 position = Vector2(0, 0.5)

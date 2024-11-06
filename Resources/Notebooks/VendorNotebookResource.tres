@@ -11,9 +11,9 @@ topics = {
 2: true,
 3: false
 },
-"the village": {
+"the_village": {
 0: "test_timeline",
-1: "the village",
+1: "the_village",
 2: false,
 3: false
 }

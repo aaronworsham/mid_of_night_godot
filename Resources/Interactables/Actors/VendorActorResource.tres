@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ActorResource" load_steps=2 format=3 uid="uid://cy7swn42bjlm5"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/ActorResource.gd" id="1_ejvip"]
+
+[resource]
+script = ExtResource("1_ejvip")
+name = "Vendor"
