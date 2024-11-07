@@ -6,7 +6,7 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_hcx4n"]
 
-[node name="TestingUI" type="CanvasLayer"]
+[node name="TestingUI" type="Node2D"]
 script = ExtResource("1_5njsg")
 
 [node name="ButtonList" type="ItemList" parent="."]
@@ -16,9 +16,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -123.0
-offset_top = -538.5
-offset_bottom = 538.5
+offset_left = 1795.0
+offset_top = 4.0
+offset_right = 1918.0
+offset_bottom = 982.0
 grow_horizontal = 0
 grow_vertical = 2
 auto_height = true
@@ -30,15 +31,17 @@ item_1/icon = SubResource("CanvasTexture_hcx4n")
 item_2/text = "Quit"
 
 [node name="ToastPanel" type="Panel" parent="."]
-offset_left = 1468.0
-offset_top = 1024.0
-offset_right = 1793.0
-offset_bottom = 1078.0
+offset_left = 1595.0
+offset_top = 986.0
+offset_right = 1920.0
+offset_bottom = 1079.0
 
 [node name="ToastMessage" type="Label" parent="ToastPanel"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_right = 312.0
-offset_bottom = 52.0
+offset_left = 7.0
+offset_top = 1.0
+offset_right = 319.0
+offset_bottom = 53.0
 
 [connection signal="item_selected" from="ButtonList" to="." method="_on_item_list_item_selected"]

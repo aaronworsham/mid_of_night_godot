@@ -1,16 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://ck5s77sy8lhis"]
+[gd_scene load_steps=10 format=3 uid="uid://ck5s77sy8lhis"]
 
-[ext_resource type="PackedScene" uid="uid://epkelude5vue" path="res://Scenes/UI/NotebookUI.tscn" id="1_ah8me"]
 [ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_dobw0"]
 [ext_resource type="PackedScene" uid="uid://6vhcn0bs35h" path="res://Scenes/Controllers/input_controller.tscn" id="2_rqwcm"]
 [ext_resource type="PackedScene" uid="uid://uq7pf86awi87" path="res://Scenes/Managers/detective_manager.tscn" id="3_vnnr2"]
 [ext_resource type="PackedScene" uid="uid://c3mtayg14ghop" path="res://Scenes/Managers/event_manager.tscn" id="4_py5oh"]
 [ext_resource type="PackedScene" uid="uid://dsntxowjttdx0" path="res://Scenes/Interactables/Actors/detective_model.tscn" id="5_dlrtt"]
 [ext_resource type="PackedScene" uid="uid://vjn0rs5rhiwm" path="res://Scenes/Managers/mystery_manager.tscn" id="5_e1ejx"]
+[ext_resource type="PackedScene" uid="uid://b4llhlqlk70pp" path="res://Scenes/UI/UIOverlay.tscn" id="6_1lec7"]
 [ext_resource type="PackedScene" uid="uid://dslya3xokc4xn" path="res://Scenes/Chapters/first_chapter.tscn" id="6_o33fe"]
 [ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="8_fyupr"]
-[ext_resource type="PackedScene" uid="uid://d2pcfccmm8fhy" path="res://Scenes/UI/TestingUI.tscn" id="9_42apx"]
-[ext_resource type="PackedScene" uid="uid://tn0ssayl7wum" path="res://Scenes/UI/SQLiteTest.tscn" id="10_1se0b"]
 
 [node name="Main" type="Node2D"]
 
@@ -34,20 +32,11 @@ unique_name_in_owner = true
 
 [node name="MysteryManager" parent="Managers" instance=ExtResource("5_e1ejx")]
 
+[node name="UIOverlay" parent="." instance=ExtResource("6_1lec7")]
+
 [node name="Models" type="Node" parent="."]
 
 [node name="DetectiveModel" parent="Models" instance=ExtResource("5_dlrtt")]
-
-[node name="UI" type="Node" parent="."]
-
-[node name="NotebookUI" parent="UI" instance=ExtResource("1_ah8me")]
-visible = false
-
-[node name="SQLiteTest" parent="UI" instance=ExtResource("10_1se0b")]
-visible = false
-
-[node name="TestingUI" parent="UI" instance=ExtResource("9_42apx")]
-visible = false
 
 [node name="FirstChapter" parent="." instance=ExtResource("6_o33fe")]
 position = Vector2(0, 4)

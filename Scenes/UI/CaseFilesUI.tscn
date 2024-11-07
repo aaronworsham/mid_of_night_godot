@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b4tj6rrelc8hd"]
+
+[node name="CaseFilesUi" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 4.0
+offset_top = 606.0
+offset_right = 651.0
+offset_bottom = 1072.0
+
+[node name="ItemList" type="ItemList" parent="Panel"]
+layout_mode = 0
+offset_right = 163.0
+offset_bottom = 465.0
+item_count = 1
+item_0/text = "Test Item"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 164.0
+offset_right = 647.0
+offset_bottom = 466.0
+text = "Test"

@@ -1,8 +1,8 @@
 class_name ActorController
-extends Node
+extends StaticBody2D
 
-@onready var querty_ui = get_node("/root/Main/UI/NotebookUI")
-@onready var query_field = get_node("/root/Main/UI/NotebookUI").get_node("%QueryEdit")
+@onready var querty_ui = self.get_node("/root/Main/UIOverlay/NotebookUI")
+@onready var query_field = self.get_node("/root/Main/UIOverlay/NotebookUI").get_node("%QueryEdit")
 @export var actor_resource: ActorResource
 @export var notebook_resource: NotebookResource
 @export var dialog_timeline: DialogicTimeline

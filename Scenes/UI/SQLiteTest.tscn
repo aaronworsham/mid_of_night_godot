@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Views/SqlTutorialView.gd" id="1_8utaq"]
 
-[node name="SqlLiteTest" type="CanvasLayer"]
+[node name="SqlLiteTest" type="Node2D"]
 
 [node name="SQLiteTest" type="Control" parent="."]
 layout_mode = 3

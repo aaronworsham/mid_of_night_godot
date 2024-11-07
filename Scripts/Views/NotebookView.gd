@@ -1,5 +1,5 @@
 class_name NotebookView
-extends CanvasLayer
+extends Node2D
 
 @onready var notebook_list:ItemList = %NotebookList
 var actor_controller:ActorController
