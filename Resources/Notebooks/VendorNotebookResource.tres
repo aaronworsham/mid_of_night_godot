@@ -1,20 +1,6 @@
-[gd_resource type="Resource" script_class="NotebookResource" load_steps=2 format=3 uid="uid://da321jfrilfau"]
+[gd_resource type="Resource" script_class="NotebookResource" load_steps=2 format=3 uid="uid://cxum027mnpi12"]
 
 [ext_resource type="Script" path="res://Scripts/Resources/NotebookResource.gd" id="1_kbbhw"]
 
 [resource]
 script = ExtResource("1_kbbhw")
-topics = {
-"hello": {
-0: "test_timeline",
-1: "hello",
-2: true,
-3: false
-},
-"the_village": {
-0: "test_timeline",
-1: "the_village",
-2: false,
-3: false
-}
-}

@@ -21,19 +21,25 @@ func _dialog_action(ac:ActorController):
 
 func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_button_index: int) -> void:
 	print("button pressed")
-	var topicKey = notebook_resource.get_topic_key_from_index(_index)
+	
+	#Set the Clicked value
+	notebook_resource.set_clicked_by_index(_index)
+
+	#tupal to get [timeline, lable]
+	var tupal = notebook_resource.get_dialogic_tupal(_index)
+
 	# check if a dialog is already running
 	if Dialogic.current_timeline != null:
 		Dialogic.clear()
-	Dialogic.start(
-		notebook_resource.get_timeline(topicKey), 
-		notebook_resource.get_label(topicKey), 
-	)
+
+	Dialogic.start(tupal[0],tupal[1])
+	
 	return
 
 func _on_dialogic_signal(_argument:String):
 	print("got signal from Dialogic:"+_argument)
 	var arg_array = _argument.split("/", true, 0)
+	
 	if notebook_resource.set_discovered(arg_array[2]):
 		load_list()
 	else:
@@ -42,6 +48,12 @@ func _on_dialogic_signal(_argument:String):
 
 func load_list():
 	notebook_list.clear()
-	for t in notebook_resource.topics.keys():
-		if notebook_resource.is_discovered(t):
-			notebook_list.add_item(t)
+	var objs:Array = notebook_resource.get_discovered_objects()
+	for obj in objs:
+		var key = obj.keys()[0]
+		var label:String 
+		if obj[key]["dynamic"]["clicked"] == true:
+			label = key + " (clicked)"
+		else:
+			label = key
+		notebook_list.add_item(label)

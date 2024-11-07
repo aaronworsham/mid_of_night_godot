@@ -9,7 +9,7 @@ size = Vector2(26, 26)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ddrd"]
 size = Vector2(40, 39)
 
-[node name="Actor" type="StaticBody2D"]
+[node name="Actor" type="StaticBody2D" groups=["Persist"]]
 script = ExtResource("1_hmqp6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

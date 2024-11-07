@@ -1,0 +1,22 @@
+{
+	"hello": {
+		"static": {
+			"timeline": "test_timeline",
+			"label": "hello"
+		},
+		"dynamic": {
+			"discovered": true,
+			"clicked": false
+		}
+	},
+	"the_village": {
+		"static": {
+			"timeline": "test_timeline",
+			"label": "the_village"
+		},
+		"dynamic": {
+			"discovered": false,
+			"clicked": false
+		}
+	}
+}

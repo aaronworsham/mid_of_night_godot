@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://Scripts/Models/detective_model.gd" id="1_3g53w"]
 
-[node name="DetectiveModel" type="Node" groups=["Persist"]]
+[node name="DetectiveModel" type="Node"]
 script = ExtResource("1_3g53w")
