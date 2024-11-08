@@ -1,6 +1,7 @@
 class_name CaseFilesView
 extends Node2D
 
+@onready var mysteries:MysteryResource
 var actor_controller:ActorController
 
 func _ready() -> void:

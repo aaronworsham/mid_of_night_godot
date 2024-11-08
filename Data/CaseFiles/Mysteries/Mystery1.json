@@ -1,5 +1,15 @@
 {
-	"static" : {
-		"name" : "mystery 1"
+	"Mystery 1" : {
+		"description" : "Mystery 1 desc",
+		"clues" : [
+			{
+				"Clue 1" : {
+					"static" : {
+						"name" : "Clue 1",
+						"description" : "This is Clue 1"
+					}	
+				}
+			}
+		]
 	}
 }
