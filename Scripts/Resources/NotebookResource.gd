@@ -1,7 +1,7 @@
 class_name NotebookResource
 extends Resource
 
-var json:JSON = load("res://Resources/Notebooks/JSON/VendorNotebookResource.json")
+@export var json:JSON
 
 
 func get_keys()->Array:
