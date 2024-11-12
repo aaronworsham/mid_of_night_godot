@@ -1,0 +1,17 @@
+{
+	"Missing Girl": {
+		"description": "Missing Girl",
+		"dynamic" : {
+			"discovered": true,
+			"clicked": false
+		},
+		"clues": {
+			"Clue 1": {
+				"static": {
+					"name": "Clue 1",
+					"description": "This is Clue 1"
+				}
+			}
+		}
+	}
+}

@@ -1,15 +1,15 @@
 class_name MysteriesManager
 extends Node
 
-@export var girl_mystery:bool
+@export var mysteries:MysteryResource
 
 func _ready() -> void:
 	EventManager.event_mysteries_updated.connect(_on_mysteries_updated)
 
 
-func _on_mysteries_updated(mystery:String):
-	print(mystery)
-	match mystery:
+func _on_mysteries_updated(m_key:String):
+	print(m_key)
+	match m_key:
 		"Missing Girl": 
-			girl_mystery = true
+			mysteries.set_mystery_as_discovered(m_key)
 			

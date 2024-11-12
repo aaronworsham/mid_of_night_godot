@@ -1,5 +1,4 @@
-class_name ActorResource
-extends Resource
+class_name ActorResource extends BaseResource
 
 @export var name:String
 
