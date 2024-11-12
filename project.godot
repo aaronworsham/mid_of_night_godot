@@ -133,7 +133,6 @@ testing_ui={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Assets/Localization/Test Localication for Godot - Sheet1.csv", "res://Assets/Localization/Test Localication for Godot - Sheet1.en.translation", "res://Assets/Localization/Test Localication for Godot - Sheet1.es.translation", "res://Assets/Localization/Test Localication for Godot - Sheet1.fr.translation")
 locale/translations_pot_files=PackedStringArray("res://Dialog/DialogueManager/test_dialogue.dialogue", "res://Dialog/DialogueManager/test_dialogue2.dialogue")
 locale/translation_add_builtin_strings_to_pot=true
 locale/test="en"

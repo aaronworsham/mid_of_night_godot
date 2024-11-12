@@ -1,0 +1,15 @@
+{
+	"Test Mystery 1": {
+		"description": "Test Mystery 1 desc",
+		"clues": [
+			{
+				"Test Clue 1": {
+					"static": {
+						"name": "Test Clue 1",
+						"description": "This is Test Clue 1"
+					}
+				}
+			}
+		]
+	}
+}

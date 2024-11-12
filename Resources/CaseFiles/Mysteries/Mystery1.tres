@@ -1,11 +1,8 @@
-[gd_resource type="Resource" script_class="MysteryResource" load_steps=5 format=3 uid="uid://3m3you0wdu4f"]
+[gd_resource type="Resource" script_class="MysteryResource" load_steps=3 format=3 uid="uid://3m3you0wdu4f"]
 
-[ext_resource type="Script" path="res://Scripts/Resources/ClueResource.gd" id="1_i4c7o"]
 [ext_resource type="Script" path="res://Scripts/Resources/MysteryResource.gd" id="2_gyi32"]
-[ext_resource type="Resource" uid="uid://du8pew6k27t72" path="res://Resources/CaseFiles/Mysteries/Clues/M1Clue1.tres" id="2_mitkf"]
 [ext_resource type="JSON" path="res://Data/CaseFiles/Mysteries/Mystery1.json" id="3_4wm47"]
 
 [resource]
 script = ExtResource("2_gyi32")
 json = ExtResource("3_4wm47")
-clues = Array[ExtResource("1_i4c7o")]([ExtResource("2_mitkf")])

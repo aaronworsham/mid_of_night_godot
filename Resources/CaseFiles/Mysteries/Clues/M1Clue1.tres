@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="ClueResource" load_steps=3 format=3 uid="uid://du8pew6k27t72"]
-
-[ext_resource type="JSON" path="res://Data/CaseFiles/Mysteries/Clues/M1Clue1.json" id="1_2p0iy"]
-[ext_resource type="Script" path="res://Scripts/Resources/ClueResource.gd" id="1_qkp4k"]
-
-[resource]
-script = ExtResource("1_qkp4k")
-json = ExtResource("1_2p0iy")
