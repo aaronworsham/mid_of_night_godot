@@ -9,6 +9,13 @@ func set_json(_json:JSON):
 func get_mysteries()->Dictionary:
 	return json.data
 
+func get_discovered_mysteries()->Array:
+	var a:Array = []
+	for m in json.data:
+		if is_mystery_discovered(m):
+			a.append(json.data[m])
+	return a
+
 func get_description(mystery:String)-> String:
 	return json.data[mystery]["description"]
 

@@ -1,6 +1,7 @@
 {
 	"Missing Girl": {
 		"description": "Missing Girl",
+		"dialogic_signal": "test_timeline/mystery/missing_girl",
 		"dynamic" : {
 			"discovered": true,
 			"clicked": false

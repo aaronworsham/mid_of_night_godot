@@ -5,14 +5,15 @@
 			"discovered": false,
 			"clicked": false
 		},
-		"clues": {
-			"Test Clue 1": {
-				"static": {
-					"name": "Test Clue 1",
-					"description": "This is Test Clue 1"
+		"clues": [
+			{
+				"Test Clue 1": {
+					"static": {
+						"name": "Test Clue 1",
+						"description": "This is Test Clue 1"
+					}
 				}
 			}
-		}
-		
+		]
 	}
 }

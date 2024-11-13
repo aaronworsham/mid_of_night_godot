@@ -37,8 +37,10 @@ class TestMysteries:
 
 	func test_mystery_discovery():
 		assert_false(mysteries.is_mystery_discovered(m_key))
+		assert_eq(mysteries.get_discovered_mysteries().size(), 0)
 		mysteries.set_mystery_as_discovered(m_key)
 		assert_true(mysteries.is_mystery_discovered(m_key))
+		assert_eq(mysteries.get_discovered_mysteries().size(), 1)
 
 
 	

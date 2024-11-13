@@ -2,12 +2,16 @@ class_name NotebookView
 extends Node2D
 
 @onready var notebook_list:ItemList = %NotebookList
+@onready var querty_ui:TextEdit = %QueryEdit
 var actor_controller:ActorController
 var actor_resource:ActorResource
 var notebook_resource:NotebookResource
 
 
 func _ready() -> void:
+	print("NotebookView Ready")
+	notebook_list.visible = false
+	querty_ui.visible = false
 	EventManager.event_start_dialog.connect(_dialog_action)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
@@ -16,6 +20,8 @@ func _dialog_action(ac:ActorController):
 	actor_controller = ac
 	actor_resource = ac.actor_resource
 	notebook_resource = ac.notebook_resource
+	notebook_list.visible = true
+	querty_ui.visible = true
 	load_list()
 		
 
@@ -36,14 +42,18 @@ func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_b
 	
 	return
 
+# Dialogic Signal scructure
+# [Interact Type]/[Interact GUID]/[Case Type]/[Case GUID]
+# Actor/vendor_actor_1/POD/the_village
+
 func _on_dialogic_signal(_argument:String):
-	print("got signal from Dialogic:"+_argument)
+	print("Notebook Manager got signal from Dialogic:"+_argument)
 	var arg_array = _argument.split("/", true, 0)
 	
-	if notebook_resource.set_discovered(arg_array[2]):
+	if notebook_resource.set_discovered(arg_array[3]):
 		load_list()
 	else:
-		print("Invalid key: "+arg_array[2] )
+		print("Invalid key: "+arg_array[3] )
 
 
 func load_list():

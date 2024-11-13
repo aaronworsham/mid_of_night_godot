@@ -1,23 +1,22 @@
-[gd_scene format=3 uid="uid://b4tj6rrelc8hd"]
+[gd_scene load_steps=2 format=3 uid="uid://b4tj6rrelc8hd"]
+
+[ext_resource type="Script" path="res://Scripts/Views/CaseFilesView.gd" id="1_6gs5b"]
 
 [node name="CaseFilesUi" type="Node2D"]
+script = ExtResource("1_6gs5b")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="CaseFileItemList" type="ItemList" parent="."]
+unique_name_in_owner = true
 offset_left = 4.0
 offset_top = 606.0
-offset_right = 651.0
-offset_bottom = 1072.0
-
-[node name="ItemList" type="ItemList" parent="Panel"]
-layout_mode = 0
-offset_right = 163.0
-offset_bottom = 465.0
+offset_right = 167.0
+offset_bottom = 1071.0
 item_count = 1
 item_0/text = "Test Item"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
-layout_mode = 0
-offset_left = 164.0
-offset_right = 647.0
-offset_bottom = 466.0
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 168.0
+offset_top = 606.0
+offset_right = 651.0
+offset_bottom = 1072.0
 text = "Test"
