@@ -1,9 +1,27 @@
 {
-	"Missing Girl": {
+	"the_village": {
+		"description": "The Village",
+		"dialogic_signal": "Actor/vendor_actor_1/POD/the_village",
+		"short_code": "the_village",
+		"dynamic": {
+			"discovered": false,
+			"clicked": false
+		},
+		"clues": {
+			"Clue 1": {
+				"static": {
+					"name": "Clue 1",
+					"description": "This is Clue 1"
+				}
+			}
+		}
+	},
+	"missing_girl": {
 		"description": "Missing Girl",
-		"dialogic_signal": "test_timeline/mystery/missing_girl",
-		"dynamic" : {
-			"discovered": true,
+		"dialogic_signal": "Actor/vendor_actor_1/Clue/missing_girl",
+		"short_code": "missing_girl",
+		"dynamic": {
+			"discovered": false,
 			"clicked": false
 		},
 		"clues": {

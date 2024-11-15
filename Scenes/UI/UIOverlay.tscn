@@ -1,15 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4llhlqlk70pp"]
+[gd_scene load_steps=4 format=3 uid="uid://b4llhlqlk70pp"]
 
 [ext_resource type="PackedScene" uid="uid://epkelude5vue" path="res://Scenes/UI/NotebookUI.tscn" id="1_8g1ew"]
 [ext_resource type="PackedScene" uid="uid://b4tj6rrelc8hd" path="res://Scenes/UI/CaseFilesUI.tscn" id="1_45bb1"]
-[ext_resource type="PackedScene" uid="uid://tn0ssayl7wum" path="res://Scenes/UI/SQLiteTest.tscn" id="2_3pcp2"]
 [ext_resource type="PackedScene" uid="uid://d2pcfccmm8fhy" path="res://Scenes/UI/TestingUI.tscn" id="3_tw1hq"]
 
 [node name="UIOverlay" type="CanvasLayer"]
 metadata/_edit_vertical_guides_ = [651.0]
-
-[node name="SqlLiteTest" parent="." instance=ExtResource("2_3pcp2")]
-visible = false
 
 [node name="TestingUI" parent="." instance=ExtResource("3_tw1hq")]
 visible = false

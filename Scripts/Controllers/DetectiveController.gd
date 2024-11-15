@@ -42,5 +42,3 @@ func _unhandled_input(event: InputEvent) -> void:
 				#actionables[0].dialog_action()
 				get_viewport().set_input_as_handled()
 				return
-
-

@@ -8,11 +8,11 @@ var valid_fonts = ['AnonymousPro', 'CourierPro', 'LobsterTwo', 'Default']
 
 var default_options = {
 	background_color = Color(.15, .15, .15, 1).to_html(),
-	config_file = 'res://.gutconfig.json',
+	config_file = 'res://gut_config.json',
 	# used by editor to handle enabled/disabled dirs.  All dirs configured go
 	# here and only the enabled dirs go into dirs
 	configured_dirs = [],
-	dirs = ["res://Tests/Unit"],
+	dirs = [],
 	disable_colors = false,
 	# double strategy can be the name of the enum value, the enum value or
 	# lowercase name with spaces:  0/SCRIPT_ONLY/script only
@@ -24,9 +24,9 @@ var default_options = {
 	font_color = Color(.8, .8, .8, 1).to_html(),
 	font_name = 'CourierPrime',
 	font_size = 16,
-	hide_orphans = true,
-	ignore_pause = true,
-	include_subdirs = true,
+	hide_orphans = false,
+	ignore_pause = false,
+	include_subdirs = false,
 	inner_class = '',
 	junit_xml_file = '',
 	junit_xml_timestamp = false,
@@ -37,9 +37,9 @@ var default_options = {
 	pre_run_script = '',
 	prefix = 'test_',
 	selected = '',
-	should_exit = true,
-	should_exit_on_success = true,
-	should_maximize = true,
+	should_exit = false,
+	should_exit_on_success = false,
+	should_maximize = false,
 	compact_mode = false,
 	show_help = false,
 	suffix = '.gd',
