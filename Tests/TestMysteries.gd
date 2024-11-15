@@ -2,14 +2,14 @@ extends GutTest
 
 @onready var mysteries_resource:MysteryResource = MysteryResource.new()
 @onready var mysteries_json:JSON = load("res://Tests/TestMysteries.json")
-var m_key:String
+var m_key = "the_village_mystery_1"
 var c_guid = "the_village_mystery_1#clue_1"
 
 
-func before_all():
+func before_each():
+
 	mysteries_resource.json = mysteries_json
 	mysteries_resource.on_load()
-	m_key = mysteries_resource.get_mystery_keys()[0]
 
 func test_json():
 	assert_not_null(mysteries_resource.json)
@@ -56,7 +56,7 @@ func test_get_clues():
 func test_get_clue_from_dialogic_signal_key():
 	var d_key = "Vendor_Actor_1/Mystery/the_village_mystery_1/Clue/clue_1"
 	var c:Dictionary = mysteries_resource.get_clue_from_dialogic_signal_key(d_key)
-	assert_eq(c["m_key"], "clue_1")
+	assert_eq(c["guid"], c_guid)
 
 func test_get_clue_by_guid():
 	var guid:String = "the_village_mystery_1#clue_1"
@@ -67,6 +67,28 @@ func test_set_clue_as_discovered():
 	assert_false(mysteries_resource.is_clue_discovered(c_guid))
 	mysteries_resource.set_clue_as_discovered(c_guid)
 	assert_true(mysteries_resource.is_clue_discovered(c_guid))
+
+func test_get_discovered_clues():
+	assert_eq(mysteries_resource.get_discovered_clues().size(), 0)
+	mysteries_resource.set_clue_as_discovered(c_guid)
+	assert_eq(mysteries_resource.get_discovered_clues().size(), 1)
+
+func test_discovery_references():
+	assert_false(mysteries_resource._mysteries_dict[m_key]["state"]["discovered"])
+	assert_false(mysteries_resource.is_mystery_discovered(m_key))
+	var tmp1:Array = mysteries_resource.get_discovered_mysteries()
+	assert_eq(tmp1.size(), 0)
+
+	mysteries_resource.set_mystery_as_discovered(m_key)
+	
+	assert_true(mysteries_resource._mysteries_dict[m_key]["state"]["discovered"])
+	assert_true(mysteries_resource.is_mystery_discovered(m_key))
+	var tmp2:Array = mysteries_resource.get_discovered_mysteries()
+	assert_eq(tmp2.size(), 1)
+	assert_eq(tmp2[0]["guid"], m_key)
+	assert_true(tmp2[0]["state"]["discovered"])
+
+
 
 
 
