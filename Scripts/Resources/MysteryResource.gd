@@ -59,12 +59,24 @@ func get_clue_from_dialogic_signal_key(key:String):
 			return c
 	return null
 
-func get_clue_for_mystery_by_guid(guid:String, mystery:String):
-	var clues:Array = get_clues_for_mystery(mystery)
-	for c in clues:
-		if c["guid"] == guid:
-			return c
+func get_clue_by_guid(guid:String):
+	for m in _mysteries_dict:
+		for c in _mysteries_dict[m]["clues"]:
+			if c["guid"] == guid:
+				return c
 	return null	
+
+func is_clue_discovered(guid:String)-> bool:
+	var clue:Dictionary = get_clue_by_guid(guid)
+	if clue:
+		return clue["state"]["discovered"]==true
+	return false
+
+func set_clue_as_discovered(guid:String):
+	var clue:Dictionary = get_clue_by_guid(guid)
+	if clue:
+		clue["state"]["discovered"] = true
+	
 
 func set_mystery_as_discovered(m_key:String)->bool:
 	_mysteries_dict[m_key]["state"]["discovered"] = true
