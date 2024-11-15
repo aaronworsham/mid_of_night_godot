@@ -18,7 +18,7 @@ func test_json():
 func test_mysteries_as_dict():
 	var tmp:Dictionary = mysteries_resource.get_mysteries_as_dict()
 	assert_eq(tmp.keys().size(), 2)
-	assert_eq(tmp.keys()[0], "the_village")
+	assert_eq(tmp.keys()[0], "the_village_mystery_1")
 
 func test_mysteries_as_array():
 	var tmp = mysteries_resource.get_mysteries_as_array()
@@ -28,7 +28,7 @@ func test_mysteries_as_array():
 func test_get_mystery_keys():
 	var tmp:Array = mysteries_resource.get_mystery_keys()
 	assert_eq(tmp.size(), 2)
-	assert_eq(tmp[0], "the_village")
+	assert_eq(tmp[0], "the_village_mystery_1")
 
 func test_get_discovered_mysteries():
 	var tmp:Array = mysteries_resource.get_discovered_mysteries()
@@ -36,24 +36,24 @@ func test_get_discovered_mysteries():
 	mysteries_resource.set_mystery_as_discovered(key)
 	var tmp2:Array = mysteries_resource.get_discovered_mysteries()
 	assert_eq(tmp2.size(),1)
-	assert_eq(tmp2[0]["key"], key)
+	assert_eq(tmp2[0]["guid"], "the_village_mystery_1")
 
 func test_get_description():
-	assert_eq(key, "the_village")
+	assert_eq(key, "the_village_mystery_1")
 	var desc:String = mysteries_resource.get_description(key)
 	assert_eq(desc,"The Village")
 
 func test_get_mystery_from_dialogic_signal_key():
 	var d_key = "Vendor_Actor_1/Mystery/the_village"
 	var tmp:Dictionary = mysteries_resource.get_mystery_from_dialogic_signal_key(d_key)
-	assert_eq(tmp["key"], key)
+	assert_eq(tmp["guid"], "the_village_mystery_1")
 
 func test_get_clues():
 	var tmp:Array = mysteries_resource.get_clues_for_mystery(key)
 	assert_eq(tmp.size(), 2)
 
 func test_get_clue_from_dialogic_signal_key():
-	var d_key = "Vendor_Actor_1/Mystery/the_village/Clue/clue_1"
+	var d_key = "Vendor_Actor_1/Mystery/the_village_mystery_1/Clue/clue_1"
 	var c:Dictionary = mysteries_resource.get_clue_from_dialogic_signal_key(d_key)
 	assert_eq(c["key"], "clue_1")
 

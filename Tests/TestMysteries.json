@@ -1,8 +1,7 @@
 {
-	"the_village": {
+	"the_village_mystery_1": {
 		"description": "The Village",
 		"dialogic_signal_key": "Vendor_Actor_1/Mystery/the_village",
-		"key": "the_village",
 		"guid": "the_village_mystery_1",
 		"state": {
 			"discovered": false,
@@ -39,21 +38,43 @@
 			}
 		]
 	},
-	"missing_girl": {
-		"description": "Missing Girl",
-		"dialogic_signal_key": "Actor/vendor_actor_1/Clue/missing_girl",
-		"key": "missing_girl",
+	"missing_girl_mystery_1": {
+		"description": "The missing girl",
+		"dialogic_signal_key": "Vendor_Actor_1/Mystery/the_missing girl",
+		"guid": "missing_girl_mystery_1",
 		"state": {
 			"discovered": false,
 			"clicked": false
 		},
-		"clues": {
-			"Clue 1": {
-				"static": {
-					"name": "Clue 1",
-					"description": "This is Clue 1"
+		"clues": [
+			{
+				"key":"clue_1",
+				"guid":"missing girl_mystery_1#clue_1",
+				"interactable":"Actor",
+				"interactable_name":"Vendor",
+				"interactable_guid":"Vendor_Actor_1",
+				"mystery_guid":"missing girl_mystery_1",
+				"name": "Clue 1",
+				"description": "This is Clue 1",
+				"state" : {
+					"discovered" : false,
+					"clicked" : false
+				}
+			},
+			{
+				"key":"clue_2",
+				"guid":"missing girl_mystery_1#clue_2",
+				"interactable":"Actor",
+				"interactable_name":"Vendor",
+				"interactable_guid":"Vendor_Actor_1",
+				"mystery_guid":"missing girl_mystery_1",
+				"name": "Clue 2",
+				"description": "This is Clue 2",
+				"state" : {
+					"discovered" : false,
+					"clicked" : false
 				}
 			}
-		}
-	}
+		]
+	},
 }
