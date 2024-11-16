@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://drs6sulao4jn6"]
+
+[ext_resource type="Script" path="res://Scripts/Controllers/CasefilesController.gd" id="1_k837l"]
+
+[node name="CasefilesController" type="Node" groups=["Persist"]]
+script = ExtResource("1_k837l")

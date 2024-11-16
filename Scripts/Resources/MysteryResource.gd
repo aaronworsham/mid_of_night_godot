@@ -9,10 +9,8 @@ var _discovered_mysteries_array:Array
 var _discovered_clues_array:Array
 
 
-
-
 func on_load():
-	_mysteries_dict = json.data.duplicate()
+	_mysteries_dict = json.data.duplicate(true)
 	_discovered_mysteries_array.clear()
 	_discovered_clues_array.clear()
 	for m in _mysteries_dict:
@@ -62,7 +60,7 @@ func get_clues_for_mystery(key:String)-> Array:
 	return _mysteries_dict[key]["clues"]
 
 func get_clue_from_dialogic_signal_key(key:String):
-	var signal_dict:Dictionary = DialogicSignalUtil.parse_signal_key(key)
+	var signal_dict:Dictionary = MoDDialogicUtil.parse_signal_key(key)
 	var clues:Array = get_clues_for_mystery(signal_dict["casefile_key"])
 	for c in clues:
 		if c["key"] == signal_dict["sub_key"]:
@@ -100,3 +98,10 @@ func set_mystery_as_discovered(m_key:String)->bool:
 
 func is_mystery_discovered(m_key:String)->bool:
 	return _mysteries_dict[m_key]["state"]["discovered"]
+
+func save()-> Dictionary:
+	print("MysteryResource Saving")
+	return {}
+
+func load():
+	print("MysteryResource Loading")

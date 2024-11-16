@@ -10,7 +10,7 @@ metadata/_edit_vertical_guides_ = [651.0]
 [node name="TestingUI" parent="." instance=ExtResource("3_tw1hq")]
 visible = false
 
-[node name="CaseFilesUi" parent="." instance=ExtResource("1_45bb1")]
+[node name="CasefilesUI" parent="." instance=ExtResource("1_45bb1")]
 position = Vector2(4, 16)
 
 [node name="NotebookUI" parent="." instance=ExtResource("1_8g1ew")]

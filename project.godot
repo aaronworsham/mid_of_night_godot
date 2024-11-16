@@ -28,7 +28,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "test_timeline": "res://Dialog/Dialogic/test_timeline.dtl",
-"timeline2": "res://Dialog/Dialogic/timeline2.dtl"
+"timeline2": "res://Dialog/Dialogic/timeline2.dtl",
+"tmp_timeline": "res://Dialog/Dialogic/tmp_timeline.dtl"
 }
 variables={}
 extensions_folder="res://addons/dialogic_additions"
@@ -79,6 +80,10 @@ window/size/viewport_height=1080
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/gd_data_binding/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg", "res://addons/gut/plugin.cfg")
+
+[global_group]
+
+Persist=""
 
 [input]
 

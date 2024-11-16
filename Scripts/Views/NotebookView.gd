@@ -12,10 +12,9 @@ func _ready() -> void:
 	print("NotebookView Ready")
 	notebook_list.visible = false
 	querty_ui.visible = false
-	EventManager.event_start_dialog.connect(_dialog_action)
-	Dialogic.signal_event.connect(_on_dialogic_signal)
 
-func _dialog_action(ac:ActorController):
+
+func dialog_action(ac:ActorController):
 	print("NotebookViewUI: Got On Start Dialog from DetectiveController")
 	actor_controller = ac
 	actor_resource = ac.actor_resource
@@ -23,7 +22,7 @@ func _dialog_action(ac:ActorController):
 	notebook_list.visible = true
 	querty_ui.visible = true
 	load_list()
-		
+
 
 func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_button_index: int) -> void:
 	print("button pressed")
@@ -46,7 +45,7 @@ func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_b
 # [Interact Type]/[Interact GUID]/[Case Type]/[Case GUID]
 # Actor/vendor_actor_1/POD/the_village
 
-func _on_dialogic_signal(_argument:String):
+func on_dialogic_signal(_argument:String):
 	print("Notebook Manager got signal from Dialogic: "+_argument)
 	var arg_array = _argument.split("/", true, 0)
 	

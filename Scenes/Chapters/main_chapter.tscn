@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://ck5s77sy8lhis"]
+[gd_scene load_steps=12 format=3 uid="uid://ck5s77sy8lhis"]
 
 [ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_dobw0"]
 [ext_resource type="PackedScene" uid="uid://6vhcn0bs35h" path="res://Scenes/Controllers/input_controller.tscn" id="2_rqwcm"]
+[ext_resource type="PackedScene" uid="uid://chg5k7pau0dic" path="res://Scenes/Controllers/notebook_controller.tscn" id="3_0w2r7"]
 [ext_resource type="PackedScene" uid="uid://uq7pf86awi87" path="res://Scenes/Managers/detective_manager.tscn" id="3_vnnr2"]
+[ext_resource type="PackedScene" uid="uid://drs6sulao4jn6" path="res://Scenes/Controllers/casefiles_controller.tscn" id="4_pxswe"]
 [ext_resource type="PackedScene" uid="uid://c3mtayg14ghop" path="res://Scenes/Managers/event_manager.tscn" id="4_py5oh"]
 [ext_resource type="PackedScene" uid="uid://dsntxowjttdx0" path="res://Scenes/Interactables/Actors/detective_model.tscn" id="5_dlrtt"]
 [ext_resource type="PackedScene" uid="uid://vjn0rs5rhiwm" path="res://Scenes/Managers/mystery_manager.tscn" id="5_e1ejx"]
@@ -22,6 +24,10 @@
 
 [node name="DetectiveController" parent="Controllers" instance=ExtResource("8_fyupr")]
 position = Vector2(0, -1)
+
+[node name="NotebookController" parent="Controllers" instance=ExtResource("3_0w2r7")]
+
+[node name="CasefilesController" parent="Controllers" instance=ExtResource("4_pxswe")]
 
 [node name="Managers" type="Node" parent="."]
 

@@ -78,6 +78,8 @@ func test_discovery_references():
 	assert_false(mysteries_resource.is_mystery_discovered(m_key))
 	var tmp1:Array = mysteries_resource.get_discovered_mysteries()
 	assert_eq(tmp1.size(), 0)
+	assert_false(mysteries_resource.json.data[m_key]["state"]["discovered"])
+	assert_false(mysteries_json.data[m_key]["state"]["discovered"])
 
 	mysteries_resource.set_mystery_as_discovered(m_key)
 	
@@ -87,6 +89,8 @@ func test_discovery_references():
 	assert_eq(tmp2.size(), 1)
 	assert_eq(tmp2[0]["guid"], m_key)
 	assert_true(tmp2[0]["state"]["discovered"])
+	assert_false(mysteries_resource.json.data[m_key]["state"]["discovered"])
+	assert_false(mysteries_json.data[m_key]["state"]["discovered"])
 
 
 

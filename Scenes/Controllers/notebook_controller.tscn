@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://chg5k7pau0dic"]
+
+[ext_resource type="Script" path="res://Scripts/Controllers/NotebookController.gd" id="1_k44m3"]
+
+[node name="NotebookController" type="Node"]
+script = ExtResource("1_k44m3")
