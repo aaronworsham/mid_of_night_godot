@@ -29,7 +29,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "test_timeline": "res://Dialog/Dialogic/test_timeline.dtl",
 "timeline2": "res://Dialog/Dialogic/timeline2.dtl",
-"tmp_timeline": "res://Dialog/Dialogic/tmp_timeline.dtl"
+"tmp_timeline": "res://Dialog/Dialogic/tmp_timeline.dtl",
+"vendor_timeline": "res://Dialog/Dialogic/vendor_timeline.dtl"
 }
 variables={}
 extensions_folder="res://addons/dialogic_additions"

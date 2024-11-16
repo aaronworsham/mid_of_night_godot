@@ -1,7 +1,7 @@
 {
 	"hello": {
 		"static": {
-			"timeline": "test_timeline",
+			"timeline": "vendor_timeline",
 			"label": "hello"
 		},
 		"dynamic": {
@@ -11,7 +11,7 @@
 	},
 	"the_village": {
 		"static": {
-			"timeline": "test_timeline",
+			"timeline": "vendor_timeline",
 			"label": "the_village"
 		},
 		"dynamic": {
