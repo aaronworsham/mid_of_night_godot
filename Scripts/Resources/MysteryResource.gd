@@ -61,7 +61,7 @@ func get_clues_for_mystery(key:String)-> Array:
 
 func get_clue_from_dialogic_signal_key(key:String):
 	var signal_dict:Dictionary = MoDDialogicUtil.parse_signal_key(key)
-	var clues:Array = get_clues_for_mystery(signal_dict["casefile_key"])
+	var clues:Array = get_clues_for_mystery(signal_dict["category_key"])
 	for c in clues:
 		if c["key"] == signal_dict["sub_key"]:
 			return c

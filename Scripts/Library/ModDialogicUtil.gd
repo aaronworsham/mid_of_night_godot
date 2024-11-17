@@ -13,6 +13,6 @@ static func parse_signal_key(key:String)->Dictionary:
 		dict["category_key"] = key_array[2]
 	if key_array.size() >= 4 :
 		dict["sub_category"] = key_array[3]
-	if key_array.has() :
+	if key_array.size() >= 5 :
 		dict["sub_key"] = key_array[4]
 	return dict
