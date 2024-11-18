@@ -1,17 +1,17 @@
 {
-	"hello": {
-		"dialogic_signal_key": "Vendor_Actor_1/Notebook/hello",
+	"test_notebook_hello_thread": {
+		"dialogic_signal_key": "Vendor_Actor_1/Notebook/test_notebook_hello_thread",
 		"timeline": "vendor_timeline",
 		"timeline_label": "hello",
 		"notebook_label": "Hello",
 		"guid": "test_notebook_hello_thread",
 		"state": {
-			"discovered": true,
+			"discovered": false,
 			"clicked": false
 		}
 	},
-	"the_village": {
-		"dialogic_signal_key": "Vendor_Actor_1/Notebook/the_village",
+	"test_notebook_the_village_thread": {
+		"dialogic_signal_key": "Vendor_Actor_1/Notebook/test_notebook_the_village_thread",
 		"timeline": "vendor_timeline",
 		"timeline_label": "the_village",
 		"notebook_label":"The Village",

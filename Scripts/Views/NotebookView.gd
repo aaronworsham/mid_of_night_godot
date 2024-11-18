@@ -19,6 +19,7 @@ func dialog_action(ac:ActorController):
 	actor_controller = ac
 	actor_resource = ac.actor_resource
 	notebook_resource = ac.notebook_resource
+	notebook_resource.on_load()
 	notebook_list.visible = true
 	querty_ui.visible = true
 	load_list()
@@ -31,7 +32,7 @@ func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_b
 	notebook_resource.set_clicked_by_index(_index)
 
 	#tupal to get [timeline, lable]
-	var tupal = notebook_resource.get_dialogic_tupal(_index)
+	var tupal:Array = notebook_resource.get_dialogic_tupal(_index)
 
 	# check if a dialog is already running
 	if Dialogic.current_timeline != null:
@@ -57,12 +58,11 @@ func on_dialogic_signal(_argument:String):
 
 func load_list():
 	notebook_list.clear()
-	var objs:Array = notebook_resource.get_discovered_objects()
+	var objs:Array = notebook_resource.get_discovered_threads()
 	for obj in objs:
-		var key = obj.keys()[0]
 		var label:String 
-		if obj[key]["dynamic"]["clicked"] == true:
-			label = key + " (clicked)"
+		if obj["state"]["clicked"] == true:
+			label = obj["notebook_label"] + " (clicked)"
 		else:
-			label = key
+			label = obj["notebook_label"]
 		notebook_list.add_item(label)
