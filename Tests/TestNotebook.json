@@ -1,0 +1,18 @@
+{
+	"hello": {
+		"timeline": "vendor_timeline",
+		"label": "hello",
+		"state": {
+			"discovered": true,
+			"clicked": false
+		}
+	},
+	"the_village": {
+		"timeline": "vendor_timeline",
+		"label": "the_village",
+		"state": {
+			"discovered": false,
+			"clicked": false
+		}
+	}
+}

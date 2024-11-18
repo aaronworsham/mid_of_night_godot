@@ -46,7 +46,7 @@ func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_b
 # Actor/vendor_actor_1/POD/the_village
 
 func on_dialogic_signal(_argument:String):
-	print("Notebook Manager got signal from Dialogic: "+_argument)
+	print("NotebookView got signal from Dialogic: "+_argument)
 	var arg_array = _argument.split("/", true, 0)
 	
 	if notebook_resource.set_discovered(arg_array[3]):
