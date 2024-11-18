@@ -10,3 +10,8 @@ func before_each():
 func test_setup():
 	assert_not_null(notebook_resource.json.data)
 	assert_not_null(notebook_resource._threads_dict)
+
+func test_notebook_as_dict():
+	var tmp:Dictionary = notebook_resource.get_threads_as_dict()
+	assert_eq(tmp.keys().size(), 2)
+	assert_eq(tmp.keys()[0], "hello")

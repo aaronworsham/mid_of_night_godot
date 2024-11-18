@@ -15,6 +15,9 @@ func on_load():
 		if _threads_dict[t]["state"]["discovered"] == true:
 			_discovered_threads_array.append(_threads_dict[t])
 
+func get_threads_as_dict()-> Dictionary:
+	return _threads_dict
+
 
 # func get_keys()->Array:
 # 	return json.data.keys()
