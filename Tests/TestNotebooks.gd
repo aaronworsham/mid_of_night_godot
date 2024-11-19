@@ -33,4 +33,22 @@ func test_dialogic_tupal():
 	var tmp:Array = notebook_resource.get_dialogic_tupal(0)
 	assert_eq(tmp[0], "vendor_timeline")
 	assert_eq(tmp[1], "hello")
+
+func test_clicked_by_index():
+	var tmp:Array = notebook_resource.get_threads_as_array()
+	assert_false(tmp[0]["state"]["clicked"])
+	assert_false(notebook_resource._threads_array[0]["state"]["clicked"])
+	assert_false(notebook_resource._threads_dict[t_key]["state"]["clicked"])
+	assert_false(notebook_resource.is_clicked_by_index(0))
+
+
+	var tmp2:bool = notebook_resource.set_clicked_by_index(0)
+	
+	var tmp3:Array = notebook_resource.get_threads_as_array()
+	assert_true(tmp[0]["state"]["clicked"])
+	assert_true(tmp3[0]["state"]["clicked"])
+	assert_true(tmp2)
+	assert_true(notebook_resource._threads_array[0]["state"]["clicked"])
+	assert_true(notebook_resource._threads_dict[t_key]["state"]["clicked"])
+	assert_true(notebook_resource.is_clicked_by_index(0))
 	

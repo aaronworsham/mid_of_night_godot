@@ -14,15 +14,17 @@ func on_load():
 	_threads_array.clear()
 	_discovered_threads_array.clear()	
 	for t in _threads_dict:
-		_threads_array.append(json.data[t])
+		_threads_array.append(_threads_dict[t])
 		if _threads_dict[t]["state"]["discovered"] == true:
-			_discovered_threads_array.append(json.data[t])
+			_discovered_threads_array.append(_threads_dict[t])
 	print("test")
 		
 
 func get_threads_as_dict()-> Dictionary:
 	return _threads_dict
 
+func get_threads_as_array()-> Array:
+	return _threads_array
 
 func get_keys()->Array:
 	return _threads_dict.keys()
@@ -77,9 +79,16 @@ func get_dialogic_tupal(_index:int):
 # 		return false
 
 #this
-# func set_clicked_by_index(_index:int)->bool:
-# 	var key = get_topic_key_from_index(_index)
-# 	return set_clicked(key)
+func set_clicked_by_index(_index:int)->bool:
+	if _threads_array.size() >= _index:
+		_threads_array[_index]["state"]["clicked"] = true
+		return true
+	return false
+
+func is_clicked_by_index(_index:int)-> bool:
+	if _threads_array.size() >= _index:
+		return _threads_array[_index]["state"]["clicked"]
+	return false
 
 # func save()->Dictionary:
 # 	var save_dict = {}

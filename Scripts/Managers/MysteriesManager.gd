@@ -19,8 +19,8 @@ func _on_mysteries_updated(m_key:String):
 # [Interact Type]/[Interact GUID]/[Case Type]/[Case GUID]
 # Actor/vendor_actor_1/POD/the_village
 
-func _on_dialogic_signal(m_key:String):
-	var arg_array = m_key.split("/", true, 0)
-	print ("MysteriesManager got Signal :" + arg_array[3])
+func _on_dialogic_signal(_arg:String):
+	var arg_array:Dictionary = MoDDialogicUtil.parse_signal_key(_arg)
+	print ("MysteriesManager got Signal :" + arg_array["category_key"])
 	
 			

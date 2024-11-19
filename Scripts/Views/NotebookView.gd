@@ -29,7 +29,7 @@ func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_b
 	print("button pressed")
 	
 	#Set the Clicked value
-	notebook_resource.set_clicked_by_index(_index)
+	# notebook_resource.set_clicked_by_index(_index)
 
 	#tupal to get [timeline, lable]
 	var tupal:Array = notebook_resource.get_dialogic_tupal(_index)
@@ -48,12 +48,12 @@ func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_b
 
 func on_dialogic_signal(_argument:String):
 	print("NotebookView got signal from Dialogic: "+_argument)
-	var arg_array = _argument.split("/", true, 0)
-	
-	if notebook_resource.set_discovered(arg_array[3]):
-		load_list()
-	else:
-		print("Invalid key: "+arg_array[3] )
+	var arg_array:Dictionary = MoDDialogicUtil.parse_signal_key(_argument)
+	if arg_array["category"] == "Notebook":
+		if notebook_resource.set_discovered(arg_array["category_key"]):
+			load_list()
+		else:
+			print("Invalid key: "+arg_array["category_key"] )
 
 
 func load_list():
