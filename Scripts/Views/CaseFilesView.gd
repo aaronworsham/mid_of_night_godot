@@ -5,6 +5,7 @@ extends Node2D
 @onready var casefiles_content_list:ItemList = %CaseFileContentList
 @onready var mysteries:MysteryResource 
 var casefiles_array:Array
+var casefiles_sub_dict:Dictionary
 
 
 func _ready() -> void:
@@ -32,8 +33,18 @@ func load_list():
 	for m in dm:
 		casefiles_list.add_item(m["description"])
 		casefiles_array.append(m)
+		var dc:Array = mysteries.get_clues_for_mystery(m["guid"])
+		for c in dc:
+			if casefiles_sub_dict.has(m["guid"]):
+				casefiles_sub_dict[m["guid"]].append(c)
+			else:
+				casefiles_sub_dict[m["guid"]] = [c]
 	
 
 func _on_case_file_item_list_item_selected(index: int) -> void:
-	print("Item in Casefile selected: "+str(index))
-	casefiles_content_list.add_item(casefiles_array[index]["content"])
+	var casefile = casefiles_array[index]
+	casefiles_content_list.add_item(casefile["content"])
+	if casefiles_sub_dict.has(casefile["guid"]):
+		for c in casefiles_sub_dict[casefile["guid"]]:
+			casefiles_content_list.add_item(c["description"])
+
