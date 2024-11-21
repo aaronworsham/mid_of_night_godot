@@ -1,7 +1,7 @@
 label hello
 Vendor: Hello young fella.  Here to learn more about [The Village (Info)] ?
 [signal arg="Vendor_Actor_1/Notebook/vendor_notebook_the_village_thread"]
-[signal arg="Actor/vendor_actor_1/Mystery/the_village_mystery_1"]
+[signal arg="Vendor_Actor_1/Mystery/the_village_mystery_1"]
 [end_timeline]
 label the_village
 Vendor: Oh, yes?  Wonderful.  Happy to tell you all about our little village.  Very quite.  Definately not haunted.  I would introduce you to everyone but... they're out looking for that poor girl.  [Missing Girl (Quest)]

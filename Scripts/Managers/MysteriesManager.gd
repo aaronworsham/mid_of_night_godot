@@ -23,4 +23,5 @@ func _on_dialogic_signal(_arg:String):
 	var arg_array:Dictionary = MoDDialogicUtil.parse_signal_key(_arg)
 	print ("MysteriesManager got Signal :" + arg_array["category_key"])
 	
+	
 			

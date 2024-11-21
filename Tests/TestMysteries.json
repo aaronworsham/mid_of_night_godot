@@ -3,6 +3,7 @@
 		"description": "The Village",
 		"dialogic_signal_key": "Vendor_Actor_1/Mystery/the_village",
 		"guid": "the_village_mystery_1",
+		"content": "This is the content for The Village Mystery",
 		"state": {
 			"discovered": false,
 			"clicked": false
@@ -42,6 +43,7 @@
 		"description": "The missing girl",
 		"dialogic_signal_key": "Vendor_Actor_1/Mystery/the_missing girl",
 		"guid": "missing_girl_mystery_1",
+		"content": "This is the content for Missing Girl mystery",
 		"state": {
 			"discovered": false,
 			"clicked": false

@@ -14,9 +14,11 @@ offset_bottom = 1071.0
 item_count = 1
 item_0/text = "Test Item"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 168.0
-offset_top = 606.0
-offset_right = 651.0
-offset_bottom = 1072.0
-text = "Test"
+[node name="CaseFileContentList" type="ItemList" parent="."]
+unique_name_in_owner = true
+offset_left = 178.0
+offset_top = 603.0
+offset_right = 684.0
+offset_bottom = 1068.0
+
+[connection signal="item_selected" from="CaseFileItemList" to="." method="_on_case_file_item_list_item_selected"]
