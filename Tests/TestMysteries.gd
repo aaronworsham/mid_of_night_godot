@@ -1,9 +1,13 @@
 extends GutTest
 
 @onready var mysteries_resource:MysteryResource = MysteryResource.new()
-@onready var mysteries_json:JSON = load("res://Tests/TestMysteries.json")
-var m_key = "the_village_mystery_1"
-var c_guid = "the_village_mystery_1#clue_1"
+@onready var mysteries_json:JSON = load("res://Tests/test_mysteries_strapi.json")
+var mystery_key = "missing_girl_mystery_1"
+var clue_key = "missing_girl_mystery_1_clue_1"
+var mystery_dialogic_key = "Vendor_Actor_1/Mystery/missing_girl_mystery_1" 
+var mystery_guid = "c8d4ff34-0486-420b-b6eb-ed14685a4ec6"
+var clue_dialogic_key = "Vendor_Actor_1/Mystery/missing_girl_mystery_1/Clue/missing_girl_mystery_1_clue_1"
+var clue_guid = "eee97f20-5367-4cac-87f5-8370bc89b0b9"
 
 
 func before_each():
@@ -19,78 +23,105 @@ func test_json():
 func test_mysteries_as_dict():
 	var tmp:Dictionary = mysteries_resource.get_mysteries_as_dict()
 	assert_eq(tmp.keys().size(), 2)
-	assert_eq(tmp.keys()[0], "the_village_mystery_1")
+	assert_eq(tmp.keys()[0], mystery_key)
 
 func test_mysteries_as_array():
 	var tmp = mysteries_resource.get_mysteries_as_array()
 	assert_eq(tmp.size(), 2)
-	assert_eq(tmp[0]["description"], "The Village")
+	assert_eq(tmp[0]["key"], mystery_key)
 
 func test_get_mystery_keys():
 	var tmp:Array = mysteries_resource.get_mystery_keys()
 	assert_eq(tmp.size(), 2)
-	assert_eq(tmp[0], "the_village_mystery_1")
+	assert_eq(tmp[0], mystery_key)
+
+
+func test_get_mystery_by_key():
+	var tmp:Dictionary = mysteries_resource.get_mystery_by_key(mystery_key)
+	assert_eq(tmp["key"], mystery_key)
+
+func test_fail_to_get_mystery_by_key():
+	var tmp:Dictionary = mysteries_resource.get_mystery_by_key("bad_key")
+	assert_true(tmp.is_empty())
+
+func test_get_mystery_by_guid():
+	var tmp:Dictionary = mysteries_resource.get_mystery_by_guid(mystery_guid)
+	assert_eq(tmp["guid"], mystery_guid)
+
+func test_fail_get_mystery_by_guid():
+	var tmp:Dictionary = mysteries_resource.get_mystery_by_guid("bad_key")
+	assert_true(tmp.is_empty())
 
 func test_get_discovered_mysteries():
 	var tmp:Array = mysteries_resource.get_discovered_mysteries()
 	assert_eq(tmp.size(), 0)
-	mysteries_resource.set_mystery_as_discovered(m_key)
+	mysteries_resource.set_mystery_as_discovered(mystery_key)
 	var tmp2:Array = mysteries_resource.get_discovered_mysteries()
 	assert_eq(tmp2.size(),1)
-	assert_eq(tmp2[0]["guid"], "the_village_mystery_1")
-
-func test_get_description():
-	assert_eq(m_key, "the_village_mystery_1")
-	var desc:String = mysteries_resource.get_description(m_key)
-	assert_eq(desc,"The Village")
+	assert_eq(tmp2[0]["key"], mystery_key)
 
 func test_get_mystery_from_dialogic_signal_key():
-	var d_key = "Vendor_Actor_1/Mystery/the_village"
-	var tmp:Dictionary = mysteries_resource.get_mystery_from_dialogic_signal_key(d_key)
-	assert_eq(tmp["guid"], "the_village_mystery_1")
+	var tmp:Dictionary = mysteries_resource.get_mystery_from_dialogic_signal_key(mystery_dialogic_key)
+	assert_eq(tmp["key"], mystery_key)
 
 func test_get_clues():
-	var tmp:Array = mysteries_resource.get_clues_for_mystery(m_key)
+	var tmp:Array = mysteries_resource.get_clues_for_mystery(mystery_key)
 	assert_eq(tmp.size(), 2)
 
 func test_get_clue_from_dialogic_signal_key():
-	var d_key = "Vendor_Actor_1/Mystery/the_village_mystery_1/Clue/clue_1"
-	var c:Dictionary = mysteries_resource.get_clue_from_dialogic_signal_key(d_key)
-	assert_eq(c["guid"], c_guid)
+	var c:Dictionary = mysteries_resource.get_clue_from_dialogic_signal_key(clue_dialogic_key)
+	assert_eq(c["key"], clue_key)
+
+func test_get_clue_by_key():
+	var clue:Dictionary = mysteries_resource.get_clue_by_key(clue_key)
+	assert_eq(clue["key"], clue_key) 
+
+func test_fail_to_get_clue_by_key():
+	var clue:Dictionary = mysteries_resource.get_clue_by_key("bad_key")
+	assert_true(clue.is_empty())
 
 func test_get_clue_by_guid():
-	var guid:String = "the_village_mystery_1#clue_1"
-	var clue:Dictionary = mysteries_resource.get_clue_by_guid(guid)
-	assert_eq(clue["guid"], guid) 
+	var clue:Dictionary = mysteries_resource.get_clue_by_guid(clue_guid)
+	assert_eq(clue["guid"], clue_guid) 
+
+func test_fail_to_get_clue_by_guid():
+	var clue:Dictionary = mysteries_resource.get_clue_by_guid("bad_key")
+	assert_true(clue.is_empty())
+
 
 func test_set_clue_as_discovered():
-	assert_false(mysteries_resource.is_clue_discovered(c_guid))
-	mysteries_resource.set_clue_as_discovered(c_guid)
-	assert_true(mysteries_resource.is_clue_discovered(c_guid))
+	assert_false(mysteries_resource.is_clue_discovered(clue_key))
+	mysteries_resource.set_clue_as_discovered(clue_key)
+	assert_true(mysteries_resource.is_clue_discovered(clue_key))
 
 func test_get_discovered_clues():
 	assert_eq(mysteries_resource.get_discovered_clues().size(), 0)
-	mysteries_resource.set_clue_as_discovered(c_guid)
+	mysteries_resource.set_clue_as_discovered(clue_key)
 	assert_eq(mysteries_resource.get_discovered_clues().size(), 1)
 
 func test_discovery_references():
-	assert_false(mysteries_resource._mysteries_dict[m_key]["state"]["discovered"])
-	assert_false(mysteries_resource.is_mystery_discovered(m_key))
+	assert_false(mysteries_resource._mysteries_dict[mystery_key]["state"]["discovered"])
+	assert_false(mysteries_resource.is_mystery_discovered(mystery_key))
 	var tmp1:Array = mysteries_resource.get_discovered_mysteries()
 	assert_eq(tmp1.size(), 0)
-	assert_false(mysteries_resource.json.data[m_key]["state"]["discovered"])
-	assert_false(mysteries_json.data[m_key]["state"]["discovered"])
+	assert_false(mysteries_resource.json.data.data[0]["state"]["discovered"])
+	assert_false(mysteries_json.data.data[0]["state"]["discovered"])
 
-	mysteries_resource.set_mystery_as_discovered(m_key)
+	mysteries_resource.set_mystery_as_discovered(mystery_key)
 	
-	assert_true(mysteries_resource._mysteries_dict[m_key]["state"]["discovered"])
-	assert_true(mysteries_resource.is_mystery_discovered(m_key))
+	#_mysteries_dict is updated by reference
+	assert_true(mysteries_resource._mysteries_dict[mystery_key]["state"]["discovered"])
+	assert_true(mysteries_resource.is_mystery_discovered(mystery_key))
 	var tmp2:Array = mysteries_resource.get_discovered_mysteries()
+	
+	#_discovered_mysteries array is updated by reference
 	assert_eq(tmp2.size(), 1)
-	assert_eq(tmp2[0]["guid"], m_key)
+	assert_eq(tmp2[0]["key"], mystery_key)
 	assert_true(tmp2[0]["state"]["discovered"])
-	assert_false(mysteries_resource.json.data[m_key]["state"]["discovered"])
-	assert_false(mysteries_json.data[m_key]["state"]["discovered"])
+	
+	#json.data.data is NOT updated by reference
+	assert_false(mysteries_resource.json.data.data[0]["state"]["discovered"])
+	assert_false(mysteries_json.data.data[0]["state"]["discovered"])
 
 
 

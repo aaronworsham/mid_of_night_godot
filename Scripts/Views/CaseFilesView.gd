@@ -47,4 +47,3 @@ func _on_case_file_item_list_item_selected(index: int) -> void:
 	if casefiles_sub_dict.has(casefile["guid"]):
 		for c in casefiles_sub_dict[casefile["guid"]]:
 			casefiles_content_list.add_item(c["description"])
-
