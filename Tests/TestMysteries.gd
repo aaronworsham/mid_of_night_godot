@@ -2,18 +2,24 @@ extends GutTest
 
 @onready var mysteries_resource:MysteryResource = MysteryResource.new()
 @onready var mysteries_json:JSON = load("res://Tests/test_mysteries_strapi.json")
-var mystery_key = "missing_girl_mystery_1"
-var clue_key = "missing_girl_mystery_1_clue_1"
-var mystery_dialogic_key = "Vendor_Actor_1/Mystery/missing_girl_mystery_1" 
-var mystery_guid = "c8d4ff34-0486-420b-b6eb-ed14685a4ec6"
-var clue_dialogic_key = "Vendor_Actor_1/Mystery/missing_girl_mystery_1/Clue/missing_girl_mystery_1_clue_1"
-var clue_guid = "eee97f20-5367-4cac-87f5-8370bc89b0b9"
+var mystery_key 
+var clue_key 
+var mystery_dialogic_key 
+var mystery_guid 
+var clue_dialogic_key
+var clue_guid
 
 
 func before_each():
 
 	mysteries_resource.json = mysteries_json
 	mysteries_resource.on_load()
+	mystery_key = mysteries_resource._mysteries_array[0]["key"]
+	clue_key = mysteries_resource._mysteries_array[0]["clues"][0]["key"]
+	mystery_dialogic_key = mysteries_resource._mysteries_array[0]["dialogic_signal_key"]
+	mystery_guid = mysteries_resource._mysteries_array[0]["guid"]
+	clue_dialogic_key = mysteries_resource._mysteries_array[0]["clues"][0]["dialogic_signal_key"]
+	clue_guid = mysteries_resource._mysteries_array[0]["clues"][0]["guid"]
 
 func test_json():
 	assert_not_null(mysteries_resource.json)

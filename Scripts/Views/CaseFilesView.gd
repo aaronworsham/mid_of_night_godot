@@ -43,7 +43,7 @@ func load_list():
 
 func _on_case_file_item_list_item_selected(index: int) -> void:
 	var casefile = casefiles_array[index]
-	casefiles_content_list.add_item(casefile["content"])
+	casefiles_content_list.add_item(casefile["description"])
 	if casefiles_sub_dict.has(casefile["guid"]):
 		for c in casefiles_sub_dict[casefile["guid"]]:
 			casefiles_content_list.add_item(c["description"])
