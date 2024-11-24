@@ -39,12 +39,12 @@ func on_load():
 			_clues_array.append(c)
 
 			
-	for m in _mysteries_dict:
-		if _mysteries_dict[m]["state"]["discovered"] == true:
-			_discovered_mysteries_array.append(_mysteries_dict[m])
-		for c in _mysteries_dict[m]["clues"]:
-			if c["state"]["discovered"] == true:
-				_discovered_clues_array.append(c)
+	# for m in _mysteries_dict:
+	# 	if _mysteries_dict[m]["state"]["discovered"] == true:
+	# 		_discovered_mysteries_array.append(_mysteries_dict[m])
+	# 	for c in _mysteries_dict[m]["clues"]:
+	# 		if c["state"]["discovered"] == true:
+	# 			_discovered_clues_array.append(c)
 
 
 

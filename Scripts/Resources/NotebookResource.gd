@@ -4,20 +4,27 @@ extends Resource
 @export var json:JSON:
 	set(value):
 		json = value
-var _threads_dict:Dictionary
+
+#source of truth (direct from json)
 var _threads_array:Array
+
+#references to _threads_array
+var _threads_dict:Dictionary
 var _discovered_threads_array:Array
 
 
 func on_load():
-	_threads_dict = json.data.duplicate(true)
+	
 	_threads_array.clear()
 	_discovered_threads_array.clear()	
-	for t in _threads_dict:
-		_threads_array.append(_threads_dict[t])
-		if _threads_dict[t]["state"]["discovered"] == true:
-			_discovered_threads_array.append(_threads_dict[t])
-	print("test")
+
+	#source of truth
+	_threads_array = json.data.data.duplicate(true)
+
+	for t in _threads_array:
+		_threads_dict[t["key"]] = t 
+		if t["state"]["discovered"] == true:
+			_discovered_threads_array.append(t)
 		
 
 func get_threads_as_dict()-> Dictionary:

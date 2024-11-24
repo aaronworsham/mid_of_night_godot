@@ -1,7 +1,7 @@
 extends GutTest
 
 @onready var notebook_resource:NotebookResource = NotebookResource.new()
-@onready var notebook_json:JSON = load ("res://Tests/TestNotebook.json")
+@onready var notebook_json:JSON = load ("res://Tests/test_notebooks.strapi.json")
 var t_key:String
 
 func before_each():
@@ -21,6 +21,7 @@ func test_notebook_as_dict():
 	assert_eq(tmp.keys()[0], "test_notebook_hello_thread")
 
 func test_thread_discover():
+	notebook_resource._discovered_threads_array.clear()
 	var tmp:Array = notebook_resource.get_discovered_threads()
 	assert_eq(tmp.size(), 0)
 	var tmp2:bool = notebook_resource.set_discovered(t_key)

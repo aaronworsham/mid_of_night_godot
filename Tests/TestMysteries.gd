@@ -2,12 +2,12 @@ extends GutTest
 
 @onready var mysteries_resource:MysteryResource = MysteryResource.new()
 @onready var mysteries_json:JSON = load("res://Tests/test_mysteries_strapi.json")
-var mystery_key 
-var clue_key 
-var mystery_dialogic_key 
-var mystery_guid 
-var clue_dialogic_key
-var clue_guid
+var mystery_key:String 
+var clue_key:String
+var mystery_dialogic_key:String
+var mystery_guid:String
+var clue_dialogic_key:String
+var clue_guid:String
 
 
 func before_each():

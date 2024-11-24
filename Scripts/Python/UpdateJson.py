@@ -11,6 +11,14 @@ data_sets = [
 	{
 		"full_url" : 'http://localhost:1337/api/mysteries?populate[0]=state&populate[1]=clues&populate[2]=clues.actor&populate[3]=clues.state',
 		"filepath" : '/home/aaron/Godot/mid_of_night_godot/Data/CaseFiles/mysteries.strapi.json'
+	},
+	{
+		"full_url" : 'http://localhost:1337/api/notebooks?populate=state',
+		"filepath" : '/home/aaron/Godot/mid_of_night_godot/Tests/test_notebooks.strapi.json'
+	},
+	{
+		"full_url" : 'http://localhost:1337/api/notebooks?populate=state',
+		"filepath" : '/home/aaron/Godot/mid_of_night_godot/Data/Notebooks/Actors/vendor_notebook.strapi.json'
 	}
 
 ] 
