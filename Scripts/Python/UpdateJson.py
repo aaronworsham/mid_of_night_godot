@@ -18,8 +18,17 @@ data_sets = [
 	},
 	{
 		"full_url" : 'http://localhost:1337/api/notebooks?populate=state',
-		"filepath" : '/home/aaron/Godot/mid_of_night_godot/Data/Notebooks/Actors/vendor_notebook.strapi.json'
-	}
+		"filepath" : '/home/aaron/Godot/mid_of_night_godot/Data/Notebooks/Actors/venedor_notebook.strapi.json'
+	},
+	{
+		"full_url" : 'http://localhost:1337/api/dialogs',
+		"filepath" : '/home/aaron/Godot/mid_of_night_godot/Data/Dialogs/dialogs.strapi.json'
+	},
+	{
+		"full_url" : 'http://localhost:1337/api/dialogs',
+		"filepath" : '/home/aaron/Godot/mid_of_night_godot/Tests/test_dialogs.strapi.json'
+	},
+
 
 ] 
 

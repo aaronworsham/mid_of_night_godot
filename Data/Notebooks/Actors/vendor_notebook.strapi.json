@@ -1,1 +1,48 @@
-{"data": [{"id": 8, "documentId": "zdqrjeaeib0kc4x22q6f7ijg", "key": "test_notebook_hello_thread", "dialogic_signal_key": "Vendor_Actor_1/Notebook/test_notebook_hello_thread", "timeline_label": "hello", "timeline": "vendor_timeline", "guid": "e6a0ebb7-5ef6-4468-a303-728ba94b7f74", "createdAt": "2024-11-24T13:45:38.267Z", "updatedAt": "2024-11-24T14:07:51.655Z", "publishedAt": "2024-11-24T14:07:51.664Z", "notebook_label": "Hello", "state": {"id": 7, "discovered": true, "clicked": false}}, {"id": 11, "documentId": "y7v07zc89ogap5uogwyrf1tz", "key": "vendor_notebook_the_village_thread", "dialogic_signal_key": "Vendor_Actor_1/Notebook/vendor_notebook_the_village_thread", "timeline_label": "the_village", "timeline": "vendor_timeline", "guid": "91402a99-395e-4c22-a3a9-a9f19c162208", "createdAt": "2024-11-24T13:47:08.312Z", "updatedAt": "2024-11-24T14:15:42.175Z", "publishedAt": "2024-11-24T14:15:42.187Z", "notebook_label": "The Village", "state": {"id": 10, "discovered": false, "clicked": false}}], "meta": {"pagination": {"page": 1, "pageSize": 25, "pageCount": 1, "total": 2}}}
+{
+	"data": [
+		{
+			"id": 8,
+			"documentId": "zdqrjeaeib0kc4x22q6f7ijg",
+			"key": "test_notebook_hello_thread",
+			"dialogic_signal_key": "Vendor_Actor_1/Notebook/test_notebook_hello_thread",
+			"timeline_label": "hello",
+			"timeline": "vendor_timeline",
+			"guid": "e6a0ebb7-5ef6-4468-a303-728ba94b7f74",
+			"createdAt": "2024-11-24T13:45:38.267Z",
+			"updatedAt": "2024-11-24T14:07:51.655Z",
+			"publishedAt": "2024-11-24T14:07:51.664Z",
+			"notebook_label": "Hello",
+			"state": {
+				"id": 7,
+				"discovered": true,
+				"clicked": false
+			}
+		},
+		{
+			"id": 11,
+			"documentId": "y7v07zc89ogap5uogwyrf1tz",
+			"key": "vendor_notebook_the_village_thread",
+			"dialogic_signal_key": "Vendor_Actor_1/Notebook/vendor_notebook_the_village_thread",
+			"timeline_label": "the_village",
+			"timeline": "vendor_timeline",
+			"guid": "91402a99-395e-4c22-a3a9-a9f19c162208",
+			"createdAt": "2024-11-24T13:47:08.312Z",
+			"updatedAt": "2024-11-24T14:15:42.175Z",
+			"publishedAt": "2024-11-24T14:15:42.187Z",
+			"notebook_label": "The Village",
+			"state": {
+				"id": 10,
+				"discovered": false,
+				"clicked": false
+			}
+		}
+	],
+	"meta": {
+		"pagination": {
+			"page": 1,
+			"pageSize": 25,
+			"pageCount": 1,
+			"total": 2
+		}
+	}
+}
