@@ -4,6 +4,8 @@ extends Node
 var actor_controller:ActorController
 var actor_resource:ActorResource
 var notebook_resource:NotebookResource
+var current_timeline_instructions:Array
+var current_timeline:DialogicTimeline
 @onready var notebook_view:NotebookView = get_node("/root/Main/UIOverlay/NotebookUI")
 
 func _ready() -> void:

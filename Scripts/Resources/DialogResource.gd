@@ -21,6 +21,9 @@ func on_load():
 	for t in _dialogs_array:
 		_dialogs_dict[t["timeline_name"]] = t 
 
+func get_timelines()-> Array:
+	return _dialogs_dict.keys()
+
 func get_instructions(timeline:String) -> Array:
 	var a:Array
 	if _dialogs_dict.has(timeline):
