@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dslya3xokc4xn"]
+[gd_scene load_steps=4 format=3 uid="uid://dslya3xokc4xn"]
 
 [ext_resource type="PackedScene" uid="uid://of4iwmum7uuq" path="res://Scenes/Maps/village_map.tscn" id="1_n4k42"]
 [ext_resource type="PackedScene" uid="uid://c77oserb3orfs" path="res://Scenes/Interactables/Actors/Vendor.tscn" id="2_s0k5x"]
+[ext_resource type="Resource" uid="uid://xptubdkfdjyg" path="res://Resources/Threads/Threads.tres" id="3_x2qv1"]
 
 [node name="FirstChapter" type="Node2D"]
 
@@ -9,3 +10,4 @@
 
 [node name="Actor" parent="." instance=ExtResource("2_s0k5x")]
 position = Vector2(-58, 2)
+thread_resource = ExtResource("3_x2qv1")

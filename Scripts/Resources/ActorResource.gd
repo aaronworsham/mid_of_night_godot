@@ -1,5 +1,6 @@
-class_name ActorResource extends BaseResource
+class_name ActorResource extends Resource
 
+@export var guid:String
 @export var name:String
 
 func save()->Dictionary:

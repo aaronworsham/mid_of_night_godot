@@ -2,17 +2,21 @@ class_name MoDDialogicUtil extends Node
 
 
 # "Vendor_Actor_1/Mystery/the_village/Clue/clue_1"
-static func parse_signal_key(key:String)->Dictionary:
+static func parse_signal_key(signalS:String)->Dictionary:
 	var dict:Dictionary
-	var key_array:Array = key.split("/",true,0)
-	if key_array.size() >= 1 :
-		dict["interactable"] = key_array[0]
-	if key_array.size() >= 2 :
-		dict["category"] = key_array[1]
-	if key_array.size() >= 3 :
-		dict["category_key"] = key_array[2]
-	if key_array.size() >= 4 :
-		dict["sub_category"] = key_array[3]
-	if key_array.size() >= 5 :
-		dict["sub_key"] = key_array[4]
+	var key_value_array:Array = signalS.split("|",true,0)
+	for kv:String in key_value_array:
+		var tmpA:Array = kv.split(":",true,0)
+		dict[tmpA[0]] = tmpA[1]
 	return dict
+
+static func generate_signal_key(thread_key:String, i:Dictionary)-> String:
+	var tmpD = {
+		"thread_key":thread_key,
+		"category_key":i["category_key"],
+		"label":i["label"]
+	}
+	
+	var tmpS_format = "[signal arg=\"thread_key:{thread_key}|category_key:{category_key}|label:{label}\"]"
+	var tmpS= tmpS_format.format(tmpD)
+	return tmpS

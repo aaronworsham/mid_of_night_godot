@@ -17,12 +17,6 @@ func _on_start_dialog(_ac:ActorController):
 
 func _on_dialogic_signal(_argument:String):
 	print("CasefilesController: _on_dialogic_signal")
-	var signal_args:Dictionary = MoDDialogicUtil.parse_signal_key(_argument)
-	match signal_args["category"]:
-		"Mystery":
-			print("CasefileController: Got a Mystery from Dialogic")
-			mystery_resource.set_mystery_as_discovered(signal_args["category_key"])
-			casefiles_view.got_mystery_from_dialogic()
 
 func save()->Dictionary:
 	print("CaseFilesController: Saving")
