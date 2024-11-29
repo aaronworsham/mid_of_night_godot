@@ -17,6 +17,14 @@ func _ready() -> void:
 	timeline_resource.on_load()
 
 	EventManager.event_start_dialog.connect(_dialog_action)
+	EventManager.event_notebook_clicked.connect(_notebook_clicked_action)
+
+func _notebook_clicked_action(topic:Dictionary):
+	print("DialogController: Got Signal from notebook_clicked_action")
+	current_threads  = timeline_resource.get_threads_for_actor_guid(topic["actor"])
+	var timeline : DialogicTimeline = DialogicTimeline.new()
+	timeline.events = current_threads[topic["category_key"]]
+	Dialogic.start(timeline)	
 
 func _dialog_action(_ac:ActorController): 
 	print("DialogController: _dialog_action.  GUID:"+_ac.actor_resource.guid)

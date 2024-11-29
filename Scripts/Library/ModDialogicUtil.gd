@@ -14,9 +14,10 @@ static func generate_signal_key(thread_key:String, i:Dictionary)-> String:
 	var tmpD = {
 		"thread_key":thread_key,
 		"category_key":i["category_key"],
-		"label":i["label"]
+		"label":i["label"],
+		"actor":i["actor"]["guid"]
 	}
 	
-	var tmpS_format = "[signal arg=\"thread_key:{thread_key}|category_key:{category_key}|label:{label}\"]"
+	var tmpS_format = "[signal arg=\"thread_key:{thread_key}|category_key:{category_key}|label:{label}|actor:{actor}\"]"
 	var tmpS= tmpS_format.format(tmpD)
 	return tmpS

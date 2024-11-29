@@ -3,6 +3,7 @@ extends Node
 signal event_attributes_updated(attrs:Dictionary)
 signal event_mysteries_updated(mystery:String)
 signal event_start_dialog(act:ActorController)
+signal event_notebook_clicked(topic)
 signal event_testing_ui()
 signal event_save_game()
 signal event_load_game()
@@ -17,6 +18,9 @@ func emit_event_mysteries_updated(mystery:String):
 
 func emit_event_start_dialog(act:ActorController):
 	event_start_dialog.emit(act)
+
+func emit_event_notebook_clicked(topic:Dictionary):
+	event_notebook_clicked.emit(topic)
 
 func emit_testing_ui():
 	event_testing_ui.emit()

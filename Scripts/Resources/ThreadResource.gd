@@ -61,20 +61,18 @@ func get_timeline(key:String)-> DialogicTimeline:
 
 func parse_instructions(instructions:Array, thread_key:String) -> Array:
     var tmpA:Array
-    var tmpS:String
     for i in instructions:
         match i["__component"]:
             "timeline.timeline-dialog":
                 print("Got Dialog")
-                tmpS = i["text"]
+                tmpA.append(i["text"])
             "timeline.timeline-signal":
                 print ("Got Signal")
-                tmpS = MoDDialogicUtil.generate_signal_key(thread_key,i)
+                tmpA.append(MoDDialogicUtil.generate_signal_key(thread_key,i))
             "timeline.thread-voiceover":
                 print ("Got Voiceover")
                 #[voice path="res://Dialog/MainVO/Audio/test_audio.ogg" volume="0.0"]
                 #tmpS="[voice path='res://"+i["male_vo_file"]["url"]+"' volume='0.0']"
-                tmpS="[voice path='res://Dialog/MainVO/Audio/test_audio.ogg' volume='0.0']"
-        print(tmpS)
-        tmpA.append(tmpS)
+                var tmpS="[voice path='res://Dialog/MainVO/Audio/test_audio.ogg' volume='0.0']"
+                tmpA.append(tmpS)
     return tmpA

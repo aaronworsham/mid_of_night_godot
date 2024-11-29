@@ -21,11 +21,11 @@ data_sets = [
 		"filepath" : '/home/aaron/Godot/mid_of_night_godot/Data/Notebooks/Actors/venedor_notebook.strapi.json'
 	},
 	{
-		"full_url" : 'http://localhost:1337/api/threads?populate[0]=instructions&populate[1]=instructions.male_vo_file&populate[2]=instructions.female_vo_file&populate[3]=actor',
+		"full_url" : 'http://localhost:1337/api/threads?populate[0]=instructions&populate[1]=instructions.male_vo_file&populate[2]=instructions.female_vo_file&populate[3]=actor&populate[4]=instructions.actor',
 		"filepath" : '/home/aaron/Godot/mid_of_night_godot/Data/Threads/threads.strapi.json'
 	},
 	{
-		"full_url" : 'http://localhost:1337/api/threads?populate[0]=instructions&populate[1]=instructions.male_vo_file&populate[2]=instructions.female_vo_file&populate[3]=actor',
+		"full_url" : 'http://localhost:1337/api/threads?populate[0]=instructions&populate[1]=instructions.male_vo_file&populate[2]=instructions.female_vo_file&populate[3]=actor&populate[4]=instructions.actor',
 		"filepath" : '/home/aaron/Godot/mid_of_night_godot/Tests/test_threads.strapi.json'
 	},
 

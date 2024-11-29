@@ -7,7 +7,7 @@ var actor_controller:ActorController
 var actor_resource:ActorResource
 var notebook_resource:NotebookResource
 var thread_resource:ThreadResource
-var notebookA:Array
+var notebook_topics:Array
 
 
 func _ready() -> void:
@@ -30,8 +30,8 @@ func dialog_action(ac:ActorController):
 
 
 func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_button_index: int) -> void:
-	print("button pressed")
-	
+	print(notebook_topics[_index])
+	EventManager.emit_event_notebook_clicked(notebook_topics[_index])
 
 
 # Dialogic Signal scructure
@@ -41,10 +41,10 @@ func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_b
 func on_dialogic_signal(_argument:String):
 	print("NotebookView got signal from Dialogic: "+_argument)
 	var tmpD:Dictionary = MoDDialogicUtil.parse_signal_key(_argument)
-	notebookA.append(tmpD)
+	notebook_topics.append(tmpD)
 	load_list()
 
 func load_list():
 	notebook_list.clear()
-	for topic in notebookA:
+	for topic in notebook_topics:
 		notebook_list.add_item(topic["label"])
