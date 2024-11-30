@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2dr7q1oycv3m"]
+
+[ext_resource type="Script" path="res://Scripts/Views/DialogViews.gd" id="1_isrco"]
+
+[node name="DialogUI" type="Node2D"]
+script = ExtResource("1_isrco")
+
+[node name="DialogItemList" type="ItemList" parent="."]
+unique_name_in_owner = true
+offset_left = 694.0
+offset_top = 185.0
+offset_right = 1181.0
+offset_bottom = 823.0

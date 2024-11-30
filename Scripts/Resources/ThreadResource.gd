@@ -64,13 +64,10 @@ func parse_instructions(instructions:Array, thread_key:String) -> Array:
     for i in instructions:
         match i["__component"]:
             "timeline.timeline-dialog":
-                print("Got Dialog")
                 tmpA.append(i["text"])
             "timeline.timeline-signal":
-                print ("Got Signal")
                 tmpA.append(MoDDialogicUtil.generate_signal_key(thread_key,i))
             "timeline.thread-voiceover":
-                print ("Got Voiceover")
                 #[voice path="res://Dialog/MainVO/Audio/test_audio.ogg" volume="0.0"]
                 #tmpS="[voice path='res://"+i["male_vo_file"]["url"]+"' volume='0.0']"
                 var tmpS="[voice path='res://Dialog/MainVO/Audio/test_audio.ogg' volume='0.0']"

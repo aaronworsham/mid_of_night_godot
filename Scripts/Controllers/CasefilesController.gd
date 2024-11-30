@@ -11,12 +11,11 @@ func _ready() -> void:
 
 
 func _on_start_dialog(_ac:ActorController):
-	print("CasefilesController: _on_start_dialog")
 	casefiles_view.on_start_dialog()
 	
 
 func _on_dialogic_signal(_argument:String):
-	print("CasefilesController: _on_dialogic_signal")
+	pass
 
 func save()->Dictionary:
 	print("CaseFilesController: Saving")

@@ -11,13 +11,11 @@ var notebook_topics:Array
 
 
 func _ready() -> void:
-	print("NotebookView Ready")
 	notebook_list.visible = false
 	querty_ui.visible = false
 
 
 func dialog_action(ac:ActorController):
-	print("NotebookViewUI: Got On Start Dialog from DetectiveController")
 	actor_controller = ac
 	actor_resource = ac.actor_resource
 	notebook_resource = ac.notebook_resource
@@ -39,7 +37,6 @@ func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_b
 # Actor/vendor_actor_1/POD/the_village
 
 func on_dialogic_signal(_argument:String):
-	print("NotebookView got signal from Dialogic: "+_argument)
 	var tmpD:Dictionary = MoDDialogicUtil.parse_signal_key(_argument)
 	notebook_topics.append(tmpD)
 	load_list()

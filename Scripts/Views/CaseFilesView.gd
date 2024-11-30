@@ -9,7 +9,6 @@ var casefiles_sub_dict:Dictionary
 
 
 func _ready() -> void:
-	print("CaseFileReady")
 	casefiles_list.visible = false
 	casefiles_content_list.visible = false
 
@@ -17,13 +16,11 @@ func setup_from_controller(_m:MysteryResource):
 	mysteries = _m
 
 func on_start_dialog():
-	print("CaseFilesView: Got On Start Dialog from Detective Controller")
 	casefiles_list.visible = true
 	casefiles_content_list.visible = true
 	load_list()
 
 func got_mystery_from_dialogic():
-	print("CaseFilesView got mystery from Dialogic")
 	load_list()
 
 func load_list():
