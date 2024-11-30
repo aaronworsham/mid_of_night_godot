@@ -5,12 +5,12 @@
 [node name="CasefilesUI" type="Node2D"]
 script = ExtResource("1_6gs5b")
 metadata/_edit_vertical_guides_ = [650.0]
-metadata/_edit_horizontal_guides_ = [700.0]
+metadata/_edit_horizontal_guides_ = [575.0]
 
 [node name="CasefileCategoryList" type="ItemList" parent="."]
 unique_name_in_owner = true
 offset_left = 4.0
-offset_top = 700.0
+offset_top = 577.0
 offset_right = 153.0
 offset_bottom = 1078.0
 item_count = 12
@@ -30,14 +30,14 @@ item_11/text = "Avata Arcanum"
 [node name="CasefileItemList" type="ItemList" parent="."]
 unique_name_in_owner = true
 offset_left = 161.0
-offset_top = 701.0
+offset_top = 577.0
 offset_right = 288.0
 offset_bottom = 1072.0
 
 [node name="CasefileContentList" type="ItemList" parent="."]
 unique_name_in_owner = true
 offset_left = 295.0
-offset_top = 700.0
+offset_top = 577.0
 offset_right = 651.0
 offset_bottom = 1075.0
 

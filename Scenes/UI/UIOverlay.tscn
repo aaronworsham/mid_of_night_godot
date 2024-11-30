@@ -9,7 +9,7 @@
 
 [node name="UIOverlay" type="CanvasLayer"]
 metadata/_edit_vertical_guides_ = [650.0, 1250.0]
-metadata/_edit_horizontal_guides_ = [700.0, 550.0]
+metadata/_edit_horizontal_guides_ = [575.0, 550.0]
 
 [node name="TestingUI" parent="." instance=ExtResource("3_tw1hq")]
 visible = false
@@ -19,6 +19,7 @@ visible = false
 [node name="NotebookUI" parent="." instance=ExtResource("1_8g1ew")]
 
 [node name="DialogUI" parent="." instance=ExtResource("4_liaxn")]
+metadata/_edit_vertical_guides_ = [650.0, 1250.0]
 
 [node name="ObservationUI" parent="." instance=ExtResource("5_6pw7o")]
 

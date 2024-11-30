@@ -5,35 +5,53 @@
 
 [node name="DialogUI" type="Node2D"]
 script = ExtResource("1_isrco")
-metadata/_edit_vertical_guides_ = [650.0, 1250.0]
+metadata/_edit_vertical_guides_ = [650.0, 1250.0, 669.0, 1236.0]
 metadata/_edit_horizontal_guides_ = [550.0, 700.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(744, 113)
-scale = Vector2(0.253061, 0.253061)
+position = Vector2(794, 193)
+scale = Vector2(0.510204, 0.510204)
 texture = ExtResource("2_7rlwc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 950.0
+offset_top = 16.0
+offset_right = 1144.0
+offset_bottom = 93.0
+
+[node name="NameLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Name: Archer Bobson"
+
+[node name="OccupationLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Occupation: Streetsweep"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Disposition: Friendly"
 
 [node name="DialogItemList" type="ItemList" parent="."]
 unique_name_in_owner = true
-offset_left = 712.0
-offset_top = 245.0
-offset_right = 1199.0
-offset_bottom = 636.0
+offset_left = 666.0
+offset_top = 398.0
+offset_right = 1233.0
+offset_bottom = 956.0
 item_count = 1
 item_0/text = "Dialog"
 
 [node name="ContinueButton" type="Button" parent="."]
-offset_left = 849.0
-offset_top = 651.0
-offset_right = 1090.0
-offset_bottom = 682.0
+offset_left = 845.0
+offset_top = 971.0
+offset_right = 1086.0
+offset_bottom = 1002.0
 text = "Continue"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 790.0
-offset_top = 698.0
-offset_right = 1140.0
-offset_bottom = 738.0
+offset_left = 786.0
+offset_top = 1018.0
+offset_right = 1136.0
+offset_bottom = 1058.0
 
 [node name="NotebookButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -50,21 +68,3 @@ text = "Observations"
 [node name="ActionsButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "Actions"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 831.0
-offset_top = 30.0
-offset_right = 1025.0
-offset_bottom = 107.0
-
-[node name="NameLabel" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Name: Archer Bobson"
-
-[node name="OccupationLabel" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Occupation: Streetsweep"
-
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Disposition: Friendly"
