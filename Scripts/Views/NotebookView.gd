@@ -22,13 +22,17 @@ func dialog_action(ac:ActorController):
 	notebook_resource.on_load()
 	thread_resource = ac.thread_resource
 	thread_resource.on_load()
-	notebook_list.visible = true
-	querty_ui.visible = true
 	load_list()
 
+func show_notebook():
+	notebook_list.visible = true
+	querty_ui.visible = true
+
+func add_topic(t:Dictionary):
+	notebook_topics.append(t)
+	load_list()
 
 func _on_notebook_list_item_clicked(_index: int, _at_position: Vector2, _mouse_button_index: int) -> void:
-	print(notebook_topics[_index])
 	EventManager.emit_event_notebook_clicked(notebook_topics[_index])
 
 

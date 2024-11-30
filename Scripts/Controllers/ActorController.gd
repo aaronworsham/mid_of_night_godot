@@ -12,7 +12,6 @@ func _ready() -> void:
 	EventManager.event_start_dialog.connect(dialog_action)
 
 func dialog_action(_act:ActorController) -> void:
-	print("ActorController: Got signal from DetectiveController")
 	querty_ui.visible = true
 
 func save()->Dictionary:
@@ -33,7 +32,6 @@ func save()->Dictionary:
 
 func load(_data:Dictionary)->void:
 	for x in _data["exports"]["resources"]["notebook_resource"].keys():
-		print("ActorController Loading X key: "+x)
 		for y in _data["exports"]["resources"]["notebook_resource"][x].keys():
 			print("ActorController Loading Y key: "+y)
 			print("ActorController Loading Y value: ")

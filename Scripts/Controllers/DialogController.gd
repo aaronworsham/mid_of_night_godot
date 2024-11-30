@@ -21,15 +21,24 @@ func _ready() -> void:
 	EventManager.event_notebook_clicked.connect(_notebook_clicked_action)
 
 func _notebook_clicked_action(topic: Dictionary):
-	current_threads = timeline_resource.get_threads_for_actor_guid(topic["actor"])
-	var timeline: DialogicTimeline = DialogicTimeline.new()
-	timeline.events = current_threads[topic["category_key"]]
-	#Dialogic.start(timeline)
-	dialog_view.update_dialog()
+	execute_thread_instructions(current_threads[topic["category_key"]])
 
 func _dialog_action(_ac: ActorController):
 	current_threads = timeline_resource.get_threads_for_actor_guid(_ac.actor_resource.guid)
-	var timeline: DialogicTimeline = DialogicTimeline.new()
-	timeline.events = current_threads["hello"]
-	#Dialogic.start(timeline)
-	dialog_view.update_dialog()
+	dialog_view.show_dialog_ui()
+	execute_thread_instructions(current_threads["hello"])
+
+func execute_thread_instructions(instructions:Array):
+	for i in instructions:
+		match i["__component"]:
+			"timeline.thread.start":
+				pass
+			"timeline.timeline-dialog":
+				dialog_view.update_dialog(i["text"])
+			"timeline.timeline-signal":
+				EventManager.event_notebook_new_topic.emit(i)
+			"timeline.thread-voiceover":
+				pass
+			"timeline.thread-end":
+				pass
+	

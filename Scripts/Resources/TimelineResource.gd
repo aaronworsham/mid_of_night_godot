@@ -15,7 +15,7 @@ func on_load():
 	_timelines_dict_by_actor_guid.clear()
 
 	if _threads_resource != null:
-		var tmpaD:Dictionary = _threads_resource.get_all_parsed_instructions_by_thread_guid()
+		var tmpaD:Dictionary = _threads_resource.get_all_instructions_by_thread_guid()
 
 		for t:String in tmpaD:
 			var actor_guid = tmpaD[t]["actor"]["guid"]

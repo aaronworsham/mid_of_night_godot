@@ -25,51 +25,30 @@ func on_load():
 		_threads_dict_by_key[t["thread_key"]] = t 
 		_threads_dict_by_guid[t["guid"]] = t 
 
-func get_all_parsed_instructions_by_thread_guid()-> Dictionary:
+func get_all_instructions_by_thread_guid()-> Dictionary:
 	var tmpaD:Dictionary
-	var tmpbA:Array
-
 	for t in _threads_array:
-		tmpbA = parse_instructions(t["instructions"],t["thread_key"])
 		tmpaD[t["guid"]] = {
 			"thread_key":t["thread_key"],
 			"thread_guid":t["guid"],
 			"actor":t["actor"],
-			"instructions":tmpbA
+			"instructions":t["instructions"]
 		}
 	return tmpaD
 
-func get_parsed_instructions_for_key(key:String) -> Array:
-	var tmpA:Array
+func get_instructions_for_key(key:String) -> Array:
 	if _threads_dict_by_key.has(key):
 		var instructions = _threads_dict_by_key[key]["instructions"]
-		tmpA = parse_instructions(instructions, key)
-		return tmpA
+		return instructions
 	return []
 
 func get_timeline(key:String)-> DialogicTimeline:
 	var tmpA:Array
 	var timeline:DialogicTimeline = DialogicTimeline.new()
 	if _threads_dict_by_key.has(key):
-		tmpA = get_parsed_instructions_for_key(key)
+		tmpA = get_instructions_for_key(key)
 		timeline.events = tmpA
 		timeline.process()
 		if timeline.events_processed:
 			return timeline
 	return DialogicTimeline.new()
-
-
-func parse_instructions(instructions:Array, thread_key:String) -> Array:
-	var tmpA:Array
-	for i in instructions:
-		match i["__component"]:
-			"timeline.timeline-dialog":
-				tmpA.append(i["text"])
-			"timeline.timeline-signal":
-				tmpA.append(MoDDialogicUtil.generate_signal_key(thread_key,i))
-			"timeline.thread-voiceover":
-				#[voice path="res://Dialog/MainVO/Audio/test_audio.ogg" volume="0.0"]
-				#tmpS="[voice path='res://"+i["male_vo_file"]["url"]+"' volume='0.0']"
-				var tmpS="[voice path='res://Dialog/MainVO/Audio/test_audio.ogg' volume='0.0']"
-				tmpA.append(tmpS)
-	return tmpA
