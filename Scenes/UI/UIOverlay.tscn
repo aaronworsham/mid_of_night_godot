@@ -1,19 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4llhlqlk70pp"]
+[gd_scene load_steps=7 format=3 uid="uid://b4llhlqlk70pp"]
 
 [ext_resource type="PackedScene" uid="uid://epkelude5vue" path="res://Scenes/UI/NotebookUI.tscn" id="1_8g1ew"]
 [ext_resource type="PackedScene" uid="uid://b4tj6rrelc8hd" path="res://Scenes/UI/CaseFilesUI.tscn" id="1_45bb1"]
 [ext_resource type="PackedScene" uid="uid://d2pcfccmm8fhy" path="res://Scenes/UI/TestingUI.tscn" id="3_tw1hq"]
 [ext_resource type="PackedScene" uid="uid://d2dr7q1oycv3m" path="res://Scenes/UI/DialogUI.tscn" id="4_liaxn"]
+[ext_resource type="PackedScene" uid="uid://dw5ichaer73uv" path="res://Scenes/UI/ObservationUI.tscn" id="5_6pw7o"]
+[ext_resource type="PackedScene" uid="uid://7j0lyauaiuve" path="res://Scenes/UI/ActionUI.tscn" id="6_xrufm"]
 
 [node name="UIOverlay" type="CanvasLayer"]
-metadata/_edit_vertical_guides_ = [651.0]
+metadata/_edit_vertical_guides_ = [650.0, 1250.0]
+metadata/_edit_horizontal_guides_ = [700.0, 550.0]
 
 [node name="TestingUI" parent="." instance=ExtResource("3_tw1hq")]
 visible = false
 
 [node name="CasefilesUI" parent="." instance=ExtResource("1_45bb1")]
-position = Vector2(4, 16)
 
 [node name="NotebookUI" parent="." instance=ExtResource("1_8g1ew")]
 
 [node name="DialogUI" parent="." instance=ExtResource("4_liaxn")]
+
+[node name="ObservationUI" parent="." instance=ExtResource("5_6pw7o")]
+
+[node name="ActionUI" parent="." instance=ExtResource("6_xrufm")]

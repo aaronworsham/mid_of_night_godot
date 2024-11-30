@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://f1tivs1vbjok" path="res://Scenes/Interactables/Actors/ActorTemplate.tscn" id="1_gc8rv"]
 [ext_resource type="Resource" uid="uid://cxum027mnpi12" path="res://Resources/Notebooks/VendorNotebookResource.tres" id="2_cbey4"]
 [ext_resource type="Resource" uid="uid://cy7swn42bjlm5" path="res://Resources/Interactables/Actors/VendorActorResource.tres" id="2_n0gfe"]
-[ext_resource type="Texture2D" uid="uid://cry6db4u7hutd" path="res://Assets/Sprites/063f63cd2d00668b7b581e1dc7102548.jpg" id="2_wafak"]
 [ext_resource type="Resource" path="res://Dialog/Dialogic/test_timeline.dtl" id="3_twbpv"]
+[ext_resource type="Texture2D" uid="uid://tcevpv5xoyq4" path="res://Assets/portraits/photobooth-in-white-cap.jpg" id="5_sb8jl"]
 
 [node name="Actor" instance=ExtResource("1_gc8rv")]
 actor_resource = ExtResource("2_n0gfe")
@@ -12,4 +12,6 @@ notebook_resource = ExtResource("2_cbey4")
 dialog_timeline = ExtResource("3_twbpv")
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_wafak")
+scale = Vector2(0.0392857, 0.0392857)
+texture = ExtResource("5_sb8jl")
+region_enabled = false

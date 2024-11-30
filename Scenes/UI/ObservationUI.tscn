@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw5ichaer73uv"]
+
+[ext_resource type="Script" path="res://Scripts/Views/ObservationView.gd" id="1_dc77w"]
+
+[node name="ObservationUI" type="Node2D"]
+script = ExtResource("1_dc77w")
+metadata/_edit_vertical_guides_ = [1251.0]
+metadata/_edit_horizontal_guides_ = [548.0]
+
+[node name="ObservationItemList" type="ItemList" parent="."]
+unique_name_in_owner = true
+offset_left = 1256.0
+offset_top = 2.0
+offset_right = 1920.0
+offset_bottom = 547.0
+item_count = 1
+item_0/text = "Observations"
