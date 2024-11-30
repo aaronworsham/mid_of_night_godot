@@ -4,7 +4,6 @@ class_name DialogView extends Node
 @onready var dialog_ui:Node = get_node("/root/Main/UIOverlay/DialogUI")
 
 func _ready() -> void:
-	clear_list()
 	dialog_ui.visible = false
 
 func show_dialog_ui():
@@ -14,6 +13,7 @@ func update_dialog(copy:String):
 	var dialog_container = RichTextLabel.new()
 	dialog_container.text = copy
 	dialog_container.fit_content = true
+	dialog_container.bbcode_enabled = true
 	dialog_list.add_child(dialog_container)
 
 func clear_list(): 
