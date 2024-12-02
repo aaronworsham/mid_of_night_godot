@@ -37,6 +37,8 @@ func execute_thread_instructions(instructions:Array):
 				dialog_view.update_dialog(i["text"])
 			"timeline.timeline-signal":
 				EventManager.event_notebook_new_topic.emit(i)
+			"timeline.casefile-signal":
+				EventManager.event_casefile_updated.emit(i)
 			"timeline.thread-voiceover":
 				pass
 			"timeline.thread-end":

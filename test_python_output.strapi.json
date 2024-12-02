@@ -1,0 +1,110 @@
+{
+    "data": [
+        {
+            "id": 4,
+            "documentId": "s926uldnaa6h6cnqqeuslpfo",
+            "Label": "The Missing Girl",
+            "guid": "5b7fd274-3f36-46b6-9d3c-ee2a0953c9a0",
+            "createdAt": "2024-12-02T16:52:06.774Z",
+            "updatedAt": "2024-12-02T16:54:28.132Z",
+            "publishedAt": "2024-12-02T16:54:28.143Z",
+            "Instructions": [
+                {
+                    "__component": "timeline.timeline-dialog",
+                    "id": 38,
+                    "text": "I can tell you a bit about our little village.  Very quiet.  Definately not haunted.  I would introduce you to everyone but they're out looking for that poor girl  [color=red]The Missing Girl[/color]",
+                    "type": "dialog"
+                },
+                {
+                    "__component": "signal.signal-tread-to-mystery",
+                    "id": 2,
+                    "Label": "The Missing Girl",
+                    "clue": {
+                        "id": 10,
+                        "documentId": "juhyv1a5i18gw50i0fzne7ye",
+                        "key": "missing_girl_mystery_1_clue_1",
+                        "guid": "eee97f20-5367-4cac-87f5-8370bc89b0b9",
+                        "dialogic_signal_key": "Vendor_Actor_1/Mystery/missing_girl_mystery_1/Clue/missing_girl_mystery_1_clue_1",
+                        "createdAt": "2024-11-22T13:19:46.007Z",
+                        "updatedAt": "2024-11-22T13:19:57.001Z",
+                        "publishedAt": "2024-11-22T13:19:57.012Z",
+                        "name": "Missing Girl Clue 1",
+                        "description": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "text": "Missing Girl Clue 1"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "mystery": {
+                        "id": 19,
+                        "documentId": "aq7l81wua2yfdxczixxsxn71",
+                        "description": "Missing Girl Mystery",
+                        "createdAt": "2024-11-22T13:18:04.951Z",
+                        "updatedAt": "2024-11-24T14:34:05.169Z",
+                        "publishedAt": "2024-11-24T14:31:56.781Z",
+                        "locale": "en",
+                        "dialogic_signal_key": "Vendor_Actor_1/Mystery/missing_girl_mystery_1",
+                        "content": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "text": "Missing Girl Mystery"
+                                    }
+                                ]
+                            }
+                        ],
+                        "guid": "c8d4ff34-0486-420b-b6eb-ed14685a4ec6",
+                        "key": "missing_girl_mystery_1"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "documentId": "li91j7adksokxgbp93wmaz0y",
+            "Label": "The Village",
+            "guid": "bb2db762-410c-49e5-9ade-108a316e6812",
+            "createdAt": "2024-12-02T16:51:36.988Z",
+            "updatedAt": "2024-12-02T17:35:51.936Z",
+            "publishedAt": "2024-12-02T17:35:51.952Z",
+            "Instructions": [
+                {
+                    "__component": "timeline.timeline-dialog",
+                    "id": 40,
+                    "text": "Hello mister.  Here to learn more bout [color=green]The Village[/color]?",
+                    "type": "dialog"
+                },
+                {
+                    "__component": "signal.signal-thread-to-notebook",
+                    "id": 4,
+                    "Label": "The Village",
+                    "next_thread": {
+                        "id": 4,
+                        "documentId": "s926uldnaa6h6cnqqeuslpfo",
+                        "Label": "The Missing Girl",
+                        "guid": "5b7fd274-3f36-46b6-9d3c-ee2a0953c9a0",
+                        "createdAt": "2024-12-02T16:52:06.774Z",
+                        "updatedAt": "2024-12-02T16:54:28.132Z",
+                        "publishedAt": "2024-12-02T16:54:28.143Z"
+                    }
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 2
+        }
+    }
+}

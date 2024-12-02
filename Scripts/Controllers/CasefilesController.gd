@@ -5,17 +5,18 @@ class_name CasefilesController extends Node
 
 func _ready() -> void:
 	EventManager.event_start_dialog.connect(_on_start_dialog)
-	Dialogic.signal_event.connect(_on_dialogic_signal)
+	EventManager.event_casefile_updated.connect(_on_casefile_updated)
 	casefiles_view.setup_from_controller(mystery_resource)
 	mystery_resource.on_load()
 
 
 func _on_start_dialog(_ac:ActorController):
 	casefiles_view.on_start_dialog()
+
+func _on_casefile_updated(data:Dictionary):
+	pass
 	
 
-func _on_dialogic_signal(_argument:String):
-	pass
 
 func save()->Dictionary:
 	print("CaseFilesController: Saving")

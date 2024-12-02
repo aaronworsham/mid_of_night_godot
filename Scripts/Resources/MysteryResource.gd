@@ -38,14 +38,7 @@ func on_load():
 			_clues_guid_dict[c["guid"]] = c
 			_clues_array.append(c)
 
-			
-	# for m in _mysteries_dict:
-	# 	if _mysteries_dict[m]["state"]["discovered"] == true:
-	# 		_discovered_mysteries_array.append(_mysteries_dict[m])
-	# 	for c in _mysteries_dict[m]["clues"]:
-	# 		if c["state"]["discovered"] == true:
-	# 			_discovered_clues_array.append(c)
-
+		
 
 
 # Mysteries
@@ -77,11 +70,6 @@ func get_discovered_mysteries()->Array:
 func get_description(mystery:String)-> String:
 	return _mysteries_dict[mystery]["description"]
 
-func get_mystery_from_dialogic_signal_key(key:String)-> Dictionary:
-	for m_key in _mysteries_dict:
-		if _mysteries_dict[m_key]["dialogic_signal_key"] == key:
-			return _mysteries_dict[m_key]
-	return {}
 
 ## Has Mysteries
 
@@ -94,6 +82,13 @@ func set_mystery_as_discovered(m_key:String)->bool:
 	_mysteries_dict[m_key]["state"]["discovered"] = true
 	_discovered_mysteries_array.append(_mysteries_dict[m_key])
 	return true
+
+func set_mystery_as_discovered_by_guid(guid:String) -> bool:
+	_mysteries_guid_dict[guid]["state"]["discovered"] = true
+	_discovered_mysteries_array.append(_mysteries_guid_dict[guid])
+	return true
+
+
 
 ## Is Mysteries
 
@@ -111,14 +106,6 @@ func get_clues_for_mystery(key:String)-> Array:
 	if _mysteries_dict.has(key):
 		return _mysteries_dict[key]["clues"]
 	return []
-
-func get_clue_from_dialogic_signal_key(key:String)-> Dictionary:
-	var signal_dict:Dictionary = MoDDialogicUtil.parse_signal_key(key)
-	var clues:Array = get_clues_for_mystery(signal_dict["category_key"])
-	for c in clues:
-		if c["key"] == signal_dict["sub_key"]:
-			return c
-	return {}
 
 func get_clue_by_key(key:String)-> Dictionary:
 	if _clues_dict.has(key):
@@ -151,6 +138,7 @@ func set_clue_as_discovered(guid:String):
 		_discovered_clues_array.append(clue)
 		
 	
+
 
 
 func save()-> Dictionary:

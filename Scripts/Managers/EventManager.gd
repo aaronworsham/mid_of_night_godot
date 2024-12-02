@@ -1,9 +1,13 @@
 extends Node
 
 signal event_attributes_updated(attrs:Dictionary)
+
 signal event_mysteries_updated(mystery:String)
+
 signal event_start_dialog(act:ActorController)
-signal event_notebook_new_topic(topic)
+signal event_notebook_new_topic(topic:Dictionary)
+signal event_casefile_updated(data:Dictionary)
+
 signal event_notebook_clicked(topic)
 signal event_testing_ui()
 signal event_save_game()
