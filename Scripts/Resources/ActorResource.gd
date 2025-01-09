@@ -18,5 +18,5 @@ func on_load():
 	#source of truth
 	_actors_array = json.data.data.duplicate(true)
 
-	for t in _actors_array:
-		_actors_dict_by_guid[t["guid"]] = t 
+	# for t in _actors_array:
+	# 	_actors_dict_by_guid[t["guid"]] = t 
