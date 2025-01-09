@@ -1,10 +1,22 @@
 class_name ActorResource extends Resource
 
-@export var guid:String
-@export var name:String
+@export var json:JSON:
+	set(value):
+		json = value
 
-func save()->Dictionary:
-	var save_dict = {
-		"name":name
-	}
-	return save_dict
+#source of truth (direct from json)
+var _actors_array:Array
+
+#Reference lookup by GUID
+var _actors_dict_by_guid:Dictionary
+
+func on_load():
+	
+	_actors_array.clear()
+	_actors_dict_by_guid.clear()
+
+	#source of truth
+	_actors_array = json.data.data.duplicate(true)
+
+	for t in _actors_array:
+		_actors_dict_by_guid[t["guid"]] = t 

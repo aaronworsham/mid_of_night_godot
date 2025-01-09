@@ -1,17 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://ck5s77sy8lhis"]
+[gd_scene load_steps=9 format=3 uid="uid://ck5s77sy8lhis"]
 
 [ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_dobw0"]
 [ext_resource type="PackedScene" uid="uid://6vhcn0bs35h" path="res://Scenes/Controllers/input_controller.tscn" id="2_rqwcm"]
-[ext_resource type="PackedScene" uid="uid://chg5k7pau0dic" path="res://Scenes/Controllers/notebook_controller.tscn" id="3_0w2r7"]
 [ext_resource type="PackedScene" uid="uid://uq7pf86awi87" path="res://Scenes/Managers/detective_manager.tscn" id="3_vnnr2"]
-[ext_resource type="PackedScene" uid="uid://drs6sulao4jn6" path="res://Scenes/Controllers/casefiles_controller.tscn" id="4_pxswe"]
 [ext_resource type="PackedScene" uid="uid://c3mtayg14ghop" path="res://Scenes/Managers/event_manager.tscn" id="4_py5oh"]
-[ext_resource type="PackedScene" uid="uid://cd0b047wu0rka" path="res://Scenes/Controllers/dialog_controller.tscn" id="5_8dkcc"]
 [ext_resource type="PackedScene" uid="uid://dsntxowjttdx0" path="res://Scenes/Interactables/Actors/detective_model.tscn" id="5_dlrtt"]
-[ext_resource type="PackedScene" uid="uid://vjn0rs5rhiwm" path="res://Scenes/Managers/mystery_manager.tscn" id="5_e1ejx"]
-[ext_resource type="PackedScene" uid="uid://b4llhlqlk70pp" path="res://Scenes/UI/UIOverlay.tscn" id="6_1lec7"]
 [ext_resource type="PackedScene" uid="uid://dslya3xokc4xn" path="res://Scenes/Chapters/first_chapter.tscn" id="6_o33fe"]
-[ext_resource type="PackedScene" uid="uid://ctoxriedtuspu" path="res://Scenes/Controllers/ObservationController.tscn" id="6_yvlsw"]
 [ext_resource type="PackedScene" uid="uid://ckc8ld73u1eaf" path="res://Scenes/Controllers/ActionUIController.tscn" id="7_71imp"]
 [ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="8_fyupr"]
 
@@ -28,14 +22,6 @@
 [node name="DetectiveController" parent="Controllers" instance=ExtResource("8_fyupr")]
 position = Vector2(0, -1)
 
-[node name="NotebookController" parent="Controllers" instance=ExtResource("3_0w2r7")]
-
-[node name="CasefilesController" parent="Controllers" instance=ExtResource("4_pxswe")]
-
-[node name="DialogController" parent="Controllers" instance=ExtResource("5_8dkcc")]
-
-[node name="ObservationController" parent="Controllers" instance=ExtResource("6_yvlsw")]
-
 [node name="ActionUIController" parent="Controllers" instance=ExtResource("7_71imp")]
 
 [node name="Managers" type="Node" parent="."]
@@ -48,13 +34,9 @@ unique_name_in_owner = true
 
 [node name="EventManager" parent="Managers" instance=ExtResource("4_py5oh")]
 
-[node name="MysteryManager" parent="Managers" instance=ExtResource("5_e1ejx")]
-
-[node name="UIOverlay" parent="." instance=ExtResource("6_1lec7")]
-
 [node name="Models" type="Node" parent="."]
 
 [node name="DetectiveModel" parent="Models" instance=ExtResource("5_dlrtt")]
 
 [node name="FirstChapter" parent="." instance=ExtResource("6_o33fe")]
-position = Vector2(0, 4)
+position = Vector2(2, 0)

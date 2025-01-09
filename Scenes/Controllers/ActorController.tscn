@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://c06cl1nbp4dc2"]
+
+[node name="ActorController" type="Node2D"]

@@ -28,3 +28,10 @@ script = null
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_6ddrd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -46.0
+offset_top = 22.0
+offset_right = 62.0
+offset_bottom = 45.0
+text = "TmpLblDelete"
