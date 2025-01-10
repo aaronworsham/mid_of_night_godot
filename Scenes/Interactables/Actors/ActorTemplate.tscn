@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://f1tivs1vbjok"]
+[gd_scene load_steps=4 format=3 uid="uid://f1tivs1vbjok"]
 
 [ext_resource type="PackedScene" uid="uid://bhnd86i7oo0md" path="res://Scenes/Interactables/Actionable.tscn" id="1_3n25r"]
-[ext_resource type="Script" path="res://Scripts/Controllers/ActorController.gd" id="1_hmqp6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7hob"]
 size = Vector2(26, 26)
@@ -10,7 +9,6 @@ size = Vector2(26, 26)
 size = Vector2(40, 39)
 
 [node name="Actor" type="StaticBody2D" groups=["Persist"]]
-script = ExtResource("1_hmqp6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
@@ -29,7 +27,7 @@ script = null
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_6ddrd")
 
-[node name="Label" type="Label" parent="."]
+[node name="ActorLabel" type="Label" parent="."]
 offset_left = -46.0
 offset_top = 22.0
 offset_right = 62.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ck5s77sy8lhis"]
+[gd_scene load_steps=10 format=3 uid="uid://ck5s77sy8lhis"]
 
 [ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_dobw0"]
 [ext_resource type="PackedScene" uid="uid://6vhcn0bs35h" path="res://Scenes/Controllers/input_controller.tscn" id="2_rqwcm"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dsntxowjttdx0" path="res://Scenes/Interactables/Actors/detective_model.tscn" id="5_dlrtt"]
 [ext_resource type="PackedScene" uid="uid://dslya3xokc4xn" path="res://Scenes/Chapters/first_chapter.tscn" id="6_o33fe"]
 [ext_resource type="PackedScene" uid="uid://ckc8ld73u1eaf" path="res://Scenes/Controllers/ActionUIController.tscn" id="7_71imp"]
+[ext_resource type="Script" path="res://Scripts/Loaders/ActorLoader.gd" id="7_ycood"]
 [ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="8_fyupr"]
 
 [node name="Main" type="Node2D"]
@@ -34,7 +35,13 @@ unique_name_in_owner = true
 
 [node name="EventManager" parent="Managers" instance=ExtResource("4_py5oh")]
 
+[node name="Loaders" type="Node" parent="."]
+
+[node name="ActorLoader" type="Node" parent="Loaders"]
+script = ExtResource("7_ycood")
+
 [node name="Models" type="Node" parent="."]
+unique_name_in_owner = true
 
 [node name="DetectiveModel" parent="Models" instance=ExtResource("5_dlrtt")]
 
