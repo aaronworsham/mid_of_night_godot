@@ -20,9 +20,17 @@ func _ready() -> void:
 
         var actor_instance:StaticBody2D = actor_template.instantiate()
 
+        #Move the Actor to the right location
         actor_instance.position = actor_model.get_coords()
 
+        #Give the Actor the right Label
         var label:Label = actor_instance.find_child("ActorLabel")
         label.text = actor_model.get_actor_name()
+
+        #Give the Actor the right image
+        var portrait:Sprite2D = actor_instance.find_child("ActorPortrait")
+        var portraitTexture:Texture = load(actor_model.get_portrait_path())
+        portrait.texture = portraitTexture      
+
         models_container.add_child(actor_instance)
         EventManager.event_actor_loaded.emit(actor_model)

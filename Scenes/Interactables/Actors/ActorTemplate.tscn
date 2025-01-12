@@ -10,7 +10,8 @@ size = Vector2(40, 39)
 
 [node name="Actor" type="StaticBody2D" groups=["Persist"]]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="ActorPortrait" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 scale = Vector2(0.25, 0.25)
 region_enabled = true
 region_rect = Rect2(27.8333, 48.4996, 98, 104)

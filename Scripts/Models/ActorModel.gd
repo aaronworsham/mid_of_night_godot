@@ -13,3 +13,6 @@ func get_guid()->String:
 
 func get_coords()->Vector2:
     return actor_resource.get_coords()
+
+func get_portrait_path()->String:
+    return actor_resource.get_portrait_path()
