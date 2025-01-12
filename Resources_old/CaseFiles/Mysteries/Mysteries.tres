@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MysteryResource" load_steps=3 format=3 uid="uid://3m3you0wdu4f"]
 
 [ext_resource type="JSON" path="res://Data/CaseFiles/mysteries.strapi.json" id="1_mrctq"]
-[ext_resource type="Script" path="res://Scripts/Resources/MysteryResource.gd" id="2_gyi32"]
+[ext_resource type="Script" path="res://Scripts/Systems/Mystery/MysteryResource.gd" id="2_gyi32"]
 
 [resource]
 script = ExtResource("2_gyi32")

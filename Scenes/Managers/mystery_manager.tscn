@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://vjn0rs5rhiwm"]
 
-[ext_resource type="Script" path="res://Scripts/Managers/MysteriesManager.gd" id="1_4mctn"]
+[ext_resource type="Script" path="res://Scripts/Systems/Mystery/MysteriesManager.gd" id="1_4mctn"]
 
 [node name="MysteryManager" type="Node"]
 script = ExtResource("1_4mctn")

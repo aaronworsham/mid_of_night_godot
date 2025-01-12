@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ctoxriedtuspu"]
 
-[ext_resource type="Script" path="res://Scripts/Controllers/ObservationController.gd" id="1_akqu5"]
+[ext_resource type="Script" path="res://Scripts/Systems/Casefile/ObservationController.gd" id="1_akqu5"]
 
 [node name="ObservationController" type="Node"]
 script = ExtResource("1_akqu5")

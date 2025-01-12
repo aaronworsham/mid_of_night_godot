@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ThreadResource" load_steps=3 format=3 uid="uid://xptubdkfdjyg"]
 
 [ext_resource type="JSON" path="res://Data/Threads/threads.strapi.json" id="1_pj1qw"]
-[ext_resource type="Script" path="res://Scripts/Resources/ThreadResource.gd" id="2_2dlol"]
+[ext_resource type="Script" path="res://Scripts/Systems/Dialog/ThreadResource.gd" id="2_2dlol"]
 
 [resource]
 script = ExtResource("2_2dlol")

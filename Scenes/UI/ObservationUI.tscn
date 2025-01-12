@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dw5ichaer73uv"]
 
-[ext_resource type="Script" path="res://Scripts/Views/ObservationView.gd" id="1_dc77w"]
+[ext_resource type="Script" path="res://Scripts/Systems/Casefile/ObservationView.gd" id="1_dc77w"]
 
 [node name="ObservationUI" type="Node2D"]
 script = ExtResource("1_dc77w")

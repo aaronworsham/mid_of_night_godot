@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="DialogResource" load_steps=3 format=3 uid="uid://8hknyoeb6lyk"]
 
 [ext_resource type="JSON" path="res://Data/Dialogs/dialogs.strapi.json" id="1_o01ud"]
-[ext_resource type="Script" path="res://Scripts/Resources/DialogResource.gd" id="1_y5kmy"]
+[ext_resource type="Script" path="res://Scripts/Systems/Dialog/DialogResource.gd" id="1_y5kmy"]
 
 [resource]
 script = ExtResource("1_y5kmy")

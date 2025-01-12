@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2dr7q1oycv3m"]
 
-[ext_resource type="Script" path="res://Scripts/Views/DialogViews.gd" id="1_isrco"]
+[ext_resource type="Script" path="res://Scripts/Systems/Dialog/DialogViews.gd" id="1_isrco"]
 [ext_resource type="Texture2D" uid="uid://tcevpv5xoyq4" path="res://Assets/portraits/photobooth-in-white-cap.jpg" id="2_7rlwc"]
 
 [node name="DialogUI" type="Node2D"]

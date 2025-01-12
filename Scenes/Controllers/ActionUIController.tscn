@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ckc8ld73u1eaf"]
 
-[ext_resource type="Script" path="res://Scripts/Controllers/ActionUIController.gd" id="1_kuc3t"]
+[ext_resource type="Script" path="res://Scripts/Systems/Interactables/ActionUIController.gd" id="1_kuc3t"]
 
 [node name="ActionUIController" type="Node"]
 script = ExtResource("1_kuc3t")

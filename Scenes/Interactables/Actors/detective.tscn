@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cjq33u7d2u3ot" path="res://Assets/Sprites/_side walk.png" id="1_153w4"]
 [ext_resource type="Texture2D" uid="uid://cyod7h33fa0dm" path="res://Assets/Sprites/_down idle.png" id="1_qqtbv"]
-[ext_resource type="Script" path="res://Scripts/Controllers/DetectiveController.gd" id="1_xut43"]
+[ext_resource type="Script" path="res://Scripts/Systems/IO/DetectiveController.gd" id="1_xut43"]
 [ext_resource type="Texture2D" uid="uid://ccdx1i88mrv72" path="res://Assets/Sprites/_up walk.png" id="2_prtkt"]
 [ext_resource type="Texture2D" uid="uid://o6v8me11hk5u" path="res://Assets/Sprites/_side idle.png" id="3_c0vmc"]
 [ext_resource type="Texture2D" uid="uid://cyj40cgbkofkg" path="res://Assets/Sprites/_down walk.png" id="3_ol1u7"]

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dsntxowjttdx0" path="res://Scenes/Interactables/Actors/detective_model.tscn" id="5_dlrtt"]
 [ext_resource type="PackedScene" uid="uid://dslya3xokc4xn" path="res://Scenes/Chapters/first_chapter.tscn" id="6_o33fe"]
 [ext_resource type="PackedScene" uid="uid://ckc8ld73u1eaf" path="res://Scenes/Controllers/ActionUIController.tscn" id="7_71imp"]
-[ext_resource type="Script" path="res://Scripts/Loaders/ActorLoader.gd" id="7_ycood"]
+[ext_resource type="Script" path="res://Scripts/Systems/Interactables/ActorLoader.gd" id="7_ycood"]
 [ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="8_fyupr"]
 
 [node name="Main" type="Node2D"]

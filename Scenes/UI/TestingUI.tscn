@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2pcfccmm8fhy"]
 
-[ext_resource type="Script" path="res://Scripts/Views/TestingUIView.gd" id="1_5njsg"]
+[ext_resource type="Script" path="res://Scripts/Systems/Base/TestingUIView.gd" id="1_5njsg"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_fti3b"]
 

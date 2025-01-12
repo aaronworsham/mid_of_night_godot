@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-ChapterManager="*res://Scripts/Managers/ChapterManager.gd"
-EventManager="*res://Scripts/Managers/EventManager.gd"
+ChapterManager="*res://Scripts/Systems/Location/ChapterManager.gd"
+EventManager="*res://Scripts/Systems/Event/EventManager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
