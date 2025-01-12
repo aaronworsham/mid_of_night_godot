@@ -11,10 +11,18 @@ func _ready() -> void:
     var _actors = actors_collection_resource.get_all_actors()
     for a in _actors:
         var actor_resource:ActorMemberResource = ActorMemberResource.new()
-        actor_resource.name = a["name"]
+        actor_resource.setup(a)
+
+        
+
         var actor_model:ActorModel = ActorModel.new()
         actor_model.actor_resource = actor_resource
-        var actor_instance = actor_template.instantiate()
+
+        var actor_instance:StaticBody2D = actor_template.instantiate()
+
+        actor_instance.position = actor_model.get_coords()
+
         var label:Label = actor_instance.find_child("ActorLabel")
         label.text = actor_model.get_actor_name()
         models_container.add_child(actor_instance)
+        EventManager.event_actor_loaded.emit(actor_model)

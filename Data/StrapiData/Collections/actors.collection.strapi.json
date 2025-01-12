@@ -1,0 +1,23 @@
+{
+    "data": [
+        {
+            "id": 5,
+            "documentId": "sw0s67qpanrx35ojkvsp18hk",
+            "name": "TestActor",
+            "createdAt": "2025-01-09T17:09:18.232Z",
+            "updatedAt": "2025-01-12T01:27:41.591Z",
+            "publishedAt": "2025-01-12T01:27:41.601Z",
+            "guid": "testguid",
+            "xcord": -100,
+            "ycord": 0
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 1
+        }
+    }
+}

@@ -63,8 +63,8 @@ def get_data_from_strapi(data):
         json.dump(r.json(), write_file)
     
     #Data File
-    # with open(base_filepath + "Data/" + data["base_url"]+".strapi.json", mode="w", encoding="utf-8") as write_file:
-    #     json.dump(r.json(), write_file)
+    with open(base_filepath + "Data/StrapiData/Collections/" + data["base_url"]+".collection.strapi.json", mode="w", encoding="utf-8") as write_file:
+        json.dump(r.json(), write_file)
 
 for ds in data_sets:
     get_data_from_strapi(ds)

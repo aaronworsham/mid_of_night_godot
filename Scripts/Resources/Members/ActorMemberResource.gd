@@ -1,8 +1,23 @@
 class_name ActorMemberResource extends Resource
 
-@export var name:String:
-    set(value):
-        name = value
+var _name:String
+var _guid:String
+var _xcord:float
+var _ycord:float
 
-func get_member_name()->String:
-    return name
+
+func setup(actor:Dictionary):
+    _name = actor["name"]
+    _guid = actor["guid"]
+    _xcord = float(actor["xcord"])
+    _ycord = float(actor["ycord"])
+
+func get_actor_name()->String:
+    return _name
+
+func get_guid()->String:
+    return _guid
+
+func get_coords()->Vector2:
+    var v:Vector2 = Vector2(_xcord,_ycord)
+    return v
