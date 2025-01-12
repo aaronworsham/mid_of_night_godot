@@ -44,7 +44,11 @@ data_sets = [
     # }
     {
         "base_url" : "actors",
-        "params" : []
+        "params"   : {
+            "populate" : [
+                "portrait"
+            ]
+        }
     }
 ] 
 
@@ -57,14 +61,20 @@ def get_data_from_strapi(data):
         }
 
     r = requests.get(base_uri + data["base_url"], params=data["params"], headers=base_headers)
+    rjson = r.json()
+
+    for a in rjson["data"]:
+        img_data = requests.get("http://localhost:1337/" + a["portrait"]["url"]).content
+        with open('image_name.jpg', 'wb') as handler:
+            handler.write(img_data)
 
     #Test File
     with open(base_filepath + "Tests/StrapiData/Collections/" + "test_"+data["base_url"]+".collection.strapi.json", mode="w", encoding="utf-8") as write_file:
-        json.dump(r.json(), write_file)
+        json.dump(rjson, write_file)
     
     #Data File
     with open(base_filepath + "Data/StrapiData/Collections/" + data["base_url"]+".collection.strapi.json", mode="w", encoding="utf-8") as write_file:
-        json.dump(r.json(), write_file)
+        json.dump(rjson, write_file)
 
 for ds in data_sets:
     get_data_from_strapi(ds)
