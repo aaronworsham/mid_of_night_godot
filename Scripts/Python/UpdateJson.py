@@ -65,8 +65,9 @@ def get_data_from_strapi(data):
 
     for a in rjson["data"]:
         img_data = requests.get("http://localhost:1337/" + a["portrait"]["url"]).content
-        with open('image_name.jpg', 'wb') as handler:
+        with open(base_filepath + "Assets/portraits/" + a["portrait"]["name"], 'wb') as handler:
             handler.write(img_data)
+        a["portrait"]["resPath"] = "res://Assets/portraits/" + a["portrait"]["name"]
 
     #Test File
     with open(base_filepath + "Tests/StrapiData/Collections/" + "test_"+data["base_url"]+".collection.strapi.json", mode="w", encoding="utf-8") as write_file:
