@@ -1,14 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://f1tivs1vbjok"]
+[gd_scene load_steps=3 format=3 uid="uid://f1tivs1vbjok"]
 
-[ext_resource type="PackedScene" uid="uid://bhnd86i7oo0md" path="res://Scenes/Interactables/Actionable.tscn" id="1_3n25r"]
+[ext_resource type="Script" path="res://Scripts/Systems/Interactables/ActionView.gd" id="1_pk8kn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7hob"]
-size = Vector2(26, 26)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ddrd"]
-size = Vector2(40, 39)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b38ua"]
+size = Vector2(100, 100)
 
 [node name="Actor" type="StaticBody2D" groups=["Persist"]]
+input_pickable = true
+script = ExtResource("1_pk8kn")
 
 [node name="ActorPortrait" type="Sprite2D" parent="."]
 unique_name_in_owner = true
@@ -17,16 +16,9 @@ region_enabled = true
 region_rect = Rect2(27.8333, 48.4996, 98, 104)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_q7hob")
-
-[node name="Actionable" parent="." instance=ExtResource("1_3n25r")]
-script = null
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
-position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_6ddrd")
+shape = SubResource("RectangleShape2D_b38ua")
+debug_color = Color(0.752941, 0.454902, 0.133333, 0.615686)
 
 [node name="ActorLabel" type="Label" parent="."]
 offset_left = -46.0
@@ -34,3 +26,5 @@ offset_top = 22.0
 offset_right = 62.0
 offset_bottom = 45.0
 text = "TmpLblDelete"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

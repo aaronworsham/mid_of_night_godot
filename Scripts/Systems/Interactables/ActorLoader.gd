@@ -2,7 +2,7 @@ class_name ActorLoader extends Node
 
 @onready var actors_collection_resource:ActorCollectionResource = ActorCollectionResource.new()
 @onready var actor_json:JSON = load ("res://Tests/StrapiData/Collections/test_actors.collection.strapi.json")
-@onready var models_container:Node = %Models
+@onready var interactables_container:Node = %Interactables
 @onready var actor_template = preload("res://Scenes/Interactables/Actors/ActorTemplate.tscn")
 
 func _ready() -> void:
@@ -32,5 +32,5 @@ func _ready() -> void:
         var portraitTexture:Texture = load(actor_model.get_portrait_path())
         portrait.texture = portraitTexture      
 
-        models_container.add_child(actor_instance)
+        interactables_container.add_child(actor_instance)
         EventManager.event_actor_loaded.emit(actor_model)

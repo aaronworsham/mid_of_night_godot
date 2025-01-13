@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_dobw0"]
 [ext_resource type="PackedScene" uid="uid://6vhcn0bs35h" path="res://Scenes/Controllers/input_controller.tscn" id="2_rqwcm"]
 [ext_resource type="PackedScene" uid="uid://uq7pf86awi87" path="res://Scenes/Managers/detective_manager.tscn" id="3_vnnr2"]
-[ext_resource type="Script" path="res://Scripts/Controllers/ActorController.gd" id="4_jl2fm"]
+[ext_resource type="Script" path="res://Scripts/Systems/Interactables/ActorController.gd" id="4_jl2fm"]
 [ext_resource type="PackedScene" uid="uid://c3mtayg14ghop" path="res://Scenes/Managers/event_manager.tscn" id="4_py5oh"]
 [ext_resource type="PackedScene" uid="uid://dsntxowjttdx0" path="res://Scenes/Interactables/Actors/detective_model.tscn" id="5_dlrtt"]
 [ext_resource type="PackedScene" uid="uid://dslya3xokc4xn" path="res://Scenes/Chapters/first_chapter.tscn" id="6_o33fe"]
@@ -17,37 +17,41 @@
 
 [node name="AudioStream" type="AudioStreamPlayer" parent="Audio"]
 
-[node name="Controllers" type="Node" parent="."]
+[node name="Systems" type="Node" parent="."]
 
-[node name="InputController" parent="Controllers" instance=ExtResource("2_rqwcm")]
+[node name="Interactable" type="Node" parent="Systems"]
 
-[node name="DetectiveController" parent="Controllers" instance=ExtResource("8_fyupr")]
-position = Vector2(0, -1)
-
-[node name="ActionUIController" parent="Controllers" instance=ExtResource("7_71imp")]
-
-[node name="ActorController" type="Node" parent="Controllers"]
+[node name="ActorController" type="Node" parent="Systems/Interactable"]
 script = ExtResource("4_jl2fm")
 
-[node name="Managers" type="Node" parent="."]
-
-[node name="SaveManager" parent="Managers" instance=ExtResource("2_dobw0")]
-unique_name_in_owner = true
-
-[node name="DetectiveManager" parent="Managers" instance=ExtResource("3_vnnr2")]
-unique_name_in_owner = true
-
-[node name="EventManager" parent="Managers" instance=ExtResource("4_py5oh")]
-
-[node name="Loaders" type="Node" parent="."]
-
-[node name="ActorLoader" type="Node" parent="Loaders"]
+[node name="ActorLoader" type="Node" parent="Systems/Interactable"]
 script = ExtResource("7_ycood")
 
-[node name="Models" type="Node" parent="."]
+[node name="ActionUIController" parent="Systems/Interactable" instance=ExtResource("7_71imp")]
+
+[node name="IO" type="Node" parent="Systems"]
+
+[node name="SaveManager" parent="Systems/IO" instance=ExtResource("2_dobw0")]
 unique_name_in_owner = true
 
-[node name="DetectiveModel" parent="Models" instance=ExtResource("5_dlrtt")]
+[node name="InputController" parent="Systems/IO" instance=ExtResource("2_rqwcm")]
+
+[node name="DetectiveController" parent="Systems/IO" instance=ExtResource("8_fyupr")]
+position = Vector2(0, -1)
+
+[node name="DetectiveManager" parent="Systems/IO" instance=ExtResource("3_vnnr2")]
+unique_name_in_owner = true
+
+[node name="DetectiveModel" parent="Systems/IO" instance=ExtResource("5_dlrtt")]
+
+[node name="Events" type="Node" parent="Systems"]
+
+[node name="EventManager" parent="Systems/Events" instance=ExtResource("4_py5oh")]
 
 [node name="FirstChapter" parent="." instance=ExtResource("6_o33fe")]
 position = Vector2(2, 0)
+
+[node name="Objects" type="Node" parent="."]
+
+[node name="Interactables" type="Node" parent="Objects"]
+unique_name_in_owner = true
