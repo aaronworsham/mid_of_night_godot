@@ -46,9 +46,21 @@ data_sets = [
         "base_url" : "actors",
         "params"   : {
             "populate" : [
-                "portrait"
+                "portrait",
+                "dialog"
+            ],
+        },
+        "has_portrait" : True
+    },
+
+    {
+        "base_url"  : "dialogs",
+        "params"    : {
+            "populate": [
+                "actor"
             ]
-        }
+        },
+        "has_portrait" : False
     }
 ] 
 
@@ -63,11 +75,12 @@ def get_data_from_strapi(data):
     r = requests.get(base_uri + data["base_url"], params=data["params"], headers=base_headers)
     rjson = r.json()
 
-    for a in rjson["data"]:
-        img_data = requests.get("http://localhost:1337/" + a["portrait"]["url"]).content
-        with open(base_filepath + "Assets/portraits/" + a["portrait"]["name"], 'wb') as handler:
-            handler.write(img_data)
-        a["portrait"]["resPath"] = "res://Assets/portraits/" + a["portrait"]["name"]
+    if data["has_portrait"]:
+        for a in rjson["data"]:
+            img_data = requests.get("http://localhost:1337/" + a["portrait"]["url"]).content
+            with open(base_filepath + "Assets/portraits/" + a["portrait"]["name"], 'wb') as handler:
+                handler.write(img_data)
+            a["portrait"]["resPath"] = "res://Assets/portraits/" + a["portrait"]["name"]
 
     #Test File
     with open(base_filepath + "Tests/StrapiData/Collections/" + "test_"+data["base_url"]+".collection.strapi.json", mode="w", encoding="utf-8") as write_file:
