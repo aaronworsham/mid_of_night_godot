@@ -8,3 +8,4 @@ func save_actor(a:ActorModel):
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
     if  event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
         print("Actor " + actor.get_actor_name() + " Clicked")
+        EventManager.event_interactable_actor_clicked.emit(actor)

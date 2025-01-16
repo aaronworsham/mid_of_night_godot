@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ck5s77sy8lhis"]
+[gd_scene load_steps=12 format=3 uid="uid://ck5s77sy8lhis"]
 
 [ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_dobw0"]
 [ext_resource type="PackedScene" uid="uid://6vhcn0bs35h" path="res://Scenes/Controllers/input_controller.tscn" id="2_rqwcm"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ckc8ld73u1eaf" path="res://Scenes/Controllers/ActionUIController.tscn" id="7_71imp"]
 [ext_resource type="Script" path="res://Scripts/Systems/Interactables/ActorLoader.gd" id="7_ycood"]
 [ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="8_fyupr"]
+[ext_resource type="PackedScene" uid="uid://cd0b047wu0rka" path="res://Scenes/Controllers/dialog_controller.tscn" id="10_xxlpj"]
 
 [node name="Main" type="Node2D"]
 
@@ -47,6 +48,10 @@ unique_name_in_owner = true
 [node name="Events" type="Node" parent="Systems"]
 
 [node name="EventManager" parent="Systems/Events" instance=ExtResource("4_py5oh")]
+
+[node name="Dialog" type="Node" parent="Systems"]
+
+[node name="DialogController" parent="Systems/Dialog" instance=ExtResource("10_xxlpj")]
 
 [node name="FirstChapter" parent="." instance=ExtResource("6_o33fe")]
 position = Vector2(2, 0)

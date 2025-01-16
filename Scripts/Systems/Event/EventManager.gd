@@ -8,12 +8,24 @@ signal event_start_dialog(act:ActorController)
 signal event_notebook_new_topic(topic:Dictionary)
 signal event_casefile_updated(data:Dictionary)
 
-signal event_actor_loaded(actor:ActorModel)
 
 signal event_notebook_clicked(topic)
 signal event_testing_ui()
 signal event_save_game()
 signal event_load_game()
+
+
+
+
+### SYSTEMS ###
+
+
+#region Interactables
+
+signal event_interactable_actor_clicked(actor:ActorModel)
+signal event_actor_loaded(actor:ActorModel)
+
+#endregion
 
 
 #Signals EM can emit for others to connect to
