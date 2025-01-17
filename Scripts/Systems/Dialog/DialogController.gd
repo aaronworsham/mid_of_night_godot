@@ -9,21 +9,21 @@ class_name DialogController extends Node
 @onready var dialogs_resource:DialogCollectionResource = DialogCollectionResource.new()
 @onready var dialogs_json:JSON = load ("res://Data/StrapiData/Collections/dialogs.collection.strapi.json")
 
-#@onready var threads_resource: = DialogCollectionResource.new()
-#@onready var dialogs_json:JSON = load ("res://Data/StrapiData/Collections/dialogs.collection.strapi.json")
+@onready var threads_resource: = ThreadCollectionResource.new()
+@onready var threads_json:JSON = load ("res://Data/StrapiData/Collections/threads.collection.strapi.json")
 
 
 
 var current_dialog: Dictionary
-var current_dialog_threads: Dictionary
+var current_dialog_threads: Array
 
 func _ready() -> void:
 
     dialogs_resource.json = dialogs_json
     dialogs_resource.on_load()
 
-    # threads_resource.json = thread_json
-    # threads_resource.on_load()
+    threads_resource.json = threads_json
+    threads_resource.on_load()
     
     # timeline_resource._threads_resource = threads_resource
     # timeline_resource.on_load()
@@ -34,7 +34,9 @@ func _ready() -> void:
 
 func _interactable_actor_clicked(actor:ActorModel):
     current_dialog = dialogs_resource.get_dialog_by_guid(actor.get_dialog_guid())
-    print("Starting Dialog:" + current_dialog["name"])
+    current_dialog_threads = threads_resource.get_threads_by_dialog_guid(current_dialog["guid"])
+    print("Starting Dialog: " + current_dialog["name"])
+    print("Starting Thread: " + current_dialog_threads[0]["name"])
         
 
 # func _notebook_clicked_action(topic: Dictionary):
