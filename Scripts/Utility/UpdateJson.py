@@ -61,7 +61,18 @@ data_sets = [
             ]
         },
         "has_portrait" : False
+    },
+    {
+        "base_url"  : "threads",
+        "params"    : {
+            "populate": [
+                "actor",
+                "dialog"
+            ]
+        },
+        "has_portrait" : False
     }
+
 ] 
 
 

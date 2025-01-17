@@ -1,6 +1,6 @@
 class_name TimelineResource extends BaseResource
 
-var _threads_resource:ThreadResource:
+var _threads_resource:ThreadCollectionResource:
 	set(value):
 		_threads_resource = value
 

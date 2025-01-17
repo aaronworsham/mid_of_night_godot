@@ -1,6 +1,6 @@
 extends GutTest
 
-@onready var thread_resource:Resource = ThreadResource.new()
+@onready var thread_resource:Resource = ThreadCollectionResource.new()
 @onready var thread_json:JSON = load ("res://Tests/test_threads.strapi.json")
 
 

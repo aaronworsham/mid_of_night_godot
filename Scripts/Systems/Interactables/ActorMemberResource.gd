@@ -4,7 +4,8 @@ var _name:String
 var _guid:String
 var _xcord:float
 var _ycord:float
-var _portraitPath:String
+var _portrait_path:String
+var _dialog_guid:String
 
 
 func setup(actor:Dictionary):
@@ -12,7 +13,8 @@ func setup(actor:Dictionary):
     _guid = actor["guid"]
     _xcord = float(actor["xcord"])
     _ycord = float(actor["ycord"])
-    _portraitPath = actor["portrait"]["resPath"]
+    _portrait_path = actor["portrait"]["resPath"]
+    _dialog_guid = actor["dialog"]["guid"]
 
 func get_actor_name()->String:
     return _name
@@ -25,4 +27,7 @@ func get_coords()->Vector2:
     return v
 
 func get_portrait_path()->String:
-    return _portraitPath
+    return _portrait_path
+
+func get_dialog_guid()->String:
+    return _dialog_guid

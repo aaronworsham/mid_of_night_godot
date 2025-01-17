@@ -16,3 +16,6 @@ func get_coords()->Vector2:
 
 func get_portrait_path()->String:
     return actor_resource.get_portrait_path()
+
+func get_dialog_guid()->String:
+    return actor_resource.get_dialog_guid()
