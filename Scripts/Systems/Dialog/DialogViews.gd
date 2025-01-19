@@ -3,6 +3,8 @@ class_name DialogView extends Node
 @onready var dialog_list: VBoxContainer = %DialogVBox
 @onready var notebook_list: VBoxContainer = %NotebookVBox
 @onready var dialog_ui:Node = get_node("/root/Main/UI/DialogUI")
+@onready var ui_util:UIUtility = UIUtility.new()
+@onready var dialog_controller:DialogController = get_node("/root/Main/Systems/Dialog/DialogController")
 
 var _topics:Array
 
@@ -15,23 +17,31 @@ func show_dialog_ui():
     dialog_ui.visible = true
 
 func update_dialog(copy:String):
-    dialog_list.add_child(create_vbox_child(copy))
+    dialog_list.add_child(ui_util.create_rich_copy_label((copy)))
 
-func create_vbox_child(copy:String) -> RichTextLabel:
-    var label = RichTextLabel.new()
-    label.text = copy
-    label.fit_content = true
-    label.bbcode_enabled = true
-    return label
+func clear_topics():
+    _topics.clear()
 
-func clear_list(): 
+func clear_dialog_list(): 
     if dialog_list != null:
         for i in dialog_list.get_children():
             i.queue_free()
 
-func add_topic(t:String):
+func clear_notebook_list(): 
+    if notebook_list != null:
+        for i in notebook_list.get_children():
+            i.queue_free()
+
+func add_topic(t:Dictionary):
     _topics.append(t)
 
 func load_notebook_list():
+    clear_notebook_list()
     for t in _topics:
-        notebook_list.add_child(create_vbox_child(t))
+        var button:Button = ui_util.create_button(t["label"])
+        button.pressed.connect(self._button_pressed.bind(t["guid"]))
+        notebook_list.add_child(button)
+
+func _button_pressed(guid:String):
+    print("Button Pressed: " + guid)
+    dialog_controller.set_current_thread(guid)

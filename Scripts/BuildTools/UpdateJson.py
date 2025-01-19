@@ -68,7 +68,8 @@ data_sets = [
             "populate": [
                 "actor",
                 "dialog",
-                "instructions"
+                "instructions",
+                "instructions.thread"
             ]
         },
         "has_portrait" : False

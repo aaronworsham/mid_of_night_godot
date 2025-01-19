@@ -16,6 +16,7 @@ class_name DialogController extends Node
 
 var current_dialog: Dictionary
 var current_dialog_threads: Array
+var current_thread: Dictionary
 
 func _ready() -> void:
 
@@ -49,22 +50,32 @@ func _interactable_actor_clicked(actor:ActorModel):
 #     dialog_view.show_dialog_ui()
 #     execute_thread_instructions(current_threads["hello"])
 
+func set_current_thread(guid):
+    current_thread = threads_resource.get_thread_by_guid(guid)
+    execute_thread_instructions()
+
 func show_discovered_threads():
     for t in current_dialog_threads:
         if t["starts_discovered"]:
-            dialog_view.add_topic(t["label"])
+            dialog_view.add_topic(t)
 
     var discovered:Array = threads_resource.get_discovered_threads()
     for r in discovered:
-        dialog_view.add_topic(r["label"])
+        dialog_view.add_topic(r)
 
     dialog_view.load_notebook_list()
 
 func execute_thread_instructions():
-    for i in current_dialog_threads[0]["instructions"]:
+    for i in current_thread["instructions"]:
         match i["__component"]:
             "thread-instruction.thread-statement":
                 dialog_view.update_dialog(i["copy"])
+            "thread-instruction.thread-discovered":
+                dialog_view.update_dialog(i["copy"])
+                threads_resource.set_thread_as_discovered(i["thread"]["guid"])
+                dialog_view.clear_topics()
+                show_discovered_threads()
+                print("Thread Discovered need guid")
             # "timeline.thread.start":
             #     pass
             # "timeline.timeline-dialog":
