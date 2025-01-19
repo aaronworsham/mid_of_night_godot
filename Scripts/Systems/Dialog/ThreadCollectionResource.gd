@@ -11,12 +11,17 @@ var _threads_array:Array
 var _threads_dict_by_guid:Dictionary
 var _threads_dict_by_thread_guid:Dictionary
 
+#persistable Values
+var _threads_persist_dict_by_guid:Dictionary
+var _threads_discovered_array:Array
 
 func on_load():
     
     _threads_array.clear()
     _threads_dict_by_guid.clear()
     _threads_dict_by_thread_guid.clear()
+    _threads_persist_dict_by_guid.clear()
+    _threads_discovered_array.clear()
 
     #source of truth
     _threads_array = json.data.data.duplicate(true)
@@ -35,30 +40,25 @@ func get_thread_by_guid(guid:String)->Dictionary:
 func get_threads_by_dialog_guid(guid:String)->Array:
     return _threads_dict_by_thread_guid[guid]
 
-# func get_all_instructions_by_thread_guid()-> Dictionary:
-# 	var tmpaD:Dictionary
-# 	for t in _threads_array:
-# 		tmpaD[t["guid"]] = {
-# 			"thread_key":t["thread_key"],
-# 			"thread_guid":t["guid"],
-# 			"actor":t["actor"],
-# 			"instructions":t["instructions"]
-# 		}
-# 	return tmpaD
+func set_thread_as_discovered(guid:String):
+    if !_threads_persist_dict_by_guid.has(guid):
+        set_thread_persist_default(guid)
+    _threads_persist_dict_by_guid[guid]["discovered"] = true
+    _threads_discovered_array.append(get_thread_by_guid(guid))
 
-# func get_instructions_for_key(key:String) -> Array:
-# 	if _threads_dict_by_key.has(key):
-# 		var instructions = _threads_dict_by_key[key]["instructions"]
-# 		return instructions
-# 	return []
+func set_thread_persist_default(guid:String):
 
-# func get_timeline(key:String)-> threadicTimeline:
-# 	var tmpA:Array
-# 	var timeline:threadicTimeline = threadicTimeline.new()
-# 	if _threads_dict_by_key.has(key):
-# 		tmpA = get_instructions_for_key(key)
-# 		timeline.events = tmpA
-# 		timeline.process()
-# 		if timeline.events_processed:
-# 			return timeline
-# 	return threadicTimeline.new()
+    if !_threads_persist_dict_by_guid.has(guid):
+        _threads_persist_dict_by_guid[guid] = {
+            "discovered" : false,
+            "clicked" : false
+        }
+
+func is_thread_discovered(guid:String) -> bool:
+    if !_threads_persist_dict_by_guid.has(guid):
+        set_thread_persist_default(guid) 
+        return false
+    return _threads_persist_dict_by_guid[guid]["discovered"] 
+
+func get_discovered_threads()->Array:
+    return _threads_discovered_array

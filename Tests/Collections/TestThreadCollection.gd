@@ -25,5 +25,16 @@ func test_get_thread_by_guid():
 func test_get_threads_by_dialog_guid():
     var a:Array = threads_resource.get_threads_by_dialog_guid(dguid)
     assert_not_null(a)
-    assert_eq(a.size(), 1)
+    assert_eq(a.size(),threads_resource._threads_array.size())
     assert_eq(a[0]["guid"], guid)
+
+func test_get_thread_instructions():
+    var a:Array = threads_resource.get_threads_by_dialog_guid(dguid)
+    assert_not_null(a[0]["instructions"])
+
+func test_thread_persist_data():
+    assert_false(threads_resource.is_thread_discovered(guid))
+    assert_eq(threads_resource.get_discovered_threads().size(), 0)
+    threads_resource.set_thread_as_discovered(guid)
+    assert_true(threads_resource.is_thread_discovered(guid))
+    assert_eq(threads_resource.get_discovered_threads().size(), 1)

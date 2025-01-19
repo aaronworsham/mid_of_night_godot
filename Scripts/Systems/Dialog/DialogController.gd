@@ -1,6 +1,6 @@
 class_name DialogController extends Node
 
-# @onready var dialog_view:DialogView = get_node("/root/Main/UIOverlay/DialogUI")
+@onready var dialog_view:DialogView = get_node("/root/Main/UI/DialogUI")
 # @onready var threads_resource: Resource = ThreadCollectionResource.new()
 # @onready var thread_json: JSON = load("res://Data/Threads/threads.strapi.json")
 # @onready var timeline_resource: TimelineResource = TimelineResource.new()
@@ -35,8 +35,10 @@ func _ready() -> void:
 func _interactable_actor_clicked(actor:ActorModel):
     current_dialog = dialogs_resource.get_dialog_by_guid(actor.get_dialog_guid())
     current_dialog_threads = threads_resource.get_threads_by_dialog_guid(current_dialog["guid"])
-    print("Starting Dialog: " + current_dialog["name"])
-    print("Starting Thread: " + current_dialog_threads[0]["name"])
+    dialog_view.show_dialog_ui()
+    show_discovered_threads()
+    
+
         
 
 # func _notebook_clicked_action(topic: Dictionary):
@@ -47,19 +49,32 @@ func _interactable_actor_clicked(actor:ActorModel):
 #     dialog_view.show_dialog_ui()
 #     execute_thread_instructions(current_threads["hello"])
 
-# func execute_thread_instructions(instructions:Array):
-#     for i in instructions:
-#         match i["__component"]:
-#             "timeline.thread.start":
-#                 pass
-#             "timeline.timeline-dialog":
-#                 dialog_view.update_dialog(i["text"])
-#             "timeline.timeline-signal":
-#                 EventManager.event_notebook_new_topic.emit(i)
-#             "timeline.casefile-signal":
-#                 EventManager.event_casefile_updated.emit(i)
-#             "timeline.thread-voiceover":
-#                 pass
-#             "timeline.thread-end":
-#                 pass
+func show_discovered_threads():
+    for t in current_dialog_threads:
+        if t["starts_discovered"]:
+            dialog_view.add_topic(t["label"])
+
+    var discovered:Array = threads_resource.get_discovered_threads()
+    for r in discovered:
+        dialog_view.add_topic(r["label"])
+
+    dialog_view.load_notebook_list()
+
+func execute_thread_instructions():
+    for i in current_dialog_threads[0]["instructions"]:
+        match i["__component"]:
+            "thread-instruction.thread-statement":
+                dialog_view.update_dialog(i["copy"])
+            # "timeline.thread.start":
+            #     pass
+            # "timeline.timeline-dialog":
+            #     dialog_view.update_dialog(i["text"])
+            # "timeline.timeline-signal":
+            #     EventManager.event_notebook_new_topic.emit(i)
+            # "timeline.casefile-signal":
+            #     EventManager.event_casefile_updated.emit(i)
+            # "timeline.thread-voiceover":
+            #     pass
+            # "timeline.thread-end":
+            #     pass
     

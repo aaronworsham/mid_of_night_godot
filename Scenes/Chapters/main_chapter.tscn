@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ck5s77sy8lhis"]
+[gd_scene load_steps=13 format=3 uid="uid://ck5s77sy8lhis"]
 
 [ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_dobw0"]
 [ext_resource type="PackedScene" uid="uid://6vhcn0bs35h" path="res://Scenes/Controllers/input_controller.tscn" id="2_rqwcm"]
@@ -11,8 +11,14 @@
 [ext_resource type="Script" path="res://Scripts/Systems/Interactables/ActorLoader.gd" id="7_ycood"]
 [ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="8_fyupr"]
 [ext_resource type="PackedScene" uid="uid://cd0b047wu0rka" path="res://Scenes/Controllers/dialog_controller.tscn" id="10_xxlpj"]
+[ext_resource type="PackedScene" uid="uid://d2dr7q1oycv3m" path="res://Scenes/UI/DialogUI.tscn" id="11_73cn6"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Chapters" type="Node" parent="."]
+
+[node name="FirstChapter" parent="Chapters" instance=ExtResource("6_o33fe")]
+position = Vector2(2, 0)
 
 [node name="Audio" type="Node" parent="."]
 
@@ -53,10 +59,11 @@ unique_name_in_owner = true
 
 [node name="DialogController" parent="Systems/Dialog" instance=ExtResource("10_xxlpj")]
 
-[node name="FirstChapter" parent="." instance=ExtResource("6_o33fe")]
-position = Vector2(2, 0)
-
 [node name="Objects" type="Node" parent="."]
 
 [node name="Interactables" type="Node" parent="Objects"]
 unique_name_in_owner = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DialogUI" parent="UI" instance=ExtResource("11_73cn6")]

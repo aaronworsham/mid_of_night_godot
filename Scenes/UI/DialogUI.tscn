@@ -3,73 +3,61 @@
 [ext_resource type="Script" path="res://Scripts/Systems/Dialog/DialogViews.gd" id="1_isrco"]
 [ext_resource type="Texture2D" uid="uid://tcevpv5xoyq4" path="res://Assets/portraits/photobooth-in-white-cap.jpg" id="2_7rlwc"]
 
-[node name="DialogUI" type="Node2D"]
+[node name="DialogUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_isrco")
-metadata/_edit_vertical_guides_ = [650.0, 1250.0, 669.0, 1236.0]
-metadata/_edit_horizontal_guides_ = [550.0, 700.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(794, 193)
+position = Vector2(255, 226.02)
 scale = Vector2(0.510204, 0.510204)
 texture = ExtResource("2_7rlwc")
 
-[node name="UpperVBox" type="VBoxContainer" parent="."]
-offset_left = 950.0
-offset_top = 16.0
-offset_right = 1144.0
-offset_bottom = 93.0
+[node name="ActorDetails" type="VBoxContainer" parent="."]
+offset_left = 424.0
+offset_top = 70.0204
+offset_right = 618.0
+offset_bottom = 147.02
 
-[node name="NameLabel" type="Label" parent="UpperVBox"]
+[node name="NameLabel" type="Label" parent="ActorDetails"]
 layout_mode = 2
 text = "Name: Archer Bobson"
 
-[node name="OccupationLabel" type="Label" parent="UpperVBox"]
+[node name="OccupationLabel" type="Label" parent="ActorDetails"]
 layout_mode = 2
 text = "Occupation: Streetsweep"
 
-[node name="Label" type="Label" parent="UpperVBox"]
+[node name="Label" type="Label" parent="ActorDetails"]
 layout_mode = 2
 text = "Disposition: Friendly"
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = 669.0
-offset_top = 391.0
-offset_right = 1232.0
-offset_bottom = 954.0
+[node name="DialogBox" type="Panel" parent="."]
+offset_left = 143.0
+offset_top = 445.02
+offset_right = 706.0
+offset_bottom = 1008.02
 
-[node name="DialogVBox" type="VBoxContainer" parent="Panel"]
+[node name="DialogVBox" type="VBoxContainer" parent="DialogBox"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 2.0
-offset_top = -1.0
-offset_right = 570.0
-offset_bottom = 564.0
+offset_left = -9.0
+offset_top = 4.0
+offset_right = 559.0
+offset_bottom = 569.0
 
-[node name="ContinueButton" type="Button" parent="."]
-offset_left = 845.0
-offset_top = 971.0
-offset_right = 1086.0
-offset_bottom = 1002.0
-text = "Continue"
+[node name="NotebookBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 453.0
+offset_right = 1205.0
+offset_bottom = 1013.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 786.0
-offset_top = 1018.0
-offset_right = 1136.0
-offset_bottom = 1058.0
-
-[node name="NotebookButton" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "Notebook"
-
-[node name="CasefilesButton" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "Casefiles"
-
-[node name="ObservationsButton" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "Observations"
-
-[node name="ActionsButton" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "Actions"
+[node name="NotebookVBox" type="VBoxContainer" parent="NotebookBox"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 59.0
+offset_top = 33.0
+offset_right = 355.0
+offset_bottom = 523.0
