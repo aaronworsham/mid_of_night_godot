@@ -75,17 +75,11 @@ func execute_thread_instructions():
                 threads_resource.set_thread_as_discovered(i["thread"]["guid"])
                 dialog_view.clear_topics()
                 show_discovered_threads()
-                print("Thread Discovered need guid")
-            # "timeline.thread.start":
-            #     pass
-            # "timeline.timeline-dialog":
-            #     dialog_view.update_dialog(i["text"])
-            # "timeline.timeline-signal":
-            #     EventManager.event_notebook_new_topic.emit(i)
-            # "timeline.casefile-signal":
-            #     EventManager.event_casefile_updated.emit(i)
-            # "timeline.thread-voiceover":
-            #     pass
-            # "timeline.thread-end":
-            #     pass
+            "thread-instruction.clue-discovered":
+                print("Clue Discovered")
+            "thread-instruction.mystery-discovered":
+                print("Mystery Discovered")
+            "thread-instruction.topic-discovered":
+                print("Research Topic Discovered")
+
     

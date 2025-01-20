@@ -3,45 +3,7 @@ import requests
 import json
 
 data_sets = [
-    # {
-    #     "base_url" : "mysteries",
-    #     "params"   : {
-    #         "populate" : [
-    #             "state",
-    #             "clues"
-    #         ]
-    #     }
-    # },
-    # {
-    #     "base_url" : "notebooks",
-    #     "params"   : {
-    #         "populate" : [
-    #             "state"
-    #         ]
-    #     }
-    # },
-    # {
-    #     "base_url" : 'threads',
-    #     "params" : {
-    #         "populate" : [
-    #             "instructions.mystery",
-    #             "instructions.clue",
-    #             "instructions.next_thread"
-    #         ]
-    #     }
-
-    # },
-
-    # {
-    #     "base_url" : "clues",
-    #     "params"   : {
-    #         "populate" : [
-    #             "state",
-    #             "actor",
-    #             "mystery"
-    #         ]
-    #     }
-    # }
+# ACTORS
     {
         "base_url" : "actors",
         "params"   : {
@@ -53,6 +15,8 @@ data_sets = [
         "has_portrait" : True
     },
 
+#DIALOGS
+
     {
         "base_url"  : "dialogs",
         "params"    : {
@@ -62,6 +26,9 @@ data_sets = [
         },
         "has_portrait" : False
     },
+
+#THREADS
+
     {
         "base_url"  : "threads",
         "params"    : {
@@ -69,11 +36,46 @@ data_sets = [
                 "actor",
                 "dialog",
                 "instructions",
-                "instructions.thread"
+                "instructions.thread",
+                "instructions.clue",
+                "instructions.mystery",
+                "instructions.research_topic"
             ]
         },
         "has_portrait" : False
-    }
+    },
+
+#MYSTERIES
+
+    {
+        "base_url"  : "mysteries",
+        "params"    : {
+            "populate": [
+                "clues"
+            ]
+        },
+        "has_portrait" : False
+    },
+
+#CLUES
+
+    {
+        "base_url"  : "clues",
+        "params"    : {
+            "populate": [
+                "mystery"
+            ]
+        },
+        "has_portrait" : False
+    },
+
+#RESEARCH TOPICS
+
+    {
+        "base_url"  : "research-topics",
+        "params"    : {},
+        "has_portrait" : False
+    },
 
 ] 
 
