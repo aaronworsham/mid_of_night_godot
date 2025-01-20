@@ -27,6 +27,11 @@ signal event_actor_loaded(actor:ActorModel)
 
 #endregion
 
+#region Mystery
+
+signal event_mystery_discovered()
+signal event_mystery_clue_discovered()
+
 
 #Signals EM can emit for others to connect to
 func emit_event_attributes_updated(attrs:Dictionary):

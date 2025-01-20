@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ck5s77sy8lhis"]
+[gd_scene load_steps=14 format=3 uid="uid://ck5s77sy8lhis"]
 
 [ext_resource type="PackedScene" uid="uid://bg5heaocpa0xe" path="res://Scenes/Managers/save_manager.tscn" id="2_dobw0"]
 [ext_resource type="PackedScene" uid="uid://6vhcn0bs35h" path="res://Scenes/Controllers/input_controller.tscn" id="2_rqwcm"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="8_fyupr"]
 [ext_resource type="PackedScene" uid="uid://cd0b047wu0rka" path="res://Scenes/Controllers/dialog_controller.tscn" id="10_xxlpj"]
 [ext_resource type="PackedScene" uid="uid://d2dr7q1oycv3m" path="res://Scenes/UI/DialogUI.tscn" id="11_73cn6"]
+[ext_resource type="PackedScene" uid="uid://xgehhw0c58ct" path="res://Scenes/Systems/Mystery/myastery_controller.tscn" id="12_plscy"]
 
 [node name="Main" type="Node2D"]
 
@@ -58,6 +59,10 @@ unique_name_in_owner = true
 [node name="Dialog" type="Node" parent="Systems"]
 
 [node name="DialogController" parent="Systems/Dialog" instance=ExtResource("10_xxlpj")]
+
+[node name="Mystery" type="Node" parent="Systems"]
+
+[node name="MyasteryController" parent="Systems/Mystery" instance=ExtResource("12_plscy")]
 
 [node name="Objects" type="Node" parent="."]
 
