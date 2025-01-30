@@ -1,7 +1,11 @@
 class_name MysteryController extends Node
 
-#@onready var mysteries_resource:Mystery = MysteryResource.new()
-@onready var mysteries_jso:JSON = load ("res://Data/StrapiData/Collections/mysteries.collection.strapi.json")
+@onready var mysteries_resource:MysteryCollectionResource = MysteryCollectionResource.new()
+@onready var mysteries_json:JSON = load ("res://Data/StrapiData/Collections/mysteries.collection.strapi.json")
+
+@onready var clues_resource:ClueCollectionResource = ClueCollectionResource.new()
+@onready var clues_json:JSON = load ("res://Data/StrapiData/Collections/clues.collection.strapi.json")
+
 
 func _ready() -> void:
     EventManager.event_mystery_discovered.connect(mystery_discovered)
