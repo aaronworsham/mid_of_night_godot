@@ -23,3 +23,6 @@ func on_load():
 
 func get_mystery_by_guid(guid:String) -> Dictionary:
     return _mysteries_dict[guid]
+
+func get_all_discovered_mysteries()-> Array:
+    return _mysteries_array

@@ -1,7 +1,7 @@
 extends GutTest
 
 @onready var mysteries_resource:MysteryCollectionResource = MysteryCollectionResource.new()
-@onready var mysteries_json:JSON = load ("res://Data/StrapiData/Collections/mysteries.collection.strapi.json")
+@onready var mysteries_json:JSON = load ("res://Tests/StrapiData/Collections/test_mysteries.collection.strapi.json")
 
 var guid:String
 var dname:String

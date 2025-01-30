@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4tj6rrelc8hd"]
+[gd_scene load_steps=3 format=3 uid="uid://b4tj6rrelc8hd"]
 
+[ext_resource type="Script" path="res://Scripts/Systems/Mystery/MysteryView.gd" id="1_1mjjp"]
 [ext_resource type="Script" path="res://Scripts/Systems/Casefile/CaseFilesView.gd" id="1_6gs5b"]
 
 [node name="CaseFileUI" type="Control"]
@@ -17,6 +18,7 @@ offset_bottom = 40.0
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_1mjjp")
 
 [node name="ResearchView" type="Control" parent="Views"]
 anchors_preset = 0
@@ -65,30 +67,19 @@ layout_mode = 2
 text = "Maps"
 
 [node name="CaseFileItemsVBox" type="VBoxContainer" parent="Panels/CaseFilePanel"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_top = 106.0
 offset_right = 368.0
 offset_bottom = 935.0
 
-[node name="SubItem1" type="Button" parent="Panels/CaseFilePanel/CaseFileItemsVBox"]
-layout_mode = 2
-text = "Sub Item 1"
-
-[node name="SubItem2" type="Button" parent="Panels/CaseFilePanel/CaseFileItemsVBox"]
-layout_mode = 2
-text = "Sub Item 2"
-
-[node name="SubItem3" type="Button" parent="Panels/CaseFilePanel/CaseFileItemsVBox"]
-layout_mode = 2
-text = "Sub Item 3"
-
 [node name="ContentDisplayLBox" type="RichTextLabel" parent="Panels/CaseFilePanel"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 390.0
 offset_top = 103.0
 offset_right = 1717.0
 offset_bottom = 894.0
-text = "This is the Cotent Display Box"
 
 [node name="ToggleCasefileBtn" type="Button" parent="."]
 layout_mode = 0
@@ -98,4 +89,5 @@ offset_right = 144.0
 offset_bottom = 1040.0
 text = "Casefile"
 
+[connection signal="pressed" from="Panels/CaseFilePanel/CaseFileTabsHBox/Mysteries" to="Views/CaseFileView" method="_on_mysteries_pressed"]
 [connection signal="pressed" from="ToggleCasefileBtn" to="Views/CaseFileView" method="_on_open_casefile_btn_pressed"]

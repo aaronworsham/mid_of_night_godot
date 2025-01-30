@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 ChapterManager="*res://Scripts/Systems/Location/ChapterManager.gd"
 EventManager="*res://Scripts/Systems/Event/EventManager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+UiUtility="*res://Scripts/Library/UIUtility.gd"
 
 [dialogic]
 

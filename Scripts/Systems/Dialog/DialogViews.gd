@@ -3,7 +3,6 @@ class_name DialogView extends Node
 @onready var dialog_list: VBoxContainer = %DialogVBox
 @onready var notebook_list: VBoxContainer = %NotebookVBox
 @onready var dialog_ui:Node = get_node("/root/Main/UI/DialogUI")
-@onready var ui_util:UIUtility = UIUtility.new()
 @onready var dialog_controller:DialogController = get_node("/root/Main/Systems/Dialog/DialogController")
 
 var _topics:Array
@@ -17,7 +16,7 @@ func show_dialog_ui():
     dialog_ui.visible = true
 
 func update_dialog(copy:String):
-    dialog_list.add_child(ui_util.create_rich_copy_label((copy)))
+    dialog_list.add_child(UIUtility.create_rich_copy_label((copy)))
 
 func clear_topics():
     _topics.clear()
@@ -38,7 +37,7 @@ func add_topic(t:Dictionary):
 func load_notebook_list():
     clear_notebook_list()
     for t in _topics:
-        var button:Button = ui_util.create_button(t["label"])
+        var button:Button = UIUtility.create_button(t["label"])
         button.pressed.connect(self._button_pressed.bind(t["guid"]))
         notebook_list.add_child(button)
 

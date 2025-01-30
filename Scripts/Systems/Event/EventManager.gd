@@ -31,6 +31,10 @@ signal event_actor_loaded(actor:ActorModel)
 
 signal event_mystery_discovered()
 signal event_mystery_clue_discovered()
+signal event_mystery_casefileui_populate_discovered_mysteries()
+signal event_mystery_casefileui_add_mystery()
+
+#endregion
 
 
 #Signals EM can emit for others to connect to
