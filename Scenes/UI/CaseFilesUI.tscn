@@ -1,40 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4tj6rrelc8hd"]
-
-[ext_resource type="Script" path="res://Scripts/Systems/Mystery/MysteryView.gd" id="1_1mjjp"]
-[ext_resource type="Script" path="res://Scripts/Systems/Casefile/CaseFilesView.gd" id="1_6gs5b"]
+[gd_scene format=3 uid="uid://b4tj6rrelc8hd"]
 
 [node name="CaseFileUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Views" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="MysteryView" type="Control" parent="Views"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_1mjjp")
-
-[node name="ResearchView" type="Control" parent="Views"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="MapView" type="Control" parent="Views"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="CaseFileView" type="Control" parent="Views"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_6gs5b")
 
 [node name="Panels" type="Control" parent="."]
 anchors_preset = 0
@@ -88,6 +58,3 @@ offset_top = 1009.0
 offset_right = 144.0
 offset_bottom = 1040.0
 text = "Casefile"
-
-[connection signal="pressed" from="Panels/CaseFilePanel/CaseFileTabsHBox/Mysteries" to="Views/CaseFileView" method="_on_mysteries_pressed"]
-[connection signal="pressed" from="ToggleCasefileBtn" to="Views/CaseFileView" method="_on_open_casefile_btn_pressed"]

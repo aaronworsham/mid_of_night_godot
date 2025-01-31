@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw4k6ui7vcqdw"]
+
+[ext_resource type="Script" path="res://Scripts/Systems/Interactables/ActorController.gd" id="1_3uamh"]
+[ext_resource type="Script" path="res://Scripts/Systems/Interactables/ActorLoader.gd" id="2_ykm54"]
+
+[node name="InteractableSystem" type="Node2D"]
+
+[node name="Controllers" type="Node" parent="."]
+
+[node name="ActorController" type="Node" parent="Controllers"]
+script = ExtResource("1_3uamh")
+
+[node name="Views" type="Node" parent="."]
+
+[node name="Loaders" type="Node" parent="."]
+
+[node name="ActorLoader" type="Node" parent="Loaders"]
+script = ExtResource("2_ykm54")

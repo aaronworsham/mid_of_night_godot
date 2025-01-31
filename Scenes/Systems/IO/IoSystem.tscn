@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cfgk5ssclmad1"]
+
+[node name="IoSystem" type="Node2D"]
+
+[node name="Controllers" type="Node" parent="."]
+
+[node name="Views" type="Node" parent="."]

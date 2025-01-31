@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://2v1bio1aocwd"]
+
+[ext_resource type="PackedScene" uid="uid://dslya3xokc4xn" path="res://Scenes/Chapters/first_chapter.tscn" id="1_fpuah"]
+[ext_resource type="PackedScene" uid="uid://dw4eei8ciqnvm" path="res://Scenes/Systems/Casefile/casefile_system.tscn" id="2_mkh6x"]
+[ext_resource type="PackedScene" uid="uid://c71bie56hggob" path="res://Scenes/Systems/Interactables/interactable_system.tscn" id="3_sxrwo"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Chapters" type="Node" parent="."]
+
+[node name="FirstChapter" parent="Chapters" instance=ExtResource("1_fpuah")]
+position = Vector2(2, 0)
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="AudioStream" type="AudioStreamPlayer" parent="Audio"]
+
+[node name="Systems" type="Node" parent="."]
+
+[node name="CasefileSystem" parent="Systems" instance=ExtResource("2_mkh6x")]
+
+[node name="InteractableSystem" parent="Systems" instance=ExtResource("3_sxrwo")]

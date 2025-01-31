@@ -1,4 +1,4 @@
-class_name MysteryView extends Control
+class_name MysteryView extends Node
 
 @onready var casefile_items_vbox:VBoxContainer = %CaseFileItemsVBox
 @onready var content_display_lbox:RichTextLabel = %ContentDisplayLBox

@@ -6,7 +6,7 @@ class_name MysteryController extends Node
 @onready var clues_resource:ClueCollectionResource = ClueCollectionResource.new()
 @onready var clues_json:JSON = load ("res://Data/StrapiData/Collections/clues.collection.strapi.json")
 
-
+@onready var mystery_view:Control = get_node("../CaseFileUI/")
 
 func _ready() -> void:
     mysteries_resource.json = mysteries_json
