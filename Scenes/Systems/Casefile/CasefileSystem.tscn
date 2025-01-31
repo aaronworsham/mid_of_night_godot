@@ -1,13 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://cij3nnw4wjnyn"]
 
-[ext_resource type="PackedScene" uid="uid://xgehhw0c58ct" path="res://Scenes/Systems/Mystery/myastery_controller.tscn" id="1_khsd8"]
-[ext_resource type="Script" path="res://Scripts/Systems/Casefile/CaseFilesView.gd" id="2_xe47f"]
+[ext_resource type="Script" path="res://Scripts/Systems/Casefile/CasefileView.gd" id="2_blyql"]
+[ext_resource type="Script" path="res://Scripts/Systems/Mystery/MysteryController.gd" id="2_yw64f"]
 [ext_resource type="Script" path="res://Scripts/Systems/Mystery/MysteryView.gd" id="3_w7urs"]
 
 [node name="CasefileSystem" type="Node2D"]
 
 [node name="CasefileUICanvas" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="CasefileUI" type="Control" parent="CasefileUICanvas"]
 layout_mode = 3
@@ -43,6 +42,7 @@ layout_mode = 2
 text = "Maps"
 
 [node name="CasefileItemsVBox" type="VBoxContainer" parent="CasefileUICanvas/CasefileUI/CasefilePanel"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 38.0
 offset_top = 156.0
@@ -50,6 +50,7 @@ offset_right = 303.0
 offset_bottom = 916.0
 
 [node name="CasefileItemContentLBox" type="RichTextLabel" parent="CasefileUICanvas/CasefileUI/CasefilePanel"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 346.0
 offset_top = 143.0
@@ -66,19 +67,21 @@ text = "Casefile"
 
 [node name="Controllers" type="Node" parent="."]
 
-[node name="MyasteryController" parent="Controllers" instance=ExtResource("1_khsd8")]
+[node name="CasefileController" type="Node" parent="Controllers"]
+
+[node name="MysteryController" type="Node" parent="Controllers"]
+unique_name_in_owner = true
+script = ExtResource("2_yw64f")
 
 [node name="Views" type="Node" parent="."]
 
 [node name="CasefileView" type="Node" parent="Views"]
-script = ExtResource("2_xe47f")
+unique_name_in_owner = true
+script = ExtResource("2_blyql")
 
 [node name="MysteryView" type="Node" parent="Views"]
+unique_name_in_owner = true
 script = ExtResource("3_w7urs")
 
-[node name="Ojbects" type="Node" parent="."]
-
-[node name="Actors" type="Node" parent="Ojbects"]
-unique_name_in_owner = true
-
+[connection signal="pressed" from="CasefileUICanvas/CasefileUI/CasefilePanel/CasefileTabsHBox/MysteryBtn" to="Views/CasefileView" method="_on_mystery_btn_pressed"]
 [connection signal="pressed" from="CasefileUICanvas/CasefileUI/ToggleCasefilePanel" to="Views/CasefileView" method="_on_toggle_casefile_panel_pressed"]

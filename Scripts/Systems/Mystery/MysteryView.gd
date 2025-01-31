@@ -1,7 +1,7 @@
 class_name MysteryView extends Node
 
-@onready var casefile_items_vbox:VBoxContainer = %CaseFileItemsVBox
-@onready var content_display_lbox:RichTextLabel = %ContentDisplayLBox
+@onready var casefile_items_vbox:VBoxContainer = %CasefileItemsVBox
+@onready var content_display_lbox:RichTextLabel = %CasefileItemContentLBox
 
 func _ready() -> void:
     EventManager.event_mystery_casefileui_add_mystery.connect(add_mystery_to_casefileui_item_vbox)
