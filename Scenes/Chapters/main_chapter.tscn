@@ -19,7 +19,7 @@ position = Vector2(2, 0)
 
 [node name="CasefileSystem" parent="Systems" instance=ExtResource("13_g7mgr")]
 
-[node name="interactable_system" parent="Systems" instance=ExtResource("3_anigj")]
+[node name="InteractableSystem" parent="Systems" instance=ExtResource("3_anigj")]
 
 [node name="Objects" type="Node" parent="."]
 

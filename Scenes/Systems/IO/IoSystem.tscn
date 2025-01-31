@@ -1,7 +1,24 @@
-[gd_scene format=3 uid="uid://cfgk5ssclmad1"]
+[gd_scene load_steps=5 format=3 uid="uid://cfgk5ssclmad1"]
+
+[ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="1_6gr3o"]
+[ext_resource type="PackedScene" uid="uid://6vhcn0bs35h" path="res://Scenes/Controllers/input_controller.tscn" id="2_dyndx"]
+[ext_resource type="PackedScene" uid="uid://dsntxowjttdx0" path="res://Scenes/Interactables/Actors/detective_model.tscn" id="3_s1n5v"]
+[ext_resource type="PackedScene" uid="uid://uq7pf86awi87" path="res://Scenes/Managers/detective_manager.tscn" id="4_0n464"]
 
 [node name="IoSystem" type="Node2D"]
 
 [node name="Controllers" type="Node" parent="."]
 
+[node name="DetectiveController" parent="Controllers" instance=ExtResource("1_6gr3o")]
+
+[node name="InputController" parent="Controllers" instance=ExtResource("2_dyndx")]
+
 [node name="Views" type="Node" parent="."]
+
+[node name="Models" type="Node" parent="."]
+
+[node name="DetectiveModel" parent="Models" instance=ExtResource("3_s1n5v")]
+
+[node name="Managers" type="Node" parent="."]
+
+[node name="DetectiveManager" parent="Managers" instance=ExtResource("4_0n464")]

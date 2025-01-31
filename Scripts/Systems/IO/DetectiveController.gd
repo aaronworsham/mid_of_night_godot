@@ -13,32 +13,32 @@ var lock_movement: bool = false
 
 
 func _physics_process(_delta):
-		
-	if lock_movement == true:
-		return
+        
+    if lock_movement == true:
+        return
 
-	#Set Velocity
-	var direction = Input.get_vector("left", "right", "up", "down")
-	velocity = direction * speed
-	
-	#this is a test 3
-	if direction == Vector2.ZERO:
-		anim_tree.get("parameters/playback").travel("Idle")
-		anim_tree.set("parameters/Idle/BlendSpace2D/blend_position", facing)
-	else:
-		anim_tree.get("parameters/playback").travel("Walk")
-		anim_tree.set("parameters/Walk/BlendSpace2D/blend_position", direction)
-		facing = direction
-	move_and_slide()
+    #Set Velocity
+    var direction = Input.get_vector("left", "right", "up", "down")
+    velocity = direction * speed
+    
+    #this is a test 3
+    if direction == Vector2.ZERO:
+        anim_tree.get("parameters/playback").travel("Idle")
+        anim_tree.set("parameters/Idle/BlendSpace2D/blend_position", facing)
+    else:
+        anim_tree.get("parameters/playback").travel("Walk")
+        anim_tree.set("parameters/Walk/BlendSpace2D/blend_position", direction)
+        facing = direction
+    move_and_slide()
 
 #func _unhandled_input(event: InputEvent) -> void:
-	#if event is InputEventKey:
-		#if Input.is_action_pressed("dialogic_default_action"):
-			#var actionables = actionable_finder.get_overlapping_areas()
-			#if actionables.size() > 0:
-				#lock_movement = true
-				##send the Actor
-				#EventManager.emit_event_start_dialog(actionables[0].get_parent())
-				##actionables[0].dialog_action()
-				#get_viewport().set_input_as_handled()
-				#return
+    #if event is InputEventKey:
+        #if Input.is_action_pressed("dialogic_default_action"):
+            #var actionables = actionable_finder.get_overlapping_areas()
+            #if actionables.size() > 0:
+                #lock_movement = true
+                ##send the Actor
+                #EventManager.emit_event_start_dialog(actionables[0].get_parent())
+                ##actionables[0].dialog_action()
+                #get_viewport().set_input_as_handled()
+                #return
