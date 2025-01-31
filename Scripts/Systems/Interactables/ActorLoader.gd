@@ -9,15 +9,9 @@ func _ready() -> void:
     actors_collection_resource.json = actor_json
     actors_collection_resource.on_load()
     var _actors = actors_collection_resource.get_all_actors()
-    var test_actor_skipped = false
     for a in _actors:
-        if !test_actor_skipped:
-            test_actor_skipped = true
-            continue
         var actor_resource:ActorMemberResource = ActorMemberResource.new()
         actor_resource.setup(a)
-
-        
 
         var actor_model:ActorModel = ActorModel.new()
         actor_model.actor_resource = actor_resource

@@ -1,9 +1,9 @@
 class_name DialogView extends Node
 
-@onready var dialog_list: VBoxContainer = %DialogVBox
-@onready var notebook_list: VBoxContainer = %NotebookVBox
-@onready var dialog_ui:Node = get_node("/root/Main/UI/DialogUI")
-@onready var dialog_controller:DialogController = get_node("/root/Main/Systems/Dialog/DialogController")
+@onready var dialog_list: VBoxContainer = %TopicsVBox
+@onready var notebook_list: VBoxContainer = %DialogVBox
+@onready var dialog_ui:Node = %DialogPanel
+@onready var dialog_controller:DialogController = %DialogController
 
 var _topics:Array
 

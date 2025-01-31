@@ -1,16 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://2v1bio1aocwd"]
+[gd_scene load_steps=6 format=3 uid="uid://2v1bio1aocwd"]
 
-[ext_resource type="PackedScene" uid="uid://dslya3xokc4xn" path="res://Scenes/Chapters/first_chapter.tscn" id="1_fpuah"]
+[ext_resource type="PackedScene" uid="uid://cpatn55cab6xo" path="res://Scenes/Chapters/FirstChapter.tscn" id="1_ahgqy"]
 [ext_resource type="PackedScene" uid="uid://cij3nnw4wjnyn" path="res://Scenes/Systems/Casefile/CasefileSystem.tscn" id="4_7ctr6"]
 [ext_resource type="PackedScene" uid="uid://cfgk5ssclmad1" path="res://Scenes/Systems/IO/IoSystem.tscn" id="4_snkwa"]
 [ext_resource type="PackedScene" uid="uid://dw4k6ui7vcqdw" path="res://Scenes/Systems/Interactables/InteractableSystem.tscn" id="4_xumfi"]
+[ext_resource type="PackedScene" uid="uid://thve5vhi8jam" path="res://Scenes/Systems/DialogSystem/DialogSystem.tscn" id="5_gp6ms"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Chapters" type="Node" parent="."]
 
-[node name="FirstChapter" parent="Chapters" instance=ExtResource("1_fpuah")]
-position = Vector2(2, 0)
+[node name="FirstChapter" parent="Chapters" instance=ExtResource("1_ahgqy")]
 
 [node name="Audio" type="Node" parent="."]
 
@@ -23,3 +23,5 @@ position = Vector2(2, 0)
 [node name="InteractableSystem" parent="Systems" instance=ExtResource("4_xumfi")]
 
 [node name="CasefileSystem" parent="Systems" instance=ExtResource("4_7ctr6")]
+
+[node name="DialogSystem" parent="Systems" instance=ExtResource("5_gp6ms")]

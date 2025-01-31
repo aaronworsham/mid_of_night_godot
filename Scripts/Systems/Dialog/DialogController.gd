@@ -1,6 +1,6 @@
 class_name DialogController extends Node
 
-@onready var dialog_view:DialogView = get_node("/root/Main/UI/DialogUI")
+@onready var dialog_view:DialogView = %DialogView
 # @onready var threads_resource: Resource = ThreadCollectionResource.new()
 # @onready var thread_json: JSON = load("res://Data/Threads/threads.strapi.json")
 # @onready var timeline_resource: TimelineResource = TimelineResource.new()

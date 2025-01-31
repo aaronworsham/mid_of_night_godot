@@ -1,3 +1,5 @@
 [gd_resource type="Theme" format=3 uid="uid://cbjorvyjmbpd0"]
 
 [resource]
+RichTextLabel/styles/background = null
+RichTextLabel/styles/fill = null
