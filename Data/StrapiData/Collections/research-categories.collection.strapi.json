@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "id": 2,
+            "documentId": "f3du1zyo7m0qqdvpehd7oxvj",
+            "name": "Research Category 1",
+            "guid": "researchcategory1guid",
+            "createdAt": "2025-02-03T13:28:00.362Z",
+            "updatedAt": "2025-02-03T13:28:01.579Z",
+            "publishedAt": "2025-02-03T13:28:01.585Z",
+            "research_topics": [
+                {
+                    "id": 2,
+                    "documentId": "jqtt8diiph75s0v1btv258ud",
+                    "name": "Research Topic 1",
+                    "guid": "researchtopic1guid",
+                    "createdAt": "2025-01-20T13:58:17.263Z",
+                    "updatedAt": "2025-01-20T14:05:39.482Z",
+                    "publishedAt": "2025-01-20T14:05:39.490Z"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 1
+        }
+    }
+}

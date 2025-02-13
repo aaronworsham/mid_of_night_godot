@@ -4,21 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://dwr2lyvhem4t" path="res://Assets/portraits/samportrait.jpg" id="2_7n2pw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b38ua"]
-size = Vector2(100, 100)
+size = Vector2(41, 61)
 
 [node name="Actor" type="StaticBody2D" groups=["Persist"]]
 top_level = true
-input_pickable = true
 script = ExtResource("1_ebqrg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(0.5, -1.5)
 shape = SubResource("RectangleShape2D_b38ua")
 debug_color = Color(0.752941, 0.454902, 0.133333, 0.615686)
 
 [node name="ActorPortrait" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_7n2pw")
 region_rect = Rect2(27.8333, 48.4996, 98, 104)
 
@@ -30,4 +29,3 @@ offset_bottom = 45.0
 text = "TmpLblDelete"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

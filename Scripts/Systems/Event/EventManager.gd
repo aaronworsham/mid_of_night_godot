@@ -36,6 +36,20 @@ signal event_mystery_casefileui_add_mystery()
 
 #endregion
 
+#region Research
+
+signal event_research_discovered()
+signal event_research_topic_discovered()
+signal event_research_casefileui_populate_discovered_research()
+signal event_research_casefileui_add_research()
+
+#endregion
+
+#region Dialog
+
+signal event_dialog_closed()
+
+#endregion
 
 #Signals EM can emit for others to connect to
 func emit_event_attributes_updated(attrs:Dictionary):

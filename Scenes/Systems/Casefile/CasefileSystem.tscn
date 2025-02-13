@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cij3nnw4wjnyn"]
+[gd_scene load_steps=6 format=3 uid="uid://cij3nnw4wjnyn"]
 
 [ext_resource type="Script" path="res://Scripts/Systems/Casefile/CasefileView.gd" id="2_blyql"]
+[ext_resource type="Script" path="res://Scripts/Systems/Research/ResearchController.gd" id="2_c6ihg"]
 [ext_resource type="Script" path="res://Scripts/Systems/Mystery/MysteryController.gd" id="2_yw64f"]
 [ext_resource type="Script" path="res://Scripts/Systems/Mystery/MysteryView.gd" id="3_w7urs"]
+[ext_resource type="Script" path="res://Scripts/Systems/Research/ResearchView.gd" id="4_nikvl"]
 
 [node name="CasefileSystem" type="Node2D"]
 
@@ -73,6 +75,10 @@ text = "Casefile"
 unique_name_in_owner = true
 script = ExtResource("2_yw64f")
 
+[node name="ResearchController" type="Node" parent="Controllers"]
+unique_name_in_owner = true
+script = ExtResource("2_c6ihg")
+
 [node name="Views" type="Node" parent="."]
 
 [node name="CasefileView" type="Node" parent="Views"]
@@ -83,5 +89,10 @@ script = ExtResource("2_blyql")
 unique_name_in_owner = true
 script = ExtResource("3_w7urs")
 
+[node name="ResearchView" type="Node" parent="Views"]
+unique_name_in_owner = true
+script = ExtResource("4_nikvl")
+
 [connection signal="pressed" from="CasefileUICanvas/CasefileUI/CasefilePanel/CasefileTabsHBox/MysteryBtn" to="Views/CasefileView" method="_on_mystery_btn_pressed"]
+[connection signal="pressed" from="CasefileUICanvas/CasefileUI/CasefilePanel/CasefileTabsHBox/ResearchBtn" to="Views/CasefileView" method="_on_research_btn_pressed"]
 [connection signal="pressed" from="CasefileUICanvas/CasefileUI/ToggleCasefilePanel" to="Views/CasefileView" method="_on_toggle_casefile_panel_pressed"]

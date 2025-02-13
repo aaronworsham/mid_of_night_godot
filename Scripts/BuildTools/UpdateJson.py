@@ -73,7 +73,23 @@ data_sets = [
 
     {
         "base_url"  : "research-topics",
-        "params"    : {},
+        "params"    : {
+            "populate": [
+                "research_category"
+            ]
+        },
+        "has_portrait" : False
+    },
+
+#RESEARCH CATEGORIES
+
+    {
+        "base_url"  : "research-categories",
+        "params"    : {
+            "populate": [
+                "research_topics"
+            ]
+        },
         "has_portrait" : False
     },
 

@@ -57,13 +57,13 @@ func set_current_thread(guid):
 func show_discovered_threads():
     for t in current_dialog_threads:
         if t["starts_discovered"]:
-            dialog_view.add_topic(t)
+            dialog_view.add_topic(t)  #TODO only add if it is a new topic
 
     var discovered:Array = threads_resource.get_discovered_threads()
     for r in discovered:
         dialog_view.add_topic(r)
 
-    dialog_view.load_notebook_list()
+    dialog_view.load_topic_list()
 
 func execute_thread_instructions():
     for i in current_thread["instructions"]:
@@ -74,6 +74,7 @@ func execute_thread_instructions():
                 dialog_view.update_dialog(i["copy"])
                 threads_resource.set_thread_as_discovered(i["thread"]["guid"])
                 dialog_view.clear_topics()
+                dialog_view.clear_topic_list()
                 show_discovered_threads()
             "thread-instruction.clue-discovered":
                 EventManager.event_mystery_clue_discovered.emit()
@@ -83,3 +84,8 @@ func execute_thread_instructions():
                 print("Research Topic Discovered")
 
     
+
+
+func _on_dialog_close_btn_pressed() -> void:
+    dialog_view.hide_dialog_ui()
+    EventManager.event_dialog_closed.emit()

@@ -39,6 +39,14 @@ offset_top = 62.0
 offset_right = 1741.0
 offset_bottom = 933.0
 
+[node name="DialogCloseBtn" type="Button" parent="DialogCanvas/DialogPanel"]
+layout_mode = 0
+offset_left = 1732.0
+offset_top = 5.0
+offset_right = 1782.0
+offset_bottom = 36.0
+text = "Close"
+
 [node name="Views" type="Node" parent="."]
 
 [node name="DialogView" type="Node" parent="Views"]
@@ -50,3 +58,5 @@ script = ExtResource("2_rhf56")
 [node name="DialogController" type="Node" parent="Controllers"]
 unique_name_in_owner = true
 script = ExtResource("3_cr0d0")
+
+[connection signal="pressed" from="DialogCanvas/DialogPanel/DialogCloseBtn" to="Controllers/DialogController" method="_on_dialog_close_btn_pressed"]
