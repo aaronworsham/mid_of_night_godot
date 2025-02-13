@@ -1,21 +1,17 @@
-extends GutTest
+class_name TestDialogCollection extends BaseTestCollection
 
 @onready var dialog_resource:DialogCollectionResource = DialogCollectionResource.new()
 @onready var dialog_json:JSON = load ("res://Tests/StrapiData/Collections/test_dialogs.collection.strapi.json")
 
-var guid:String
-var dname:String
+var mguid:String
 
 func before_each():
-    dialog_resource.json = dialog_json
-    dialog_resource.on_load()
-    guid = dialog_resource._dialogs_array[0]["guid"]
-    dname = dialog_resource._dialogs_array[0]["name"]
+    setup_collection(dialog_resource,dialog_json)
+    mguid = collection_resource._collection_array[0]["mystery"]["guid"]
 
 func test_setup():
-    assert_not_null(dialog_resource.json.data)
-    assert_not_null(dialog_resource._dialogs_dict)
+    base_test_setup()
 
-func test_get_dialog_by_guid():
-    var d:Dictionary = dialog_resource.get_dialog_by_guid(guid)
-    assert_eq(d["name"], dname)
+func test_get_clue_by_guid():
+    var d:Dictionary = dialog_resource.get_member_by_guid(cguid)
+    assert_eq(d["name"], cname)

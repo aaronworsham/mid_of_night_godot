@@ -21,7 +21,8 @@ data_sets = [
         "base_url"  : "dialogs",
         "params"    : {
             "populate": [
-                "actor"
+                "actor",
+                "threads"
             ]
         },
         "has_portrait" : False
