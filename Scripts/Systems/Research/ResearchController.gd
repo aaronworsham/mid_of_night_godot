@@ -10,7 +10,6 @@ func _ready() -> void:
 
     EventManager.event_research_discovered.connect(research_discovered)
     EventManager.event_research_topic_discovered.connect(topic_discovered)
-    EventManager.event_research_casefileui_populate_discovered_research.connect(populate_casefile_ui_with_discovered_research)
 
 func research_discovered():
     print("Research Controller: Research Discovered")

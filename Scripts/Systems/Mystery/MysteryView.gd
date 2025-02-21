@@ -2,6 +2,7 @@ class_name MysteryView extends Node
 
 @onready var casefile_items_vbox:VBoxContainer = %CasefileItemsVBox
 @onready var content_display_lbox:RichTextLabel = %CasefileItemContentLBox
+@onready var mystery_controller:MysteryController = %MysteryController
 
 func _ready() -> void:
     EventManager.event_mystery_casefileui_add_mystery.connect(add_mystery_to_casefileui_item_vbox)
@@ -19,3 +20,4 @@ func _button_pressed(m:Dictionary)->void:
         s += "\n"
     s += "END"
     content_display_lbox.text = s
+   

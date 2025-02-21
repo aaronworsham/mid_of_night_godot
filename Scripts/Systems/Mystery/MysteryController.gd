@@ -12,14 +12,14 @@ func _ready() -> void:
 
     EventManager.event_mystery_discovered.connect(mystery_discovered)
     EventManager.event_mystery_clue_discovered.connect(clue_discovered)
-    EventManager.event_mystery_casefileui_populate_discovered_mysteries.connect(populate_casefile_ui_with_discovered_mysteries)
 
-func mystery_discovered():
-    print("Mystery Controller: Mystery Discovered")
+func mystery_discovered(guid:String):
+    mystery_system_resource.set_member_as_discovered(guid)
 
-func clue_discovered():
-    print("Mystery Controller: Clue Discovered")
+func clue_discovered(guid:String):
+    mystery_system_resource.set_submember_as_discovered(guid)
 
-func populate_casefile_ui_with_discovered_mysteries():
+
+func _on_mystery_btn_pressed() -> void:
     for m in mystery_system_resource.get_discovered_members():
         mystery_view.add_mystery_to_casefileui_item_vbox(m)

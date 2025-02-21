@@ -14,11 +14,3 @@ func _on_toggle_casefile_panel_pressed() -> void:
         casefiles_panel.visible = false
     else:
         casefiles_panel.visible = true
-
-
-func _on_mystery_btn_pressed() -> void:
-    mystery_controller.populate_casefile_ui_with_discovered_mysteries()
-
-
-func _on_research_btn_pressed() -> void:
-    research_controller.populate_casefile_ui_with_discovered_research()

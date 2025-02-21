@@ -70,9 +70,9 @@ func execute_thread_instructions():
                 dialog_view.clear_topic_list()
                 show_discovered_threads()
             "thread-instruction.clue-discovered":
-                EventManager.event_mystery_clue_discovered.emit()
+                EventManager.event_mystery_clue_discovered.emit(i["clue"]["guid"])
             "thread-instruction.mystery-discovered":
-                EventManager.event_mystery_discovered.emit()
+                EventManager.event_mystery_discovered.emit(i["mystery"]["guid"])
             "thread-instruction.topic-discovered":
                 print("Research Topic Discovered")
 

@@ -31,7 +31,6 @@ signal event_actor_loaded(actor:ActorModel)
 
 signal event_mystery_discovered()
 signal event_mystery_clue_discovered()
-signal event_mystery_casefileui_populate_discovered_mysteries()
 signal event_mystery_casefileui_add_mystery()
 
 #endregion
@@ -40,7 +39,6 @@ signal event_mystery_casefileui_add_mystery()
 
 signal event_research_discovered()
 signal event_research_topic_discovered()
-signal event_research_casefileui_populate_discovered_research()
 signal event_research_casefileui_add_research()
 
 #endregion
