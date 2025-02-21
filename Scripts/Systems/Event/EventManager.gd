@@ -49,6 +49,12 @@ signal event_dialog_closed()
 
 #endregion
 
+#region Skills
+signal event_skill_get_value()
+signal event_skill_set_value()
+
+#endregion
+
 #Signals EM can emit for others to connect to
 func emit_event_attributes_updated(attrs:Dictionary):
 	event_attributes_updated.emit(attrs)
