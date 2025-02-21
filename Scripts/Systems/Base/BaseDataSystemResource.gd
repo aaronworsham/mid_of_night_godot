@@ -68,6 +68,9 @@ func on_load():
 func get_member_by_guid(guid:String) -> Dictionary:
     return _member_dict[guid]
 
+func get_members()-> Array:
+    return _member_array
+
 func get_submember_by_guid(guid:String) -> Dictionary:
     return _submember_dict[guid]
 
@@ -76,6 +79,9 @@ func get_submembers_from_member_guid(guid:String) -> Array:
         return _submembers_by_member_guid[guid]
     else:
         return []
+
+func get_submembers()-> Array:
+    return _submember_array
 
 func set_member_as_discovered(guid:String):
     if !_members_discovered.has(guid):

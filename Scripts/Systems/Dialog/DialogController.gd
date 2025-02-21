@@ -74,7 +74,7 @@ func execute_thread_instructions():
             "thread-instruction.mystery-discovered":
                 EventManager.event_mystery_discovered.emit(i["mystery"]["guid"])
             "thread-instruction.topic-discovered":
-                print("Research Topic Discovered")
+                EventManager.event_research_discovered.emit(i["research_topic"]["guid"])
 
     
 

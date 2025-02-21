@@ -11,12 +11,12 @@ func _ready() -> void:
     EventManager.event_research_discovered.connect(research_discovered)
     EventManager.event_research_topic_discovered.connect(topic_discovered)
 
-func research_discovered():
-    print("Research Controller: Research Discovered")
+func research_discovered(guid:String):
+    research_system_resource.set_member_as_discovered(guid)
 
-func topic_discovered():
-    print("research Controller: Topic Discovered")
+func topic_discovered(guid):
+    research_system_resource.set_submember_as_discovered(guid)
 
-func populate_casefile_ui_with_discovered_research():
-    for m in research_system_resource.get_discovered_members():
+func _on_research_btn_pressed() -> void:
+    for m in research_system_resource.get_members():
         research_view.add_research_to_casefileui_item_vbox(m)

@@ -94,5 +94,5 @@ unique_name_in_owner = true
 script = ExtResource("4_nikvl")
 
 [connection signal="pressed" from="CasefileUICanvas/CasefileUI/CasefilePanel/CasefileTabsHBox/MysteryBtn" to="Controllers/MysteryController" method="_on_mystery_btn_pressed"]
-[connection signal="pressed" from="CasefileUICanvas/CasefileUI/CasefilePanel/CasefileTabsHBox/ResearchBtn" to="Views/CasefileView" method="_on_research_btn_pressed"]
+[connection signal="pressed" from="CasefileUICanvas/CasefileUI/CasefilePanel/CasefileTabsHBox/ResearchBtn" to="Controllers/ResearchController" method="_on_research_btn_pressed"]
 [connection signal="pressed" from="CasefileUICanvas/CasefileUI/ToggleCasefilePanel" to="Views/CasefileView" method="_on_toggle_casefile_panel_pressed"]
