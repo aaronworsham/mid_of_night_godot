@@ -1,5 +1,4 @@
-class_name DiceManager
-extends Node
+class_name DiceManager extends Node
 
 var random = RandomNumberGenerator.new()
 var set_roll = 0

@@ -55,6 +55,9 @@ signal event_skill_set_value()
 
 #endregion
 
+#region ChanceOfSuccess
+signal event_cos_get_cos()
+
 #Signals EM can emit for others to connect to
 func emit_event_attributes_updated(attrs:Dictionary):
 	event_attributes_updated.emit(attrs)

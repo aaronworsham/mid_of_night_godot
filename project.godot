@@ -24,15 +24,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={
-"Vendor": "res://Dialog/Dialogic/Vendor.dch"
-}
-directories/dtl_directory={
-"test_timeline": "res://Dialog/Dialogic/test_timeline.dtl",
-"timeline2": "res://Dialog/Dialogic/timeline2.dtl",
-"tmp_timeline": "res://Dialog/Dialogic/tmp_timeline.dtl",
-"vendor_timeline": "res://Dialog/Dialogic/vendor_timeline.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 variables={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
