@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="NotebookResource" load_steps=3 format=3 uid="uid://cxum027mnpi12"]
-
-[ext_resource type="JSON" path="res://Data/Notebooks/Actors/vendor_notebook.strapi.json" id="1_5obfj"]
-[ext_resource type="Script" path="res://Scripts/Systems/Dialog/NotebookResource.gd" id="1_kbbhw"]
-
-[resource]
-script = ExtResource("1_kbbhw")
-json = ExtResource("1_5obfj")
