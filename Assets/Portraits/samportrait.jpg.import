@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lvaclmw0ghe7"
-path="res://.godot/imported/testactor2portrait.jpg-99ae9d95c189bf17b7dd36ecd4e7bec1.ctex"
+uid="uid://hoidxmb2v57o"
+path="res://.godot/imported/samportrait.jpg-2261a5caca49e08757dd0faf3e1bc079.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/portraits/testactor2portrait.jpg"
-dest_files=["res://.godot/imported/testactor2portrait.jpg-99ae9d95c189bf17b7dd36ecd4e7bec1.ctex"]
+source_file="res://Assets/Portraits/samportrait.jpg"
+dest_files=["res://.godot/imported/samportrait.jpg-2261a5caca49e08757dd0faf3e1bc079.ctex"]
 
 [params]
 
