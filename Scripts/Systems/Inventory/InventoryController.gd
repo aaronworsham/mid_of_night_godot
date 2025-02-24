@@ -1,5 +1,7 @@
 class_name InventoryController extends Node
 
+@onready var inventory_view:InventoryView = %InventoryView
+
 var _items_resource:ItemsResource
 @export var _inventory:Array
 
@@ -21,4 +23,5 @@ func get_items()-> Array:
     return _items_resource.get_items_as_resources()
 
 func _on_inventory_btn_pressed() -> void:
-    pass # Replace with function body.
+    for i in _items_resource.get_items_as_resources():
+        inventory_view.add_inventory_to_casefileui_item_vbox(i)

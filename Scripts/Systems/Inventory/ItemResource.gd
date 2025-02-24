@@ -4,7 +4,6 @@ var item_data:Dictionary:
     set(value):
         item_data = value
 
-var _name:String
 var _count:int
 var _guid:String
 
@@ -23,11 +22,8 @@ func set_count(c:int) -> void:
 func get_count()->int:
     return _count
 
-func set_item_name(n:String) -> void:
-    _name = n
-
 func get_item_name()->String:
-    return _name
+    return item_data["name"]
 
 func get_guid()->String:
     return _guid
