@@ -1,5 +1,9 @@
 class_name ItemResource extends BaseResource
 
+var item_data:Dictionary:
+    set(value):
+        item_data = value
+
 var _name:String
 var _count:int
 var _guid:String

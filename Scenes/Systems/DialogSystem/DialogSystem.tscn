@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://thve5vhi8jam"]
 
-[ext_resource type="Texture2D" uid="uid://lvaclmw0ghe7" path="res://Assets/portraits/testactor2portrait.jpg" id="1_k8w5w"]
+[ext_resource type="Texture2D" path="res://Assets/portraits/testactor2portrait.jpg" id="1_k8w5w"]
 [ext_resource type="Script" path="res://Scripts/Systems/Dialog/DialogView.gd" id="2_rhf56"]
 [ext_resource type="Script" path="res://Scripts/Systems/Dialog/DialogController.gd" id="3_cr0d0"]
 

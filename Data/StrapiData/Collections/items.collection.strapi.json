@@ -1,1 +1,66 @@
-{"data": [{"id": 4, "documentId": "mko85uh8yhvttuufvpcfnpve", "name": "Test Item 2", "guid": "testitem2guid", "createdAt": "2025-02-22T17:57:04.887Z", "updatedAt": "2025-02-22T17:57:05.717Z", "publishedAt": "2025-02-22T17:57:05.722Z", "item_portrait": null}, {"id": 6, "documentId": "wdqx62bnk5q7t7mybeo7qeu7", "name": "Test Item 1", "guid": "testitem1guid", "createdAt": "2025-02-22T17:56:46.326Z", "updatedAt": "2025-02-23T13:53:01.781Z", "publishedAt": "2025-02-23T13:53:01.792Z", "item_portrait": {"id": 5, "documentId": "d2czby2e7e6n4jpw63apj5bc", "name": "spellbook.jpeg", "alternativeText": null, "caption": null, "width": 225, "height": 225, "formats": {"thumbnail": {"name": "thumbnail_spellbook.jpeg", "hash": "thumbnail_spellbook_f195e3d367", "ext": ".jpeg", "mime": "image/jpeg", "path": null, "width": 156, "height": 156, "size": 5.95, "sizeInBytes": 5950, "url": "/uploads/thumbnail_spellbook_f195e3d367.jpeg"}}, "hash": "spellbook_f195e3d367", "ext": ".jpeg", "mime": "image/jpeg", "size": 10.97, "url": "/uploads/spellbook_f195e3d367.jpeg", "previewUrl": null, "provider": "local", "provider_metadata": null, "createdAt": "2025-02-23T13:50:29.454Z", "updatedAt": "2025-02-23T13:52:19.562Z", "publishedAt": "2025-02-23T13:50:29.454Z", "resPath": "res://Assets/Items/spellbook.jpeg"}}], "meta": {"pagination": {"page": 1, "pageSize": 25, "pageCount": 1, "total": 2}}}
+{
+    "data": [
+        {
+            "id": 4,
+            "documentId": "mko85uh8yhvttuufvpcfnpve",
+            "name": "Test Item 2",
+            "guid": "testitem2guid",
+            "createdAt": "2025-02-22T17:57:04.887Z",
+            "updatedAt": "2025-02-22T17:57:05.717Z",
+            "publishedAt": "2025-02-22T17:57:05.722Z",
+            "item_portrait": null
+        },
+        {
+            "id": 6,
+            "documentId": "wdqx62bnk5q7t7mybeo7qeu7",
+            "name": "Test Item 1",
+            "guid": "testitem1guid",
+            "createdAt": "2025-02-22T17:56:46.326Z",
+            "updatedAt": "2025-02-23T13:53:01.781Z",
+            "publishedAt": "2025-02-23T13:53:01.792Z",
+            "item_portrait": {
+                "id": 5,
+                "documentId": "d2czby2e7e6n4jpw63apj5bc",
+                "name": "spellbook.jpeg",
+                "alternativeText": null,
+                "caption": null,
+                "width": 225,
+                "height": 225,
+                "formats": {
+                    "thumbnail": {
+                        "name": "thumbnail_spellbook.jpeg",
+                        "hash": "thumbnail_spellbook_f195e3d367",
+                        "ext": ".jpeg",
+                        "mime": "image/jpeg",
+                        "path": null,
+                        "width": 156,
+                        "height": 156,
+                        "size": 5.95,
+                        "sizeInBytes": 5950,
+                        "url": "/uploads/thumbnail_spellbook_f195e3d367.jpeg"
+                    }
+                },
+                "hash": "spellbook_f195e3d367",
+                "ext": ".jpeg",
+                "mime": "image/jpeg",
+                "size": 10.97,
+                "url": "/uploads/spellbook_f195e3d367.jpeg",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "createdAt": "2025-02-23T13:50:29.454Z",
+                "updatedAt": "2025-02-23T13:52:19.562Z",
+                "publishedAt": "2025-02-23T13:50:29.454Z",
+                "resPath": "res://Assets/Items/spellbook.jpeg"
+            }
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 2
+        }
+    }
+}

@@ -1,5 +1,6 @@
 class_name InventoryController extends Node
 
+
 @export var _inventory:Array
 
 func _ready() -> void:
@@ -13,3 +14,7 @@ func add_to_inventory(i:ItemResource) -> void:
 
 func get_inventory() -> Array:
     return _inventory
+
+
+func _on_inventory_btn_pressed() -> void:
+    pass # Replace with function body.
