@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://ckc8ld73u1eaf"]
 
-[ext_resource type="Script" path="res://Scripts/Systems/Interactables/ActionUIController.gd" id="1_kuc3t"]
+[sub_resource type="Resource" id="Resource_4huqs"]
+metadata/__load_path__ = "res://Scripts/Systems/Interactables/ActionUIController.gd"
 
 [node name="ActionUIController" type="Node"]
-script = ExtResource("1_kuc3t")
+script = SubResource("Resource_4huqs")

@@ -16,5 +16,5 @@ func add_inventory_to_casefileui_item_vbox(i:ItemResource) -> void:
 
 
 func _button_pressed(i:ItemResource)->void:
-    var s:String = "Test Inventory"
+    var s:String = i.get_item_name()
     content_display_lbox.text = s

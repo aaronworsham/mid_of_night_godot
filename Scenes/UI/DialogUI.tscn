@@ -1,19 +1,22 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2dr7q1oycv3m"]
 
-[ext_resource type="Script" path="res://Scripts/Systems/Dialog/DialogViews.gd" id="1_isrco"]
-[ext_resource type="Texture2D" uid="uid://tcevpv5xoyq4" path="res://Assets/portraits/photobooth-in-white-cap.jpg" id="2_7rlwc"]
+[sub_resource type="Resource" id="Resource_4ta1a"]
+metadata/__load_path__ = "res://Scripts/Systems/Dialog/DialogViews.gd"
+
+[sub_resource type="Resource" id="Resource_qjaxh"]
+metadata/__load_path__ = "res://Assets/portraits/photobooth-in-white-cap.jpg"
 
 [node name="DialogUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_isrco")
+script = SubResource("Resource_4ta1a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(255, 226.02)
 scale = Vector2(0.510204, 0.510204)
-texture = ExtResource("2_7rlwc")
+texture = SubResource("Resource_qjaxh")
 
 [node name="ActorDetails" type="VBoxContainer" parent="."]
 layout_mode = 0

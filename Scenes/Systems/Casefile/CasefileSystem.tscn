@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://cij3nnw4wjnyn"]
 
-[ext_resource type="Script" path="res://Scripts/Systems/Casefile/CasefileView.gd" id="2_blyql"]
-[ext_resource type="Script" path="res://Scripts/Systems/Research/ResearchController.gd" id="2_c6ihg"]
-[ext_resource type="Script" path="res://Scripts/Systems/Mystery/MysteryController.gd" id="2_yw64f"]
-[ext_resource type="Script" path="res://Scripts/Systems/Inventory/InventoryController.gd" id="3_id7ay"]
-[ext_resource type="Script" path="res://Scripts/Systems/Mystery/MysteryView.gd" id="3_w7urs"]
-[ext_resource type="Script" path="res://Scripts/Systems/Research/ResearchView.gd" id="4_nikvl"]
-[ext_resource type="Script" path="res://Scripts/Systems/Inventory/InventoryView.gd" id="7_661nj"]
+[ext_resource type="Script" uid="uid://cwfq2suxhfwwm" path="res://Scripts/Systems/Casefile/CasefileView.gd" id="2_blyql"]
+[ext_resource type="Script" uid="uid://bllvyvet0ouya" path="res://Scripts/Systems/Research/ResearchController.gd" id="2_c6ihg"]
+[ext_resource type="Script" uid="uid://bc5xc0ed2msm5" path="res://Scripts/Systems/Mystery/MysteryController.gd" id="2_yw64f"]
+[ext_resource type="Script" uid="uid://dmygtupaucddn" path="res://Scripts/Systems/Inventory/InventoryController.gd" id="3_id7ay"]
+[ext_resource type="Script" uid="uid://c21s4lcvnttjf" path="res://Scripts/Systems/Mystery/MysteryView.gd" id="3_w7urs"]
+[ext_resource type="Script" uid="uid://cvhflna03xo8v" path="res://Scripts/Systems/Research/ResearchView.gd" id="4_nikvl"]
+[ext_resource type="Script" uid="uid://cstsmmmtix8fi" path="res://Scripts/Systems/Inventory/InventoryView.gd" id="7_661nj"]
 
 [node name="CasefileSystem" type="Node2D"]
 

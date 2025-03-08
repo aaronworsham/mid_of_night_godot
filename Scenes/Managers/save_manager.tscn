@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://bg5heaocpa0xe"]
 
-[ext_resource type="Script" path="res://Scripts/Systems/IO/SaveManager.gd" id="1_3102s"]
+[sub_resource type="Resource" id="Resource_gqtos"]
+metadata/__load_path__ = "res://Scripts/Systems/IO/SaveManager.gd"
 
 [node name="SaveManager" type="Node"]
-script = ExtResource("1_3102s")
+script = SubResource("Resource_gqtos")

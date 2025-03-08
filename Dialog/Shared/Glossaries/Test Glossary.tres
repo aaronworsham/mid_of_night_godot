@@ -1,19 +1,3 @@
-[gd_resource type="Resource" script_class="DialogicGlossary" load_steps=2 format=3 uid="uid://oxj6b2qah4cg"]
-
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_mvb3g"]
+[gd_resource type="Resource" format=3 uid="uid://oxj6b2qah4cg"]
 
 [resource]
-script = ExtResource("1_mvb3g")
-entries = {
-"Glossary/1f/20/name": "Test Entry 1",
-"Test Entry 1": {
-"_translation_id": "20",
-"case_sensitive": true,
-"name": "Test Entry 1"
-}
-}
-enabled = true
-_translation_id = "1f"
-_translation_keys = {
-"Test Entry 1": "Glossary/1f/20/name"
-}

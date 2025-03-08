@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://ctoxriedtuspu"]
 
-[ext_resource type="Script" path="res://Scripts/Systems/Casefile/ObservationController.gd" id="1_akqu5"]
+[sub_resource type="Resource" id="Resource_bmrav"]
+metadata/__load_path__ = "res://Scripts/Systems/Casefile/ObservationController.gd"
 
 [node name="ObservationController" type="Node"]
-script = ExtResource("1_akqu5")
+script = SubResource("Resource_bmrav")

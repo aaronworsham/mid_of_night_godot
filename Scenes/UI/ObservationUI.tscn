@@ -1,9 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://dw5ichaer73uv"]
 
-[ext_resource type="Script" path="res://Scripts/Systems/Casefile/ObservationView.gd" id="1_dc77w"]
+[sub_resource type="Resource" id="Resource_gp6ui"]
+metadata/__load_path__ = "res://Scripts/Systems/Casefile/ObservationView.gd"
 
 [node name="ObservationUI" type="Node2D"]
-script = ExtResource("1_dc77w")
+script = SubResource("Resource_gp6ui")
 metadata/_edit_vertical_guides_ = [1251.0]
 metadata/_edit_horizontal_guides_ = [548.0]
 

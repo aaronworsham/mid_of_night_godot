@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://thve5vhi8jam"]
+[gd_scene load_steps=3 format=3 uid="uid://thve5vhi8jam"]
 
-[ext_resource type="Texture2D" path="res://Assets/portraits/testactor2portrait.jpg" id="1_k8w5w"]
-[ext_resource type="Script" path="res://Scripts/Systems/Dialog/DialogView.gd" id="2_rhf56"]
-[ext_resource type="Script" path="res://Scripts/Systems/Dialog/DialogController.gd" id="3_cr0d0"]
+[ext_resource type="Script" uid="uid://dyalilihm2rg3" path="res://Scripts/Systems/Dialog/DialogView.gd" id="2_rhf56"]
+[ext_resource type="Script" uid="uid://de64vpe1bfmgj" path="res://Scripts/Systems/Dialog/DialogController.gd" id="3_cr0d0"]
 
 [node name="DialogSystem" type="Node2D"]
 
@@ -17,7 +16,6 @@ offset_bottom = 1016.0
 
 [node name="Sprite2D" type="Sprite2D" parent="DialogCanvas/DialogPanel"]
 position = Vector2(175, 172)
-texture = ExtResource("1_k8w5w")
 
 [node name="TopicsVBox" type="VBoxContainer" parent="DialogCanvas/DialogPanel"]
 unique_name_in_owner = true
