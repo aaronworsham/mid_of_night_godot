@@ -85,8 +85,7 @@ data_sets = [
             ]
         },
         "config"    :{}
-    },
-
+    },     
 #RESEARCH CATEGORIES
 
     {
@@ -150,5 +149,7 @@ def download_images(rjson, data, base_filepath):
                 handler.write(img_data)
             a[image_name]["resPath"] = "res://"+image_dir
 
-for ds in data_sets:
-    get_data_from_strapi(ds)
+def get_json():
+    print("Getting JSON")
+    for ds in data_sets:
+        get_data_from_strapi(ds)

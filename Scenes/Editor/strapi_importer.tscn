@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7cjfpsfydn5w"]
+
+[ext_resource type="Script" uid="uid://bfdhtysq4a3ar" path="res://Scripts/Editor/TestEditorScript.gd" id="1_gdbus"]
+
+[node name="StrapiImporter" type="Node"]
+script = ExtResource("1_gdbus")
