@@ -153,3 +153,7 @@ def get_json():
     print("Getting JSON")
     for ds in data_sets:
         get_data_from_strapi(ds)
+
+def test_json(x,y):
+    print(x)
+    print(y)

@@ -1,7 +1,7 @@
 import sys
 import UpdateJson
 
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QDir
 from PySide6.QtWidgets import (
     QApplication,
     QHBoxLayout,
@@ -13,7 +13,8 @@ from PySide6.QtWidgets import (
     QWidget,
     QTabWidget,
     QMessageBox,
-    QFileDialog
+    QFileDialog,
+    QLineEdit
 )
 from PySide6.QtGui import (
     QPalette, 
@@ -28,41 +29,53 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("My App")
 
-        layout = QVBoxLayout()
+        ## Variables
+        self.imnDir = "..."
+        self.apiURL = "..."
 
-        button_layout = QHBoxLayout()
-        btn = QPushButton("Get JSON")
-        btn.clicked.connect(self.press_button_1)
-        button_layout.addWidget(btn)
-        btn = QPushButton("Dialog")
-        btn.clicked.connect(self.press_button_2)
-        button_layout.addWidget(btn)
+        ## Layout
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(QLabel("Getting JSON from Strapi"))
+        self.layout.addWidget(QLabel("IMN Directory"))
+
+        ## IMN Directory
+        self.directory = QLineEdit()
+        self.directory.setMaxLength(255)
+        self.directory.setPlaceholderText(self.imnDir)
+        self.layout.addWidget(self.directory)
+        self.findDirBtn = QPushButton("Find Directory")
+        self.findDirBtn.clicked.connect(self.find_dir)
+        self.layout.addWidget(self.findDirBtn)
+
+        ## Strapi URL
+        self.layout.addWidget(QLabel("Strapi URL (http://NordMagicUrl)"))
+        self.apiURLEdit = QLineEdit()
+        self.apiURLEdit.setMaxLength(255)
+        self.apiURLEdit.setPlaceholderText(self.apiURL)
+        self.layout.addWidget(self.apiURLEdit)
 
 
-        layout.addLayout(button_layout)
+        ## Get JSON
+        self.getJsonBtn = QHBoxLayout()
+        self.getJsonBtn = QPushButton("Get JSON")
+        self.getJsonBtn.clicked.connect(self.get_json)
+        self.layout.addWidget(self.getJsonBtn)
 
-        layout.addWidget(Color('red'))
-
+        ## Add all to Widget
         widget = QWidget()
-        widget.setLayout(layout)
+        widget.setLayout(self.layout)
         self.setCentralWidget(widget)
 
-    def press_button_1(self):
-        UpdateJson.get_json()
+    def get_json(self):
+        UpdateJson.test_json(self.imnDir, self.apiURL)
 
-    def press_button_2(self, s):
-        filename, filter = QFileDialog.getOpenFileName(parent=self, caption='Open file', dir='.')
-        if filename:
-            print(filename)
+    def find_dir(self, s):
+        options = QFileDialog.ShowDirsOnly
+        self.imnDir = QFileDialog.getExistingDirectory(self, "Select Directory",  QDir.homePath(), options=options)
+        if self.imnDir:
+            print(self.imnDir)
+            self.directory.setPlaceholderText(self.imnDir)
 
-class Color(QWidget):
-    def __init__(self, color):
-        super().__init__()
-        self.setAutoFillBackground(True)
-
-        palette = self.palette()
-        palette.setColor(QPalette.Window, QColor(color))
-        self.setPalette(palette)
 
 app = QApplication(sys.argv)
 window = MainWindow()
