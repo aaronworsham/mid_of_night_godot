@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hoidxmb2v57o"
-path="res://.godot/imported/samportrait.jpg-2261a5caca49e08757dd0faf3e1bc079.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Assets/Portraits/samportrait.jpg"
-dest_files=["res://.godot/imported/samportrait.jpg-2261a5caca49e08757dd0faf3e1bc079.ctex"]
 
 [params]
 

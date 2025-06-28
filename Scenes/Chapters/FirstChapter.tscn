@@ -4,4 +4,4 @@
 
 [node name="FirstChapter" type="Node2D"]
 
-[node name="Library Map" parent="." instance=ExtResource("1_d6hvn")]
+[node name="Village Map" parent="." instance=ExtResource("1_d6hvn")]

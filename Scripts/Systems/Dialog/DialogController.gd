@@ -24,14 +24,15 @@ func _ready() -> void:
     EventManager.event_interactable_actor_clicked.connect(_interactable_actor_clicked)
     # EventManager.event_start_dialog.connect(_dialog_action)
     # EventManager.event_notebook_clicked.connect(_notebook_clicked_action)
-
 func _interactable_actor_clicked(actor:ActorModel):
     
     current_dialog = dialog_system_resource.get_member_by_guid(actor.get_dialog_guid())
     current_dialog_threads = dialog_system_resource.get_submembers_from_member_guid(current_dialog["guid"])
     dialog_view.show_dialog_ui()
     show_discovered_threads()
-    
+
+
+
 
         
 

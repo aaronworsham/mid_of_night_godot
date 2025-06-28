@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dslya3xokc4xn"]
-
-[ext_resource type="PackedScene" uid="uid://of4iwmum7uuq" path="res://Scenes/Maps/village_map.tscn" id="1_n4k42"]
-
-[node name="FirstChapter" type="Node2D"]
-
-[node name="Library Map" parent="." instance=ExtResource("1_n4k42")]

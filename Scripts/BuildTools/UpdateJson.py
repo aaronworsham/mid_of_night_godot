@@ -3,8 +3,6 @@ import requests
 import json
 import subprocess
 
-base_uri = "http://localhost:1337/api/"
-base_filepath = '/home/aaronw/Development/mid_of_night_godot'
 data_sets = [
 # ACTORS
     {
@@ -119,17 +117,18 @@ data_sets = [
 ] 
 
 
-def get_data_from_strapi(data):
+def get_data_from_strapi(data, base_filepath, base_uri):
 
     base_headers = {
           'Content-Type': 'application/json'
         }
 
+    print("Using base uri: "+ base_uri)
     r = requests.get(base_uri + data["base_url"], params=data["params"], headers=base_headers)
     rjson = r.json()
 
     if "image" in data["config"]:
-        download_images(rjson, data, base_filepath)
+        download_images(rjson, data, base_filepath, base_uri)
 
     #Test File
     with open(base_filepath + "/Tests/StrapiData/Collections/" + "test_"+data["base_url"]+".collection.strapi.json", mode="w", encoding="utf-8") as write_file:
@@ -139,7 +138,7 @@ def get_data_from_strapi(data):
     with open(base_filepath + "/Data/StrapiData/Collections/" + data["base_url"]+".collection.strapi.json", mode="w", encoding="utf-8") as write_file:
         json.dump(rjson, write_file)
 
-def download_images(rjson, data, base_filepath):
+def download_images(rjson, data, base_filepath, base_uri):
     for a in rjson["data"]:
         image_name = data["config"]["image_name"]
         if a[image_name] is not None :
@@ -151,11 +150,12 @@ def download_images(rjson, data, base_filepath):
             a[image_name]["resPath"] = "res://"+image_dir
 
 def get_json(path,uri):
-    print("Getting JSON")
-    base_filepath = path
-    base_uri = uri
+    
+    print("Got uri: "+uri)
+    print("Got path: "+path)
+    
     for ds in data_sets:
-        get_data_from_strapi(ds)
+        get_data_from_strapi(ds, path, uri)
 
 def test_json(x,y):
     print(x)

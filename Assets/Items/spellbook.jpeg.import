@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmire516s6wgm"
-path="res://.godot/imported/spellbook.jpeg-0f9c346c665fcfc01d17a6f993d380f6.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Assets/Items/spellbook.jpeg"
-dest_files=["res://.godot/imported/spellbook.jpeg-0f9c346c665fcfc01d17a6f993d380f6.ctex"]
 
 [params]
 
