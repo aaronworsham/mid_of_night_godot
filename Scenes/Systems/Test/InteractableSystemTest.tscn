@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl5g86y10m8u8"]
+
+[ext_resource type="Script" uid="uid://ddeqgsh3haoy0" path="res://Scripts/Systems/Test/ActorLoaderTest.gd" id="1_m2p08"]
+
+[node name="InteractableSystemTest" type="Node2D"]
+
+[node name="Controllers" type="Node" parent="."]
+
+[node name="Views" type="Node" parent="."]
+
+[node name="Loaders" type="Node" parent="."]
+
+[node name="ActorLoader" type="Node" parent="Loaders"]
+script = ExtResource("1_m2p08")
+
+[node name="Objects" type="Node" parent="."]
+
+[node name="Actors" type="Node" parent="Objects"]
+unique_name_in_owner = true

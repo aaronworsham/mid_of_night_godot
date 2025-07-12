@@ -10,6 +10,10 @@
 [node name="ActorController" type="Node" parent="Controllers"]
 script = ExtResource("1_3uamh")
 
+[node name="CameraController" type="Node" parent="Controllers"]
+
+[node name="Camera2D" type="Camera2D" parent="Controllers/CameraController"]
+
 [node name="Views" type="Node" parent="."]
 
 [node name="Loaders" type="Node" parent="."]

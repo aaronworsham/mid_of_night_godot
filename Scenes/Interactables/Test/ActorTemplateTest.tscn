@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://f1tivs1vbjok"]
+[gd_scene load_steps=3 format=3 uid="uid://dhf6jxo1po4pu"]
 
-[ext_resource type="Script" uid="uid://ckh3oiwqpxemk" path="res://Scripts/Systems/Interactables/ActorView.gd" id="1_ebqrg"]
+[ext_resource type="Script" uid="uid://lwv32jpqluot" path="res://Scripts/Systems/Test/ActorViewTest.gd" id="1_55yc8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b38ua"]
 size = Vector2(64, 64)
 
 [node name="Actor" type="StaticBody2D" groups=["Persist"]]
 top_level = true
-script = ExtResource("1_ebqrg")
+script = ExtResource("1_55yc8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -1.5)

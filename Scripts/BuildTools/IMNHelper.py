@@ -36,42 +36,43 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("My App")
 
         ## Layout
-        self.layout = QVBoxLayout()
-        self.layout.addWidget(QLabel("Getting JSON from Strapi"))
-        self.layout.addWidget(QLabel("IMN Directory"))
+        central_widget = QWidget()
+        layout = QVBoxLayout(central_widget)
+        layout.addWidget(QLabel("Getting JSON from Strapi"))
+        layout.addWidget(QLabel("IMN Directory"))
 
         ## IMN Directory
         self.directory = QLineEdit()
         self.directory.setMaxLength(255)
         self.directory.setText(settings.imnDir)
-        self.layout.addWidget(self.directory)
+        layout.addWidget(self.directory)
         self.findDirBtn = QPushButton("Find Directory")
         self.findDirBtn.clicked.connect(self.find_dir)
-        self.layout.addWidget(self.findDirBtn)
+        layout.addWidget(self.findDirBtn)
 
         ## Strapi URL
-        self.layout.addWidget(QLabel("Strapi URL (http://NordMagicUrl:1337/api/)"))
+        layout.addWidget(QLabel("Strapi URL (http://localhost:1337)"))
         self.apiURLEdit = QLineEdit()
         self.apiURLEdit.setMaxLength(255)
         self.apiURLEdit.setText(settings.apiURL)
-        self.layout.addWidget(self.apiURLEdit)
+        layout.addWidget(self.apiURLEdit)
 
         ## Save Settings
         self.saveSettingsBtn = QHBoxLayout()
         self.saveSettingsBtn = QPushButton("Save Settings")
         self.saveSettingsBtn.clicked.connect(self.save_settings)
-        self.layout.addWidget(self.saveSettingsBtn)
+        layout.addWidget(self.saveSettingsBtn)
 
 
         ## Get JSON
         self.getJsonBtn = QHBoxLayout()
         self.getJsonBtn = QPushButton("Get JSON")
         self.getJsonBtn.clicked.connect(self.get_json)
-        self.layout.addWidget(self.getJsonBtn)
+        layout.addWidget(self.getJsonBtn)
 
         ## Add all to Widget
         widget = QWidget()
-        widget.setLayout(self.layout)
+        widget.setLayout(layout)
         self.setCentralWidget(widget)
 
     def save_settings(self):
@@ -80,12 +81,10 @@ class MainWindow(QMainWindow):
         settings.save(settingsFileName)
 
     def get_json(self):
-        UpdateJson.get_json(settings.imnDir, self.apiURLEdit.text())
+        UpdateJson.get_json(settings.imnDir, self.apiURLEdit.text() + "/api/")
 
     def find_dir(self, s):
-        options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
-        options |= QFileDialog.ShowDirsOnly
+        options = QFileDialog.Option.DontUseNativeDialog | QFileDialog.Option.ShowDirsOnly
         settings.imnDir = QFileDialog.getExistingDirectory(self, "Select Directory",  QDir.homePath(), options=options)
         if settings.imnDir:
             self.directory.setText(settings.imnDir)
@@ -98,7 +97,7 @@ class App_Settings:
     def __init__(self):
         self._start_message = "Hello World"
         self.imnDir = "/home/aaronw/Development/mid_of_night_godot"
-        self.apiURL = "http://NordMagicUrl:1337/api/"
+        self.apiURL = "http://localhost:1337/api/"
 
     # Property Getter and Setters to allow the application to
     # access the settings and change them

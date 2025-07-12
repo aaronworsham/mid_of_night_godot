@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hoidxmb2v57o"
-valid=false
+uid="uid://b54yicq1jjgfp"
+path="res://.godot/imported/character_b_64x64.png-b0b9efcfe8369ef660069d090fcd0492.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/Portraits/samportrait.jpg"
+source_file="res://Assets/Portraits/character_b_64x64.png"
+dest_files=["res://.godot/imported/character_b_64x64.png-b0b9efcfe8369ef660069d090fcd0492.ctex"]
 
 [params]
 
