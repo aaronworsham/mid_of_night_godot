@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxkennmswpjmk"]
+
+[ext_resource type="Script" uid="uid://c4m7tn377eq20" path="res://Scripts/Systems/Test/ActorSceneTestUI.gd" id="1_lvma6"]
+[ext_resource type="Texture2D" uid="uid://msopuii5k5h1" path="res://Assets/Portraits/character_a_64x64.jpeg" id="1_x67p5"]
+
+[node name="ActorSceneTestUi" type="CanvasLayer"]
+script = ExtResource("1_lvma6")
+
+[node name="DetectiveLeft" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="PortraitPanel" type="Panel" parent="DetectiveLeft"]
+offset_right = 300.0
+offset_bottom = 300.0
+
+[node name="Sprite2D" type="Sprite2D" parent="DetectiveLeft/PortraitPanel"]
+
+[node name="ActorRight" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="PortraitPanel" type="Panel" parent="ActorRight"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_bottom = 300.0
+grow_horizontal = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="ActorRight/PortraitPanel"]
+position = Vector2(150, 150)
+texture = ExtResource("1_x67p5")

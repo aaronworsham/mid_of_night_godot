@@ -1,12 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7kxwnxkrnxkt"]
+[gd_scene load_steps=4 format=3 uid="uid://b7kxwnxkrnxkt"]
 
 [ext_resource type="Script" uid="uid://c7r4hlw8mirje" path="res://Scripts/SceneTests/ActorSceneTest.gd" id="1_p0ab2"]
 [ext_resource type="PackedScene" uid="uid://cl5g86y10m8u8" path="res://Scenes/Systems/Test/InteractableSystemTest.tscn" id="2_i60kd"]
+[ext_resource type="PackedScene" uid="uid://cxkennmswpjmk" path="res://Scenes/Tests/ActorSceneTestUI.tscn" id="3_n36sl"]
 
 [node name="ActorSceneTest" type="Node2D"]
 script = ExtResource("1_p0ab2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-8, 8)
 
-[node name="InteractableSystemTest" parent="." instance=ExtResource("2_i60kd")]
+[node name="Systems" type="Node" parent="."]
+
+[node name="InteractableSystemTest" parent="Systems" instance=ExtResource("2_i60kd")]
+
+[node name="UI" type="Node" parent="."]
+
+[node name="ActorSceneTestUi" parent="UI" instance=ExtResource("3_n36sl")]
+visible = false

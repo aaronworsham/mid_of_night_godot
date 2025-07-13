@@ -58,6 +58,13 @@ signal event_skill_set_value()
 #region ChanceOfSuccess
 signal event_cos_get_cos()
 
+#endregion
+
+#region Test
+signal event_test_show_actor_dialog(actor:ActorModel)
+
+#endregion
+
 #Signals EM can emit for others to connect to
 func emit_event_attributes_updated(attrs:Dictionary):
 	event_attributes_updated.emit(attrs)

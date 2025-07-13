@@ -3,23 +3,23 @@ class_name BaseDataSystemResource extends BaseResource
 # [MemberCollection] is an array of <Members>.  Each <Member> can have multiple <SubMembers>.  [SubMemberCollection] is an array of <SubMembers>
 
 @export var member_json:JSON:
-    set(value):
-        member_json = value
+	set(value):
+		member_json = value
 @export var submember_json:JSON:
-    set(value):
-        submember_json = value
+	set(value):
+		submember_json = value
 @export var member_string:String:
-    set(value):
-        member_string = value
+	set(value):
+		member_string = value
 @export var members_string:String:
-    set(value):
-        members_string = value
+	set(value):
+		members_string = value
 @export var submember_string:String:
-    set(value):
-        submember_string = value
+	set(value):
+		submember_string = value
 @export var submembers_string:String:
-    set(value):
-        submembers_string = value
+	set(value):
+		submembers_string = value
 
 
 #source of truth (direct from json)
@@ -37,84 +37,84 @@ var _submembers_discovered:Array
 
 
 func on_load():
-    
-    _member_array.clear()
-    _submember_array.clear()
-    _submembers_by_member_guid.clear()
-    _members_discovered.clear()
-    _submembers_discovered.clear()
+	
+	_member_array.clear()
+	_submember_array.clear()
+	_submembers_by_member_guid.clear()
+	_members_discovered.clear()
+	_submembers_discovered.clear()
 
-    #source of truth
-    _member_array = member_json.data.data.duplicate(true)
-    _submember_array = submember_json.data.data.duplicate(true)
+	#source of truth
+	_member_array = member_json.data.data.duplicate(true)
+	_submember_array = submember_json.data.data.duplicate(true)
 
-    for t in _member_array:
-        _member_dict[t["guid"]] = t
+	for t in _member_array:
+		_member_dict[t["guid"]] = t
 
 
-    for t in _submember_array:
-        _submember_dict[t["guid"]] = t
+	for t in _submember_array:
+		_submember_dict[t["guid"]] = t
 
-    for t in _submember_array:
-        _submembers_by_member_guid[t["guid"]] = t 
-        if _submembers_by_member_guid.has(t[member_string]["guid"]):
-            _submembers_by_member_guid[t[member_string]["guid"]].append(t)
-        else: 
-            _submembers_by_member_guid[t[member_string]["guid"]] = []           
-            _submembers_by_member_guid[t[member_string]["guid"]].append(t)
+	for t in _submember_array:
+		_submembers_by_member_guid[t["guid"]] = t 
+		if _submembers_by_member_guid.has(t[member_string]["guid"]):
+			_submembers_by_member_guid[t[member_string]["guid"]].append(t)
+		else: 
+			_submembers_by_member_guid[t[member_string]["guid"]] = []           
+			_submembers_by_member_guid[t[member_string]["guid"]].append(t)
 
-    #TODO: Create Persistant list of Discovered Members and Submembers
+	#TODO: Create Persistant list of Discovered Members and Submembers
 
 func get_member_by_guid(guid:String) -> Dictionary:
-    return _member_dict[guid]
+	return _member_dict[guid]
 
 func get_members()-> Array:
-    return _member_array
+	return _member_array
 
 func get_submember_by_guid(guid:String) -> Dictionary:
-    return _submember_dict[guid]
+	return _submember_dict[guid]
 
 func get_submembers_from_member_guid(guid:String) -> Array:
-    if _submembers_by_member_guid.has(guid):
-        return _submembers_by_member_guid[guid]
-    else:
-        return []
+	if _submembers_by_member_guid.has(guid):
+		return _submembers_by_member_guid[guid]
+	else:
+		return []
 
 func get_submembers()-> Array:
-    return _submember_array
+	return _submember_array
 
 func set_member_as_discovered(guid:String):
-    if !_members_discovered.has(guid):
-        _members_discovered.append(guid)
+	if !_members_discovered.has(guid):
+		_members_discovered.append(guid)
 
 func set_member_as_undiscovered(guid:String):
-    if _members_discovered.has(guid):
-        _members_discovered.erase(guid)
+	if _members_discovered.has(guid):
+		_members_discovered.erase(guid)
 
 
 func is_member_discovered(guid:String)->bool:
-    return _members_discovered.has(guid)
+	return _members_discovered.has(guid)
 
 func get_discovered_members() -> Array:
-    var _tmp:Array
-    for m in _members_discovered:
-        _tmp.append(get_member_by_guid(m))
-    return _tmp
+	var _tmp:Array
+	for m in _members_discovered:
+		_tmp.append(get_member_by_guid(m))
+	return _tmp
 
 func set_submember_as_discovered(guid:String):
-    if !_submembers_discovered.has(guid):
-        _submembers_discovered.append(guid)
+	if !_submembers_discovered.has(guid):
+		_submembers_discovered.append(guid)
 
 func set_submember_as_undiscovered(guid:String):
-    if _submembers_discovered.has(guid):
-        _submembers_discovered.erase(guid)
+	if _submembers_discovered.has(guid):
+		_submembers_discovered.erase(guid)
 
 
 func is_submember_discovered(guid:String)->bool:
-    return _submembers_discovered.has(guid)
+	return _submembers_discovered.has(guid)
 
 func get_discorvered_submembers() -> Array:
-    var _tmp:Array
-    for m in _submembers_discovered:
-        _tmp.append(get_submember_by_guid(m))
-    return _tmp
+	var _tmp:Array
+	for m in _submembers_discovered:
+		_tmp.append(get_submember_by_guid(m))
+	return _tmp
