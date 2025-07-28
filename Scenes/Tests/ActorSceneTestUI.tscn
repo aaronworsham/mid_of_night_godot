@@ -18,7 +18,7 @@ offset_bottom = 300.0
 [node name="ActorRight" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
 
-[node name="PortraitPanel" type="Panel" parent="ActorRight"]
+[node name="panel" type="Panel" parent="ActorRight"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -26,6 +26,16 @@ offset_left = -300.0
 offset_bottom = 300.0
 grow_horizontal = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="ActorRight/PortraitPanel"]
+[node name="ActorPortrait" type="Sprite2D" parent="ActorRight/panel"]
+unique_name_in_owner = true
 position = Vector2(150, 150)
 texture = ExtResource("1_x67p5")
+
+[node name="ActorLabel" type="Label" parent="ActorRight"]
+unique_name_in_owner = true
+offset_left = 1737.0
+offset_top = 189.0
+offset_right = 1813.0
+offset_bottom = 218.0
+text = "tmp"
+horizontal_alignment = 1
