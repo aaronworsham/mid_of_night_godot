@@ -1,16 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://cl5g86y10m8u8"]
+[gd_scene load_steps=3 format=3 uid="uid://cl5g86y10m8u8"]
 
 [ext_resource type="Script" uid="uid://ddeqgsh3haoy0" path="res://Scripts/Systems/Test/ActorLoaderTest.gd" id="1_m2p08"]
+[ext_resource type="Script" uid="uid://ccjxggc7r7g3q" path="res://Scripts/Systems/Test/DialogControllerTest.gd" id="1_u0vs1"]
 
 [node name="InteractableSystemTest" type="Node2D"]
 
 [node name="Controllers" type="Node" parent="."]
 
+[node name="DialogControllerTest" type="Node" parent="Controllers"]
+script = ExtResource("1_u0vs1")
+
 [node name="Views" type="Node" parent="."]
 
 [node name="Loaders" type="Node" parent="."]
 
-[node name="ActorLoader" type="Node" parent="Loaders"]
+[node name="ActorLoaderTest" type="Node" parent="Loaders"]
 script = ExtResource("1_m2p08")
 
 [node name="Objects" type="Node" parent="."]

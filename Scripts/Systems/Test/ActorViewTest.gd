@@ -17,3 +17,4 @@ func _input(event: InputEvent) -> void:
 				if (mouse_pos.distance_to(target_pos) < 30):
 					print("clicked actor: "+ actor.get_actor_name())
 					EventManager.event_test_show_actor_dialog.emit(actor)
+					EventManager.event_interactable_actor_clicked.emit(actor)

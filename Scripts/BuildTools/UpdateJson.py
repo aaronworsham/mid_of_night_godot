@@ -9,47 +9,47 @@ data_sets = [
         "base_url" : "actors",
         "params"   : {
             "populate" : [
-                "portrait",
+                "portrait_64_x_64",
                 "dialog"
             ],
         },
         "config"    : {
             "image" : True,
-            "image_name" : "portrait",
+            "image_name" : "portrait_64_x_64",
             "image_dir"  : "Portraits"
         }
     },
 
-# #DIALOGS
+#DIALOGS
 
-#     {
-#         "base_url"  : "dialogs",
-#         "params"    : {
-#             "populate": [
-#                 "actor",
-#                 "threads"
-#             ]
-#         },
-#         "config"    :{}
-#     },
+    {
+        "base_url"  : "dialogs",
+        "params"    : {
+            "populate": [
+                "actor",
+                "threads"
+            ]
+        },
+        "config"    :{}
+    },
 
-# #THREADS
+#THREADS
 
-#     {
-#         "base_url"  : "threads",
-#         "params"    : {
-#             "populate": [
-#                 "actor",
-#                 "dialog",
-#                 "instructions",
-#                 "instructions.thread",
-#                 "instructions.clue",
-#                 "instructions.mystery",
-#                 "instructions.research_topic"
-#             ]
-#         },
-#         "config"    :{}
-#     },
+    {
+        "base_url"  : "threads",
+        "params"    : {
+            "populate": [
+                "actor",
+                "dialog",
+                # "instructions",
+                # "instructions.thread",
+                # "instructions.clue",
+                # "instructions.mystery",
+                # "instructions.research_topic"
+            ]
+        },
+        "config"    :{}
+    },
 
 # #MYSTERIES
 

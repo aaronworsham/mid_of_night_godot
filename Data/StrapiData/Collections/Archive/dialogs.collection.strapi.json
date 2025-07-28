@@ -1,1 +1,56 @@
-{"data": [{"id": 2, "documentId": "b9vjkcgg14c3ha1a1ea7cp3b", "name": "Sam Dialog", "guid": "samdialogguid", "createdAt": "2025-01-15T13:13:31.434Z", "updatedAt": "2025-01-19T14:10:16.169Z", "publishedAt": "2025-01-19T14:10:16.182Z", "actor": {"id": 2, "documentId": "p8ee9dcj67kuka6vutsefok0", "name": "Sam", "guid": "samguid", "xcord": -100, "ycord": -100, "createdAt": "2025-01-15T13:05:21.082Z", "updatedAt": "2025-01-15T13:14:53.219Z", "publishedAt": "2025-01-15T13:14:53.234Z"}, "threads": [{"id": 3, "documentId": "zzqrypbhjv58msth8itjsnan", "name": "Sam First Thread", "guid": "samthread1guid", "starts_discovered": true, "label": "Hello there", "createdAt": "2025-01-16T13:52:48.142Z", "updatedAt": "2025-02-21T14:15:28.864Z", "publishedAt": "2025-02-21T14:15:28.890Z"}, {"id": 4, "documentId": "hq61s1iplplbu1hctamffwu3", "name": "Sam Second Thread", "guid": "samesecondthreadguid", "starts_discovered": null, "label": "Tell me about this Second Thread?", "createdAt": "2025-01-19T14:03:54.407Z", "updatedAt": "2025-02-21T15:52:25.028Z", "publishedAt": "2025-02-21T15:52:25.058Z"}]}], "meta": {"pagination": {"page": 1, "pageSize": 25, "pageCount": 1, "total": 1}}}
+{
+    "data": [
+        {
+            "id": 2,
+            "documentId": "b9vjkcgg14c3ha1a1ea7cp3b",
+            "name": "Sam Dialog",
+            "guid": "samdialogguid",
+            "createdAt": "2025-01-15T13:13:31.434Z",
+            "updatedAt": "2025-01-19T14:10:16.169Z",
+            "publishedAt": "2025-01-19T14:10:16.182Z",
+            "actor": {
+                "id": 2,
+                "documentId": "p8ee9dcj67kuka6vutsefok0",
+                "name": "Sam",
+                "guid": "samguid",
+                "xcord": -100,
+                "ycord": -100,
+                "createdAt": "2025-01-15T13:05:21.082Z",
+                "updatedAt": "2025-01-15T13:14:53.219Z",
+                "publishedAt": "2025-01-15T13:14:53.234Z"
+            },
+            "threads": [
+                {
+                    "id": 3,
+                    "documentId": "zzqrypbhjv58msth8itjsnan",
+                    "name": "Sam First Thread",
+                    "guid": "samthread1guid",
+                    "starts_discovered": true,
+                    "label": "Hello there",
+                    "createdAt": "2025-01-16T13:52:48.142Z",
+                    "updatedAt": "2025-02-21T14:15:28.864Z",
+                    "publishedAt": "2025-02-21T14:15:28.890Z"
+                },
+                {
+                    "id": 4,
+                    "documentId": "hq61s1iplplbu1hctamffwu3",
+                    "name": "Sam Second Thread",
+                    "guid": "samesecondthreadguid",
+                    "starts_discovered": null,
+                    "label": "Tell me about this Second Thread?",
+                    "createdAt": "2025-01-19T14:03:54.407Z",
+                    "updatedAt": "2025-02-21T15:52:25.028Z",
+                    "publishedAt": "2025-02-21T15:52:25.058Z"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 1
+        }
+    }
+}
