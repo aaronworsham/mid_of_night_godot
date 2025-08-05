@@ -1,47 +1,6 @@
 {
     "data": [
         {
-            "id": 12,
-            "documentId": "hc4ty6bubcbqpt0mzzhvsjq1",
-            "name": "test_actor_a",
-            "guid": "test_actor_a_guid",
-            "xcord": 0,
-            "ycord": 0,
-            "createdAt": "2025-07-01T12:25:37.664Z",
-            "updatedAt": "2025-07-28T12:45:59.376Z",
-            "publishedAt": "2025-07-28T12:45:59.455Z",
-            "portrait_64_x_64": {
-                "id": 6,
-                "documentId": "kux7bgytxrtprim6666clsw3",
-                "name": "character_a_64x64.jpeg",
-                "alternativeText": null,
-                "caption": null,
-                "width": 64,
-                "height": 64,
-                "formats": null,
-                "hash": "character_a_64x64_08ad6d1c45",
-                "ext": ".jpeg",
-                "mime": "image/jpeg",
-                "size": 1.5,
-                "url": "https://lovable-strength-32fca2b18c.media.strapiapp.com/character_a_64x64_08ad6d1c45.jpeg",
-                "previewUrl": null,
-                "provider": "strapi-provider-upload-strapi-cloud",
-                "provider_metadata": null,
-                "createdAt": "2025-07-05T13:28:12.508Z",
-                "updatedAt": "2025-07-05T13:28:12.508Z",
-                "publishedAt": "2025-07-05T13:28:12.508Z"
-            },
-            "dialog": {
-                "id": 2,
-                "documentId": "zlk5bi52rdvgq4bj9v4a4jzm",
-                "name": "Test Dialog",
-                "guid": "test_dialog",
-                "createdAt": "2025-07-03T16:22:45.003Z",
-                "updatedAt": "2025-07-03T16:22:47.312Z",
-                "publishedAt": "2025-07-03T16:22:47.338Z"
-            }
-        },
-        {
             "id": 13,
             "documentId": "jodepzrc9jvye12u2aus5ixv",
             "name": "test_actor_b",
@@ -112,6 +71,47 @@
                 "createdAt": "2025-07-05T13:28:12.397Z",
                 "updatedAt": "2025-07-05T13:28:12.397Z",
                 "publishedAt": "2025-07-05T13:28:12.455Z"
+            },
+            "dialog": {
+                "id": 2,
+                "documentId": "zlk5bi52rdvgq4bj9v4a4jzm",
+                "name": "Test Dialog",
+                "guid": "test_dialog",
+                "createdAt": "2025-07-03T16:22:45.003Z",
+                "updatedAt": "2025-07-03T16:22:47.312Z",
+                "publishedAt": "2025-07-03T16:22:47.338Z"
+            }
+        },
+        {
+            "id": 15,
+            "documentId": "hc4ty6bubcbqpt0mzzhvsjq1",
+            "name": "test_actor_a",
+            "guid": "test_actor_a_guid",
+            "xcord": 0,
+            "ycord": 0,
+            "createdAt": "2025-07-01T12:25:37.664Z",
+            "updatedAt": "2025-08-04T13:18:52.740Z",
+            "publishedAt": "2025-08-04T13:18:52.885Z",
+            "portrait_64_x_64": {
+                "id": 6,
+                "documentId": "kux7bgytxrtprim6666clsw3",
+                "name": "character_a_64x64.jpeg",
+                "alternativeText": null,
+                "caption": null,
+                "width": 64,
+                "height": 64,
+                "formats": null,
+                "hash": "character_a_64x64_08ad6d1c45",
+                "ext": ".jpeg",
+                "mime": "image/jpeg",
+                "size": 1.5,
+                "url": "https://lovable-strength-32fca2b18c.media.strapiapp.com/character_a_64x64_08ad6d1c45.jpeg",
+                "previewUrl": null,
+                "provider": "strapi-provider-upload-strapi-cloud",
+                "provider_metadata": null,
+                "createdAt": "2025-07-05T13:28:12.508Z",
+                "updatedAt": "2025-07-05T13:28:12.508Z",
+                "publishedAt": "2025-07-05T13:28:12.508Z"
             },
             "dialog": {
                 "id": 2,

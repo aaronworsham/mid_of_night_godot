@@ -7,15 +7,15 @@ class_name ActorSceneTestUI extends Node
 
 func _ready() -> void:
 	print("Hiding UI")
-	detective_left.hide()
-	actor_right.hide()
-	EventManager.event_test_show_actor_dialog.connect(_show_actor_dialog)
+	detective_left.visible = false
+	actor_right.visible = false
+	EventManager.event_interactable_actor_clicked.connect(_show_actor_dialog)
 
 func _show_actor_dialog(actor:ActorModel):
-	detective_left.show()
-	actor_right.show()
-	print ("got actor:" + actor.get_actor_name())
 	actor_label.text = actor.get_actor_name()
-	actor_portrait.texture = load(actor.get_portrait_path())	
+	print ("ACTUI: got actor:" + actor_label.text)
+	actor_portrait.texture = load(actor.get_portrait_256_path())
+	detective_left.visible = true
+	actor_right.visible = true
 
 

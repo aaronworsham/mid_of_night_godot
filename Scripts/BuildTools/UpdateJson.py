@@ -10,13 +10,23 @@ data_sets = [
         "params"   : {
             "populate" : [
                 "portrait_64_x_64",
+                "portrait_256_x_256",
                 "dialog"
             ],
         },
         "config"    : {
             "image" : True,
-            "image_name" : "portrait_64_x_64",
-            "image_dir"  : "Portraits"
+            "images": [
+                {
+                    "image_name" : "portrait_64_x_64",
+                    "image_dir"  : "Portraits"
+                },
+                {
+                    "image_name" : "portrait_256_x_256",
+                    "image_dir"  : "Portraits"
+                },
+                
+            ]
         }
     },
 
@@ -39,7 +49,6 @@ data_sets = [
         "base_url"  : "threads",
         "params"    : {
             "populate": [
-                "actor",
                 "dialog",
                 # "instructions",
                 # "instructions.thread",
@@ -141,16 +150,16 @@ def get_data_from_strapi(data, base_filepath, base_uri):
 
 def download_images(rjson, data, base_filepath, base_uri):
     for a in rjson["data"]:
-        image_name = data["config"]["image_name"]
-        if a[image_name] is not None :
-            image_dir = "/Assets/" + data["config"]["image_dir"] + "/" + a[image_name]["name"]
-            image_url = a[image_name]["url"]
-            print("Downloading image from: "+image_url)
-            img_data = requests.get(image_url).content
-            with open(base_filepath + image_dir, 'wb') as handler:
-                handler.write(img_data)
-            print("Saved image to: "+base_filepath + image_dir)
-            a[image_name]["resPath"] = "res://"+image_dir
+        for i in data["config"]["images"]:
+            if a[i["image_name"]] is not None :
+                image_dir = "/Assets/" + i["image_dir"] + "/" + a[i["image_name"]]["name"]
+                image_url = a[i["image_name"]]["url"]
+                print("Downloading image from: "+image_url)
+                img_data = requests.get(image_url).content
+                with open(base_filepath + image_dir, 'wb') as handler:
+                    handler.write(img_data)
+                print("Saved image to: "+base_filepath + image_dir)
+                a[i["image_name"]]["resPath"] = "res://"+image_dir
 
 def get_json(path,uri):
     

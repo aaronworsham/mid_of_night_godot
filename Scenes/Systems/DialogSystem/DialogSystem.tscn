@@ -9,10 +9,10 @@
 
 [node name="DialogPanel" type="Panel" parent="DialogCanvas"]
 unique_name_in_owner = true
-offset_left = 57.0
-offset_top = 44.0
-offset_right = 1848.0
-offset_bottom = 1016.0
+offset_left = 416.0
+offset_top = 46.0
+offset_right = 1501.0
+offset_bottom = 1018.0
 
 [node name="Sprite2D" type="Sprite2D" parent="DialogCanvas/DialogPanel"]
 position = Vector2(175, 172)
@@ -20,10 +20,10 @@ position = Vector2(175, 172)
 [node name="TopicsVBox" type="VBoxContainer" parent="DialogCanvas/DialogPanel"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 27.0
-offset_top = 372.0
-offset_right = 455.0
-offset_bottom = 924.0
+offset_left = 81.0
+offset_top = 376.0
+offset_right = 509.0
+offset_bottom = 928.0
 
 [node name="Button" type="Button" parent="DialogCanvas/DialogPanel/TopicsVBox"]
 layout_mode = 2
@@ -32,10 +32,10 @@ text = "Test Button"
 [node name="DialogVBox" type="VBoxContainer" parent="DialogCanvas/DialogPanel"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 700.0
-offset_top = 62.0
-offset_right = 1741.0
-offset_bottom = 933.0
+offset_left = 592.0
+offset_top = 58.0
+offset_right = 1026.0
+offset_bottom = 929.0
 
 [node name="DialogCloseBtn" type="Button" parent="DialogCanvas/DialogPanel"]
 layout_mode = 0
