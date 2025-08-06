@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dsntxowjttdx0"]
 
-[ext_resource type="Script" uid="uid://7fcimkbnwhl2" path="res://Scripts/Systems/IO/detective_model.gd" id="1_3g53w"]
+[ext_resource type="Script" uid="uid://7fcimkbnwhl2" path="res://Scenes/Systems/IO/detective_model.gd" id="1_3g53w"]
 
 [node name="DetectiveModel" type="Node"]
 script = ExtResource("1_3g53w")

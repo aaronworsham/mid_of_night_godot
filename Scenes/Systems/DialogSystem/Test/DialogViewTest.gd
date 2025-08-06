@@ -4,22 +4,41 @@ class_name DialogViewTest extends Node
 @onready var dialog_list: VBoxContainer = %DialogVBox
 @onready var dialog_ui:Node = %DialogPanel
 @onready var dialog_controller:DialogControllerTest = %DialogControllerTest
+@onready var detective_left:CanvasLayer = %DetectiveLeft
+@onready var actor_right:CanvasLayer= %ActorRight
+@onready var actor_label:Label = %ActorLabel
+@onready var actor_portrait:Sprite2D = %ActorPortrait
+@onready var actors_container:Node = %Actors
 
 var _topics:Array
 
 func _ready() -> void:
 	_topics.clear()
 	dialog_ui.visible = false
+	EventManager.event_interactable_actor_clicked.connect(show_dialog_ui)
 
-func show_dialog_ui():
+func show_dialog_ui(actor:ActorModel):
+	actor_label.text = actor.get_actor_name()
+	print ("ACTUI: got actor:" + actor_label.text)
+	actor_portrait.texture = load(actor.get_portrait_256_path())
+	detective_left.visible = true
+	actor_right.visible = true
 	dialog_ui.visible = true
+	var actors = actors_container.get_children()
+	for a in actors:
+		a.visible = false
 	load_topic_list()
 
 func hide_dialog_ui():
 	clear_topic_list()
 	clear_dialog_list()
 	clear_topics()
+	detective_left.visible = false
+	actor_right.visible = false
 	dialog_ui.visible = false
+	var actors = actors_container.get_children()
+	for a in actors:
+		a.visible = true
 
 func update_dialog(copy:String):
 	dialog_list.add_child(UIUtility.create_rich_copy_label((copy)))

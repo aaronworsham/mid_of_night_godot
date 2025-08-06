@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7kxwnxkrnxkt"]
 
-[ext_resource type="PackedScene" uid="uid://bsv5nso1l6hhu" path="res://Scenes/Tests/DialogSystemTest.tscn" id="3_n36sl"]
+[ext_resource type="PackedScene" uid="uid://bsv5nso1l6hhu" path="res://Scenes/Systems/DialogSystem/Test/DialogSystemTest.tscn" id="3_n36sl"]
 
 [node name="ActorSceneTest" type="Node2D"]
 

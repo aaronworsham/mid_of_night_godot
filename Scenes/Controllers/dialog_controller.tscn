@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cd0b047wu0rka"]
 
-[ext_resource type="Script" uid="uid://de64vpe1bfmgj" path="res://Scripts/Systems/Dialog/DialogController.gd" id="1_46dyk"]
+[ext_resource type="Script" uid="uid://de64vpe1bfmgj" path="res://Scenes/Systems/DialogSystem/DialogController.gd" id="1_46dyk"]
 
 [node name="DialogController" type="Node"]
 script = ExtResource("1_46dyk")

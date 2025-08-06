@@ -33,9 +33,9 @@ texture = ExtResource("1_x67p5")
 
 [node name="ActorLabel" type="Label" parent="ActorRight"]
 unique_name_in_owner = true
-offset_left = 1737.0
-offset_top = 189.0
-offset_right = 1813.0
-offset_bottom = 218.0
+offset_left = 1738.0
+offset_top = 307.0
+offset_right = 1814.0
+offset_bottom = 336.0
 text = "tmp"
 horizontal_alignment = 1

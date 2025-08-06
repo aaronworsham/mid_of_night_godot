@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://thve5vhi8jam"]
 
-[ext_resource type="Script" uid="uid://dyalilihm2rg3" path="res://Scripts/Systems/Dialog/DialogView.gd" id="2_rhf56"]
-[ext_resource type="Script" uid="uid://de64vpe1bfmgj" path="res://Scripts/Systems/Dialog/DialogController.gd" id="3_cr0d0"]
+[ext_resource type="Script" uid="uid://dyalilihm2rg3" path="res://Scenes/Systems/DialogSystem/DialogView.gd" id="2_rhf56"]
+[ext_resource type="Script" uid="uid://de64vpe1bfmgj" path="res://Scenes/Systems/DialogSystem/DialogController.gd" id="3_cr0d0"]
 
 [node name="DialogSystem" type="Node2D"]
 

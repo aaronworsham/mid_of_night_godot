@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-EventManager="*res://Scripts/Systems/Event/EventManager.gd"
+EventManager="*res://Scenes/Systems/Event/EventManager.gd"
 UiUtility="*res://Scripts/Library/UIUtility.gd"
-CharacterManager="*res://Scripts/Systems/Character/CharacterManager.gd"
+CharacterManager="*res://Scenes/Systems/Character/CharacterManager.gd"
 
 [dialogic]
 

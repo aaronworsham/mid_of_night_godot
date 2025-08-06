@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dw4k6ui7vcqdw"]
 
-[ext_resource type="Script" uid="uid://2xbesvxiab6l" path="res://Scripts/Systems/Interactables/ActorController.gd" id="1_3uamh"]
-[ext_resource type="Script" uid="uid://bpwwttv2dp23e" path="res://Scripts/Systems/Interactables/ActorLoader.gd" id="2_ykm54"]
+[ext_resource type="Script" uid="uid://2xbesvxiab6l" path="res://Scenes/Systems/Interactables/ActorController.gd" id="1_3uamh"]
+[ext_resource type="Script" uid="uid://bpwwttv2dp23e" path="res://Scenes/Systems/Interactables/ActorLoader.gd" id="2_ykm54"]
 
 [node name="InteractableSystem" type="Node2D"]
 
