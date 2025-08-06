@@ -15,6 +15,8 @@ var _topics:Array
 func _ready() -> void:
 	_topics.clear()
 	dialog_ui.visible = false
+	detective_left.visible = false
+	actor_right.visible = false
 	EventManager.event_interactable_actor_clicked.connect(show_dialog_ui)
 
 func show_dialog_ui(actor:ActorModel):
@@ -27,7 +29,7 @@ func show_dialog_ui(actor:ActorModel):
 	var actors = actors_container.get_children()
 	for a in actors:
 		a.visible = false
-	load_topic_list()
+	#load_topic_list()
 
 func hide_dialog_ui():
 	clear_topic_list()

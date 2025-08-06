@@ -1,1 +1,41 @@
-{"data": [{"id": 2, "documentId": "o9dblhwwc40kx9hul8k4gai3", "name": "thread 1", "guid": "thread1guid", "starts_discovery": null, "label": null, "createdAt": "2025-07-28T11:02:24.580Z", "updatedAt": "2025-07-28T11:49:32.383Z", "publishedAt": "2025-07-28T11:49:32.477Z", "dialog": {"id": 2, "documentId": "zlk5bi52rdvgq4bj9v4a4jzm", "name": "Test Dialog", "guid": "test_dialog", "createdAt": "2025-07-03T16:22:45.003Z", "updatedAt": "2025-07-03T16:22:47.312Z", "publishedAt": "2025-07-03T16:22:47.338Z"}}], "meta": {"pagination": {"page": 1, "pageSize": 25, "pageCount": 1, "total": 1}}}
+{
+    "data": [
+        {
+            "id": 5,
+            "documentId": "o9dblhwwc40kx9hul8k4gai3",
+            "name": "thread 1",
+            "guid": "thread1guid",
+            "label": "Test Label",
+            "createdAt": "2025-07-28T11:02:24.580Z",
+            "updatedAt": "2025-08-06T18:07:23.703Z",
+            "publishedAt": "2025-08-06T18:07:23.792Z",
+            "starts_discovered": true,
+            "dialog": {
+                "id": 2,
+                "documentId": "zlk5bi52rdvgq4bj9v4a4jzm",
+                "name": "Test Dialog",
+                "guid": "test_dialog",
+                "createdAt": "2025-07-03T16:22:45.003Z",
+                "updatedAt": "2025-07-03T16:22:47.312Z",
+                "publishedAt": "2025-07-03T16:22:47.338Z"
+            },
+            "instructions": [
+
+                {
+                    "__component": "thread-instruction.thread-statement",
+                    "id": 3,
+                    "name": "test_thread_statement",
+                    "copy": "Test Thread Statement Copy"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 1
+        }
+    }
+}

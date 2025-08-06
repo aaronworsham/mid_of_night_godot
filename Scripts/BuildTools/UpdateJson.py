@@ -50,11 +50,11 @@ data_sets = [
         "params"    : {
             "populate": [
                 "dialog",
-                # "instructions",
-                # "instructions.thread",
-                # "instructions.clue",
-                # "instructions.mystery",
-                # "instructions.research_topic"
+                "instructions",
+                "instructions.thread",
+                "instructions.clue",
+                "instructions.mystery",
+                "instructions.research_topic"
             ]
         },
         "config"    :{}
