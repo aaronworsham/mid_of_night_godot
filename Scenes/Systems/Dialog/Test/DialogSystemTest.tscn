@@ -30,21 +30,42 @@ size_flags_vertical = 4
 [node name="Sprite2D" type="Sprite2D" parent="DialogCanvas/DialogPanel"]
 position = Vector2(175, 172)
 
+[node name="TabsHB" type="HBoxContainer" parent="DialogCanvas/DialogPanel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 689.0
+offset_bottom = 41.0
+
+[node name="DialogBtn" type="Button" parent="DialogCanvas/DialogPanel/TabsHB"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Logbook"
+
+[node name="MysteriesBtn" type="Button" parent="DialogCanvas/DialogPanel/TabsHB"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Mysteries"
+
+[node name="ResearchBtn" type="Button" parent="DialogCanvas/DialogPanel/TabsHB"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Research"
+
 [node name="TopicsVBox" type="VBoxContainer" parent="DialogCanvas/DialogPanel"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 39.0
-offset_top = 47.0
-offset_right = 330.0
-offset_bottom = 599.0
+offset_left = 5.0
+offset_top = 62.5
+offset_right = 296.0
+offset_bottom = 614.5
 
 [node name="DialogVBox" type="VBoxContainer" parent="DialogCanvas/DialogPanel"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 400.0
-offset_top = 24.0
+offset_top = 57.0
 offset_right = 729.0
-offset_bottom = 615.0
+offset_bottom = 616.0
 
 [node name="DialogCloseBtn" type="Button" parent="DialogCanvas/DialogPanel"]
 layout_mode = 0
