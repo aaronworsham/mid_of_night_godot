@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://doea11017vluq"]
+
+[ext_resource type="Script" uid="uid://c8tf4o1vysyo6" path="res://Scenes/Systems/Overtab/Test/OvertabViewTest.gd" id="1_bkhlr"]
+[ext_resource type="Script" uid="uid://ci6hn1f8thqdj" path="res://Scenes/Systems/Overtab/Test/OvertabControllerTest.gd" id="2_klwxk"]
+
+[node name="OvertabSystem" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TabsHB" type="HBoxContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 406.0
+offset_top = 4.0
+offset_right = 1095.0
+offset_bottom = 45.0
+
+[node name="DialogBtn" type="Button" parent="CanvasLayer/TabsHB"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Logbook"
+
+[node name="MysteriesBtn" type="Button" parent="CanvasLayer/TabsHB"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Mysteries"
+
+[node name="ResearchBtn" type="Button" parent="CanvasLayer/TabsHB"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Research"
+
+[node name="Views" type="Node" parent="."]
+
+[node name="OvertabViewTest" type="Node" parent="Views"]
+script = ExtResource("1_bkhlr")
+
+[node name="Controllers" type="Node" parent="."]
+
+[node name="OvertabControllerTest" type="Node" parent="Controllers"]
+script = ExtResource("2_klwxk")
+
+[node name="Models" type="Node" parent="."]
