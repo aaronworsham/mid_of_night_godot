@@ -1,31 +1,125 @@
 {
     "data": [
         {
-            "id": 5,
+            "id": 22,
             "documentId": "o9dblhwwc40kx9hul8k4gai3",
-            "name": "thread 1",
-            "guid": "thread1guid",
-            "label": "Test Label",
+            "name": "Thread A 1",
+            "guid": "threadA1guid",
+            "label": "Topic for Actor A",
             "createdAt": "2025-07-28T11:02:24.580Z",
-            "updatedAt": "2025-08-06T18:07:23.703Z",
-            "publishedAt": "2025-08-06T18:07:23.792Z",
+            "updatedAt": "2025-08-07T12:23:37.602Z",
+            "publishedAt": "2025-08-07T12:23:37.700Z",
             "starts_discovered": true,
             "dialog": {
-                "id": 2,
+                "id": 9,
                 "documentId": "zlk5bi52rdvgq4bj9v4a4jzm",
-                "name": "Test Dialog",
-                "guid": "test_dialog",
+                "name": "Test Dialog A",
+                "guid": "testdialoga",
                 "createdAt": "2025-07-03T16:22:45.003Z",
-                "updatedAt": "2025-07-03T16:22:47.312Z",
-                "publishedAt": "2025-07-03T16:22:47.338Z"
+                "updatedAt": "2025-08-07T11:47:31.481Z",
+                "publishedAt": "2025-08-07T11:47:31.606Z"
             },
             "instructions": [
-
+                {
+                    "__component": "thread-instruction.thread-discovered",
+                    "id": 7,
+                    "name": "ThreadA1DiscoveredThreadA2",
+                    "copy": "This is what Actor A said about the topic.  Also there is a new topic discovered about [color=blue]Thread A 2[/color]",
+                    "thread": {
+                        "id": 21,
+                        "documentId": "v9yz64cmp98hv8kzgzxydhp5",
+                        "name": "Thread A2",
+                        "guid": "threada2guid",
+                        "label": "Topic A 2",
+                        "createdAt": "2025-08-07T12:11:16.316Z",
+                        "updatedAt": "2025-08-07T12:11:20.827Z",
+                        "publishedAt": "2025-08-07T12:11:20.862Z",
+                        "starts_discovered": true
+                    }
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "documentId": "hx4tsw40wfpusq7nrr5ca4sf",
+            "name": "Thread B 1",
+            "guid": "threadb1guid",
+            "label": "Interesting Topic for Actor B",
+            "createdAt": "2025-08-07T11:38:01.791Z",
+            "updatedAt": "2025-08-07T12:02:45.528Z",
+            "publishedAt": "2025-08-07T12:02:45.646Z",
+            "starts_discovered": true,
+            "dialog": {
+                "id": 6,
+                "documentId": "xu6z7qd5jcdpiwy59y9wb5qv",
+                "name": "Test Dialog B",
+                "guid": "testdialogb",
+                "createdAt": "2025-08-07T11:35:55.534Z",
+                "updatedAt": "2025-08-07T11:39:07.754Z",
+                "publishedAt": "2025-08-07T11:39:07.789Z"
+            },
+            "instructions": [
                 {
                     "__component": "thread-instruction.thread-statement",
-                    "id": 3,
-                    "name": "test_thread_statement",
-                    "copy": "Test Thread Statement Copy"
+                    "id": 14,
+                    "name": "Thread B Statement 1",
+                    "copy": "Interesting thing that Actor B said about the topic"
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "documentId": "jlvvs1bg4a785dkg1t7pdqz3",
+            "name": "Thread C 1",
+            "guid": "threadc1guid",
+            "label": "Interesting topic for Actor C",
+            "createdAt": "2025-08-07T11:38:43.600Z",
+            "updatedAt": "2025-08-07T12:02:57.827Z",
+            "publishedAt": "2025-08-07T12:02:57.906Z",
+            "starts_discovered": true,
+            "dialog": {
+                "id": 8,
+                "documentId": "u2vz1s34exh1n75p0rnnqx35",
+                "name": "Test Dialog C",
+                "guid": "testdialogc",
+                "createdAt": "2025-08-07T11:39:43.791Z",
+                "updatedAt": "2025-08-07T11:40:03.619Z",
+                "publishedAt": "2025-08-07T11:40:03.813Z"
+            },
+            "instructions": [
+                {
+                    "__component": "thread-instruction.thread-statement",
+                    "id": 15,
+                    "name": "thread c statement 1",
+                    "copy": "Thing Actor C says about the topic"
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "documentId": "v9yz64cmp98hv8kzgzxydhp5",
+            "name": "Thread A2",
+            "guid": "threada2guid",
+            "label": "Topic A 2",
+            "createdAt": "2025-08-07T12:11:16.316Z",
+            "updatedAt": "2025-08-07T12:11:20.827Z",
+            "publishedAt": "2025-08-07T12:11:20.862Z",
+            "starts_discovered": false,
+            "dialog": {
+                "id": 9,
+                "documentId": "zlk5bi52rdvgq4bj9v4a4jzm",
+                "name": "Test Dialog A",
+                "guid": "testdialoga",
+                "createdAt": "2025-07-03T16:22:45.003Z",
+                "updatedAt": "2025-08-07T11:47:31.481Z",
+                "publishedAt": "2025-08-07T11:47:31.606Z"
+            },
+            "instructions": [
+                {
+                    "__component": "thread-instruction.thread-statement",
+                    "id": 17,
+                    "name": "Thread A2 Statement",
+                    "copy": "This is an interesting statement about thread A 2"
                 }
             ]
         }
@@ -35,7 +129,7 @@
             "page": 1,
             "pageSize": 25,
             "pageCount": 1,
-            "total": 1
+            "total": 4
         }
     }
 }
