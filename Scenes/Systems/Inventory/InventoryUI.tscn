@@ -1,0 +1,132 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8xvhqxqxqxqx"]
+
+[ext_resource type="Script" path="res://Scenes/Systems/Inventory/InventoryView.gd" id="1_0"]
+
+[node name="InventoryUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_0")
+
+[node name="MainContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="LeftPanel" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HeaderPanel" type="Panel" parent="MainContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 0
+custom_minimum_size = Vector2(0, 60)
+
+[node name="HeaderVBox" type="VBoxContainer" parent="MainContainer/LeftPanel/HeaderPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = -10.0
+offset_bottom = -5.0
+
+[node name="TitleLabel" type="Label" parent="MainContainer/LeftPanel/HeaderPanel/HeaderVBox"]
+layout_mode = 2
+text = "Inventory"
+horizontal_alignment = 1
+
+[node name="WeightProgressBar" type="ProgressBar" parent="MainContainer/LeftPanel/HeaderPanel/HeaderVBox"]
+layout_mode = 2
+value = 50.0
+
+[node name="WeightLabel" type="Label" parent="MainContainer/LeftPanel/HeaderPanel/HeaderVBox"]
+layout_mode = 2
+text = "Weight: 0.0/100.0"
+horizontal_alignment = 1
+
+[node name="SlotsLabel" type="Label" parent="MainContainer/LeftPanel/HeaderPanel/HeaderVBox"]
+layout_mode = 2
+text = "Slots: 0/50"
+horizontal_alignment = 1
+
+[node name="ControlsPanel" type="HBoxContainer" parent="MainContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 0
+custom_minimum_size = Vector2(0, 40)
+
+[node name="SortButton" type="Button" parent="MainContainer/LeftPanel/ControlsPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sort"
+
+[node name="FilterButton" type="Button" parent="MainContainer/LeftPanel/ControlsPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Filter"
+
+[node name="InventoryGrid" type="GridContainer" parent="MainContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 6
+
+[node name="RightPanel" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+custom_minimum_size = Vector2(300, 0)
+
+[node name="ItemDetailsPanel" type="Panel" parent="MainContainer/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DetailsVBox" type="VBoxContainer" parent="MainContainer/RightPanel/ItemDetailsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="ItemNameLabel" type="Label" parent="MainContainer/RightPanel/ItemDetailsPanel/DetailsVBox"]
+layout_mode = 2
+text = "Select an item"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MainContainer/RightPanel/ItemDetailsPanel/DetailsVBox"]
+layout_mode = 2
+
+[node name="ItemDescriptionLabel" type="RichTextLabel" parent="MainContainer/RightPanel/ItemDetailsPanel/DetailsVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "No item selected"
+fit_content = true
+
+[node name="HSeparator2" type="HSeparator" parent="MainContainer/RightPanel/ItemDetailsPanel/DetailsVBox"]
+layout_mode = 2
+
+[node name="ItemStatsLabel" type="Label" parent="MainContainer/RightPanel/ItemDetailsPanel/DetailsVBox"]
+layout_mode = 2
+text = "Stats will appear here"
+autowrap_mode = 2
+
+[node name="ActionButtonsPanel" type="VBoxContainer" parent="MainContainer/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 0
+custom_minimum_size = Vector2(0, 100)
+
+[node name="UseItemButton" type="Button" parent="MainContainer/RightPanel/ActionButtonsPanel"]
+layout_mode = 2
+text = "Use Item"
+
+[node name="DropItemButton" type="Button" parent="MainContainer/RightPanel/ActionButtonsPanel"]
+layout_mode = 2
+text = "Drop Item"

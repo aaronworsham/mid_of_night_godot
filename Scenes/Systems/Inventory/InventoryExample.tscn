@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://d8xvhqxqxqxqx"]
+
+[ext_resource type="Script" path="res://Scenes/Systems/Inventory/InventorySystem.gd" id="1_0"]
+[ext_resource type="PackedScene" uid="uid://c8xvhqxqxqxqx" path="res://Scenes/Systems/Inventory/InventoryUI.tscn" id="2_0"]
+[ext_resource type="Script" path="res://Scenes/Systems/Inventory/InventoryTest.gd" id="3_0"]
+
+[node name="InventoryExample" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="InventorySystem" type="Node" parent="."]
+script = ExtResource("1_0")
+max_weight = 100.0
+max_slots = 50
+
+[node name="InventoryUI" parent="InventorySystem" instance=ExtResource("2_0")]
+visible = false
+
+[node name="InventoryTest" type="Node" parent="."]
+script = ExtResource("3_0")
+
+[node name="Instructions" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -60.0
+offset_right = 400.0
+offset_bottom = -10.0
+text = "Press I to open inventory
+Press Enter to run test
+Press Escape to close inventory"
+vertical_alignment = 1
