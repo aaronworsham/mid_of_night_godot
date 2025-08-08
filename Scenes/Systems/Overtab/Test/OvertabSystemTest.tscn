@@ -12,10 +12,11 @@
 
 [node name="OvertabContainer" type="HBoxContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
-offset_left = 617.0
-offset_top = 1.0
-offset_right = 1306.0
-offset_bottom = 42.0
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.501
+offset_top = 20.0
+grow_horizontal = 2
 
 [node name="DialogBtn" type="Button" parent="CanvasLayer/OvertabContainer"]
 unique_name_in_owner = true
