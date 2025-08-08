@@ -1,42 +1,51 @@
-[gd_scene load_steps=3 format=3 uid="uid://doea11017vluq"]
+[gd_scene load_steps=6 format=3 uid="uid://doea11017vluq"]
 
 [ext_resource type="Script" uid="uid://c8tf4o1vysyo6" path="res://Scenes/Systems/Overtab/Test/OvertabViewTest.gd" id="1_bkhlr"]
+[ext_resource type="Texture2D" uid="uid://bwbe04t1rul1y" path="res://Assets/Icons/logbook_40p.png" id="1_vjriv"]
+[ext_resource type="Texture2D" uid="uid://jtqmmd58oqkb" path="res://Assets/Icons/mystery.png" id="2_6qwhv"]
 [ext_resource type="Script" uid="uid://ci6hn1f8thqdj" path="res://Scenes/Systems/Overtab/Test/OvertabControllerTest.gd" id="2_klwxk"]
+[ext_resource type="Texture2D" uid="uid://0j06w1y0whci" path="res://Assets/Icons/research.png" id="3_4htig"]
 
 [node name="OvertabSystem" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TabsHB" type="HBoxContainer" parent="CanvasLayer"]
+[node name="OvertabContainer" type="HBoxContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
-offset_left = 406.0
-offset_top = 4.0
-offset_right = 1095.0
-offset_bottom = 45.0
+offset_left = 617.0
+offset_top = 1.0
+offset_right = 1306.0
+offset_bottom = 42.0
 
-[node name="DialogBtn" type="Button" parent="CanvasLayer/TabsHB"]
+[node name="DialogBtn" type="Button" parent="CanvasLayer/OvertabContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.807843, 0, 0, 1)
 text = "Logbook"
+icon = ExtResource("1_vjriv")
 
-[node name="MysteriesBtn" type="Button" parent="CanvasLayer/TabsHB"]
+[node name="MysteriesBtn" type="Button" parent="CanvasLayer/OvertabContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Mysteries"
+icon = ExtResource("2_6qwhv")
 
-[node name="ResearchBtn" type="Button" parent="CanvasLayer/TabsHB"]
+[node name="ResearchBtn" type="Button" parent="CanvasLayer/OvertabContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Research"
+icon = ExtResource("3_4htig")
 
 [node name="Views" type="Node" parent="."]
 
 [node name="OvertabViewTest" type="Node" parent="Views"]
+unique_name_in_owner = true
 script = ExtResource("1_bkhlr")
 
 [node name="Controllers" type="Node" parent="."]
 
 [node name="OvertabControllerTest" type="Node" parent="Controllers"]
+unique_name_in_owner = true
 script = ExtResource("2_klwxk")
 
 [node name="Models" type="Node" parent="."]

@@ -1,6 +1,7 @@
 class_name DialogControllerTest extends Node
 
 @onready var dialog_view:DialogViewTest = %DialogViewTest
+@onready var dialog_system_events: DialogSystemEventsTest = %DialogSystemEventsTest
 # @onready var threads_resource: Resource = ThreadCollectionResource.new()
 # @onready var thread_json: JSON = load("res://Data/Threads/threads.strapi.json")
 # @onready var timeline_resource: TimelineResource = TimelineResource.new()
@@ -21,7 +22,8 @@ func _ready() -> void:
 	# timeline_resource._threads_resource = threads_resource
 	# timeline_resource.on_load()
 
-	EventManager.event_interactable_actor_clicked.connect(_interactable_actor_clicked)
+	EventManager.event_test_interactable_actor_clicked.connect(_interactable_actor_clicked)
+	EventManager.event_test_dialog_closed.connect(_on_event_close_dialog)
 	# EventManager.event_start_dialog.connect(_dialog_action)
 	# EventManager.event_notebook_clicked.connect(_notebook_clicked_action)
 func _interactable_actor_clicked(actor:ActorModel):
@@ -80,6 +82,5 @@ func execute_thread_instructions():
 	
 
 
-func _on_dialog_close_btn_pressed() -> void:
+func _on_event_close_dialog() -> void:
 	dialog_view.hide_dialog_ui()
-	EventManager.event_dialog_closed.emit()

@@ -17,7 +17,7 @@ func _ready() -> void:
 	dialog_ui.visible = false
 	detective_left.visible = false
 	actor_right.visible = false
-	EventManager.event_interactable_actor_clicked.connect(show_dialog_ui)
+	EventManager.event_test_interactable_actor_clicked.connect(show_dialog_ui)
 
 func show_dialog_ui(actor:ActorModel):
 	actor_label.text = actor.get_actor_name()

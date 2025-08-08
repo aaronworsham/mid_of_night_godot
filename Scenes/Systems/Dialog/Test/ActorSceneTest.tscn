@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7kxwnxkrnxkt"]
+[gd_scene load_steps=3 format=3 uid="uid://b7kxwnxkrnxkt"]
 
-[ext_resource type="PackedScene" uid="uid://bsv5nso1l6hhu" path="res://Scenes/Systems/DialogSystem/Test/DialogSystemTest.tscn" id="3_n36sl"]
+[ext_resource type="PackedScene" uid="uid://doea11017vluq" path="res://Scenes/Systems/Overtab/Test/OvertabSystemTest.tscn" id="2_y2q4s"]
+[ext_resource type="PackedScene" uid="uid://bsv5nso1l6hhu" path="res://Scenes/Systems/Dialog/Test/DialogSystemTest.tscn" id="3_n36sl"]
 
 [node name="ActorSceneTest" type="Node2D"]
 
@@ -9,3 +10,5 @@
 [node name="Systems" type="Node" parent="."]
 
 [node name="DialogSystemTest" parent="Systems" instance=ExtResource("3_n36sl")]
+
+[node name="OvertabSystem" parent="Systems" instance=ExtResource("2_y2q4s")]

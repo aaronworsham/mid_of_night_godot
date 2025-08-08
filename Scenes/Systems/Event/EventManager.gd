@@ -60,12 +60,13 @@ signal event_cos_get_cos()
 
 #endregion
 
-#region Test
+#region DialogTest
 signal event_test_show_actor_dialog(actor:ActorModel)
-
+signal event_test_interactable_actor_clicked(actor:ActorModel)
+signal event_test_dialog_closed()
 #endregion
 
-#region overtabTest
+#region OvertabTest
 signal event_test_overtab_clicked(overtab: OvertabModel)
 #endregion
 
