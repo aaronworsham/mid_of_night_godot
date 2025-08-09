@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bykpg87c2k8sq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_od5nr"]
+bg_color = Color(0.267189, 0.363231, 0.725458, 1)
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxFlat_od5nr")

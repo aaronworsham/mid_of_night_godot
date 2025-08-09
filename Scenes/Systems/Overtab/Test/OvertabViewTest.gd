@@ -1,5 +1,6 @@
 class_name OvertabViewTest extends Node
 
+@onready var logbook_btn: Button = %LogbookBtn
 @onready var overtab_container: HBoxContainer = %OvertabContainer
 
 func _ready() -> void:
@@ -14,5 +15,7 @@ func show_overtab() -> void:
 func hide_overtab() -> void:
     overtab_container.visible = false;
 
+func focus_on_logbook() -> void:
+    logbook_btn.grab_focus()
 
 
