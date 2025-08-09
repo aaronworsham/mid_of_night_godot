@@ -1,0 +1,3 @@
+class_name MysteryEventsTest extends Node
+
+signal event_test_dialog_closed

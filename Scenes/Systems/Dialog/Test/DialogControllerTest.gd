@@ -23,7 +23,9 @@ func _ready() -> void:
 	# timeline_resource.on_load()
 
 	EventManager.event_test_interactable_actor_clicked.connect(_interactable_actor_clicked)
+	EventManager.event_test_logbook_clicked.connect(_on_event_logbook_clicked)
 	EventManager.event_test_dialog_closed.connect(_on_event_close_dialog)
+	EventManager.event_test_close_all_panels.connect(_on_event_close_all_panels)
 	# EventManager.event_start_dialog.connect(_dialog_action)
 	# EventManager.event_notebook_clicked.connect(_notebook_clicked_action)
 func _interactable_actor_clicked(actor:ActorModel):
@@ -83,4 +85,10 @@ func execute_thread_instructions():
 
 
 func _on_event_close_dialog() -> void:
+	dialog_view.hide_dialog_ui()
+
+func _on_event_logbook_clicked() -> void:
+	dialog_view.show_dialog_ui()
+
+func _on_event_close_all_panels() -> void:
 	dialog_view.hide_dialog_ui()

@@ -1,19 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://doea11017vluq"]
+[gd_scene load_steps=8 format=3 uid="uid://doea11017vluq"]
 
 [ext_resource type="Theme" uid="uid://bykpg87c2k8sq" path="res://Assets/Themes/mntheme.tres" id="1_6qwhv"]
 [ext_resource type="Script" uid="uid://c8tf4o1vysyo6" path="res://Scenes/Systems/Overtab/Test/OvertabViewTest.gd" id="1_bkhlr"]
 [ext_resource type="Texture2D" uid="uid://bwbe04t1rul1y" path="res://Assets/Icons/logbook_40p.png" id="1_vjriv"]
+[ext_resource type="Texture2D" uid="uid://60yqhgs0ww5x" path="res://Assets/Icons/dialog.png" id="2_4htig"]
 [ext_resource type="Texture2D" uid="uid://jtqmmd58oqkb" path="res://Assets/Icons/mystery.png" id="2_6qwhv"]
 [ext_resource type="Script" uid="uid://ci6hn1f8thqdj" path="res://Scenes/Systems/Overtab/Test/OvertabControllerTest.gd" id="2_klwxk"]
 [ext_resource type="Texture2D" uid="uid://0j06w1y0whci" path="res://Assets/Icons/research.png" id="3_4htig"]
 
 [node name="OvertabSystem" type="Node2D"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="OvertabContainer" type="HBoxContainer" parent="CanvasLayer"]
+[node name="OvertabCanvas" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
-anchors_preset = -1
+
+[node name="OvertabContainer" type="HBoxContainer" parent="OvertabCanvas"]
+unique_name_in_owner = true
+anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -21,20 +23,27 @@ anchor_bottom = 1.0
 offset_top = -40.0
 grow_horizontal = 2
 
-[node name="LogbookBtn" type="Button" parent="CanvasLayer/OvertabContainer"]
+[node name="DialogBtn" type="Button" parent="OvertabCanvas/OvertabContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_6qwhv")
+text = "Dialog"
+icon = ExtResource("2_4htig")
+
+[node name="LogbookBtn" type="Button" parent="OvertabCanvas/OvertabContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("1_6qwhv")
 text = "Logbook"
 icon = ExtResource("1_vjriv")
 
-[node name="MysteriesBtn" type="Button" parent="CanvasLayer/OvertabContainer"]
+[node name="MysteriesBtn" type="Button" parent="OvertabCanvas/OvertabContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Mysteries"
 icon = ExtResource("2_6qwhv")
 
-[node name="ResearchBtn" type="Button" parent="CanvasLayer/OvertabContainer"]
+[node name="ResearchBtn" type="Button" parent="OvertabCanvas/OvertabContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Research"

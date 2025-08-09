@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqv7jk6r6gjup"]
+
+[ext_resource type="Script" uid="uid://tebcnjxjthtr" path="res://Scenes/Systems/Mystery/Test/MysteryModelTest.gd" id="1_kjs2w"]
+[ext_resource type="Script" uid="uid://m3i063l3q57l" path="res://Scenes/Systems/Mystery/Test/MysteryViewTest.gd" id="2_fj5cv"]
+[ext_resource type="Script" uid="uid://c6ir72xxirpdm" path="res://Scenes/Systems/Mystery/Test/MysteryControllerTest.gd" id="3_13856"]
+[ext_resource type="Script" uid="uid://whg2u63c7720" path="res://Scenes/Systems/Mystery/Test/MysteryEventsTest.gd" id="4_vcowj"]
+
+[node name="MysterySystemTest" type="Node2D"]
+
+[node name="MysteryCanvas" type="CanvasLayer" parent="."]
+
+[node name="MysteryPanel" type="Panel" parent="MysteryCanvas"]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.25
+anchor_right = 0.75
+anchor_bottom = 1.0
+offset_top = 80.0
+offset_bottom = -60.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TopicsVBox" type="VBoxContainer" parent="MysteryCanvas/MysteryPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 0.2
+
+[node name="MysteryVBox" type="VBoxContainer" parent="MysteryCanvas/MysteryPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.548
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+
+[node name="MysteryCloseBtn" type="Button" parent="MysteryCanvas/MysteryPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.943
+anchor_right = 1.0
+offset_top = -40.0
+grow_horizontal = 0
+text = "Close"
+
+[node name="Models" type="Node" parent="."]
+
+[node name="MysteryModelTest" type="Node" parent="Models"]
+unique_name_in_owner = true
+script = ExtResource("1_kjs2w")
+
+[node name="Views" type="Node" parent="."]
+
+[node name="MysteryViewTest" type="Node" parent="Views"]
+unique_name_in_owner = true
+script = ExtResource("2_fj5cv")
+
+[node name="Controllers" type="Node" parent="."]
+
+[node name="MysteryControllerTest" type="Node" parent="Controllers"]
+unique_name_in_owner = true
+script = ExtResource("3_13856")
+
+[node name="Events" type="Node" parent="."]
+
+[node name="MysteryEventsTest" type="Node" parent="Events"]
+unique_name_in_owner = true
+script = ExtResource("4_vcowj")

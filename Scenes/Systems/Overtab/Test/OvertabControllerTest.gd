@@ -12,3 +12,7 @@ func _interactable_actor_clicked(actor: ActorModel) -> void:
 
 func _on_event_close_dialog() -> void:
 	pass
+
+func logbook_clicked() -> void:
+	EventManager.event_test_close_all_panels.emit()
+	EventManager.event_test_logbook_clicked.emit()
