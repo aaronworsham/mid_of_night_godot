@@ -24,9 +24,6 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Sprite2D" type="Sprite2D" parent="DialogCanvas/DialogPanel"]
-position = Vector2(175, 172)
-
 [node name="TopicsVBox" type="VBoxContainer" parent="DialogCanvas/DialogPanel"]
 unique_name_in_owner = true
 layout_mode = 1
