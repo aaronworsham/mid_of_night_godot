@@ -10,5 +10,5 @@ func _ready() -> void:
 func _on_event_close_dialog() -> void:
 	pass
 
-func _on_event_mystery_clicked(mystery: MysteryModel) -> void:
+func _on_event_mystery_clicked() -> void:
 	mystery_panel.visible = true

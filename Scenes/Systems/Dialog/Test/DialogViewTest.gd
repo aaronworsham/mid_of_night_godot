@@ -8,7 +8,7 @@ class_name DialogViewTest extends Node
 @onready var actor_right:CanvasLayer= %ActorRight
 @onready var actor_label:Label = %ActorLabel
 @onready var actor_portrait:Sprite2D = %ActorPortrait
-@onready var actors_container:Node = %Actors
+
 
 var _topics:Array
 
@@ -26,9 +26,7 @@ func show_dialog_ui(actor:ActorModel):
 	detective_left.visible = true
 	actor_right.visible = true
 	dialog_ui.visible = true
-	var actors = actors_container.get_children()
-	for a in actors:
-		a.visible = false
+
 	#load_topic_list()
 
 func hide_dialog_ui():
@@ -38,9 +36,7 @@ func hide_dialog_ui():
 	detective_left.visible = false
 	actor_right.visible = false
 	dialog_ui.visible = false
-	var actors = actors_container.get_children()
-	for a in actors:
-		a.visible = true
+
 
 func update_dialog(copy:String):
 	dialog_list.add_child(UIUtility.create_rich_copy_label((copy)))

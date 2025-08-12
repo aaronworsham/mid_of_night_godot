@@ -88,7 +88,7 @@ func _on_event_close_dialog() -> void:
 	dialog_view.hide_dialog_ui()
 
 func _on_event_logbook_clicked() -> void:
-	dialog_view.show_dialog_ui()
+	EventManager.event_test_close_all_panels.emit()
 
 func _on_event_close_all_panels() -> void:
 	dialog_view.hide_dialog_ui()

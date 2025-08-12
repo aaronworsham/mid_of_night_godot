@@ -54,11 +54,12 @@ signal event_test_dialog_closed()
 #endregion
 
 #region OvertabTest
-signal event_test_overtab_clicked(overtab: OvertabModel)
 signal event_test_logbook_clicked()
-signal event_test_mystery_clicked(mystery: MysteryModel)
+signal event_test_mystery_clicked()
+signal event_test_research_clicked()
 signal event_test_close_all_panels()
 #endregion
+
 
 #Signals EM can emit for others to connect to
 func emit_event_attributes_updated(attrs:Dictionary):

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://4shhrqq14b7s"]
+
+[ext_resource type="PackedScene" uid="uid://doea11017vluq" path="res://Scenes/Systems/Overtab/Test/OvertabSystemTest.tscn" id="2_y2q4s"]
+[ext_resource type="PackedScene" uid="uid://bsv5nso1l6hhu" path="res://Scenes/Systems/Dialog/Test/DialogSystemTest.tscn" id="3_n36sl"]
+[ext_resource type="PackedScene" uid="uid://cqv7jk6r6gjup" path="res://Scenes/Systems/Mystery/Test/MysterySystemTest.tscn" id="3_vykkl"]
+[ext_resource type="Script" uid="uid://ddeqgsh3haoy0" path="res://Scenes/Systems/Interactables/Test/ActorLoaderTest.gd" id="4_jcxdr"]
+[ext_resource type="Script" uid="uid://lwv32jpqluot" path="res://Scenes/Systems/Interactables/Test/ActorViewTest.gd" id="5_8xjal"]
+
+[node name="ActorSceneTest" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Systems" type="Node" parent="."]
+
+[node name="DialogSystemTest" parent="Systems" instance=ExtResource("3_n36sl")]
+script = null
+
+[node name="OvertabSystemTest" parent="Systems" instance=ExtResource("2_y2q4s")]
+
+[node name="MysterySystemTest" parent="Systems" instance=ExtResource("3_vykkl")]
+
+[node name="Loaders" type="Node" parent="."]
+
+[node name="ActorLoaderTest" type="Node" parent="Loaders"]
+script = ExtResource("4_jcxdr")
+
+[node name="Objects" type="Node" parent="."]
+
+[node name="Actors" type="Node" parent="Objects"]
+unique_name_in_owner = true
+
+[node name="Views" type="Node2D" parent="."]
+
+[node name="ActorViewTest" type="Node2D" parent="Views"]
+script = ExtResource("5_8xjal")

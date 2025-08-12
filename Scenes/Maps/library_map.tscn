@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvd7df11se5qh"]
 
 [ext_resource type="Texture2D" uid="uid://cmcia0vkef3up" path="res://Assets/Backgrounds/Library.webp" id="1_6w8id"]
-[ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Interactables/Actors/detective.tscn" id="5_4yku1"]
+[ext_resource type="PackedScene" uid="uid://bseh846181j0d" path="res://Scenes/Systems/Interactables/Actors/detective.tscn" id="5_4yku1"]
 
 [node name="Library Map" type="Node2D"]
 

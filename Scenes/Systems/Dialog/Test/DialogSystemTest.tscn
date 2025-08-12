@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bsv5nso1l6hhu"]
+[gd_scene load_steps=6 format=3 uid="uid://bsv5nso1l6hhu"]
 
 [ext_resource type="Script" uid="uid://bscmckha1fmw6" path="res://Scenes/Systems/Dialog/Test/DialogViewTest.gd" id="1_3x8rw"]
 [ext_resource type="Script" uid="uid://cgia1vhwq502l" path="res://Scenes/Systems/Dialog/Test/DialogSystemTest.gd" id="1_x4u42"]
 [ext_resource type="Texture2D" uid="uid://msopuii5k5h1" path="res://Assets/Portraits/character_a_64x64.jpeg" id="2_234wd"]
 [ext_resource type="Script" uid="uid://ccjxggc7r7g3q" path="res://Scenes/Systems/Dialog/Test/DialogControllerTest.gd" id="3_qrjav"]
-[ext_resource type="Script" uid="uid://ddeqgsh3haoy0" path="res://Scenes/Systems/Dialog/Test/ActorLoaderTest.gd" id="5_x06od"]
 [ext_resource type="Script" uid="uid://d0o15p76v0811" path="res://Scenes/Systems/Dialog/Test/DialogSystemEventsTest.gd" id="6_s3jl1"]
 
 [node name="DialogSystemTest" type="Node2D"]
@@ -93,23 +92,11 @@ metadata/_edit_use_anchors_ = true
 unique_name_in_owner = true
 script = ExtResource("1_3x8rw")
 
-[node name="PortraitViewTest" type="Node" parent="Views"]
-
 [node name="Controllers" type="Node" parent="."]
 
 [node name="DialogControllerTest" type="Node" parent="Controllers"]
 unique_name_in_owner = true
 script = ExtResource("3_qrjav")
-
-[node name="Objects" type="Node" parent="."]
-
-[node name="Actors" type="Node" parent="Objects"]
-unique_name_in_owner = true
-
-[node name="Loaders" type="Node" parent="."]
-
-[node name="ActorLoaderTest" type="Node" parent="Loaders"]
-script = ExtResource("5_x06od")
 
 [node name="Events" type="Node" parent="."]
 

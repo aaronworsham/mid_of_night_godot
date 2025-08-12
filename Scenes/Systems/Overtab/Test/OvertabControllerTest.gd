@@ -8,11 +8,22 @@ func _ready() -> void:
 
 
 func _interactable_actor_clicked(actor: ActorModel) -> void:
-	overtab_view.focus_on_logbook()
+	overtab_view.focus_on_dialog()
 
 func _on_event_close_dialog() -> void:
 	pass
 
-func logbook_clicked() -> void:
+
+func _on_logbook_btn_pressed() -> void:
 	EventManager.event_test_close_all_panels.emit()
 	EventManager.event_test_logbook_clicked.emit()
+
+
+func _on_mysteries_btn_pressed() -> void:
+	EventManager.event_test_close_all_panels.emit()
+	EventManager.event_test_mystery_clicked.emit()
+
+
+func _on_research_btn_pressed() -> void:
+	EventManager.event_test_close_all_panels.emit()
+	EventManager.event_test_research_clicked.emit()

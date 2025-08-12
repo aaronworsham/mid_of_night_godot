@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://doea11017vluq"]
 
-[ext_resource type="Theme" uid="uid://bykpg87c2k8sq" path="res://Assets/Themes/mntheme.tres" id="1_6qwhv"]
+[ext_resource type="Theme" uid="uid://b1c3s4p4rha6n" path="res://Assets/Themes/mntheme.tres" id="1_6qwhv"]
 [ext_resource type="Script" uid="uid://c8tf4o1vysyo6" path="res://Scenes/Systems/Overtab/Test/OvertabViewTest.gd" id="1_bkhlr"]
 [ext_resource type="Texture2D" uid="uid://bwbe04t1rul1y" path="res://Assets/Icons/logbook_40p.png" id="1_vjriv"]
 [ext_resource type="Texture2D" uid="uid://60yqhgs0ww5x" path="res://Assets/Icons/dialog.png" id="2_4htig"]
@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://ci6hn1f8thqdj" path="res://Scenes/Systems/Overtab/Test/OvertabControllerTest.gd" id="2_klwxk"]
 [ext_resource type="Texture2D" uid="uid://0j06w1y0whci" path="res://Assets/Icons/research.png" id="3_4htig"]
 
-[node name="OvertabSystem" type="Node2D"]
+[node name="OvertabSystemTest" type="Node2D"]
 
 [node name="OvertabCanvas" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
@@ -62,3 +62,7 @@ unique_name_in_owner = true
 script = ExtResource("2_klwxk")
 
 [node name="Models" type="Node" parent="."]
+
+[connection signal="pressed" from="OvertabCanvas/OvertabContainer/LogbookBtn" to="Controllers/OvertabControllerTest" method="_on_logbook_btn_pressed"]
+[connection signal="pressed" from="OvertabCanvas/OvertabContainer/MysteriesBtn" to="Controllers/OvertabControllerTest" method="_on_mysteries_btn_pressed"]
+[connection signal="pressed" from="OvertabCanvas/OvertabContainer/ResearchBtn" to="Controllers/OvertabControllerTest" method="_on_research_btn_pressed"]
