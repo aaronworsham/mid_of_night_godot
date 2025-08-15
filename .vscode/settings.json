@@ -1,3 +1,8 @@
 {
-	"godotTools.editorPath.godot4": "/usr/bin/godot"
+	"godotTools.editorPath.godot4": "/home/aaronw/Development/Godot_v4.4.1-stable_linux.x86_64",
+	"python.testing.pytestArgs": [
+		"Tests"
+	],
+	"python.testing.unittestEnabled": false,
+	"python.testing.pytestEnabled": true
 }

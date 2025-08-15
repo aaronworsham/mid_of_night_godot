@@ -8,7 +8,7 @@ var valid_fonts = ['AnonymousPro', 'CourierPro', 'LobsterTwo', 'Default']
 
 var default_options = {
 	background_color = Color(.15, .15, .15, 1).to_html(),
-	config_file = 'res://gut_config.json',
+	config_file = 'res://.gutconfig.json',
 	# used by editor to handle enabled/disabled dirs.  All dirs configured go
 	# here and only the enabled dirs go into dirs
 	configured_dirs = [],
@@ -30,14 +30,14 @@ var default_options = {
 	inner_class = '',
 	junit_xml_file = '',
 	junit_xml_timestamp = false,
-	log_level = 2,
+	log_level = 1,
 	opacity = 100,
 	paint_after = .1,
 	post_run_script = '',
 	pre_run_script = '',
 	prefix = 'test_',
 	selected = '',
-	should_exit = true,
+	should_exit = false,
 	should_exit_on_success = false,
 	should_maximize = false,
 	compact_mode = false,
@@ -51,7 +51,7 @@ var default_options = {
 
 
 var options = default_options.duplicate()
-
+var logger = GutUtils.get_logger()
 
 func _null_copy(h):
 	var new_hash = {}
@@ -61,10 +61,11 @@ func _null_copy(h):
 
 
 func _load_options_from_config_file(file_path, into):
-	# SHORTCIRCUIT
 	if(!FileAccess.file_exists(file_path)):
-		if(file_path != 'res://.gutconfig.json'):
-			print('ERROR:  Config File "', file_path, '" does not exist.')
+		# Default files are ok to be missing.  Maybe this is too deep a place
+		# to implement this, but here it is.
+		if(file_path != 'res://.gutconfig.json' and file_path != GutUtils.EditorGlobals.editor_run_gut_config_path):
+			logger.error(str('Config File "', file_path, '" does not exist.'))
 			return -1
 		else:
 			return 1
@@ -72,7 +73,7 @@ func _load_options_from_config_file(file_path, into):
 	var f = FileAccess.open(file_path, FileAccess.READ)
 	if(f == null):
 		var result = FileAccess.get_open_error()
-		push_error(str("Could not load data ", file_path, ' ', result))
+		logger.error(str("Could not load data ", file_path, ' ', result))
 		return result
 
 	var json = f.get_as_text()
@@ -83,7 +84,7 @@ func _load_options_from_config_file(file_path, into):
 	var results = test_json_conv.get_data()
 	# SHORTCIRCUIT
 	if(results == null):
-		print("\n\n",'!! ERROR parsing file:  ', file_path)
+		logger.error(str("Could not parse file:  ", file_path))
 		return -1
 
 	# Get all the options out of the config file using the option name.  The
@@ -149,7 +150,7 @@ func write_options(path):
 		f.store_string(content)
 		f = null # closes file
 	else:
-		print('ERROR:  could not open file ', path, ' ', result)
+		logger.error(str("Could not open file ", path, ' ', result))
 	return result
 
 
@@ -182,7 +183,7 @@ func apply_options(gut):
 # The MIT License (MIT)
 # =====================
 #
-# Copyright (c) 2023 Tom "Butch" Wesley
+# Copyright (c) 2025 Tom "Butch" Wesley
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal

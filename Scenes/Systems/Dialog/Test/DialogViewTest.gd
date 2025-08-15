@@ -8,6 +8,7 @@ class_name DialogViewTest extends Node
 @onready var actor_right:CanvasLayer= %ActorRight
 @onready var actor_label:Label = %ActorLabel
 @onready var actor_portrait:Sprite2D = %ActorPortrait
+var actor:ActorModel
 
 
 var _topics:Array
@@ -17,9 +18,10 @@ func _ready() -> void:
 	dialog_ui.visible = false
 	detective_left.visible = false
 	actor_right.visible = false
-	EventManager.event_test_interactable_actor_clicked.connect(show_dialog_ui)
+	
 
 func show_dialog_ui(actor:ActorModel):
+	self.actor = actor
 	actor_label.text = actor.get_actor_name()
 	print ("ACTUI: got actor:" + actor_label.text)
 	actor_portrait.texture = load(actor.get_portrait_256_path())
@@ -27,6 +29,10 @@ func show_dialog_ui(actor:ActorModel):
 	actor_right.visible = true
 	dialog_ui.visible = true
 
+func show_dialog_ui_no_actor(a:ActorModel):
+	if actor == null:
+		actor = a
+	show_dialog_ui(actor)
 	#load_topic_list()
 
 func hide_dialog_ui():

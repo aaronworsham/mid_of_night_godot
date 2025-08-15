@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://doea11017vluq"]
+[gd_scene load_steps=9 format=3 uid="uid://doea11017vluq"]
 
 [ext_resource type="Theme" uid="uid://b1c3s4p4rha6n" path="res://Assets/Themes/mntheme.tres" id="1_6qwhv"]
 [ext_resource type="Script" uid="uid://c8tf4o1vysyo6" path="res://Scenes/Systems/Overtab/Test/OvertabViewTest.gd" id="1_bkhlr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://jtqmmd58oqkb" path="res://Assets/Icons/mystery.png" id="2_6qwhv"]
 [ext_resource type="Script" uid="uid://ci6hn1f8thqdj" path="res://Scenes/Systems/Overtab/Test/OvertabControllerTest.gd" id="2_klwxk"]
 [ext_resource type="Texture2D" uid="uid://0j06w1y0whci" path="res://Assets/Icons/research.png" id="3_4htig"]
+[ext_resource type="Script" uid="uid://du8egxvjoc15n" path="res://Scenes/Systems/Overtab/Test/OvertablSystemEventsTest.gd" id="8_jjc6x"]
 
 [node name="OvertabSystemTest" type="Node2D"]
 
@@ -63,6 +64,7 @@ script = ExtResource("2_klwxk")
 
 [node name="Models" type="Node" parent="."]
 
-[connection signal="pressed" from="OvertabCanvas/OvertabContainer/LogbookBtn" to="Controllers/OvertabControllerTest" method="_on_logbook_btn_pressed"]
-[connection signal="pressed" from="OvertabCanvas/OvertabContainer/MysteriesBtn" to="Controllers/OvertabControllerTest" method="_on_mysteries_btn_pressed"]
-[connection signal="pressed" from="OvertabCanvas/OvertabContainer/ResearchBtn" to="Controllers/OvertabControllerTest" method="_on_research_btn_pressed"]
+[node name="Events" type="Node" parent="."]
+
+[node name="OvertabSystemEvents" type="Node" parent="Events"]
+script = ExtResource("8_jjc6x")

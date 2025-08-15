@@ -48,12 +48,18 @@ signal event_cos_get_cos()
 
 #endregion
 
+#region ActorTest
+signal event_test_hide_all_actors()
+signal event_test_show_all_actors()
+#endregion
+
 #region DialogTest
 signal event_test_interactable_actor_clicked(actor:ActorModel)
 signal event_test_dialog_closed()
 #endregion
 
 #region OvertabTest
+signal event_test_dialog_clicked()
 signal event_test_logbook_clicked()
 signal event_test_mystery_clicked()
 signal event_test_research_clicked()

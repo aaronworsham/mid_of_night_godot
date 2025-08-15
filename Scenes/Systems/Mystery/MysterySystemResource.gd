@@ -11,3 +11,15 @@ func on_load():
     submembers_string = "clues"
 
     super()
+
+func on_test_load():
+    member_json = load("res://Data/StrapiData/Test/mysteries.collection.strapi.json")
+    member_string = "mystery"
+    members_string = "mysteries"
+
+    
+    submember_json = load("res://Data/StrapiData/Test/clues.collection.strapi.json")
+    submember_string = "clue"
+    submembers_string = "clues"
+
+    super.on_load()

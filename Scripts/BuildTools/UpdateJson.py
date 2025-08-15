@@ -60,52 +60,52 @@ data_sets = [
         "config"    :{}
     },
 
-# #MYSTERIES
+#MYSTERIES
 
-#     {
-#         "base_url"  : "mysteries",
-#         "params"    : {
-#             "populate": [
-#                 "clues"
-#             ]
-#         },
-#         "config"    :{}
-#     },
+    {
+        "base_url"  : "mysteries",
+        "params"    : {
+            "populate": [
+                "clues"
+            ]
+        },
+        "config"    :{}
+    },
 
-# #CLUES
+#CLUES
 
-#     {
-#         "base_url"  : "clues",
-#         "params"    : {
-#             "populate": [
-#                 "mystery"
-#             ]
-#         },
-#         "config"    :{}
-#     },
+    {
+        "base_url"  : "clues",
+        "params"    : {
+            "populate": [
+                "mystery"
+            ]
+        },
+        "config"    :{}
+    },
 
-# #RESEARCH TOPICS
+#RESEARCH TOPICS
 
-#     {
-#         "base_url"  : "research-topics",
-#         "params"    : {
-#             "populate": [
-#                 "research_category"
-#             ]
-#         },
-#         "config"    :{}
-#     },     
-# #RESEARCH CATEGORIES
+    {
+        "base_url"  : "research-topics",
+        "params"    : {
+            "populate": [
+                "research_category"
+            ]
+        },
+        "config"    :{}
+    },     
+#RESEARCH CATEGORIES
 
-#     {
-#         "base_url"  : "research-categories",
-#         "params"    : {
-#             "populate": [
-#                 "research_topics"
-#             ]
-#         },
-#         "config"    :{}
-#     },
+    {
+        "base_url"  : "research-categories",
+        "params"    : {
+            "populate": [
+                "research_topics"
+            ]
+        },
+        "config"    :{}
+    },
 
 # # ITEMS
 #     {

@@ -7,7 +7,7 @@ var resource_array = [
 var mguid:String
 
 func setup_resource(r:BaseDataSystemResource):
-    r.on_load()
+    r.on_test_load()
     data_system_resource = r
     base_setup()    
 

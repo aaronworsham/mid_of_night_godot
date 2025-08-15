@@ -10,7 +10,7 @@ class_name DialogControllerTest extends Node
 
 @onready var dialog_system_resource:DialogSystemResource = DialogSystemResource.new()
 
-
+var actors:Array[ActorModel]
 var current_dialog: Dictionary
 var current_dialog_threads: Array
 var current_thread: Dictionary
@@ -19,34 +19,39 @@ func _ready() -> void:
 
 	dialog_system_resource.on_load()
 
-	# timeline_resource._threads_resource = threads_resource
-	# timeline_resource.on_load()
 
 	EventManager.event_test_interactable_actor_clicked.connect(_interactable_actor_clicked)
-	EventManager.event_test_logbook_clicked.connect(_on_event_logbook_clicked)
-	EventManager.event_test_dialog_closed.connect(_on_event_close_dialog)
+	EventManager.event_test_dialog_clicked.connect(_on_event_dialog_clicked)
+	EventManager.event_test_dialog_closed.connect(_on_event_close_dialog)	
 	EventManager.event_test_close_all_panels.connect(_on_event_close_all_panels)
-	# EventManager.event_start_dialog.connect(_dialog_action)
-	# EventManager.event_notebook_clicked.connect(_notebook_clicked_action)
+	EventManager.event_actor_loaded.connect(_on_event_actor_loaded)
+
+
+func _on_event_actor_loaded(actor:ActorModel):
+	actors.append(actor)
+
 func _interactable_actor_clicked(actor:ActorModel):
 	print("DIALOG: got actor: " + actor.get_actor_name())
+
+	show_dialog_ui(actor)
+
 	current_dialog = dialog_system_resource.get_member_by_guid(actor.get_dialog_guid())
 	current_dialog_threads = dialog_system_resource.get_submembers_from_member_guid(current_dialog["guid"])
 	dialog_view.show_dialog_ui(actor)
 	show_discovered_threads()
 
+func _on_event_dialog_clicked():
+	dialog_view.show_dialog_ui_no_actor(actors[0])
 
+func show_dialog_ui(actor:ActorModel):
+	dialog_view.show_dialog_ui(actor)
 
+func _on_event_close_dialog():
+	dialog_view.hide_dialog_ui()
 
-		
+func _on_event_close_all_panels():
+	dialog_view.hide_dialog_ui()
 
-# func _notebook_clicked_action(topic: Dictionary):
-#     execute_thread_instructions(current_threads[topic["category_key"]])
-
-# func _dialog_action(_ac: ActorController):
-#     current_threads = timeline_resource.get_threads_for_actor_guid(_ac.actor_resource.guid)
-#     dialog_view.show_dialog_ui()
-#     execute_thread_instructions(current_threads["hello"])
 
 func set_current_thread(guid):
 	current_thread = dialog_system_resource.get_submember_by_guid(guid)
@@ -84,11 +89,3 @@ func execute_thread_instructions():
 	
 
 
-func _on_event_close_dialog() -> void:
-	dialog_view.hide_dialog_ui()
-
-func _on_event_logbook_clicked() -> void:
-	EventManager.event_test_close_all_panels.emit()
-
-func _on_event_close_all_panels() -> void:
-	dialog_view.hide_dialog_ui()

@@ -4,3 +4,4 @@ signal event_close_dialog(_on_event_close_dialog: bool)
 
 func _on_event_close_dialog() -> void:
 	EventManager.event_test_dialog_closed.emit()
+	EventManager.event_test_show_all_actors.emit()
