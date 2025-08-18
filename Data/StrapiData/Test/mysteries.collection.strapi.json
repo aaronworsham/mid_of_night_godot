@@ -19,6 +19,26 @@
                     "publishedAt": "2025-08-14T15:01:57.519Z"
                 }
             ]
+        },
+        {
+            "id": 3,
+            "documentId": "fsdsi8xi5vup3ac5jjh5j4lm",
+            "name": "Test Mystery 2",
+            "guid": "testmystery2guid",
+            "createdAt": "2025-08-14T15:01:38.441Z",
+            "updatedAt": "2025-08-14T15:02:04.080Z",
+            "publishedAt": "2025-08-14T15:02:04.104Z",
+            "clues": [
+                {
+                    "id": 3,
+                    "documentId": "nfdsfdassyrzu6prptppllnoerdb",
+                    "name": "Test Clue 2",
+                    "guid": "testclue2guid",
+                    "createdAt": "2025-08-14T15:01:54.931Z",
+                    "updatedAt": "2025-08-14T15:01:57.481Z",
+                    "publishedAt": "2025-08-14T15:01:57.519Z"
+                }
+            ]
         }
     ],
     "meta": {

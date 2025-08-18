@@ -113,8 +113,15 @@ func set_submember_as_undiscovered(guid:String):
 func is_submember_discovered(guid:String)->bool:
 	return _submembers_discovered.has(guid)
 
-func get_discorvered_submembers() -> Array:
+func get_discovered_submembers() -> Array:
 	var _tmp:Array
 	for m in _submembers_discovered:
 		_tmp.append(get_submember_by_guid(m))
+	return _tmp
+
+func get_discovered_submembers_by_member_guid(guid:String) -> Array:
+	var _tmp:Array
+	for m in _submembers_discovered:
+		if _submember_array.has(m):
+			_tmp.append(_submember_array[m])
 	return _tmp

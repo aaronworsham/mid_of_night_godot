@@ -17,6 +17,24 @@
                 "updatedAt": "2025-08-14T15:02:04.080Z",
                 "publishedAt": "2025-08-14T15:02:04.104Z"
             }
+        },
+        {
+            "id": 4,
+            "documentId": "uiossyrzu6prptppllnoerdb",
+            "name": "Test Clue 2",
+            "guid": "testclue2guid",
+            "createdAt": "2025-08-14T15:01:54.931Z",
+            "updatedAt": "2025-08-15T12:13:29.284Z",
+            "publishedAt": "2025-08-15T12:13:29.358Z",
+            "mystery": {
+                "id": 2,
+                "documentId": "fsvaads1i8xi5vup3ac5jjh5j4lm",
+                "name": "Test Mystery 2",
+                "guid": "testmystery2guid",
+                "createdAt": "2025-08-14T15:01:38.441Z",
+                "updatedAt": "2025-08-14T15:02:04.080Z",
+                "publishedAt": "2025-08-14T15:02:04.104Z"
+            }
         }
     ],
     "meta": {
