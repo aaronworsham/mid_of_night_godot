@@ -122,6 +122,6 @@ func get_discovered_submembers() -> Array:
 func get_discovered_submembers_by_member_guid(guid:String) -> Array:
 	var _tmp:Array
 	for m in _submembers_discovered:
-		if _submember_array.has(m):
-			_tmp.append(_submember_array[m])
+		if _submember_dict[m][member_string]["guid"] == guid:
+			_tmp.append(_submember_dict[m])
 	return _tmp

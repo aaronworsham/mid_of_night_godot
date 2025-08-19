@@ -62,7 +62,7 @@ func show_discovered_threads():
 		if t["starts_discovered"]:
 			dialog_view.add_topic(t)  #TODO only add if it is a new topic
 
-	var discovered:Array = dialog_system_resource.get_discorvered_submembers()
+	var discovered:Array = dialog_system_resource.get_discovered_submembers_by_member_guid(current_dialog["guid"])
 	for r in discovered:
 		dialog_view.add_topic(r)
 

@@ -83,13 +83,20 @@ func test_get_discovered_submembers_from_member():
 		setup_resource(r)
 		var m:Dictionary = r.get_member_by_guid(first_member_guid)
 		var c:Dictionary = r.get_submember_by_guid(m[r.submembers_string][0]["guid"])
+		assert_eq(c["name"], first_submember_name)
+		assert_eq(r.get_discovered_submembers_by_member_guid(first_member_guid).size(), 0)
+		r.set_submember_as_discovered(c["guid"])
+		var s:Array = r.get_discovered_submembers_by_member_guid(first_member_guid)
+		assert_eq(s.size(), 1)
+		assert_eq(s[0].guid, c["guid"])
 
 func test_get_discovered_submembers_by_member_guid():
 	for r in resource_array:
 		setup_resource(r)
 		var s:Array = r.get_discovered_submembers_by_member_guid(first_member_guid)
 		assert_eq(s.size(), 0)
-		r.set_submember_as_discovered(first_submember_guid)
+		var m:Dictionary = r.get_member_by_guid(first_member_guid)
+		r.set_submember_as_discovered(m[r.submembers_string][0]["guid"])
 		s = r.get_discovered_submembers_by_member_guid(first_member_guid)
 		assert_eq(s.size(), 1)
-		assert_eq(s[0].guid, first_submember_guid)
+		assert_eq(s[0].guid, m[r.submembers_string][0]["guid"])
