@@ -21,7 +21,7 @@ func _ready() -> void:
 
 
 	EventManager.event_test_interactable_actor_clicked.connect(_interactable_actor_clicked)
-	EventManager.event_test_dialog_clicked.connect(_on_event_dialog_clicked)
+	EventManager.event_test_dialog_tab_clicked.connect(_on_event_dialog_clicked)
 	EventManager.event_test_dialog_closed.connect(_on_event_close_dialog)	
 	EventManager.event_test_close_all_panels.connect(_on_event_close_all_panels)
 	EventManager.event_actor_loaded.connect(_on_event_actor_loaded)

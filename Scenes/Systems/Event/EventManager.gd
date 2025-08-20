@@ -58,11 +58,17 @@ signal event_test_interactable_actor_clicked(actor:ActorModel)
 signal event_test_dialog_closed()
 #endregion
 
-#region OvertabTest
-signal event_test_dialog_clicked()
-signal event_test_logbook_clicked()
+#region MysteryTest
 signal event_test_mystery_clicked()
-signal event_test_research_clicked()
+signal event_test_mystery_discovered(mystery_guid:String)
+signal event_test_mystery_clue_discovered(clue_guid:String)
+#endregion
+
+#region OvertabTest
+signal event_test_dialog_tab_clicked()
+signal event_test_logbook_tab_clicked()
+signal event_test_mystery_tab_clicked()
+signal event_test_research_tab_clicked()
 signal event_test_close_all_panels()
 #endregion
 

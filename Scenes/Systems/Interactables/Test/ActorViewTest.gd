@@ -3,7 +3,7 @@ var actor:ActorModel
 var target_range:int = 30
 var clickable:bool = true
 
-@onready var actors_container:Node = %Actors
+@onready var actors_container:Node = $/root/ActorSelectorSceneTest/Objects/Actors
 
 func _ready() -> void:
 	EventManager.event_test_hide_all_actors.connect(hide_actor)

@@ -2,7 +2,7 @@ class_name ActorLoaderTest extends Node
 
 @onready var actors_collection_resource:ActorCollectionResource = ActorCollectionResource.new()
 @onready var actor_json:JSON = load ("res://Data/StrapiData/Collections/actors.collection.strapi.json")
-@onready var actors_container:Node = %Actors
+@onready var actors_container:Node = $/root/ActorSelectorSceneTest/Objects/Actors
 @onready var actor_template = preload("res://Scenes/Systems/Interactables/Test/ActorTemplateTest.tscn")
 
 @export var _x_currentXCord:int = 0
