@@ -12,7 +12,7 @@ from PySide6.QtWidgets import (
     QMainWindow,
     QPushButton,
     QStackedLayout,
-    QVBoxLayout,
+QVBoxLayout,
     QWidget,
     QTabWidget,
     QMessageBox,

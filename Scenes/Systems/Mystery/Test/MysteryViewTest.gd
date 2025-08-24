@@ -1,7 +1,7 @@
 class_name MysteryViewTest extends Node
 @onready var mysteries_list: VBoxContainer = %MysteriesVBox
 @onready var Clues_list: VBoxContainer = %CluesVBox
-@onready var content_list: VBoxContainer = %ContentVBox
+@onready var detail_list: VBoxContainer = %DetailVBox
 
 @onready var mystery_panel: Panel = %MysteryPanel
 @onready var mystery_close_btn: Button = %MysteryCloseBtn
@@ -26,13 +26,13 @@ func load_mystery_list(mysteries:Array) -> void:
     _mysteries = mysteries
     clear_mystery_list()
     for m in _mysteries:
-        var btn:Button = UIUtility.create_button(m["name"])
+        var btn:Button = UIUtility.create_button(m["label"])
         btn.pressed.connect(_on_mystery_button_pressed.bind(m))
         mysteries_list.add_child(btn)   
 
 func _on_mystery_button_pressed(mystery:Dictionary) -> void:
     clear_Clue_list()
-    _Clues = mystery["Clues"]
+    _Clues = mystery["clues"]
     load_Clue_list()       
 
 func load_Clue_list() -> void:
@@ -44,8 +44,8 @@ func load_Clue_list() -> void:
 
 func _on_Clue_button_pressed(Clue:Dictionary) -> void:
     clear_content_list()
-    var content:RichTextLabel = UIUtility.create_rich_copy_label(Clue["content"])
-    content_list.add_child(content) 
+    var content:RichTextLabel = UIUtility.create_rich_copy_label(Clue["description"])
+    detail_list.add_child(content) 
 
 func clear_mystery_list() -> void:
     if mysteries_list != null:
@@ -58,8 +58,8 @@ func clear_Clue_list() -> void:
             i.queue_free()      
 
 func clear_content_list() -> void:
-    if content_list != null:
-        for i in content_list.get_children():
+    if detail_list != null:
+        for i in detail_list.get_children():
             i.queue_free() 
         clear_Clue_list()
         clear_mystery_list()

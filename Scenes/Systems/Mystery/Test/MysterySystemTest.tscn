@@ -20,6 +20,13 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
+[node name="MysteriesLabel" type="Label" parent="MysteryCanvas/MysteryPanel"]
+layout_mode = 0
+offset_right = 424.0
+offset_bottom = 25.0
+text = "Mysteries"
+horizontal_alignment = 1
+
 [node name="MysteriesVBox" type="VBoxContainer" parent="MysteryCanvas/MysteryPanel"]
 unique_name_in_owner = true
 layout_mode = 1
@@ -28,7 +35,17 @@ anchor_left = 0.005
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = 0.2
+offset_top = 48.0
 offset_bottom = -508.0
+
+[node name="CluesLabel" type="Label" parent="MysteryCanvas/MysteryPanel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 460.0
+offset_right = 435.0
+offset_bottom = 485.0
+text = "Clues"
+horizontal_alignment = 1
 
 [node name="CluesVBox" type="VBoxContainer" parent="MysteryCanvas/MysteryPanel"]
 unique_name_in_owner = true
@@ -42,13 +59,26 @@ offset_top = 495.0
 offset_right = -6.0
 offset_bottom = -13.0
 
-[node name="ContentVBox" type="VBoxContainer" parent="MysteryCanvas/MysteryPanel"]
+[node name="DetailLabel2" type="Label" parent="MysteryCanvas/MysteryPanel"]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 5.0
+offset_right = 951.0
+offset_bottom = 30.0
+text = "Details"
+horizontal_alignment = 1
+
+[node name="DetailVBox" type="VBoxContainer" parent="MysteryCanvas/MysteryPanel"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.548
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -10.08
+offset_top = 42.0
+offset_right = -10.0
+offset_bottom = -3.0
 grow_horizontal = 0
 
 [node name="MysteryCloseBtn" type="Button" parent="MysteryCanvas/MysteryPanel"]
