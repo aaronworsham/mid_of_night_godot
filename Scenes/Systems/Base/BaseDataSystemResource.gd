@@ -95,8 +95,8 @@ func set_member_as_undiscovered(guid:String):
 func is_member_discovered(guid:String)->bool:
 	return _members_discovered.has(guid)
 
-func get_discovered_members() -> Array:
-	var _tmp:Array
+func get_discovered_members() -> Array[Dictionary]:
+	var _tmp:Array[Dictionary]
 	for m in _members_discovered:
 		_tmp.append(get_member_by_guid(m))
 	return _tmp
@@ -119,8 +119,8 @@ func get_discovered_submembers() -> Array:
 		_tmp.append(get_submember_by_guid(m))
 	return _tmp
 
-func get_discovered_submembers_by_member_guid(guid:String) -> Array:
-	var _tmp:Array
+func get_discovered_submembers_by_member_guid(guid:String) -> Array[Dictionary]:
+	var _tmp:Array[Dictionary]
 	for m in _submembers_discovered:
 		if _submember_dict[m][member_string]["guid"] == guid:
 			_tmp.append(_submember_dict[m])

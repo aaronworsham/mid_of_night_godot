@@ -1,4 +1,4 @@
-class_name MysteryControllerTest extends Node
+class_name MysteryControllerTest extends BaseRecordCatalogController
 
 @onready var mystery_view: MysteryViewTest = %MysteryViewTest
 @onready var mystery_panel: Panel = %MysteryPanel
@@ -7,17 +7,13 @@ class_name MysteryControllerTest extends Node
 # Add mystery system resource similar to dialog system
 @onready var mystery_system_resource: MysterySystemResource = MysterySystemResource.new()
 
-var discovered_mysteries:Array[Dictionary] = []
-var discovered_clues:Array[Dictionary] = []
-var current_mystery: Dictionary
-var current_clues: Array[Dictionary] = []
-var actors: Array[ActorModel]
+
 
 func _ready() -> void:
 	mystery_panel.visible = false
 	
 	# Load mystery system resource
-	mystery_system_resource.on_load()
+	super.initialize(mystery_system_resource, mystery_view)
 	
 	# Add event connections similar to DialogControllerTest
 	EventManager.event_test_close_all_panels.connect(_on_event_close_all_panels)
@@ -39,28 +35,10 @@ func _on_event_close_all_panels() -> void:
 	mystery_panel.visible = false
 
 func _on_mystery_discovered(mystery_guid: String):
-	var mystery = mystery_system_resource.get_member_by_guid(mystery_guid)
-	if mystery and not discovered_mysteries.has(mystery):
-		discovered_mysteries.append(mystery)
-		mystery_view.load_mystery_list(discovered_mysteries)
+	super.discover_record(mystery_guid)
 
 func _on_clue_discovered(clue_guid: String):
-	var clue = mystery_system_resource.get_submember_by_guid(clue_guid)
-	if clue and not discovered_clues.has(clue):
-		discovered_clues.append(clue)
-		mystery_system_resource.set_submember_as_discovered(clue_guid)
-
-func set_current_mystery(mystery_guid: String):
-	current_mystery = mystery_system_resource.get_member_by_guid(mystery_guid)
-	current_clues = mystery_system_resource.get_submembers_from_member_guid(mystery_guid)
+	super.discover_sub_record(clue_guid)
 
 func load_discovered_mysteries():
-	var discovered = mystery_system_resource.get_discovered_members()
-	for mystery in discovered:
-		if not discovered_mysteries.has(mystery):
-			discovered_mysteries.append(mystery)
-	mystery_view.load_mystery_list(discovered_mysteries)
-
-func add_discovered_mystery(mystery:Dictionary) -> void:
-	discovered_mysteries.append(mystery)
-	mystery_view.load_mystery_list(discovered_mysteries)
+	super.load_discovered_records()

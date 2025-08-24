@@ -21,14 +21,14 @@ func _on_dialog_btn_pressed() -> void:
 func _on_mystery_btn_pressed() -> void:
     EventManager.event_test_hide_all_actors.emit();
     EventManager.event_test_close_all_panels.emit();
-    EventManager.event_test_mystery_clicked.emit();
+    EventManager.event_test_mystery_tab_clicked.emit();
 
 func _on_research_btn_pressed() -> void:
     EventManager.event_test_hide_all_actors.emit();
     EventManager.event_test_close_all_panels.emit();
-    EventManager.event_test_research_clicked.emit();
+    EventManager.event_test_research_tab_clicked.emit();
 
 func _on_logbook_btn_pressed() -> void:
     EventManager.event_test_hide_all_actors.emit();
     EventManager.event_test_close_all_panels.emit();
-    EventManager.event_test_logbook_clicked.emit();
+    EventManager.event_test_logbook_tab_clicked.emit();
