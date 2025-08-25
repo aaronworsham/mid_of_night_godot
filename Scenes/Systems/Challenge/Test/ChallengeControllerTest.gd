@@ -1,5 +1,5 @@
 class_name ChallengeControllerTest extends Node
-#@onready var challenge_view:ChallengeViewTest = %ChallengeViewTest
+@onready var challenge_view:ChallengeViewTest = %ChallengeViewTest
 #@onready var challenge_system_events: ChallengeSystemEventsTest = %ChallengeSystemEventsTest
 #@onready var challenge_system_resource:ChallengeSystemResource = ChallengeSystemResource.new()
 
@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func _on_event_challenge_given(challenge:Dictionary) -> void:
     print("CHALLENGE: given challenge: " + challenge["name"])
-    #challenge_view.show_challenge_ui(challenge)
+    challenge_view.show_challenge_ui()
 
 func _on_event_challenge_succeeded(challenge:Dictionary) -> void:
     print("CHALLENGE: succeeded challenge: " + challenge["name"])

@@ -1,26 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://yrjb2a4kjbaa"]
+[gd_scene load_steps=5 format=3 uid="uid://yrjb2a4kjbaa"]
 
 [ext_resource type="Script" uid="uid://dypomckix4mt4" path="res://Scenes/Systems/Challenge/Test/ChallengeControllerTest.gd" id="1_hc4ft"]
 [ext_resource type="Theme" uid="uid://b1c3s4p4rha6n" path="res://Assets/Themes/mntheme.tres" id="1_i48xc"]
-[ext_resource type="Texture2D" uid="uid://diwc6bljmu2so" path="res://Assets/Items/d20.jpg" id="2_rukax"]
+[ext_resource type="Texture2D" uid="uid://bfacrv0umwx8l" path="res://Assets/Items/2d10.png" id="2_rtmr8"]
+[ext_resource type="Script" uid="uid://lsmuujoj6dw8" path="res://Scenes/Systems/Challenge/Test/ChallengeViewTest.gd" id="4_rtmr8"]
 
 [node name="ChallengeSystemTest" type="Node2D"]
 
 [node name="ChallengeUI" type="CanvasLayer" parent="."]
 
-[node name="Panel" type="Panel" parent="ChallengeUI"]
+[node name="ChallengePanel" type="Panel" parent="ChallengeUI"]
+unique_name_in_owner = true
 offset_left = 724.0
 offset_top = 426.0
 offset_right = 1187.0
 offset_bottom = 597.0
 theme = ExtResource("1_i48xc")
 
-[node name="Sprite2D" type="Sprite2D" parent="ChallengeUI/Panel"]
+[node name="Sprite2D" type="Sprite2D" parent="ChallengeUI/ChallengePanel"]
 position = Vector2(82, 81)
 scale = Vector2(0.212281, 0.212281)
-texture = ExtResource("2_rukax")
+texture = ExtResource("2_rtmr8")
 
-[node name="Label" type="Label" parent="ChallengeUI/Panel"]
+[node name="Label" type="Label" parent="ChallengeUI/ChallengePanel"]
 layout_mode = 0
 offset_left = 166.0
 offset_top = 57.0
@@ -33,3 +35,9 @@ text = "Skill Challenge"
 
 [node name="ChallengeControllerTest" type="Node" parent="Controllers"]
 script = ExtResource("1_hc4ft")
+
+[node name="Views" type="Node" parent="."]
+
+[node name="ChallengeViewTest" type="Node" parent="Views"]
+unique_name_in_owner = true
+script = ExtResource("4_rtmr8")
