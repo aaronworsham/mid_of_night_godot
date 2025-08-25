@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://yrjb2a4kjbaa"]
+
+[ext_resource type="Script" uid="uid://dypomckix4mt4" path="res://Scenes/Systems/Challenge/Test/ChallengeControllerTest.gd" id="1_hc4ft"]
+[ext_resource type="Theme" uid="uid://b1c3s4p4rha6n" path="res://Assets/Themes/mntheme.tres" id="1_i48xc"]
+[ext_resource type="Texture2D" uid="uid://diwc6bljmu2so" path="res://Assets/Items/d20.jpg" id="2_rukax"]
+
+[node name="ChallengeSystemTest" type="Node2D"]
+
+[node name="ChallengeUI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="ChallengeUI"]
+offset_left = 724.0
+offset_top = 426.0
+offset_right = 1187.0
+offset_bottom = 597.0
+theme = ExtResource("1_i48xc")
+
+[node name="Sprite2D" type="Sprite2D" parent="ChallengeUI/Panel"]
+position = Vector2(82, 81)
+scale = Vector2(0.212281, 0.212281)
+texture = ExtResource("2_rukax")
+
+[node name="Label" type="Label" parent="ChallengeUI/Panel"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 57.0
+offset_right = 444.0
+offset_bottom = 112.0
+theme_override_font_sizes/font_size = 40
+text = "Skill Challenge"
+
+[node name="Controllers" type="Node" parent="."]
+
+[node name="ChallengeControllerTest" type="Node" parent="Controllers"]
+script = ExtResource("1_hc4ft")

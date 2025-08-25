@@ -66,11 +66,15 @@ func show_discovered_threads():
 	for r in discovered:
 		dialog_view.add_topic(r)
 
+
 	dialog_view.load_topic_list()
 
 func execute_thread_instructions():
 	for i in current_thread["instructions"]:
 		match i["__component"]:
+			"thread-instruction.thread-challenged":
+				print("DIALOG: challenged thread: " + current_thread["guid"])
+				EventManager.event_test_challenge_given.emit(i)
 			"thread-instruction.thread-statement":
 				dialog_view.update_dialog(i["copy"])
 			"thread-instruction.thread-discovered":

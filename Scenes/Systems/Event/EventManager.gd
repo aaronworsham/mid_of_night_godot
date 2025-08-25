@@ -72,6 +72,12 @@ signal event_test_research_tab_clicked()
 signal event_test_close_all_panels()
 #endregion
 
+#regtion ChallengeTest
+signal event_test_challenge_given(challenge:Dictionary)
+signal event_test_challenge_succeeded(challenge:Dictionary)
+signal event_test_challenge_failed(challenge:Dictionary)
+#endregion
+
 
 #Signals EM can emit for others to connect to
 func emit_event_attributes_updated(attrs:Dictionary):

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7kxwnxkrnxkt"]
+[gd_scene load_steps=7 format=3 uid="uid://b7kxwnxkrnxkt"]
 
 [ext_resource type="Script" uid="uid://c31e1hf5lbdi2" path="res://Scenes/Tests/ActorSelectorSceneTest.gd" id="1_64qps"]
 [ext_resource type="PackedScene" uid="uid://doea11017vluq" path="res://Scenes/Systems/Overtab/Test/OvertabSystemTest.tscn" id="2_y2q4s"]
 [ext_resource type="PackedScene" uid="uid://bsv5nso1l6hhu" path="res://Scenes/Systems/Dialog/Test/DialogSystemTest.tscn" id="3_n36sl"]
 [ext_resource type="PackedScene" uid="uid://cqv7jk6r6gjup" path="res://Scenes/Systems/Mystery/Test/MysterySystemTest.tscn" id="3_vykkl"]
 [ext_resource type="Script" uid="uid://ddeqgsh3haoy0" path="res://Scenes/Systems/Interactables/Test/ActorLoaderTest.gd" id="4_jcxdr"]
+[ext_resource type="PackedScene" uid="uid://yrjb2a4kjbaa" path="res://Scenes/Systems/Challenge/Test/ChallengeSystemTest.tscn" id="5_3fdfe"]
 
 [node name="ActorSelectorSceneTest" type="Node2D"]
 script = ExtResource("1_64qps")
@@ -19,6 +20,8 @@ script = null
 [node name="OvertabSystemTest" parent="Systems" instance=ExtResource("2_y2q4s")]
 
 [node name="MysterySystemTest" parent="Systems" instance=ExtResource("3_vykkl")]
+
+[node name="ChallengeSystemTest" parent="Systems" instance=ExtResource("5_3fdfe")]
 
 [node name="Loaders" type="Node" parent="."]
 

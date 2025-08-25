@@ -1,1 +1,246 @@
-{"data": [{"id": 42, "documentId": "v9yz64cmp98hv8kzgzxydhp5", "name": "Test Thread 2 For Test Dialog 1  For Test Actor 1 ", "guid": "TestThread2ForTestDialog1ForTestActor1guid", "label": "Topic A 2", "createdAt": "2025-08-07T12:11:16.316Z", "updatedAt": "2025-08-24T11:48:05.628Z", "publishedAt": "2025-08-24T11:48:05.692Z", "starts_discovered": false, "description": null, "dialog": {"id": 20, "documentId": "zlk5bi52rdvgq4bj9v4a4jzm", "name": "Test Dialog 1 For Test Actor 1 ", "guid": "TestDialog1ForTestActor1guid", "createdAt": "2025-07-03T16:22:45.003Z", "updatedAt": "2025-08-24T12:16:08.119Z", "publishedAt": "2025-08-24T12:16:08.175Z", "label": "Dialog 1 Label", "description": "Dialog 1 Description"}, "instructions": [{"__component": "thread-instruction.thread-statement", "id": 31, "name": "Thread A2 Statement", "copy": "This is an interesting statement about thread A 2.  It reveals a hidden Mystery entitled [color=blue]Mystery 1[/color]"}, {"__component": "thread-instruction.mystery-discovered", "id": 14, "name": "M1 Discovered", "mystery": {"id": 3, "documentId": "crq1i8xi5vup3ac5jjh5j4lm", "name": "Test Mystery 1", "guid": "TestMystery1guid", "createdAt": "2025-08-14T15:01:38.441Z", "updatedAt": "2025-08-24T12:17:15.258Z", "publishedAt": "2025-08-24T12:17:15.491Z", "label": "Mystery 1 Label", "description": "Mystery 1 Description"}}, {"__component": "thread-instruction.clue-discovered", "id": 13, "name": "C1 Discovered", "clue": {"id": 4, "documentId": "na8nsyrzu6prptppllnoerdb", "name": "Test Clue 1", "guid": "TestClue1guid", "createdAt": "2025-08-14T15:01:54.931Z", "updatedAt": "2025-08-24T12:15:45.366Z", "publishedAt": "2025-08-24T12:15:45.395Z", "label": "Clue 1 Label", "description": "Clue 1 Description"}}]}, {"id": 43, "documentId": "o9dblhwwc40kx9hul8k4gai3", "name": "Test Thread 1 For Test Dialog 1 For Test Actor 1", "guid": "TestThread1ForTestDialog1ForTestActor1guid", "label": "Thread 1 Label", "createdAt": "2025-07-28T11:02:24.580Z", "updatedAt": "2025-08-24T12:19:10.375Z", "publishedAt": "2025-08-24T12:19:10.422Z", "starts_discovered": true, "description": "Thread 1 Description", "dialog": {"id": 20, "documentId": "zlk5bi52rdvgq4bj9v4a4jzm", "name": "Test Dialog 1 For Test Actor 1 ", "guid": "TestDialog1ForTestActor1guid", "createdAt": "2025-07-03T16:22:45.003Z", "updatedAt": "2025-08-24T12:16:08.119Z", "publishedAt": "2025-08-24T12:16:08.175Z", "label": "Dialog 1 Label", "description": "Dialog 1 Description"}, "instructions": [{"__component": "thread-instruction.thread-discovered", "id": 14, "name": "ThreadA1DiscoveredThreadA2", "copy": "This is what Actor A said about the topic.  Also there is a new topic discovered about [color=blue]Thread A 2[/color]", "thread": {"id": 42, "documentId": "v9yz64cmp98hv8kzgzxydhp5", "name": "Test Thread 2 For Test Dialog 1  For Test Actor 1 ", "guid": "TestThread2ForTestDialog1ForTestActor1guid", "label": "Topic A 2", "createdAt": "2025-08-07T12:11:16.316Z", "updatedAt": "2025-08-24T11:48:05.628Z", "publishedAt": "2025-08-24T11:48:05.692Z", "starts_discovered": false, "description": null}}]}, {"id": 44, "documentId": "hx4tsw40wfpusq7nrr5ca4sf", "name": "Test Thread 1 For Test Dialog 2 For Test Actor 2", "guid": "TestThread1ForTestDialog2ForTestActor2guid", "label": "Thread 1 Label", "createdAt": "2025-08-07T11:38:01.791Z", "updatedAt": "2025-08-24T12:19:41.113Z", "publishedAt": "2025-08-24T12:19:41.161Z", "starts_discovered": true, "description": "Thread 1 Description", "dialog": {"id": 21, "documentId": "xu6z7qd5jcdpiwy59y9wb5qv", "name": "Test Dialog 2 For Test Actor 2", "guid": "TestDialog2ForTestActor2guid", "createdAt": "2025-08-07T11:35:55.534Z", "updatedAt": "2025-08-24T12:16:26.815Z", "publishedAt": "2025-08-24T12:16:26.883Z", "label": "Dialog 2 Label", "description": "Dialog 2 Description"}, "instructions": [{"__component": "thread-instruction.thread-statement", "id": 32, "name": "Thread B Statement 1", "copy": "Interesting thing that Actor B said about the topic"}]}, {"id": 45, "documentId": "jlvvs1bg4a785dkg1t7pdqz3", "name": "Test Thread 1 For Test Dialog 3 for Test Actor 3", "guid": "TestThread1ForTestDialog3forTestActor3guid", "label": "Thread 1 Label", "createdAt": "2025-08-07T11:38:43.600Z", "updatedAt": "2025-08-24T12:20:05.357Z", "publishedAt": "2025-08-24T12:20:05.494Z", "starts_discovered": true, "description": "Thread 1 Description", "dialog": {"id": 22, "documentId": "u2vz1s34exh1n75p0rnnqx35", "name": "Test Dialog 3 For Test Actor 3", "guid": "TestDialog3ForTestActor3guid", "createdAt": "2025-08-07T11:39:43.791Z", "updatedAt": "2025-08-24T12:16:49.082Z", "publishedAt": "2025-08-24T12:16:49.181Z", "label": "Dialog 3 Label", "description": "Dialog 3 Description"}, "instructions": [{"__component": "thread-instruction.thread-statement", "id": 33, "name": "thread c statement 1", "copy": "Thing Actor C says about the topic"}]}], "meta": {"pagination": {"page": 1, "pageSize": 25, "pageCount": 1, "total": 4}}}
+{
+    "data": [
+        {
+            "id": 49,
+            "documentId": "v9yz64cmp98hv8kzgzxydhp5",
+            "name": "Test Thread 2 For Test Dialog 1  For Test Actor 1 ",
+            "guid": "TestThread2ForTestDialog1ForTestActor1guid",
+            "label": "Topic A 2",
+            "createdAt": "2025-08-07T12:11:16.316Z",
+            "updatedAt": "2025-08-25T12:23:43.309Z",
+            "publishedAt": "2025-08-25T12:23:43.418Z",
+            "starts_discovered": false,
+            "description": null,
+            "dialog": {
+                "id": 20,
+                "documentId": "zlk5bi52rdvgq4bj9v4a4jzm",
+                "name": "Test Dialog 1 For Test Actor 1 ",
+                "guid": "TestDialog1ForTestActor1guid",
+                "createdAt": "2025-07-03T16:22:45.003Z",
+                "updatedAt": "2025-08-24T12:16:08.119Z",
+                "publishedAt": "2025-08-24T12:16:08.175Z",
+                "label": "Dialog 1 Label",
+                "description": "Dialog 1 Description"
+            },
+            "instructions": [
+                {
+                    "__component": "thread-instruction.thread-statement",
+                    "id": 36,
+                    "name": "Thread A2 Statement",
+                    "copy": "This is an interesting statement about thread A 2.  It reveals a hidden Mystery entitled [color=blue]Mystery 1[/color]"
+                },
+                {
+                    "__component": "thread-instruction.mystery-discovered",
+                    "id": 15,
+                    "name": "M1 Discovered",
+                    "mystery": {
+                        "id": 3,
+                        "documentId": "crq1i8xi5vup3ac5jjh5j4lm",
+                        "name": "Test Mystery 1",
+                        "guid": "TestMystery1guid",
+                        "createdAt": "2025-08-14T15:01:38.441Z",
+                        "updatedAt": "2025-08-24T12:17:15.258Z",
+                        "publishedAt": "2025-08-24T12:17:15.491Z",
+                        "label": "Mystery 1 Label",
+                        "description": "Mystery 1 Description"
+                    }
+                },
+                {
+                    "__component": "thread-instruction.clue-discovered",
+                    "id": 14,
+                    "name": "C1 Discovered",
+                    "clue": {
+                        "id": 4,
+                        "documentId": "na8nsyrzu6prptppllnoerdb",
+                        "name": "Test Clue 1",
+                        "guid": "TestClue1guid",
+                        "createdAt": "2025-08-14T15:01:54.931Z",
+                        "updatedAt": "2025-08-24T12:15:45.366Z",
+                        "publishedAt": "2025-08-24T12:15:45.395Z",
+                        "label": "Clue 1 Label",
+                        "description": "Clue 1 Description"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 53,
+            "documentId": "hhz8jk8p2m6d0fkm9k5oin7c",
+            "name": "Hidden Thread 2 for Dialog 3 for Test Actor 3",
+            "guid": "HiddenThread2forDialog1forTestActor3guid",
+            "label": "A hidden thread",
+            "createdAt": "2025-08-25T12:26:27.574Z",
+            "updatedAt": "2025-08-25T12:35:08.182Z",
+            "publishedAt": "2025-08-25T12:35:08.293Z",
+            "starts_discovered": false,
+            "description": "This is a hidden thread that doesn't start discovered.  It is revealed in dialog with Test Actor 2",
+            "dialog": {
+                "id": 22,
+                "documentId": "u2vz1s34exh1n75p0rnnqx35",
+                "name": "Test Dialog 3 For Test Actor 3",
+                "guid": "TestDialog3ForTestActor3guid",
+                "createdAt": "2025-08-07T11:39:43.791Z",
+                "updatedAt": "2025-08-24T12:16:49.082Z",
+                "publishedAt": "2025-08-24T12:16:49.181Z",
+                "label": "Dialog 3 Label",
+                "description": "Dialog 3 Description"
+            },
+            "instructions": [
+                {
+                    "__component": "thread-instruction.thread-statement",
+                    "id": 39,
+                    "name": "statement",
+                    "copy": "This is a hidden thread that was revealed by Actor 2 dialog"
+                }
+            ]
+        },
+        {
+            "id": 54,
+            "documentId": "hx4tsw40wfpusq7nrr5ca4sf",
+            "name": "Test Thread 1 For Test Dialog 2 For Test Actor 2",
+            "guid": "TestThread1ForTestDialog2ForTestActor2guid",
+            "label": "[STR] Revealing Thread",
+            "createdAt": "2025-08-07T11:38:01.791Z",
+            "updatedAt": "2025-08-25T13:19:03.084Z",
+            "publishedAt": "2025-08-25T13:19:03.222Z",
+            "starts_discovered": true,
+            "description": "This thread reveals a secret thread on Test Actor 3",
+            "dialog": {
+                "id": 21,
+                "documentId": "xu6z7qd5jcdpiwy59y9wb5qv",
+                "name": "Test Dialog 2 For Test Actor 2",
+                "guid": "TestDialog2ForTestActor2guid",
+                "createdAt": "2025-08-07T11:35:55.534Z",
+                "updatedAt": "2025-08-24T12:16:26.815Z",
+                "publishedAt": "2025-08-24T12:16:26.883Z",
+                "label": "Dialog 2 Label",
+                "description": "Dialog 2 Description"
+            },
+            "instructions": [
+                {
+                    "__component": "thread-instruction.thread-challenged",
+                    "id": 2,
+                    "name": "Strength Challenge",
+                    "description": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "text": "Challenge on Strength",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ],
+                    "skill": "strength"
+                },
+                {
+                    "__component": "thread-instruction.thread-statement",
+                    "id": 40,
+                    "name": "Thread B Statement 1",
+                    "copy": "Interesting thing that Actor B said about the topic"
+                },
+                {
+                    "__component": "thread-instruction.thread-discovered",
+                    "id": 18,
+                    "name": "Reveal hidden thread on Test Actor 3",
+                    "copy": "This reveals a hidden thread on test actor 3",
+                    "thread": {
+                        "id": 53,
+                        "documentId": "hhz8jk8p2m6d0fkm9k5oin7c",
+                        "name": "Hidden Thread 2 for Dialog 3 for Test Actor 3",
+                        "guid": "HiddenThread2forDialog1forTestActor3guid",
+                        "label": "A hidden thread",
+                        "createdAt": "2025-08-25T12:26:27.574Z",
+                        "updatedAt": "2025-08-25T12:35:08.182Z",
+                        "publishedAt": "2025-08-25T12:35:08.293Z",
+                        "starts_discovered": false,
+                        "description": "This is a hidden thread that doesn't start discovered.  It is revealed in dialog with Test Actor 2"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 46,
+            "documentId": "o9dblhwwc40kx9hul8k4gai3",
+            "name": "Test Thread 1 For Test Dialog 1 For Test Actor 1",
+            "guid": "TestThread1ForTestDialog1ForTestActor1guid",
+            "label": "Thread 1 Label",
+            "createdAt": "2025-07-28T11:02:24.580Z",
+            "updatedAt": "2025-08-25T12:21:57.393Z",
+            "publishedAt": "2025-08-25T12:21:57.519Z",
+            "starts_discovered": true,
+            "description": "Thread 1 Description",
+            "dialog": {
+                "id": 20,
+                "documentId": "zlk5bi52rdvgq4bj9v4a4jzm",
+                "name": "Test Dialog 1 For Test Actor 1 ",
+                "guid": "TestDialog1ForTestActor1guid",
+                "createdAt": "2025-07-03T16:22:45.003Z",
+                "updatedAt": "2025-08-24T12:16:08.119Z",
+                "publishedAt": "2025-08-24T12:16:08.175Z",
+                "label": "Dialog 1 Label",
+                "description": "Dialog 1 Description"
+            },
+            "instructions": [
+                {
+                    "__component": "thread-instruction.thread-discovered",
+                    "id": 15,
+                    "name": "ThreadA1DiscoveredThreadA2",
+                    "copy": "This is what Actor A said about the topic.  Also there is a new topic discovered about [color=blue]Thread A 2[/color]",
+                    "thread": {
+                        "id": 49,
+                        "documentId": "v9yz64cmp98hv8kzgzxydhp5",
+                        "name": "Test Thread 2 For Test Dialog 1  For Test Actor 1 ",
+                        "guid": "TestThread2ForTestDialog1ForTestActor1guid",
+                        "label": "Topic A 2",
+                        "createdAt": "2025-08-07T12:11:16.316Z",
+                        "updatedAt": "2025-08-25T12:23:43.309Z",
+                        "publishedAt": "2025-08-25T12:23:43.418Z",
+                        "starts_discovered": false,
+                        "description": null
+                    }
+                }
+            ]
+        },
+        {
+            "id": 48,
+            "documentId": "jlvvs1bg4a785dkg1t7pdqz3",
+            "name": "Test Thread 1 For Test Dialog 3 for Test Actor 3",
+            "guid": "TestThread1ForTestDialog3forTestActor3guid",
+            "label": "Thread 1 Label",
+            "createdAt": "2025-08-07T11:38:43.600Z",
+            "updatedAt": "2025-08-25T12:23:31.939Z",
+            "publishedAt": "2025-08-25T12:23:32.002Z",
+            "starts_discovered": true,
+            "description": "Thread 1 Description",
+            "dialog": {
+                "id": 22,
+                "documentId": "u2vz1s34exh1n75p0rnnqx35",
+                "name": "Test Dialog 3 For Test Actor 3",
+                "guid": "TestDialog3ForTestActor3guid",
+                "createdAt": "2025-08-07T11:39:43.791Z",
+                "updatedAt": "2025-08-24T12:16:49.082Z",
+                "publishedAt": "2025-08-24T12:16:49.181Z",
+                "label": "Dialog 3 Label",
+                "description": "Dialog 3 Description"
+            },
+            "instructions": [
+                {
+                    "__component": "thread-instruction.thread-statement",
+                    "id": 35,
+                    "name": "thread c statement 1",
+                    "copy": "Thing Actor C says about the topic"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 5
+        }
+    }
+}

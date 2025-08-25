@@ -4,7 +4,7 @@ class_name MysteryViewTest extends BaseRecordCatalogView
 
 @onready var mysteries_list: VBoxContainer = %MysteriesVBox
 @onready var clues_list: VBoxContainer = %CluesVBox
-@onready var detail_list: VBoxContainer = %DetailVBox
+@onready var clue_detail_list: VBoxContainer = %DetailVBox
 @onready var mystery_panel: Panel = %MysteryPanel
 @onready var mystery_close_btn: Button = %MysteryCloseBtn
 @onready var mystery_events: MysteryEventsTest = %MysteryEventsTest
@@ -15,7 +15,8 @@ func _ready() -> void:
         mystery_close_btn,
         mystery_panel,
         mysteries_list,
-        clues_list
+        clues_list,
+        clue_detail_list
     )
     EventManager.event_test_close_all_panels.connect(_on_event_close_all_panels)
     EventManager.event_test_mystery_tab_clicked.connect(_on_event_mystery_clicked)
