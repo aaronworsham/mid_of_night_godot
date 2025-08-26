@@ -59,6 +59,7 @@ text = "Roll Physical"
 
 [node name="PhysicalRollPanel" type="Panel" parent="ChallengeUI"]
 unique_name_in_owner = true
+visible = false
 offset_left = 681.0
 offset_top = 412.0
 offset_right = 1182.0
@@ -101,7 +102,6 @@ text = "Submit"
 
 [node name="DigitalRollPanel" type="Panel" parent="ChallengeUI"]
 unique_name_in_owner = true
-visible = false
 offset_left = 681.0
 offset_top = 412.0
 offset_right = 1182.0
@@ -109,19 +109,12 @@ offset_bottom = 646.0
 
 [node name="Label" type="Label" parent="ChallengeUI/DigitalRollPanel"]
 layout_mode = 0
-offset_left = 118.0
-offset_top = 85.0
-offset_right = 173.0
-offset_bottom = 141.0
+offset_left = 145.0
+offset_top = 78.0
+offset_right = 363.0
+offset_bottom = 134.0
 theme_override_font_sizes/font_size = 30
-text = "%"
-
-[node name="LineEdit" type="LineEdit" parent="ChallengeUI/DigitalRollPanel"]
-layout_mode = 0
-offset_left = 162.0
-offset_top = 76.0
-offset_right = 360.0
-offset_bottom = 141.0
+text = "Rolling 1d100..."
 
 [node name="ChallengeResultPanel" type="Panel" parent="ChallengeUI"]
 unique_name_in_owner = true

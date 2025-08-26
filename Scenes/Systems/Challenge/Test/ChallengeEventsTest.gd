@@ -26,7 +26,9 @@ func _on_event_challenge_failed(challenge:Dictionary) -> void:
     pass
 
 func _on_roll_digital_pressed() -> void:
-    pass
+    view.show_digital_roll_ui()
+    await get_tree().create_timer(0.9).timeout
+    controller.submit_digital_roll()
 
 
 func _on_roll_physical_pressed() -> void:

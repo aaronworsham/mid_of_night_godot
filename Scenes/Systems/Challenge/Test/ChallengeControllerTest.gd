@@ -4,16 +4,23 @@ class_name ChallengeControllerTest extends Node
 @onready var dice:DiceManager = DiceManager.new()
 
 func _ready() -> void:
-    chance.skill_value = 10
-    chance.skill = SkillResource.Skills.STRENGTH
     pass
 
 func submit_physical_roll(roll_value:int) -> void:
-    print("CHALLENGE CONTROLLER: Physical Roll Submitted with value: " + str(roll_value))
-    # Here you would typically handle the roll logic, e.g., check against a target number
-    # For testing, we'll just emit a success or failure event based on a simple condition
-    chance.dice_roll = roll_value
-    if chance.is_success():
+    var skill = SkillResource.Skills.STRENGTH
+    CharacterManager.set_skill_value(skill, 10)
+    var c = CharacterManager.get_set_cos(skill, roll_value) 
+    if c.is_success():
+        challenge_view.show_challenge_success()
+    else:
+        challenge_view.show_challenge_failure()
+
+func submit_digital_roll() -> void:
+    var skill = SkillResource.Skills.STRENGTH
+    CharacterManager.set_skill_value(skill, 50)
+    var c = CharacterManager.get_random_cos(skill) 
+    print("DICE ROLL: %d" % c.dice_roll)
+    if c.is_success():
         challenge_view.show_challenge_success()
     else:
         challenge_view.show_challenge_failure()
