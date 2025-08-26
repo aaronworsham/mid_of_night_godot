@@ -60,3 +60,4 @@ func show_challenge_success() -> void:
 func show_challenge_failure() -> void:
     challenge_success_label.visible = false
     challenge_failure_label.visible = true
+    show_challenge_results_ui()
