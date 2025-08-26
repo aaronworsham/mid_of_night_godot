@@ -1,7 +1,7 @@
 class_name DialogControllerTest extends Node
 
 @onready var dialog_view:DialogViewTest = %DialogViewTest
-@onready var dialog_system_events: DialogSystemEventsTest = %DialogSystemEventsTest
+@onready var dialog_system_events: DialogEventsTest = %DialogEventsTest
 # @onready var threads_resource: Resource = ThreadCollectionResource.new()
 # @onready var thread_json: JSON = load("res://Data/Threads/threads.strapi.json")
 # @onready var timeline_resource: TimelineResource = TimelineResource.new()
@@ -21,9 +21,8 @@ func _ready() -> void:
 
 
 	EventManager.event_test_interactable_actor_clicked.connect(_interactable_actor_clicked)
-	EventManager.event_test_dialog_tab_clicked.connect(_on_event_dialog_clicked)
-	EventManager.event_test_dialog_closed.connect(_on_event_close_dialog)	
-	EventManager.event_test_close_all_panels.connect(_on_event_close_all_panels)
+	EventManager.event_test_dialog_tab_clicked.connect(_on_event_dialog_clicked)	
+
 	EventManager.event_actor_loaded.connect(_on_event_actor_loaded)
 
 
@@ -45,13 +44,6 @@ func _on_event_dialog_clicked():
 
 func show_dialog_ui(actor:ActorModel):
 	dialog_view.show_dialog_ui(actor)
-
-func _on_event_close_dialog():
-	dialog_view.hide_dialog_ui()
-
-func _on_event_close_all_panels():
-	dialog_view.hide_dialog_ui()
-
 
 func set_current_thread(guid):
 	current_thread = dialog_system_resource.get_submember_by_guid(guid)

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cgia1vhwq502l" path="res://Scenes/Systems/Dialog/Test/DialogSystemTest.gd" id="1_x4u42"]
 [ext_resource type="Texture2D" uid="uid://msopuii5k5h1" path="res://Assets/Portraits/character_a_64x64.jpeg" id="2_234wd"]
 [ext_resource type="Script" uid="uid://ccjxggc7r7g3q" path="res://Scenes/Systems/Dialog/Test/DialogControllerTest.gd" id="3_qrjav"]
-[ext_resource type="Script" uid="uid://d0o15p76v0811" path="res://Scenes/Systems/Dialog/Test/DialogSystemEventsTest.gd" id="6_s3jl1"]
+[ext_resource type="Script" uid="uid://nukn2pmwdd0c" path="res://Scenes/Systems/Dialog/Test/DialogEventsTest.gd" id="5_j4s7d"]
 
 [node name="DialogSystemTest" type="Node2D"]
 script = ExtResource("1_x4u42")
@@ -60,6 +60,7 @@ offset_top = 37.0
 grow_horizontal = 0
 
 [node name="DialogCloseBtn" type="Button" parent="DialogCanvas/DialogPanel"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.943
@@ -104,22 +105,16 @@ text = "tmp"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Views" type="CanvasLayer" parent="."]
+[node name="Scripts" type="Node" parent="."]
 
-[node name="DialogViewTest" type="Node" parent="Views"]
+[node name="DialogViewTest" type="Node" parent="Scripts"]
 unique_name_in_owner = true
 script = ExtResource("1_3x8rw")
 
-[node name="Controllers" type="Node" parent="."]
-
-[node name="DialogControllerTest" type="Node" parent="Controllers"]
+[node name="DialogControllerTest" type="Node" parent="Scripts"]
 unique_name_in_owner = true
 script = ExtResource("3_qrjav")
 
-[node name="Events" type="Node" parent="."]
-
-[node name="DialogSystemEventsTest" type="Node" parent="Events"]
+[node name="DialogEventsTest" type="Node" parent="Scripts"]
 unique_name_in_owner = true
-script = ExtResource("6_s3jl1")
-
-[connection signal="pressed" from="DialogCanvas/DialogPanel/DialogCloseBtn" to="Events/DialogSystemEventsTest" method="_on_event_close_dialog"]
+script = ExtResource("5_j4s7d")

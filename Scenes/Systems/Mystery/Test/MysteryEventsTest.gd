@@ -1,11 +1,11 @@
-class_name MysteryEventsTest extends Node
+class_name MysteryEventsTest extends BaseRecordCatalogEvents
 
 @onready var mystery_close_btn: Button = %MysteryCloseBtn
+@onready var mystery_view:MysteryViewTest = %MysteryViewTest
+@onready var mystery_controller:MysteryControllerTest = %MysteryControllerTest
 
 
 func _ready() -> void:
-    mystery_close_btn.pressed.connect(_on_mystery_close_btn_pressed)
+    super.initialize(mystery_view, mystery_controller, mystery_close_btn)
+    pass
 
-func _on_mystery_close_btn_pressed() -> void:
-    EventManager.event_test_close_all_panels.emit()
-    EventManager.event_test_show_all_actors.emit()

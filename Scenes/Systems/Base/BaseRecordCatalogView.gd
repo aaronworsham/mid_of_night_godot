@@ -17,21 +17,17 @@ func _ready() -> void:
     pass
 
 func initialize(
-    c: BaseRecordCatalogController, 
-    b: Button, 
+    c: BaseRecordCatalogController,  
     p: Panel,
     rl: VBoxContainer,
     srl: VBoxContainer,
     dl: VBoxContainer
     ) -> void:
     controller = c  
-    close_btn = b
     panel = p
     subrecords_list = srl
     records_list = rl
     detail_list = dl
-    if close_btn != null && panel != null:
-        close_btn.pressed.connect(hide_panel)
 
 func load_record_list(records:Array) -> void:
     for r in records:

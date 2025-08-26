@@ -50,21 +50,15 @@ layout_mode = 2
 text = "Research"
 icon = ExtResource("3_4htig")
 
-[node name="Views" type="Node" parent="."]
+[node name="Scripts" type="Node" parent="."]
 
-[node name="OvertabViewTest" type="Node" parent="Views"]
-unique_name_in_owner = true
-script = ExtResource("1_bkhlr")
+[node name="OvertabSystemEvents" type="Node" parent="Scripts"]
+script = ExtResource("8_jjc6x")
 
-[node name="Controllers" type="Node" parent="."]
-
-[node name="OvertabControllerTest" type="Node" parent="Controllers"]
+[node name="OvertabControllerTest" type="Node" parent="Scripts"]
 unique_name_in_owner = true
 script = ExtResource("2_klwxk")
 
-[node name="Models" type="Node" parent="."]
-
-[node name="Events" type="Node" parent="."]
-
-[node name="OvertabSystemEvents" type="Node" parent="Events"]
-script = ExtResource("8_jjc6x")
+[node name="OvertabViewTest" type="Node" parent="Scripts"]
+unique_name_in_owner = true
+script = ExtResource("1_bkhlr")

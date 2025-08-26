@@ -4,18 +4,13 @@ class_name ChallengeControllerTest extends Node
 #@onready var challenge_system_resource:ChallengeSystemResource = ChallengeSystemResource.new()
 
 func _ready() -> void:
-    EventManager.event_test_challenge_given.connect(_on_event_challenge_given)
-    EventManager.event_test_challenge_succeeded.connect(_on_event_challenge_succeeded)
-    EventManager.event_test_challenge_failed.connect(_on_event_challenge_failed)
+    pass
 
-func _on_event_challenge_given(challenge:Dictionary) -> void:
-    print("CHALLENGE: given challenge: " + challenge["name"])
-    challenge_view.show_challenge_ui()
-
-func _on_event_challenge_succeeded(challenge:Dictionary) -> void:
-    print("CHALLENGE: succeeded challenge: " + challenge["name"])
-    #challenge_view.show_challenge_success_ui(challenge)
-
-func _on_event_challenge_failed(challenge:Dictionary) -> void:
-    print("CHALLENGE: failed challenge: " + challenge["name"])
-    #challenge_view.show_challenge_failure_ui(challenge)
+func submit_physical_roll(roll_value:int) -> void:
+    print("CHALLENGE CONTROLLER: Physical Roll Submitted with value: " + str(roll_value))
+    # Here you would typically handle the roll logic, e.g., check against a target number
+    # For testing, we'll just emit a success or failure event based on a simple condition
+    if roll_value >= 5:
+        challenge_view.show_challenge_success()
+    else:
+        challenge_view.show_challenge_failure()

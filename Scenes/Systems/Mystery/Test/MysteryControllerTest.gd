@@ -16,8 +16,6 @@ func _ready() -> void:
 	super.initialize(mystery_system_resource, mystery_view)
 	
 	# Add event connections similar to DialogControllerTest
-	EventManager.event_test_close_all_panels.connect(_on_event_close_all_panels)
-	EventManager.event_test_mystery_tab_clicked.connect(_on_event_mystery_clicked)
 	EventManager.event_test_mystery_discovered.connect(_on_mystery_discovered)
 	EventManager.event_test_mystery_clue_discovered.connect(_on_clue_discovered)
 
@@ -26,13 +24,6 @@ func _on_event_actor_loaded(actor: ActorModel):
 
 func _on_event_close_dialog() -> void:
 	pass
-
-func _on_event_mystery_clicked() -> void:
-	mystery_panel.visible = true
-	load_discovered_mysteries()
-
-func _on_event_close_all_panels() -> void:
-	mystery_panel.visible = false
 
 func _on_mystery_discovered(mystery_guid: String):
 	super.discover_record(mystery_guid)

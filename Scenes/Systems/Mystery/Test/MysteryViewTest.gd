@@ -6,13 +6,12 @@ class_name MysteryViewTest extends BaseRecordCatalogView
 @onready var clues_list: VBoxContainer = %CluesVBox
 @onready var clue_detail_list: VBoxContainer = %DetailVBox
 @onready var mystery_panel: Panel = %MysteryPanel
-@onready var mystery_close_btn: Button = %MysteryCloseBtn
+
 @onready var mystery_events: MysteryEventsTest = %MysteryEventsTest
 
 func _ready() -> void:
     super.initialize(
         mystery_controller,
-        mystery_close_btn,
         mystery_panel,
         mysteries_list,
         clues_list,

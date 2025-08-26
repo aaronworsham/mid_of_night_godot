@@ -91,20 +91,16 @@ offset_top = -40.0
 grow_horizontal = 0
 text = "Close"
 
-[node name="Views" type="Node" parent="."]
+[node name="Scripts" type="Node" parent="."]
 
-[node name="MysteryViewTest" type="Node" parent="Views"]
-unique_name_in_owner = true
-script = ExtResource("2_fj5cv")
-
-[node name="Controllers" type="Node" parent="."]
-
-[node name="MysteryControllerTest" type="Node" parent="Controllers"]
+[node name="MysteryControllerTest" type="Node" parent="Scripts"]
 unique_name_in_owner = true
 script = ExtResource("3_13856")
 
-[node name="Events" type="Node" parent="."]
+[node name="MysteryViewTest" type="Node" parent="Scripts"]
+unique_name_in_owner = true
+script = ExtResource("2_fj5cv")
 
-[node name="MysteryEventsTest" type="Node" parent="Events"]
+[node name="MysteryEventsTest" type="Node" parent="Scripts"]
 unique_name_in_owner = true
 script = ExtResource("4_vcowj")
