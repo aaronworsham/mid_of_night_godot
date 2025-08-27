@@ -42,6 +42,7 @@ func hide_physical_roll_ui() -> void:
 
 func show_digital_roll_ui() -> void:
     digital_roll_panel.visible = true
+    
 
 func hide_digital_roll_ui() -> void:
     digital_roll_panel.visible = false

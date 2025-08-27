@@ -67,6 +67,13 @@ func execute_thread_instructions():
 			"thread-instruction.thread-challenged":
 				print("DIALOG: challenged thread: " + current_thread["guid"])
 				EventManager.event_test_challenge_given.emit(i)
+				var c:ChanceOfSuccessResource = await EventManager.event_test_challenge_completed
+				if c.is_success():
+					print("DIALOG: challenge succeeded")
+					continue
+				else:
+					print("DIALOG: challenge failed")
+					break	
 			"thread-instruction.thread-statement":
 				dialog_view.update_dialog(i["copy"])
 			"thread-instruction.thread-discovered":

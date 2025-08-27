@@ -19,17 +19,14 @@ func _ready() -> void:
 func _on_event_challenge_given(challenge:Dictionary) -> void:
     view.show_challenge_ui()
 
-func _on_event_challenge_succeeded(challenge:Dictionary) -> void:
+func _on_event_challenge_succeeded(c:ChanceOfSuccessResource) -> void:
     pass
 
-func _on_event_challenge_failed(challenge:Dictionary) -> void:
+func _on_event_challenge_failed(c:ChanceOfSuccessResource) -> void:
     pass
 
 func _on_roll_digital_pressed() -> void:
-    view.show_digital_roll_ui()
-    await get_tree().create_timer(0.9).timeout
-    controller.submit_digital_roll()
-
+    controller.show_digital_roll_ui()
 
 func _on_roll_physical_pressed() -> void:
     view.show_physical_roll_ui()

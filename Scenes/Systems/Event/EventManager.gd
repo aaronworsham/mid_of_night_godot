@@ -1,14 +1,12 @@
 extends Node
 
-signal event_attributes_updated(attrs:Dictionary)
+signal event_attributes_updated(attrs: Dictionary)
 
-signal event_start_dialog(act:ActorController)
+signal event_start_dialog(act: ActorController)
 signal event_notebook_clicked(topic)
 signal event_testing_ui()
 signal event_save_game()
 signal event_load_game()
-
-
 
 
 ### SYSTEMS ###
@@ -16,8 +14,8 @@ signal event_load_game()
 
 #region Interactables
 
-signal event_interactable_actor_clicked(actor:ActorModel)
-signal event_actor_loaded(actor:ActorModel)
+signal event_interactable_actor_clicked(actor: ActorModel)
+signal event_actor_loaded(actor: ActorModel)
 
 #endregion
 
@@ -54,14 +52,14 @@ signal event_test_show_all_actors()
 #endregion
 
 #region DialogTest
-signal event_test_interactable_actor_clicked(actor:ActorModel)
+signal event_test_interactable_actor_clicked(actor: ActorModel)
 signal event_test_dialog_closed()
 #endregion
 
 #region MysteryTest
 signal event_test_mystery_clicked()
-signal event_test_mystery_discovered(mystery_guid:String)
-signal event_test_mystery_clue_discovered(clue_guid:String)
+signal event_test_mystery_discovered(mystery_guid: String)
+signal event_test_mystery_clue_discovered(clue_guid: String)
 #endregion
 
 #region OvertabTest
@@ -73,20 +71,21 @@ signal event_test_close_all_panels()
 #endregion
 
 #regtion ChallengeTest
-signal event_test_challenge_given(challenge:Dictionary)
-signal event_test_challenge_succeeded(challenge:Dictionary)
-signal event_test_challenge_failed(challenge:Dictionary)
+signal event_test_challenge_given(challenge: Dictionary)
+signal event_test_challenge_succeeded(challenge: ChanceOfSuccessResource)
+signal event_test_challenge_failed(challenge: ChanceOfSuccessResource)
+signal event_test_challenge_completed(challenge: ChanceOfSuccessResource)
 #endregion
 
 
 #Signals EM can emit for others to connect to
-func emit_event_attributes_updated(attrs:Dictionary):
+func emit_event_attributes_updated(attrs: Dictionary):
 	event_attributes_updated.emit(attrs)
 
-func emit_event_start_dialog(act:ActorController):
+func emit_event_start_dialog(act: ActorController):
 	event_start_dialog.emit(act)
 
-func emit_event_notebook_clicked(topic:Dictionary):
+func emit_event_notebook_clicked(topic: Dictionary):
 	event_notebook_clicked.emit(topic)
 
 func emit_testing_ui():
@@ -99,6 +98,6 @@ func emit_load_game():
 	event_load_game.emit()
 
 #Singals EM is connected to
-func _on_dialogic_signal(argument:String):
+func _on_dialogic_signal(argument: String):
 	if argument == "uncover_missing_girl_mystery":
 		print("Missing Girl Mystery Uncovered")
