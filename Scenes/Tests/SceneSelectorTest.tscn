@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://o0hsvkfbq3ba"]
+
+[ext_resource type="Script" uid="uid://b1ogr7quqt3if" path="res://Scenes/Tests/SceneSelectorTest.gd" id="1_pepug"]
+
+[node name="SceneSelectorTest" type="Node2D"]
+script = ExtResource("1_pepug")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 915.0
+offset_top = 436.0
+offset_right = 1088.0
+offset_bottom = 583.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ActorSelectorSceneBtn" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Actor Selector Scene"
+
+[node name="CharCreationSceneBtn" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Char Creation Scene"

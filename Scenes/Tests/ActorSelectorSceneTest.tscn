@@ -32,3 +32,12 @@ script = ExtResource("4_jcxdr")
 
 [node name="Actors" type="Node" parent="Objects"]
 unique_name_in_owner = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackToMainBtn" type="Button" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_top = 1013.0
+offset_right = 142.0
+offset_bottom = 1072.0
+text = "Back to Main"

@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv4vstqj4itq5"]
+
+[ext_resource type="Script" uid="uid://ctr5t42k6r1gf" path="res://Scenes/Tests/CharacterCreationSceneTest.gd" id="1_21wb6"]
+[ext_resource type="PackedScene" uid="uid://b1xny1d2hiwqq" path="res://Scenes/Systems/Character/Test/NewCharSceneTest.tscn" id="2_qpbcj"]
+
+[node name="CharacterCreationSceneTest" type="Node2D"]
+script = ExtResource("1_21wb6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CharOptionMenu" type="CanvasLayer" parent="."]
+
+[node name="CharOptionsPanel" type="Panel" parent="CharOptionMenu"]
+unique_name_in_owner = true
+offset_left = 772.0
+offset_top = 345.0
+offset_right = 1157.0
+offset_bottom = 699.0
+
+[node name="CharOptionVbox" type="VBoxContainer" parent="CharOptionMenu/CharOptionsPanel"]
+layout_mode = 0
+offset_right = 382.0
+offset_bottom = 360.0
+
+[node name="NewCharBtn" type="Button" parent="CharOptionMenu/CharOptionsPanel/CharOptionVbox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "New Character"
+
+[node name="BackToMainBtn" type="Button" parent="CharOptionMenu"]
+unique_name_in_owner = true
+offset_right = 149.0
+offset_bottom = 61.0
+text = "Back to Main"
+
+[node name="Systems" type="Node" parent="."]
+
+[node name="NewCharSceneTest" parent="Systems" instance=ExtResource("2_qpbcj")]

@@ -70,13 +70,18 @@ signal event_test_research_tab_clicked()
 signal event_test_close_all_panels()
 #endregion
 
-#regtion ChallengeTest
+#region ChallengeTest
 signal event_test_challenge_given(challenge: Dictionary)
 signal event_test_challenge_succeeded(challenge: ChanceOfSuccessResource)
 signal event_test_challenge_failed(challenge: ChanceOfSuccessResource)
 signal event_test_challenge_completed(challenge: ChanceOfSuccessResource)
 #endregion
 
+#region CharacterCreationSceneTest
+signal event_test_new_character_button()
+signal event_test_back_to_options_button()
+
+#endregion
 
 #Signals EM can emit for others to connect to
 func emit_event_attributes_updated(attrs: Dictionary):
