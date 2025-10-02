@@ -2,10 +2,10 @@
  "background_color": "262626ff",
  "compact_mode": false,
  "configured_dirs": [
-  "res://Tests"
+  "res://UnitTests"
  ],
  "dirs": [
-  "res://Tests"
+  "res://UnitTests"
  ],
  "disable_colors": false,
  "double_strategy": 1,

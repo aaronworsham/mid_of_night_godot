@@ -1,0 +1,20 @@
+[
+    {
+        "enum": "STRENGTH",
+        "guid": "skill_strength",
+        "name": "Strength",
+        "description": "A measure of your physical power.",
+        "associated_attribute": "STRENGTH",
+        "default_value": 10
+    },
+    {
+        "enum": "DEXTERITY",
+        "guid": "skill_dexterity",
+        "name": "Dexterity",
+        "description": "A measure of your agility.",
+        "associated_attribute": "DEXTERITY",
+        "default_value": 10
+    }
+
+]
+
