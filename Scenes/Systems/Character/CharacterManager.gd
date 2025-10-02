@@ -31,13 +31,13 @@ func get_random_cos(skill_enum:String)->ChanceOfSuccessResource:
 	var _skill_resource:SkillMemberResource = _character_skills.get_skill_by_enum(skill_enum)   
 	var c:ChanceOfSuccessResource = ChanceOfSuccessResource.new()
 	var roll:int = _dice_manager.roll_d100()
-	var skill_value:int = _skill_resource.get_skill_value()
+	var skill_value:int = _skill_resource.get_current_value()
 	c.on_load(roll,_skill_resource,skill_value)
 	return c
 
 func get_set_cos(skill_enum:String, r:int)->ChanceOfSuccessResource:
 	var _skill_resource:SkillMemberResource = _character_skills.get_skill_by_enum(skill_enum)   
 	var c:ChanceOfSuccessResource = ChanceOfSuccessResource.new()
-	var skill_value:int = _skill_resource.get_skill_value()
+	var skill_value:int = _skill_resource.get_current_value()
 	c.on_load(r,_skill_resource,skill_value)
 	return c

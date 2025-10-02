@@ -10,9 +10,9 @@ func _ready() -> void:
     pass
 
 func _on_actor_selector_scene_btn_pressed() -> void:
-    get_tree().change_scene_to_file("res://Scenes/Tests/ActorSelectorSceneTest.tscn")
+    get_tree().change_scene_to_file("res://Scenes/SceneTests/ActorSelectorSceneTest.tscn")
     print("Actor Selector Scene Button Pressed")
 
 func _on_character_creation_scene_btn_pressed() -> void:
-    get_tree().change_scene_to_file("res://Scenes/Tests/CharacterCreationSceneTest.tscn")
+    get_tree().change_scene_to_file("res://Scenes/SceneTests/CharacterCreationSceneTest.tscn")
     print("Character Creation Scene Button Pressed")

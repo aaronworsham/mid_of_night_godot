@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://o0hsvkfbq3ba"]
 
-[ext_resource type="Script" uid="uid://b1ogr7quqt3if" path="res://Scenes/Tests/SceneSelectorTest.gd" id="1_pepug"]
+[ext_resource type="Script" uid="uid://b1ogr7quqt3if" path="res://Scenes/SceneTests/SceneSelectorTest.gd" id="1_pepug"]
 
 [node name="SceneSelectorTest" type="Node2D"]
 script = ExtResource("1_pepug")
