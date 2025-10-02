@@ -1,11 +1,14 @@
 extends Node
 
+@onready var skills_json:JSON = load("res://Data/Skills/skills.json")
+
 var _character_resource:CharacterResource = CharacterResource.new()
 var _character_skills:SkillsCollectionResource = SkillsCollectionResource.new()
 var _dice_manager:DiceManager = DiceManager.new()
 
 func _ready() -> void:
 	_character_resource.on_load()
+	_character_skills.json = skills_json
 	_character_skills.on_load()
 
 func get_character_name() -> String:

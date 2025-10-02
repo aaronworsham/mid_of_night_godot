@@ -21,12 +21,12 @@ func before_each():
     skills_collection_resource.on_load()
 
 func test_get_value():
-    assert_eq(skill_resource.get_skill_value(), 0)
+    assert_eq(skill_resource.get_current_value(), 0)
 
 func test_set_value():
-    assert_eq(skill_resource.get_skill_value()  ,0)
+    assert_eq(skill_resource.get_current_value()  ,0)
     skill_resource.set_current_value(10)
-    assert_eq(skill_resource.get_skill_value()  ,10)
+    assert_eq(skill_resource.get_current_value()  ,10)
 
 
 
