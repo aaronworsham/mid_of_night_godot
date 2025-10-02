@@ -1,18 +1,24 @@
 [gd_scene format=3 uid="uid://cs3qnydy03jrl"]
 
-[node name="CharacterSkillTemplate" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="CharacterSkillTemplate" type="Panel"]
+custom_minimum_size = Vector2(200, 40)
+anchors_preset = -1
+anchor_right = 0.054
+anchor_bottom = 0.037
+offset_right = -103.68
+offset_bottom = -39.96
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="skillbtn" type="Button" parent="HBoxContainer"]
+[node name="SkillBtn" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "temp"
 
-[node name="skillvaluebtn" type="Button" parent="HBoxContainer"]
+[node name="SkillValueBtn" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "temp"

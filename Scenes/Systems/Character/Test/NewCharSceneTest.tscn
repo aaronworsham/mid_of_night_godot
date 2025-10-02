@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1xny1d2hiwqq"]
+[gd_scene load_steps=5 format=3 uid="uid://b1xny1d2hiwqq"]
 
 [ext_resource type="Script" uid="uid://cu00wmfnopmph" path="res://Scenes/Systems/Character/Test/NewCharView.gd" id="1_0ya3u"]
 [ext_resource type="Script" uid="uid://db0elg8s3grl3" path="res://Scenes/Systems/Character/Test/NewCharController.gd" id="2_yse5f"]
 [ext_resource type="Script" uid="uid://bpsn5udvcu2s1" path="res://Scenes/Systems/Character/Test/NewCharEvents.gd" id="3_yse5f"]
+[ext_resource type="Script" uid="uid://bswcjcf18w3y5" path="res://Scenes/Systems/Character/Test/NewCharLoader.gd" id="5_y671j"]
 
 [node name="NewCharSceneTest" type="Node2D"]
 
@@ -14,23 +15,14 @@ offset_left = 187.0
 offset_right = 1796.0
 offset_bottom = 1075.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/NewCharPanel"]
-layout_mode = 0
-offset_right = 751.0
-offset_bottom = 1090.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/NewCharPanel/VBoxContainer"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="CanvasLayer/NewCharPanel/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "Test"
-
-[node name="Button2" type="Button" parent="CanvasLayer/NewCharPanel/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "Test"
+[node name="NewCharSkills" type="VBoxContainer" parent="CanvasLayer/NewCharPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.467
+anchor_bottom = 1.0
+offset_right = -0.40301514
+offset_bottom = 15.0
 
 [node name="BackToOptionsBtn" type="Button" parent="CanvasLayer"]
 unique_name_in_owner = true
@@ -53,3 +45,7 @@ script = ExtResource("2_yse5f")
 [node name="NewCharEvents" type="Node" parent="MVCE"]
 unique_name_in_owner = true
 script = ExtResource("3_yse5f")
+
+[node name="NewCharLoader" type="Node" parent="MVCE"]
+unique_name_in_owner = true
+script = ExtResource("5_y671j")

@@ -10,7 +10,7 @@ var dice_roll:int:
     set(value):
         dice_roll = value
 
-var skill:SkillResource.Skills:
+var skill:SkillMemberResource:
     set(value):
         skill = value
 
@@ -18,7 +18,7 @@ var skill_value:int:
     set(value):
         skill_value = value
 
-func on_load(r:int, s:SkillResource.Skills, sv:int) -> void:
+func on_load(r:int, s:SkillMemberResource, sv:int) -> void:
     dice_roll = r
     skill = s
     skill_value = sv

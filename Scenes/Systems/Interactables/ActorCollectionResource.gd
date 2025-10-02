@@ -20,5 +20,6 @@ func on_load():
 
     for t in _actors_array:
         _actors_dict_by_guid[t["guid"]] = t 
+
 func get_all_actors()->Array:
     return _actors_array
