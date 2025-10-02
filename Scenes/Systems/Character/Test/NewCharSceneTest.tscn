@@ -14,6 +14,24 @@ offset_left = 187.0
 offset_right = 1796.0
 offset_bottom = 1075.0
 
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/NewCharPanel"]
+layout_mode = 0
+offset_right = 751.0
+offset_bottom = 1090.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/NewCharPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/NewCharPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Test"
+
+[node name="Button2" type="Button" parent="CanvasLayer/NewCharPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Test"
+
 [node name="BackToOptionsBtn" type="Button" parent="CanvasLayer"]
 unique_name_in_owner = true
 offset_left = 8.0
