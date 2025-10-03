@@ -15,14 +15,48 @@ offset_left = 187.0
 offset_right = 1796.0
 offset_bottom = 1075.0
 
-[node name="NewCharSkills" type="VBoxContainer" parent="CanvasLayer/NewCharPanel"]
+[node name="CharacteristicsLabel" type="Label" parent="CanvasLayer/NewCharPanel"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 30.0
+offset_right = 276.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 30
+text = "Characteristics"
+
+[node name="CharacteristicsVBox" type="VBoxContainer" parent="CanvasLayer/NewCharPanel"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.467
+anchor_top = 0.061000004
+anchor_right = 0.24200001
 anchor_bottom = 1.0
-offset_right = -0.40301514
-offset_bottom = 15.0
+offset_top = 0.42499542
+offset_right = -0.37802124
+offset_bottom = 12.0
+
+[node name="SkillsLabel" type="Label" parent="CanvasLayer/NewCharPanel"]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 24.0
+offset_right = 733.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 30
+text = "Skills
+"
+
+[node name="SkillsVBox" type="VBoxContainer" parent="CanvasLayer/NewCharPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.252
+anchor_top = 0.066
+anchor_right = 0.49300003
+anchor_bottom = 1.0
+offset_left = -0.46801758
+offset_top = 0.05000305
+offset_right = 0.76293945
+offset_bottom = 2.0
 
 [node name="BackToOptionsBtn" type="Button" parent="CanvasLayer"]
 unique_name_in_owner = true

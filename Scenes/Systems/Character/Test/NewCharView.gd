@@ -3,7 +3,8 @@ class_name NewCharView extends Node
 @onready var new_char_controller:NewCharController = %NewCharController
 @onready var new_char_panel:Panel = %NewCharPanel
 @onready var back_to_options_btn:Button = %BackToOptionsBtn
-@onready var new_char_skills:VBoxContainer = %NewCharSkills
+@onready var skills_vbox:VBoxContainer = %SkillsVBox
+@onready var characteristics_vbox:VBoxContainer = %CharacteristicsVBox
 
 func _ready() -> void:
     new_char_panel.visible = false
@@ -19,4 +20,7 @@ func hide_new_char_panel() -> void:
     back_to_options_btn.visible = false
 
 func get_skills_container()->VBoxContainer:
-    return new_char_skills
+    return skills_vbox
+
+func get_characteristics_container()->VBoxContainer:
+    return characteristics_vbox

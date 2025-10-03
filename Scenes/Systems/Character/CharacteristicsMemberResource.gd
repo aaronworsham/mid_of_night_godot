@@ -1,4 +1,4 @@
-class_name SkillMemberResource extends BaseMemberResource
+class_name CharacteristicsMemberResource extends BaseMemberResource
 
 var _enum:String
 var _guid:String
@@ -24,7 +24,7 @@ func get_enum()->String:
 func get_guid()->String:
     return _guid
 
-func get_skill_name()->String:
+func get_characteristic_name()->String:
     return _name    
 
 func get_description()->String:

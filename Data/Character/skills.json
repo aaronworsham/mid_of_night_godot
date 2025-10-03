@@ -1,0 +1,20 @@
+[
+    {
+        "enum": "CLIMB",
+        "guid": "skill_climb",
+        "name": "climb",
+        "description": "A measure of your ability to climb.",
+        "associated_attribute": "STRENGTH",
+        "default_value": 10
+    },
+    {
+        "enum": "STEALTH",
+        "guid": "skill_stealth",
+        "name": "stealth",
+        "description": "A measure of your ability to be unnoticed.",
+        "associated_attribute": "DEXTERITY",
+        "default_value": 10
+    }
+
+]
+
